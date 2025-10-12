@@ -375,9 +375,15 @@ footer .brand-title {
         max-width: 95%;
         max-height: 95%;
     }
-    .close {
+.close {
         top: 10px;
         right: 20px;
         font-size: 30px;
     }
 }
+
+.io a {
+    color: #ADD8E6;
+}
+
+
