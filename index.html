@@ -27,7 +27,7 @@
             <p class="description">I build mobile applications and websites that solve real problems and create better user experiences</p>
             <div class="cta-btns">
                 <a href="projects.html" style="background: #00d4ff; color: #181824;">View My Projects</a>
-                <a href="contact.html" class="secondary" style="background: #00d4ff; color: #13c1ec; border-color: #00d4ff;">Contact Me</a>
+                <a href="contact.html" class="secondary" style="background: #00d4ff; color: #020f13; border-color: #00d4ff;">Contact Me</a>
             </div>
         </div>
     </header>
@@ -45,7 +45,7 @@
         <h2>My Recent Work</h2>
         <div style="display:flex;flex-wrap:wrap;gap:2rem;justify-content:center;">
             <div class="feature-card">
-                <img src="images/carp.jpg" alt="Car Rental System" style="width:120px;height:120px;object-fit:cover;border-radius:16px;margin-bottom:1rem;">
+                <img src="images/carp.jpg" alt="Car Rental System" style="width:120px;height:120px;object-fit:cover;border-radius:16px;margin-bottom:1rem;" class="clickable">
                 <h3>Online Cross-Platform Car Rental System</h3>
                 <p>A web and mobile platform for booking, managing, and renting cars online. Built for both Android and iOS users, with real-time availability and secure payments.</p>
                 <div style="color:#bdbdbd;font-size:1rem;margin-bottom:1.2rem;">Flutter, Firebase, Web, Android, iOS</div>
@@ -53,6 +53,13 @@
             </div>
         </div>
     </section>
+
+    <!-- Modal for image popup -->
+    <div id="image-modal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="modal-image">
+    </div>
+
     <footer>
         <div>
             <a href="mailto:emmanueldrah10@gmail.com">

@@ -18,6 +18,17 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
+    // Get all clickable project images
+    const projectImages = document.querySelectorAll('.clickable');
+
+    // Add click event to each project image
+    projectImages.forEach(img => {
+        img.addEventListener('click', function() {
+            modal.style.display = 'block';
+            modalImg.src = this.src;
+        });
+    });
+
     // Close modal when clicking the close button
     closeBtn.addEventListener('click', function() {
         modal.style.display = 'none';

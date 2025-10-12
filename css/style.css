@@ -314,6 +314,15 @@ footer .brand-title {
     margin-bottom: 0.5rem !important;
 }
 
+.clickable {
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.clickable:hover {
+    transform: scale(1.05);
+}
+
 @media (max-width: 800px) {
     .features {
         grid-template-columns:1fr;
