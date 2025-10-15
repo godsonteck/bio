@@ -3,6 +3,16 @@ console.log('Portfolio site loaded');
 
 // Gallery modal functionality
 document.addEventListener('DOMContentLoaded', function() {
+    // Mobile nav toggle
+    const navToggle = document.getElementById('nav-toggle');
+    const navLinks = document.querySelector('.nav-links');
+    if (navToggle && navLinks) {
+        navToggle.addEventListener('click', function() {
+            navLinks.classList.toggle('show');
+        });
+        // Close menu when clicking a nav link
+        navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => navLinks.classList.remove('show')));
+    }
     const modal = document.getElementById('image-modal');
     const modalImg = document.getElementById('modal-image');
     const closeBtn = document.getElementsByClassName('close')[0];
