@@ -8,16 +8,20 @@
 </head>
 <body>
     <nav>
-        <div style="display:flex;align-items:center;gap:1rem;">
-            <img src="images/sad.jpg" alt="Success Above Dreams Logo">
-            <span class="brand-title">Emmanuel Drah</span>
+        <div class="nav-left" style="display:flex;align-items:center;gap:1rem;">
+            <a href="index.html" class="brand-link" style="display:flex;align-items:center;gap:0.8rem;text-decoration:none;color:inherit;">
+                <img src="images/sad.jpg" alt="Success Above Dreams Logo">
+                <span class="brand-title">Emmanuel Drah</span>
+            </a>
         </div>
-        <div style="flex:1"></div>
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="projects.html">Portfolio</a>
-        <a href="gallery.html">Gallery</a>
-        <a href="contact.html">Contact</a>
+        <button id="nav-toggle" class="nav-toggle" aria-label="Toggle navigation">☰</button>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="projects.html">Portfolio</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="contact.html">Contact</a>
+        </div>
     </nav>
     <section class="gallery">
         <h2>Photo Gallery</h2>

@@ -47,6 +47,16 @@ nav img {
     box-shadow: 0 2px 8px rgba(2,2,34,0.18);
     background: #23272f;
 }
+/* Brand link styles */
+.brand-link img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+.brand-link:focus, .brand-link:hover {
+    outline: none;
+    opacity: 0.95;
+}
 /* Navigation responsive tweaks */
 .nav-toggle {
     display: none;
@@ -201,8 +211,9 @@ h2, h3, h1 {
 }
 .gallery-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 1.5rem;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 1rem;
+    align-items: start;
 }
 .gallery-card {
     background: #181824e6;
@@ -218,9 +229,11 @@ h2, h3, h1 {
 .gallery-card img {
     border-radius: 8px;
     width: 100%;
-    height: 180px;
+    height: auto;
+    aspect-ratio: 4/3;
     object-fit: cover;
     transition: transform 0.2s;
+    display: block;
 }
 .gallery-card:hover {
     box-shadow: 0 6px 24px rgba(8,212,76,0.18);
