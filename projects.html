@@ -3,79 +3,73 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Work — Emmanuel Drah</title>
+    <title>Portfolio — Emmanuel Drah</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <nav>
-        <a href="index.html" class="nav-logo">SAD.</a>
+        <a href="index.html" class="brand">
+            <img src="images/sad.jpg" alt="SAD Logo" class="logo-img">
+            <div class="brand-info">
+                <span class="brand-name">Emmanuel Drah</span>
+                <span class="brand-tag">Success Above Dreams</span>
+            </div>
+        </a>
         <div class="nav-links">
             <a href="index.html">Home</a>
-            <a href="about.html">My Story</a>
-            <a href="projects.html">Work</a>
+            <a href="about.html">About</a>
+            <a href="projects.html" class="active">Portfolio</a>
             <a href="gallery.html">Gallery</a>
-            <a href="contact.html">Say Hello</a>
-            <button class="theme-toggle" id="theme-btn" aria-label="Switch Theme">🌙</button>
+            <a href="contact.html">Contact</a>
+            <button class="btn-theme" id="theme-btn">🌙</button>
         </div>
     </nav>
 
     <main>
-        <section class="hero" style="min-height: 50vh; padding-top: 10rem;">
-            <div class="hero-content">
-                <span class="hero-tagline">Portfolio</span>
-                <h1>Selected <span class="serif">Works.</span></h1>
+        <section class="hero" style="min-height: 40vh;">
+            <div class="hero-text">
+                <span class="section-tag">Case Studies</span>
+                <h1>Crafted <span class="text-gradient">Innovations.</span></h1>
             </div>
         </section>
 
-        <section id="alera">
-            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 6rem; align-items: center;">
-                <div>
-                    <span class="project-category">Case Study: Healthcare</span>
-                    <h2 class="serif" style="font-size: 4rem; margin-bottom: 2rem;">ALERA Gamma</h2>
-                    <p style="margin-bottom: 2.5rem;">The challenge was to unify a fragmented healthcare landscape in Ghana into a single, high-performance ecosystem. ALERA Gamma provides real-time tracking for ambulance services, secure laboratory integration, and pharmacist dashboards.</p>
-                    <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
-                        <span style="border: 1px solid var(--border); padding: 0.5rem 1.2rem; border-radius: 100px; font-size: 0.8rem; letter-spacing: 0.1em;">REACT</span>
-                        <span style="border: 1px solid var(--border); padding: 0.5rem 1.2rem; border-radius: 100px; font-size: 0.8rem; letter-spacing: 0.1em;">FASTAPI</span>
-                        <span style="border: 1px solid var(--border); padding: 0.5rem 1.2rem; border-radius: 100px; font-size: 0.8rem; letter-spacing: 0.1em;">WEBSOCKETS</span>
-                    </div>
-                </div>
-                <div>
-                    <img src="images/alera_screen.jpg" alt="ALERA" style="width: 100%; border-radius: 4px; box-shadow: var(--shadow-hover);">
+        <section>
+            <div class="projects-grid">
+                <!-- ALERA -->
+                <article class="project-card">
+                    <img src="images/alera_screen.jpg" alt="ALERA" class="project-img">
+                    <span class="brand-tag">Healthcare</span>
+                    <h3>ALERA Gamma</h3>
+                    <p>A mission-critical healthcare platform with real-time tracking, role-based dashboards, and secure data pipelines.</p>
                     <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin-top: 1rem;">
-                        <img src="images/alera_2.png" alt="ALERA 2" style="width: 100%; border-radius: 2px;">
-                        <img src="images/alera_3.png" alt="ALERA 3" style="width: 100%; border-radius: 2px;">
-                        <img src="images/alera_4.png" alt="ALERA 4" style="width: 100%; border-radius: 2px;">
+                        <img src="images/alera_2.png" alt="ALERA 2" style="width: 100%; border-radius: 4px;">
+                        <img src="images/alera_3.png" alt="ALERA 3" style="width: 100%; border-radius: 4px;">
+                        <img src="images/alera_4.png" alt="ALERA 4" style="width: 100%; border-radius: 4px;">
                     </div>
-                </div>
-            </div>
-        </section>
+                </article>
 
-        <hr style="border: 0; border-top: 1px solid var(--border); margin: 0 8%;">
-
-        <section id="car-rental">
-            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 6rem; align-items: center;">
-                <div>
-                    <img src="images/carp.jpg" alt="Car Rental" style="width: 100%; border-radius: 4px; box-shadow: var(--shadow-hover);">
-                </div>
-                <div>
-                    <span class="project-category">Case Study: Mobility</span>
-                    <h2 class="serif" style="font-size: 4rem; margin-bottom: 2rem;">Rental Flow</h2>
-                    <p style="margin-bottom: 2.5rem;">A cross-platform solution designed to streamline the car rental process from booking to fleet management. Focused on extreme simplicity and secure payment integration for the African market.</p>
-                    <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
-                        <span style="border: 1px solid var(--border); padding: 0.5rem 1.2rem; border-radius: 100px; font-size: 0.8rem; letter-spacing: 0.1em;">FLUTTER</span>
-                        <span style="border: 1px solid var(--border); padding: 0.5rem 1.2rem; border-radius: 100px; font-size: 0.8rem; letter-spacing: 0.1em;">FIREBASE</span>
-                    </div>
-                </div>
+                <!-- Car Rental -->
+                <article class="project-card">
+                    <img src="images/carp.jpg" alt="Car Rental" class="project-img">
+                    <span class="brand-tag">E-Commerce</span>
+                    <h3>Rental Flow</h3>
+                    <p>Streamlined vehicle booking platform with secure digital payments and automated fleet management.</p>
+                </article>
             </div>
         </section>
     </main>
 
     <footer>
-        <div class="footer-socials">
-            <a href="https://github.com/godsonteck">GitHub</a>
-            <a href="mailto:emmanueldrah10@gmail.com">Email</a>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <img src="images/sad.jpg" alt="SAD Logo">
+                <span style="font-weight: 800; font-size: 1.2rem;">Emmanuel Drah</span>
+            </div>
+            <div class="social-links">
+                <a href="https://github.com/godsonteck">GitHub</a>
+                <a href="mailto:emmanueldrah10@gmail.com">Email</a>
+            </div>
         </div>
-        <p class="footer-copy">&copy; 2026 Emmanuel Drah.</p>
     </footer>
 
     <script src="main.js"></script>

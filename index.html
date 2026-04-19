@@ -3,95 +3,105 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Emmanuel Drah — Web & Mobile Artisan</title>
-    <meta name="description" content="The professional portfolio of Emmanuel Drah, a developer focused on human-centric digital experiences and robust technical architecture.">
+    <title>Emmanuel Drah — Mobile & Web Architect</title>
+    <meta name="description" content="Official portfolio of Emmanuel Drah. Success Above Dreams branding. Expert in high-fidelity mobile and web platforms.">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <nav>
-        <a href="index.html" class="nav-logo">SAD.</a>
+        <a href="index.html" class="brand">
+            <img src="images/sad.jpg" alt="SAD Logo" class="logo-img">
+            <div class="brand-info">
+                <span class="brand-name">Emmanuel Drah</span>
+                <span class="brand-tag">Success Above Dreams</span>
+            </div>
+        </a>
         <div class="nav-links">
-            <a href="index.html">Home</a>
-            <a href="about.html">My Story</a>
-            <a href="projects.html">Work</a>
+            <a href="index.html" class="active">Home</a>
+            <a href="about.html">About</a>
+            <a href="projects.html">Portfolio</a>
             <a href="gallery.html">Gallery</a>
-            <a href="contact.html">Say Hello</a>
-            <button class="theme-toggle" id="theme-btn" aria-label="Switch Theme">🌙</button>
+            <a href="contact.html">Contact</a>
+            <button class="btn-theme" id="theme-btn">🌙</button>
         </div>
     </nav>
 
     <header class="hero">
-        <div class="hero-content">
-            <span class="hero-tagline">Web & Mobile Developer</span>
-            <h1>Crafting digital<br><span class="serif">stories</span> through code.</h1>
-            <p>I’m Emmanuel Drah. I build high-performance applications that bridge the gap between complex technology and human intuition.</p>
-            <div style="margin-top: 3rem;">
-                <a href="projects.html" style="text-decoration: none; color: var(--text-main); font-weight: 700; border-bottom: 2px solid var(--accent); padding-bottom: 5px; font-size: 1.1rem;">Explore My Work</a>
+        <div class="hero-grid">
+            <div class="hero-text">
+                <span class="section-tag">High-Fidelity Developer</span>
+                <h1>Building <span class="text-gradient">Robust</span> Digital Solutions.</h1>
+                <p>I design and architect premium digital experiences that bridge the gap between complex engineering and human-centric design.</p>
+                <div class="cta-group">
+                    <a href="projects.html" class="btn btn-primary">View My Work</a>
+                    <a href="contact.html" class="btn btn-outline">Let's Talk</a>
+                </div>
             </div>
-        </div>
-        <div class="hero-image-container">
-            <img src="images/IMG_6590.JPG" alt="Emmanuel Drah" class="hero-image">
+            <div class="hero-visual">
+                <div class="hero-img-frame">
+                    <img src="images/IMG_6590.JPG" alt="Emmanuel Drah">
+                </div>
+            </div>
         </div>
     </header>
 
     <main>
-        <section id="philosophy">
-            <div class="section-header">
-                <span class="hero-tagline">My Philosophy</span>
-                <h2>Success Above <span class="serif">Dreams.</span></h2>
-                <p>Behind every project is my brand philosophy: Success Above Dreams. It's a commitment to taking persistent action over passive hoping. I don't just write code; I build digital shields—robust, reliable systems that stand the test of time.</p>
+        <section id="about">
+            <span class="section-tag">My Philosophy</span>
+            <h2 class="section-title">Success Above <span class="text-gradient">Dreams.</span></h2>
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 4rem;">
+                <p style="font-size: 1.1rem; color: var(--text-muted);">
+                    I believe that real success isn't found in dreaming alone—it's forged in the persistent pursuit of technical excellence. My brand, <strong>Success Above Dreams</strong>, represents the shield of reliability I bring to every project.
+                </p>
+                <p style="font-size: 1.1rem; color: var(--text-muted);">
+                    Whether I'm architecting a mission-critical healthcare platform like ALERA or a seamless cross-platform mobile app, my commitment is to build systems that are as resilient as they are beautiful.
+                </p>
             </div>
         </section>
 
-        <section id="featured-work">
-            <div class="section-header" style="text-align: center; margin: 0 auto 8rem;">
-                <h2>Selected <span class="serif">Pieces</span></h2>
-            </div>
-            
+        <section id="work">
+            <span class="section-tag">Case Studies</span>
+            <h2 class="section-title">Selected <span class="text-gradient">Works.</span></h2>
             <div class="projects-grid">
                 <article class="project-card">
-                    <div class="project-image-wrapper">
-                        <img src="images/alera_screen.jpg" alt="ALERA Gamma">
-                    </div>
-                    <div class="project-info">
-                        <span class="project-category">Healthcare Platform</span>
-                        <h3>ALERA Gamma</h3>
-                        <p>A mission-critical healthcare ecosystem unified into a single, intelligent interface.</p>
-                        <a href="projects.html" style="color: var(--text-main); font-weight: 600;">View Story →</a>
+                    <img src="images/alera_screen.jpg" alt="ALERA Gamma" class="project-img">
+                    <span class="brand-tag">Healthcare Platform</span>
+                    <h3>ALERA Gamma</h3>
+                    <p>A mission-critical ecosystem for the healthcare industry, unifying real-time tracking and role-based management.</p>
+                    <div class="tech-tags">
+                        <span class="tag">React</span>
+                        <span class="tag">FastAPI</span>
+                        <span class="tag">WebSockets</span>
                     </div>
                 </article>
 
                 <article class="project-card">
-                    <div class="project-image-wrapper">
-                        <img src="images/carp.jpg" alt="Car Rental System">
-                    </div>
-                    <div class="project-info">
-                        <span class="project-category">Booking Interface</span>
-                        <h3>Rental Flow</h3>
-                        <p>Bridging the gap between fleet management and effortless user bookings.</p>
-                        <a href="projects.html" style="color: var(--text-main); font-weight: 600;">View Story →</a>
+                    <img src="images/carp.jpg" alt="Car Rental System" class="project-img">
+                    <span class="brand-tag">Booking Engine</span>
+                    <h3>Rental Flow</h3>
+                    <p>High-fidelity car rental platform focusing on seamless user journeys and robust backend synchronization.</p>
+                    <div class="tech-tags">
+                        <span class="tag">Flutter</span>
+                        <span class="tag">Firebase</span>
+                        <span class="tag">Dart</span>
                     </div>
                 </article>
-            </div>
-        </section>
-
-        <section style="text-align: center;">
-            <div class="section-header" style="margin: 0 auto;">
-                <h2 class="serif" style="font-size: 5rem;">Let's build<br>the future.</h2>
-                <div style="margin-top: 4rem;">
-                    <a href="contact.html" style="background: var(--text-main); color: var(--bg-page); padding: 1.5rem 4rem; text-decoration: none; font-weight: 700; font-size: 1.1rem; border-radius: 100px; transition: var(--transition);">Say Hello</a>
-                </div>
             </div>
         </section>
     </main>
 
     <footer>
-        <div class="footer-socials">
-            <a href="https://github.com/godsonteck">GitHub</a>
-            <a href="mailto:emmanueldrah10@gmail.com">Email</a>
-            <a href="https://sites.google.com/view/godsonteck">Portfolio V1</a>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <img src="images/sad.jpg" alt="SAD Logo">
+                <span style="font-weight: 800; font-size: 1.2rem;">Emmanuel Drah</span>
+            </div>
+            <div class="social-links">
+                <a href="https://github.com/godsonteck">GitHub</a>
+                <a href="mailto:emmanueldrah10@gmail.com">Email</a>
+            </div>
         </div>
-        <p class="footer-copy">&copy; 2026 Emmanuel Drah. Handcrafted in Ghana.</p>
+        <p style="text-align: center; margin-top: 4rem; font-size: 0.8rem; opacity: 0.6;">&copy; 2026 Emmanuel Drah. Handcrafted with Precision.</p>
     </footer>
 
     <script src="main.js"></script>

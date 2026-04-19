@@ -3,60 +3,70 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Story — Emmanuel Drah</title>
+    <title>About — Emmanuel Drah</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <nav>
-        <a href="index.html" class="nav-logo">SAD.</a>
+        <a href="index.html" class="brand">
+            <img src="images/sad.jpg" alt="SAD Logo" class="logo-img">
+            <div class="brand-info">
+                <span class="brand-name">Emmanuel Drah</span>
+                <span class="brand-tag">Success Above Dreams</span>
+            </div>
+        </a>
         <div class="nav-links">
             <a href="index.html">Home</a>
-            <a href="about.html">My Story</a>
-            <a href="projects.html">Work</a>
+            <a href="about.html" class="active">About</a>
+            <a href="projects.html">Portfolio</a>
             <a href="gallery.html">Gallery</a>
-            <a href="contact.html">Say Hello</a>
-            <button class="theme-toggle" id="theme-btn" aria-label="Switch Theme">🌙</button>
+            <a href="contact.html">Contact</a>
+            <button class="btn-theme" id="theme-btn">🌙</button>
         </div>
     </nav>
 
     <main>
-        <section class="hero" style="min-height: 60vh; padding-top: 10rem;">
-            <div class="hero-content">
-                <span class="hero-tagline">The Person Behind The Code</span>
-                <h1>A narrative of<br><span class="serif">persistence.</span></h1>
+        <section class="hero" style="min-height: 50vh;">
+            <div class="hero-text">
+                <span class="section-tag">The Story</span>
+                <h1>Behind the <span class="text-gradient">Shield.</span></h1>
             </div>
         </section>
 
-        <section id="story-content">
-            <div style="display: grid; grid-template-columns: 1.2fr 1fr; gap: 6rem;">
-                <div class="serif" style="font-size: 1.8rem; line-height: 1.4; color: var(--text-main);">
-                    "I believe that the best digital products aren't just built with logic—they are woven with stories of human intent and technical grit."
+        <section>
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 4rem;">
+                <div class="hero-visual">
+                    <img src="images/IMG_6590.JPG" alt="Emmanuel" style="width: 100%; border-radius: var(--radius-lg); box-shadow: var(--shadow);">
                 </div>
                 <div>
-                    <p style="margin-bottom: 2rem;">My journey as a developer didn't start with a textbook; it started with a curiosity about how things work—and a shield. My brand, <strong>Success Above Dreams</strong>, was born from a realization that dreaming is easy, but success requires a fortress of action.</p>
-                    <p>Based in Ghana, I specialize in the architecture of high-performance mobile and web ecosystems. Whether I'm building a mission-critical healthcare platform like ALERA or a seamless booking engine, my goal is always the same: reliability above all else.</p>
+                    <h2 class="section-title">A Vision for <span class="text-gradient">Quality.</span></h2>
+                    <p style="margin-bottom: 2rem;">I didn't start my journey to just build apps; I started it to build trust. Every line of code I write is a commitment to reliability. My philosophy, "Success Above Dreams," isn't just a catchy phrase—it's a lifestyle of disciplined action.</p>
+                    <p>Based in Ghana, I work with global-standard technologies to deliver solutions that are robust, secure, and user-focused.</p>
                 </div>
             </div>
         </section>
 
-        <section id="life-outside">
-            <div class="section-header">
-                <h2>Life Outside <span class="serif">Code.</span></h2>
-                <p>Beyond the IDE, I am an active voice in the Ghanaian tech community, a mentor, and a continuous learner.</p>
-            </div>
-            <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 2rem;">
-                <img src="images/IMG-20251001-WA0109.jpg" alt="At Tech Fest" style="width: 100%; border-radius: 4px; box-shadow: var(--shadow);">
-                <img src="images/IMG_6622.JPG" alt="With the team" style="width: 100%; border-radius: 4px; box-shadow: var(--shadow);">
+        <section>
+            <span class="section-tag">Community</span>
+            <h2 class="section-title">Life Outside <span class="text-gradient">Work.</span></h2>
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem;">
+                <img src="images/IMG-20251001-WA0109.jpg" alt="Tech Fest" style="width: 100%; border-radius: var(--radius-md); box-shadow: var(--shadow);">
+                <img src="images/IMG_6622.JPG" alt="Team" style="width: 100%; border-radius: var(--radius-md); box-shadow: var(--shadow);">
             </div>
         </section>
     </main>
 
     <footer>
-        <div class="footer-socials">
-            <a href="https://github.com/godsonteck">GitHub</a>
-            <a href="mailto:emmanueldrah10@gmail.com">Email</a>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <img src="images/sad.jpg" alt="SAD Logo">
+                <span style="font-weight: 800; font-size: 1.2rem;">Emmanuel Drah</span>
+            </div>
+            <div class="social-links">
+                <a href="https://github.com/godsonteck">GitHub</a>
+                <a href="mailto:emmanueldrah10@gmail.com">Email</a>
+            </div>
         </div>
-        <p class="footer-copy">&copy; 2026 Emmanuel Drah.</p>
     </footer>
 
     <script src="main.js"></script>
