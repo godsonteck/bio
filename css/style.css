@@ -68,11 +68,12 @@ nav {
 }
 
 .logo-img {
-    width: 45px;
-    height: 45px;
-    border-radius: 10px;
+    width: 60px;
+    height: 60px;
+    border-radius: 12px;
     object-fit: cover;
-    box-shadow: var(--shadow);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    border: 2px solid var(--border);
 }
 
 .brand-info {
@@ -82,16 +83,16 @@ nav {
 
 .brand-name {
     font-weight: 800;
-    font-size: 1.1rem;
+    font-size: 1.3rem;
     letter-spacing: -0.02em;
 }
 
 .brand-tag {
-    font-size: 0.7rem;
+    font-size: 0.8rem;
     text-transform: uppercase;
-    letter-spacing: 0.1em;
+    letter-spacing: 0.15em;
     color: var(--accent);
-    font-weight: 700;
+    font-weight: 800;
 }
 
 .nav-links {
@@ -320,8 +321,9 @@ footer {
 }
 
 .footer-logo img {
-    width: 50px;
-    filter: brightness(0) invert(1);
+    width: 80px;
+    height: 80px;
+    border-radius: 12px;
 }
 
 .social-links {
