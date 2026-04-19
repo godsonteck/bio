@@ -412,6 +412,40 @@ section {
     color: var(--primary);
 }
 
+/* --- Toolkit --- */
+.tech-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 2rem;
+    align-items: center;
+    justify-items: center;
+    background: var(--bg-card);
+    padding: 3rem;
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--border);
+    box-shadow: var(--shadow-sm);
+}
+
+.tech-item {
+    text-align: center;
+    transition: var(--transition);
+}
+
+.tech-item:hover {
+    transform: translateY(-5px);
+}
+
+.tech-item img {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 0.8rem;
+    filter: drop-shadow(0 4px 8px rgba(0,0,0,0.1));
+}
+
+[data-theme="dark"] .tech-item img[alt="GitHub"] {
+    filter: invert(1) brightness(1.5);
+}
+
 /* --- Footer --- */
 footer {
     padding: 6rem 5% 3rem;
