@@ -15,17 +15,19 @@
             position: relative;
             border-radius: var(--radius-md);
             overflow: hidden;
-            aspect-ratio: 4/3;
+            background: var(--bg-card);
             box-shadow: var(--shadow);
             transition: var(--transition);
+            display: flex;
+            flex-direction: column;
         }
         .gallery-item:hover {
-            transform: scale(1.03);
+            transform: translateY(-5px);
             box-shadow: 0 15px 40px rgba(0,0,0,0.2);
         }
         .gallery-item img {
             width: 100%;
-            height: 100%;
+            aspect-ratio: 4/3;
             object-fit: cover;
         }
     </style>
@@ -66,33 +68,43 @@
             <div class="gallery-grid">
                 <div class="gallery-item" data-reveal>
                     <img src="images/alera_screen.jpg" alt="ALERA Healthcare Interface">
+                    <div style="padding: 1rem; background: var(--bg-card);"><p style="font-size: 0.85rem; opacity: 0.8;">The ALERA interface: Designed for speed and clarity in high-pressure medical environments.</p></div>
                 </div>
                 <div class="gallery-item" data-reveal>
                     <img src="images/IMG_6590.JPG" alt="Emmanuel Drah - Digital Architect">
+                    <div style="padding: 1rem; background: var(--bg-card);"><p style="font-size: 0.85rem; opacity: 0.8;">Focused and ready: Building the next generation of digital tools for our community.</p></div>
                 </div>
                 <div class="gallery-item" data-reveal>
                     <img src="images/carp.jpg" alt="Rental Flow Application Interface">
+                    <div style="padding: 1rem; background: var(--bg-card);"><p style="font-size: 0.85rem; opacity: 0.8;">Rental Flow: A seamless booking experience that makes mobility accessible to everyone.</p></div>
                 </div>
                 <div class="gallery-item" data-reveal>
                     <img src="images/alera_2.png" alt="ALERA Patient Records Dashboard">
+                    <div style="padding: 1rem; background: var(--bg-card);"><p style="font-size: 0.85rem; opacity: 0.8;">Streamlining data: Ensuring that vital information is always at a doctor's fingertips.</p></div>
                 </div>
                 <div class="gallery-item" data-reveal>
                     <img src="images/IMG-20251001-WA0109.jpg" alt="Ho West Tech Fest - Community Engagement">
+                    <div style="padding: 1rem; background: var(--bg-card);"><p style="font-size: 0.85rem; opacity: 0.8;">On the ground at the Ho West Tech Fest, where we took innovation to the streets.</p></div>
                 </div>
                 <div class="gallery-item" data-reveal>
                     <img src="images/IMG-20251001-WA0104.jpg" alt="Ho West Tech Fest Award Ceremony">
+                    <div style="padding: 1rem; background: var(--bg-card);"><p style="font-size: 0.85rem; opacity: 0.8;">A moment of recognition: Excellence in Innovation at the 2025 Tech Fest ceremony.</p></div>
                 </div>
                 <div class="gallery-item" data-reveal>
-                    <img src="images/IMG_6543.JPG" alt="NASPA Recognition Event">
+                    <img src="images/IMG_6543.JPG" alt="NASPA Recognition Event" style="object-position: top;">
+                    <div style="padding: 1rem; background: var(--bg-card);"><p style="font-size: 0.85rem; opacity: 0.8;">Honored for service: A testament to the impact of dedicated effort in the Ketu-North community.</p></div>
                 </div>
                 <div class="gallery-item" data-reveal>
-                    <img src="images/IMG-20251001-WA0093.jpg" alt="Educational Impact - Awudome SHS">
+                    <img src="images/IMG-20251001-WA0093.jpg" alt="Educational Impact - Awudome SHS" style="object-position: top;">
+                    <div style="padding: 1rem; background: var(--bg-card);"><p style="font-size: 0.85rem; opacity: 0.8;">Inspiring students at Awudome SHS—because the future belongs to those who dream big.</p></div>
                 </div>
                 <div class="gallery-item" data-reveal>
                     <img src="images/alera_3.png" alt="ALERA Lab Reporting System">
+                    <div style="padding: 1rem; background: var(--bg-card);"><p style="font-size: 0.85rem; opacity: 0.8;">Real-time lab reporting: Reducing wait times and improving patient outcomes with every scan.</p></div>
                 </div>
                 <div class="gallery-item" data-reveal>
-                    <img src="images/IMG_6622.JPG" alt="Team Collaboration and Growth">
+                    <img src="images/NASPA AWRDS.JPG" alt="Team Collaboration and Growth" style="object-position: top;">
+                    <div style="padding: 1rem; background: var(--bg-card);"><p style="font-size: 0.85rem; opacity: 0.8;">The NASPA team: Building lasting connections through shared service and hard work.</p></div>
                 </div>
                 <div class="gallery-item" data-reveal>
                     <img src="images/alera_4.png" alt="ALERA Pharmacy Inventory Management">
