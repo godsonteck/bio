@@ -3,122 +3,80 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio | Emmanuel Drah</title>
+    <title>Work — Emmanuel Drah</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <div class="aurora-bg">
-        <div class="aurora-blob blob-1"></div>
-        <div class="aurora-blob blob-2"></div>
-    </div>
-
     <nav>
-        <a href="index.html" class="brand-link">
-            <img src="images/sad.jpg" alt="Emmanuel Drah Logo">
-            <span class="brand-title">Success Above Dreams</span>
-        </a>
-        <button id="nav-toggle" aria-label="Toggle navigation">☰</button>
+        <a href="index.html" class="nav-logo">SAD.</a>
         <div class="nav-links">
             <a href="index.html">Home</a>
-            <a href="about.html">About</a>
-            <a href="projects.html" class="active">Portfolio</a>
+            <a href="about.html">My Story</a>
+            <a href="projects.html">Work</a>
             <a href="gallery.html">Gallery</a>
-            <a href="contact.html">Contact</a>
+            <a href="contact.html">Say Hello</a>
+            <button class="theme-toggle" id="theme-btn" aria-label="Switch Theme">🌙</button>
         </div>
     </nav>
 
     <main>
-        <section>
-            <h2>My Portfolio</h2>
-            <p style="text-align: center; color: var(--text-dim); margin-bottom: 4rem;">A curated selection of high-impact digital solutions built with modern technology stacks.</p>
+        <section class="hero" style="min-height: 50vh; padding-top: 10rem;">
+            <div class="hero-content">
+                <span class="hero-tagline">Portfolio</span>
+                <h1>Selected <span class="serif">Works.</span></h1>
+            </div>
+        </section>
 
-            <!-- ALERA Detailed Project -->
-            <article class="detailed-project">
-                <div class="image-gallery">
-                    <img src="images/alera_screen.jpg" alt="ALERA Dashboard" class="clickable">
-                    <img src="images/alera_2.png" alt="ALERA Interface" class="clickable">
-                </div>
-                <div class="detailed-project-info">
-                    <h3>ALERA Healthcare Platform</h3>
-                    <p>A production-grade healthcare management system designed to streamline communication between patients and providers. It features real-time ambulance tracking, role-based access for labs and pharmacies, and a modern, responsive interface.</p>
-                    
-                    <span class="section-title">Key Features</span>
-                    <ul>
-                        <li>Real-time Live Location Tracking for emergency services</li>
-                        <li>Role-based Dashboards (Admin, Lab, Pharmacy, Ambulance)</li>
-                        <li>Secure Multipart Result Uploads and Management</li>
-                        <li>Advanced Data Visualizations with Recharts</li>
-                        <li>Responsive Glassmorphism UI/UX Design</li>
-                    </ul>
-
-                    <span class="section-title">Technologies Used</span>
-                    <div class="tech-stack" style="margin-top: 0.5rem;">
-                        <span class="tech-tag">React</span>
-                        <span class="tech-tag">TypeScript</span>
-                        <span class="tech-tag">FastAPI</span>
-                        <span class="tech-tag">WebSockets</span>
-                        <span class="tech-tag">PostgreSQL</span>
-                        <span class="tech-tag">Tailwind CSS</span>
+        <section id="alera">
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 6rem; align-items: center;">
+                <div>
+                    <span class="project-category">Case Study: Healthcare</span>
+                    <h2 class="serif" style="font-size: 4rem; margin-bottom: 2rem;">ALERA Gamma</h2>
+                    <p style="margin-bottom: 2.5rem;">The challenge was to unify a fragmented healthcare landscape in Ghana into a single, high-performance ecosystem. ALERA Gamma provides real-time tracking for ambulance services, secure laboratory integration, and pharmacist dashboards.</p>
+                    <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+                        <span style="border: 1px solid var(--border); padding: 0.5rem 1.2rem; border-radius: 100px; font-size: 0.8rem; letter-spacing: 0.1em;">REACT</span>
+                        <span style="border: 1px solid var(--border); padding: 0.5rem 1.2rem; border-radius: 100px; font-size: 0.8rem; letter-spacing: 0.1em;">FASTAPI</span>
+                        <span style="border: 1px solid var(--border); padding: 0.5rem 1.2rem; border-radius: 100px; font-size: 0.8rem; letter-spacing: 0.1em;">WEBSOCKETS</span>
                     </div>
-
-                    <span class="section-title">Challenge & Solution</span>
-                    <p style="font-size: 0.95rem; color: var(--text-dim);">Implementing real-time tracking required robust WebSocket synchronization. I developed a room-based streaming architecture to handle patient-responder location updates efficiently across thousands of concurrent users.</p>
                 </div>
-            </article>
-
-            <!-- Car Rental Detailed Project -->
-            <article class="detailed-project">
-                <div class="image-gallery">
-                    <img src="images/carp.jpg" alt="Car Rental App" class="clickable">
-                </div>
-                <div class="detailed-project-info">
-                    <h3>Car Rental System</h3>
-                    <p>A robust cross-platform booking engine built to simplify car rentals. It provides real-time availability checks, secure online payments, and a powerful admin dashboard for fleet management.</p>
-                    
-                    <span class="section-title">Key Features</span>
-                    <ul>
-                        <li>Real-time car availability and booking</li>
-                        <li>Secure online payments and invoice generation</li>
-                        <li>Advanced user account and profile management</li>
-                        <li>Comprehensive Admin dashboard for fleet tracking</li>
-                        <li>Automated push notifications and reminders</li>
-                    </ul>
-
-                    <span class="section-title">Technologies Used</span>
-                    <div class="tech-stack" style="margin-top: 0.5rem;">
-                        <span class="tech-tag">Flutter</span>
-                        <span class="tech-tag">Firebase</span>
-                        <span class="tech-tag">Cloud Functions</span>
-                        <span class="tech-tag">Dart</span>
+                <div>
+                    <img src="images/alera_screen.jpg" alt="ALERA" style="width: 100%; border-radius: 4px; box-shadow: var(--shadow-hover);">
+                    <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin-top: 1rem;">
+                        <img src="images/alera_2.png" alt="ALERA 2" style="width: 100%; border-radius: 2px;">
+                        <img src="images/alera_3.png" alt="ALERA 3" style="width: 100%; border-radius: 2px;">
+                        <img src="images/alera_4.png" alt="ALERA 4" style="width: 100%; border-radius: 2px;">
                     </div>
-
-                    <span class="section-title">Results</span>
-                    <p style="font-size: 0.95rem; color: var(--text-dim);">Successfully launched for both Android and iOS, processing over 2,500 bookings with 99.9% uptime during the first year of operation.</p>
                 </div>
-            </article>
+            </div>
+        </section>
+
+        <hr style="border: 0; border-top: 1px solid var(--border); margin: 0 8%;">
+
+        <section id="car-rental">
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 6rem; align-items: center;">
+                <div>
+                    <img src="images/carp.jpg" alt="Car Rental" style="width: 100%; border-radius: 4px; box-shadow: var(--shadow-hover);">
+                </div>
+                <div>
+                    <span class="project-category">Case Study: Mobility</span>
+                    <h2 class="serif" style="font-size: 4rem; margin-bottom: 2rem;">Rental Flow</h2>
+                    <p style="margin-bottom: 2.5rem;">A cross-platform solution designed to streamline the car rental process from booking to fleet management. Focused on extreme simplicity and secure payment integration for the African market.</p>
+                    <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+                        <span style="border: 1px solid var(--border); padding: 0.5rem 1.2rem; border-radius: 100px; font-size: 0.8rem; letter-spacing: 0.1em;">FLUTTER</span>
+                        <span style="border: 1px solid var(--border); padding: 0.5rem 1.2rem; border-radius: 100px; font-size: 0.8rem; letter-spacing: 0.1em;">FIREBASE</span>
+                    </div>
+                </div>
+            </div>
         </section>
     </main>
 
     <footer>
-        <div class="social-links">
-            <a href="mailto:emmanueldrah10@gmail.com" class="social-icon">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/google/google-original.svg" alt="Email">
-            </a>
-            <a href="https://linkedin.com/in/emmanueldrah10" target="_blank" class="social-icon">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" alt="LinkedIn">
-            </a>
-            <a href="https://github.com/godsonteck" target="_blank" class="social-icon">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub">
-            </a>
+        <div class="footer-socials">
+            <a href="https://github.com/godsonteck">GitHub</a>
+            <a href="mailto:emmanueldrah10@gmail.com">Email</a>
         </div>
-        <p class="copyright">&copy; 2026 Emmanuel Drah. Built with passion and precision.</p>
+        <p class="footer-copy">&copy; 2026 Emmanuel Drah.</p>
     </footer>
-
-    <!-- Modal for image popup -->
-    <div id="image-modal" class="modal">
-        <span class="close">&times;</span>
-        <img class="modal-content" id="modal-image">
-    </div>
 
     <script src="main.js"></script>
 </body>

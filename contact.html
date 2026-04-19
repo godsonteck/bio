@@ -3,82 +3,59 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact | Emmanuel Drah - Mobile App and Website Developer</title>
+    <title>Say Hello — Emmanuel Drah</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <nav>
-        <div class="nav-left" style="display:flex;align-items:center;gap:1rem;">
-            <a href="index.html" class="brand-link" style="display:flex;align-items:center;gap:0.8rem;text-decoration:none;color:inherit;">
-                <img src="images/sad.jpg" alt="Success Above Dreams Logo">
-                <span class="brand-title">Emmanuel Drah</span>
-            </a>
-        </div>
-        <button id="nav-toggle" class="nav-toggle" aria-label="Toggle navigation">☰</button>
+        <a href="index.html" class="nav-logo">SAD.</a>
         <div class="nav-links">
             <a href="index.html">Home</a>
-            <a href="about.html">About</a>
-            <a href="projects.html">Portfolio</a>
+            <a href="about.html">My Story</a>
+            <a href="projects.html">Work</a>
             <a href="gallery.html">Gallery</a>
-            <a href="contact.html">Contact</a>
+            <a href="contact.html">Say Hello</a>
+            <button class="theme-toggle" id="theme-btn" aria-label="Switch Theme">🌙</button>
         </div>
     </nav>
-    <section>
-        <h2>Let's Work Together</h2>
-        <p>I am available for mobile app and website development projects. Whether you need a new app or website built, or want to improve an existing one, I would love to hear from you.</p>
-        <div>
-            <h3>What I Offer</h3>
-            <ul>
-                <li>Custom mobile app development</li>
-                <li>Responsive website development</li>
-                <li>iOS and Android applications</li>
-                <li>Technical consultation</li>
-                <li>UI/UX implementation</li>
-            </ul>
-        </div>
-        <div>
-            <h3>Contact Information</h3>
-            <div><strong>Email:</strong> <a href="mailto:emmanueldrah10@gmail.com" style="color: #00d4ff;">emmanueldrah10@gmail.com</a></div>
-            <div><strong>Phone:</strong> <a href="tel:+233543671806" style="color: #00d4ff;">+233543671806</a></div>
-            <div><strong>Location:</strong> <span style="color: #00d4ff;">Accra, Ghana</span></div>
-            <div><strong>LinkedIn:</strong> <a href="https://linkedin.com/in/emmanueldrah10" target="_blank" style="color: #00d4ff;">linkedin.com/in/emmanueldrah10</a></div>
-            <div><strong>GitHub:</strong> <a href="https://github.com/godsonteck" target="_blank" style="color: #00d4ff;">github.com/godsonteck</a></div>
-        </div>
-        <form method="POST" class="contact-form">
-            <label for="name">Your Name</label><br>
-            <input type="text" id="name" name="name" required><br>
-            <label for="email">Your Email</label><br>
-            <input type="email" id="email" name="email" required><br>
-            <label for="project-type">Project Type</label><br>
-            <select id="project-type" name="project-type" required>
-                <option value="New App">New App</option>
-                <option value="New Website">New Website</option>
-                <option value="App Update">App Update</option>
-                <option value="Website Update">Website Update</option>
-                <option value="Consultation">Consultation</option>
-                <option value="Other">Other</option>
-            </select><br>
-            <label for="message">Message</label><br>
-            <textarea id="message" name="message" rows="5" required></textarea>
-            <button type="submit">Send Message</button>
-        </form>
-        <p>I typically respond within 24 hours. I look forward to discussing your project and how we can work together to create something great.</p>
-    </section>
+
+    <main>
+        <section class="hero" style="min-height: 50vh; padding-top: 10rem;">
+            <div class="hero-content">
+                <span class="hero-tagline">Contact</span>
+                <h1>Let's start a<br><span class="serif">conversation.</span></h1>
+            </div>
+        </section>
+
+        <section id="contact-form-section" style="max-width: 800px; margin: 0 auto;">
+            <form action="#" method="POST" style="display: flex; flex-direction: column; gap: 3rem;">
+                <div style="border-bottom: 1px solid var(--border); padding-bottom: 1rem;">
+                    <label for="name" style="text-transform: uppercase; letter-spacing: 0.1em; font-size: 0.8rem; display: block; margin-bottom: 1rem;">What is your name?</label>
+                    <input type="text" id="name" name="name" placeholder="John Doe" required style="width: 100%; border: none; background: transparent; font-size: 1.5rem; font-family: 'Cormorant Garamond', serif; color: var(--text-main); outline: none;">
+                </div>
+                <div style="border-bottom: 1px solid var(--border); padding-bottom: 1rem;">
+                    <label for="email" style="text-transform: uppercase; letter-spacing: 0.1em; font-size: 0.8rem; display: block; margin-bottom: 1rem;">Where can I reach you?</label>
+                    <input type="email" id="email" name="email" placeholder="john@example.com" required style="width: 100%; border: none; background: transparent; font-size: 1.5rem; font-family: 'Cormorant Garamond', serif; color: var(--text-main); outline: none;">
+                </div>
+                <div style="border-bottom: 1px solid var(--border); padding-bottom: 1rem;">
+                    <label for="message" style="text-transform: uppercase; letter-spacing: 0.1em; font-size: 0.8rem; display: block; margin-bottom: 1rem;">Tell me about your project</label>
+                    <textarea id="message" name="message" rows="4" placeholder="I have an idea..." required style="width: 100%; border: none; background: transparent; font-size: 1.5rem; font-family: 'Cormorant Garamond', serif; color: var(--text-main); outline: none; resize: none;"></textarea>
+                </div>
+                <div style="margin-top: 2rem;">
+                    <button type="submit" style="background: var(--text-main); color: var(--bg-page); padding: 1.2rem 4rem; border: none; font-weight: 700; border-radius: 100px; cursor: pointer; transition: var(--transition);">Send Message</button>
+                </div>
+            </form>
+        </section>
+    </main>
+
     <footer>
-        <div>
-            <a href="mailto:emmanueldrah10@gmail.com">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/google/google-original.svg" alt="Email">
-            </a>
-            <a href="https://linkedin.com/in/emmanueldrah10" target="_blank">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" alt="LinkedIn">
-            </a>
-            <a href="https://github.com/godsonteck" target="_blank">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub">
-            </a>
+        <div class="footer-socials">
+            <a href="https://github.com/godsonteck">GitHub</a>
+            <a href="mailto:emmanueldrah10@gmail.com">Email</a>
         </div>
-        <div>emmanueldrah10@gmail.com | Accra, Ghana</div>
-        <div>&copy; 2025 Emmanuel Drah. Mobile App and Website Developer.</div>
+        <p class="footer-copy">&copy; 2026 Emmanuel Drah.</p>
     </footer>
+
     <script src="main.js"></script>
 </body>
 </html>

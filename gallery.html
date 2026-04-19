@@ -3,76 +3,74 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gallery | Emmanuel Drah</title>
+    <title>Gallery — Emmanuel Drah</title>
     <link rel="stylesheet" href="css/style.css">
+    <style>
+        .gallery-item {
+            break-inside: avoid;
+            margin-bottom: 2rem;
+            transition: var(--transition);
+        }
+        .gallery-item img {
+            width: 100%;
+            border-radius: 4px;
+            box-shadow: var(--shadow);
+            cursor: zoom-in;
+        }
+        .gallery-item:hover {
+            transform: scale(1.02);
+        }
+        .masonry {
+            column-count: 3;
+            column-gap: 2rem;
+        }
+        @media (max-width: 900px) { .masonry { column-count: 2; } }
+        @media (max-width: 600px) { .masonry { column-count: 1; } }
+    </style>
 </head>
 <body>
-    <div class="aurora-bg">
-        <div class="aurora-blob blob-1"></div>
-        <div class="aurora-blob blob-2"></div>
-    </div>
-
     <nav>
-        <a href="index.html" class="brand-link">
-            <img src="images/sad.jpg" alt="Emmanuel Drah Logo">
-            <span class="brand-title">Success Above Dreams</span>
-        </a>
-        <button id="nav-toggle" aria-label="Toggle navigation">☰</button>
+        <a href="index.html" class="nav-logo">SAD.</a>
         <div class="nav-links">
             <a href="index.html">Home</a>
-            <a href="about.html">About</a>
-            <a href="projects.html">Portfolio</a>
-            <a href="gallery.html" class="active">Gallery</a>
-            <a href="contact.html">Contact</a>
+            <a href="about.html">My Story</a>
+            <a href="projects.html">Work</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="contact.html">Say Hello</a>
+            <button class="theme-toggle" id="theme-btn" aria-label="Switch Theme">🌙</button>
         </div>
     </nav>
 
     <main>
+        <section class="hero" style="min-height: 40vh; padding-top: 10rem;">
+            <div class="hero-content">
+                <span class="hero-tagline">Visual Diary</span>
+                <h1>Fragments of <span class="serif">Creation.</span></h1>
+            </div>
+        </section>
+
         <section>
-            <h2>Visual Gallery</h2>
-            <p style="text-align: center; color: var(--text-dim); margin-bottom: 3rem;">A collection of interfaces, screenshots, and visual assets from my recent projects.</p>
-            
-            <div class="gallery-grid">
-                <div class="gallery-card"><img src="images/alera_screen.jpg" alt="ALERA Dashboard"></div>
-                <div class="gallery-card"><img src="images/alera_2.png" alt="ALERA Interface 1"></div>
-                <div class="gallery-card"><img src="images/alera_3.png" alt="ALERA Interface 2"></div>
-                <div class="gallery-card"><img src="images/alera_4.png" alt="ALERA Interface 3"></div>
-                <div class="gallery-card"><img src="images/alera.jpg" alt="ALERA Logo"></div>
-                <div class="gallery-card"><img src="images/carp.jpg" alt="Car Rental App"></div>
-                <div class="gallery-card"><img src="images/IMG_3346.JPG" alt="Gallery image"></div>
-                <div class="gallery-card"><img src="images/IMG_3500.JPG" alt="Gallery image"></div>
-                <div class="gallery-card"><img src="images/IMG_6147.JPG" alt="Gallery image"></div>
-                <div class="gallery-card"><img src="images/IMG_6343.JPG" alt="Gallery image"></div>
-                <div class="gallery-card"><img src="images/IMG_6375-1.JPG" alt="Gallery image"></div>
-                <div class="gallery-card"><img src="images/IMG_6542.JPG" alt="Gallery image"></div>
-                <div class="gallery-card"><img src="images/IMG_6543.JPG" alt="Gallery image"></div>
-                <div class="gallery-card"><img src="images/IMG_6590.JPG" alt="Gallery image"></div>
-                <div class="gallery-card"><img src="images/IMG_6594.JPG" alt="Gallery image"></div>
-                <div class="gallery-card"><img src="images/IMG_6622.JPG" alt="Gallery image"></div>
+            <div class="masonry">
+                <div class="gallery-item"><img src="images/alera_screen.jpg" alt="Alera"></div>
+                <div class="gallery-item"><img src="images/IMG_6590.JPG" alt="Emmanuel"></div>
+                <div class="gallery-item"><img src="images/carp.jpg" alt="Car Rental"></div>
+                <div class="gallery-item"><img src="images/alera_2.png" alt="Alera 2"></div>
+                <div class="gallery-item"><img src="images/IMG-20251001-WA0109.jpg" alt="Tech Fest"></div>
+                <div class="gallery-item"><img src="images/alera_3.png" alt="Alera 3"></div>
+                <div class="gallery-item"><img src="images/IMG_6622.JPG" alt="Team"></div>
+                <div class="gallery-item"><img src="images/alera_4.png" alt="Alera 4"></div>
+                <div class="gallery-item"><img src="images/sad.jpg" alt="SAD"></div>
             </div>
         </section>
     </main>
 
     <footer>
-        <div class="social-links">
-            <a href="mailto:emmanueldrah10@gmail.com" class="social-icon">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/google/google-original.svg" alt="Email">
-            </a>
-            <a href="https://linkedin.com/in/emmanueldrah10" target="_blank" class="social-icon">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" alt="LinkedIn">
-            </a>
-            <a href="https://github.com/godsonteck" target="_blank" class="social-icon">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub">
-            </a>
+        <div class="footer-socials">
+            <a href="https://github.com/godsonteck">GitHub</a>
+            <a href="mailto:emmanueldrah10@gmail.com">Email</a>
         </div>
-        <p class="copyright">&copy; 2026 Emmanuel Drah. Built with passion and precision.</p>
+        <p class="footer-copy">&copy; 2026 Emmanuel Drah.</p>
     </footer>
-
-    <!-- Modal for image popup -->
-    <div id="image-modal" class="modal">
-        <span class="close">&times;</span>
-        <img class="modal-content" id="modal-image">
-    </div>
 
     <script src="main.js"></script>
 </body>

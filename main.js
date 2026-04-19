@@ -1,49 +1,61 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // Mobile Navigation Toggle
-    const navToggle = document.getElementById('nav-toggle');
-    const navLinks = document.querySelector('.nav-links');
+    // --- Theme Management ---
+    const themeBtn = document.getElementById('theme-btn');
+    const currentTheme = localStorage.getItem('theme') || 'light';
 
-    if (navToggle && navLinks) {
-        navToggle.addEventListener('click', () => {
-            navLinks.classList.toggle('show');
-            navToggle.textContent = navLinks.classList.contains('show') ? '✕' : '☰';
-        });
+    if (currentTheme === 'dark') {
+        document.body.setAttribute('data-theme', 'dark');
+        themeBtn.textContent = '☀️';
     }
 
-    // Modal / Lightbox functionality
-    const modal = document.getElementById('image-modal');
-    const modalImg = document.getElementById('modal-image');
-    const closeBtn = document.querySelector('.close');
-    const clickableImages = document.querySelectorAll('.gallery-card img, .project-image-wrapper img, .image-gallery img.clickable');
-
-    clickableImages.forEach(img => {
-        img.addEventListener('click', () => {
-            modal.style.display = 'flex';
-            modalImg.src = img.src;
-        });
+    themeBtn.addEventListener('click', () => {
+        let theme = document.body.getAttribute('data-theme');
+        if (theme === 'dark') {
+            document.body.removeAttribute('data-theme');
+            themeBtn.textContent = '🌙';
+            localStorage.setItem('theme', 'light');
+        } else {
+            document.body.setAttribute('data-theme', 'dark');
+            themeBtn.textContent = '☀️';
+            localStorage.setItem('theme', 'dark');
+        }
     });
 
-    if (closeBtn) {
-        closeBtn.addEventListener('click', () => {
-            modal.style.display = 'none';
-        });
-    }
+    // --- Intersection Observer for Scroll Reveals ---
+    const observerOptions = {
+        threshold: 0.1
+    };
 
-    if (modal) {
-        modal.addEventListener('click', (e) => {
-            if (e.target === modal) {
-                modal.style.display = 'none';
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.style.opacity = '1';
+                entry.target.style.transform = 'translateY(0)';
             }
         });
-    }
+    }, observerOptions);
 
-    // Smooth scroll for anchor links
+    // Apply reveal animation to sections and cards
+    document.querySelectorAll('section, .project-card').forEach(el => {
+        el.style.opacity = '0';
+        el.style.transform = 'translateY(40px)';
+        el.style.transition = 'all 0.8s cubic-bezier(0.23, 1, 0.32, 1)';
+        observer.observe(el);
+    });
+
+    // --- Smooth Scroll for Anchor Links ---
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
             e.preventDefault();
-            document.querySelector(this.getAttribute('href')).scrollIntoView({
-                behavior: 'smooth'
-            });
+            const targetId = this.getAttribute('href');
+            if (targetId === '#') return;
+            
+            const target = document.querySelector(targetId);
+            if (target) {
+                target.scrollIntoView({
+                    behavior: 'smooth'
+                });
+            }
         });
     });
 });
