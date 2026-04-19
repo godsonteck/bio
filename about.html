@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <nav>
+    <nav id="navbar">
         <a href="index.html" class="brand">
             <img src="images/sad.jpg" alt="SAD Logo" class="logo-img">
             <div class="brand-info">
@@ -15,13 +15,18 @@
                 <span class="brand-tag">Success Above Dreams</span>
             </div>
         </a>
-        <div class="nav-links">
+        <div class="nav-links" id="nav-menu">
             <a href="index.html">Home</a>
-            <a href="about.html" class="active">About</a>
+            <a href="about.html">About</a>
             <a href="projects.html">Portfolio</a>
             <a href="gallery.html">Gallery</a>
             <a href="contact.html">Contact</a>
-            <button class="btn-theme" id="theme-btn">🌙</button>
+        </div>
+        <div style="display: flex; gap: 1rem; align-items: center;">
+            <button class="btn-theme" id="theme-btn" aria-label="Toggle Theme">🌙</button>
+            <button class="mobile-nav-toggle" id="mobile-toggle" aria-label="Open Menu">
+                <span class="hamburger"></span>
+            </button>
         </div>
     </nav>
 
@@ -33,12 +38,12 @@
             </div>
         </section>
 
-        <section>
-            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 4rem;">
-                <div class="hero-visual">
+        <section class="container">
+            <div class="grid-2-col">
+                <div class="hero-visual" data-reveal>
                     <img src="images/IMG_6590.JPG" alt="Emmanuel" style="width: 100%; border-radius: var(--radius-lg); box-shadow: var(--shadow);">
                 </div>
-                <div>
+                <div data-reveal>
                     <h2 class="section-title">A Builder at <span class="text-gradient">Heart.</span></h2>
                     <p style="margin-bottom: 2rem; line-height: 1.8;">I’ve always been fascinated by how technology can make life better. But I also know that tech without a human touch is just numbers on a screen. That’s why I approach every project with empathy—putting myself in the shoes of the person who will eventually use what I build.</p>
                     <p style="line-height: 1.8;">I’m proud to be a part of the vibrant tech community in Ho, Ghana. My brand, <strong>Success Above Dreams</strong>, is my personal promise to keep pushing forward, keep building, and keep delivering value that matters.</p>
@@ -46,27 +51,35 @@
             </div>
         </section>
 
-        <section>
+        <section class="container">
             <span class="section-tag">Community</span>
             <h2 class="section-title">Life Outside <span class="text-gradient">Work.</span></h2>
-            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem;">
-                <img src="images/IMG-20251001-WA0109.jpg" alt="Tech Fest" style="width: 100%; border-radius: var(--radius-md); box-shadow: var(--shadow);">
-                <img src="images/IMG_6622.JPG" alt="Team" style="width: 100%; border-radius: var(--radius-md); box-shadow: var(--shadow);">
+            <div class="grid-2-col" style="gap: 2rem;">
+                <img src="images/IMG-20251001-WA0109.jpg" alt="Tech Fest" style="width: 100%; border-radius: var(--radius-md); box-shadow: var(--shadow);" data-reveal>
+                <img src="images/IMG_6622.JPG" alt="Team" style="width: 100%; border-radius: var(--radius-md); box-shadow: var(--shadow);" data-reveal>
             </div>
         </section>
     </main>
 
     <footer>
-        <div class="footer-content">
+        <div class="footer-content container">
             <div class="footer-logo">
                 <img src="images/sad.jpg" alt="SAD Logo">
-                <span style="font-weight: 800; font-size: 1.2rem;">Emmanuel Drah</span>
+                <div class="brand-info">
+                    <span style="font-weight: 800; font-size: 1.2rem;">Emmanuel Drah</span>
+                    <span style="font-size: 0.7rem; opacity: 0.7; letter-spacing: 1px;">SUCCESS ABOVE DREAMS</span>
+                </div>
             </div>
             <div class="social-links">
-                <a href="https://github.com/godsonteck">GitHub</a>
-                <a href="mailto:emmanueldrah10@gmail.com">Email</a>
+                <a href="https://github.com/godsonteck" target="_blank" aria-label="GitHub">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub" style="width: 32px; height: 32px; filter: brightness(0) invert(1);">
+                </a>
+                <a href="mailto:emmanueldrah10@gmail.com" aria-label="Email">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/google/google-original.svg" alt="Email" style="width: 32px; height: 32px;">
+                </a>
             </div>
         </div>
+        <p style="text-align: center; margin-top: 4rem; font-size: 0.8rem; opacity: 0.5;">&copy; 2026 Emmanuel Drah. Digital Architect & Visionary.</p>
     </footer>
 
     <script src="main.js"></script>

@@ -8,7 +8,7 @@
     <style>
         .contact-form {
             background: var(--bg-card);
-            padding: 3rem;
+            padding: clamp(1.5rem, 5vw, 3rem);
             border-radius: var(--radius-lg);
             border: 1px solid var(--border);
             box-shadow: var(--shadow);
@@ -40,7 +40,7 @@
     </style>
 </head>
 <body>
-    <nav>
+    <nav id="navbar">
         <a href="index.html" class="brand">
             <img src="images/sad.jpg" alt="SAD Logo" class="logo-img">
             <div class="brand-info">
@@ -48,13 +48,18 @@
                 <span class="brand-tag">Success Above Dreams</span>
             </div>
         </a>
-        <div class="nav-links">
+        <div class="nav-links" id="nav-menu">
             <a href="index.html">Home</a>
             <a href="about.html">About</a>
             <a href="projects.html">Portfolio</a>
             <a href="gallery.html">Gallery</a>
-            <a href="contact.html" class="active">Contact</a>
-            <button class="btn-theme" id="theme-btn">🌙</button>
+            <a href="contact.html">Contact</a>
+        </div>
+        <div style="display: flex; gap: 1rem; align-items: center;">
+            <button class="btn-theme" id="theme-btn" aria-label="Toggle Theme">🌙</button>
+            <button class="mobile-nav-toggle" id="mobile-toggle" aria-label="Open Menu">
+                <span class="hamburger"></span>
+            </button>
         </div>
     </nav>
 
@@ -88,16 +93,24 @@
     </main>
 
     <footer>
-        <div class="footer-content">
+        <div class="footer-content container">
             <div class="footer-logo">
                 <img src="images/sad.jpg" alt="SAD Logo">
-                <span style="font-weight: 800; font-size: 1.2rem;">Emmanuel Drah</span>
+                <div class="brand-info">
+                    <span style="font-weight: 800; font-size: 1.2rem;">Emmanuel Drah</span>
+                    <span style="font-size: 0.7rem; opacity: 0.7; letter-spacing: 1px;">SUCCESS ABOVE DREAMS</span>
+                </div>
             </div>
             <div class="social-links">
-                <a href="https://github.com/godsonteck">GitHub</a>
-                <a href="mailto:emmanueldrah10@gmail.com">Email</a>
+                <a href="https://github.com/godsonteck" target="_blank" aria-label="GitHub">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub" style="width: 32px; height: 32px; filter: brightness(0) invert(1);">
+                </a>
+                <a href="mailto:emmanueldrah10@gmail.com" aria-label="Email">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/google/google-original.svg" alt="Email" style="width: 32px; height: 32px;">
+                </a>
             </div>
         </div>
+        <p style="text-align: center; margin-top: 4rem; font-size: 0.8rem; opacity: 0.5;">&copy; 2026 Emmanuel Drah. Digital Architect & Visionary.</p>
     </footer>
 
     <script src="main.js"></script>

@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <nav>
+    <nav id="navbar">
         <a href="index.html" class="brand">
             <img src="images/sad.jpg" alt="SAD Logo" class="logo-img">
             <div class="brand-info">
@@ -16,19 +16,24 @@
                 <span class="brand-tag">Success Above Dreams</span>
             </div>
         </a>
-        <div class="nav-links">
-            <a href="index.html" class="active">Home</a>
+        <div class="nav-links" id="nav-menu">
+            <a href="index.html">Home</a>
             <a href="about.html">About</a>
             <a href="projects.html">Portfolio</a>
             <a href="gallery.html">Gallery</a>
             <a href="contact.html">Contact</a>
-            <button class="btn-theme" id="theme-btn">🌙</button>
+        </div>
+        <div style="display: flex; gap: 1rem; align-items: center;">
+            <button class="btn-theme" id="theme-btn" aria-label="Toggle Theme">🌙</button>
+            <button class="mobile-nav-toggle" id="mobile-toggle" aria-label="Open Menu">
+                <span class="hamburger"></span>
+            </button>
         </div>
     </nav>
 
     <header class="hero">
-        <div class="hero-grid">
-            <div class="hero-text">
+        <div class="hero-grid container">
+            <div class="hero-text" data-reveal>
                 <span class="section-tag">Web & Mobile Developer</span>
                 <h1>Crafting code that<br><span class="text-gradient">cares</span> about users.</h1>
                 <p>Hi, I’m Emmanuel. I build digital experiences that aren’t just functional—they’re human. From healthcare platforms to local services, I focus on solving real problems for real people.</p>
@@ -37,7 +42,7 @@
                     <a href="contact.html" class="btn btn-outline">Say Hello</a>
                 </div>
             </div>
-            <div class="hero-visual">
+            <div class="hero-visual" data-reveal>
                 <div class="hero-img-frame">
                     <img src="images/IMG_6590.JPG" alt="Emmanuel Drah">
                 </div>
@@ -46,24 +51,24 @@
     </header>
 
     <main>
-        <section id="about">
+        <section id="about" class="container">
             <span class="section-tag">My Philosophy</span>
             <h2 class="section-title">Success Above <span class="text-gradient">Dreams.</span></h2>
-            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 4rem;">
-                <p style="font-size: 1.1rem; color: var(--text-muted); line-height: 1.8;">
+            <div class="grid-2-col">
+                <p style="font-size: 1.1rem; color: var(--text-muted); line-height: 1.8;" data-reveal>
                     I believe that being a developer is more than just typing syntax. It’s about commitment. My brand, <strong>Success Above Dreams</strong>, was born from a simple idea: that real achievement comes from taking action every single day, even when the finish line feels miles away.
                 </p>
-                <p style="font-size: 1.1rem; color: var(--text-muted); line-height: 1.8;">
+                <p style="font-size: 1.1rem; color: var(--text-muted); line-height: 1.8;" data-reveal>
                     When I build a platform like ALERA, I’m not just thinking about database schemas. I’m thinking about the doctor who needs patient data in seconds, or the ambulance driver navigating a critical emergency. That’s the human side of my code.
                 </p>
             </div>
         </section>
 
-        <section id="work">
+        <section id="work" class="container">
             <span class="section-tag">Case Studies</span>
             <h2 class="section-title">Selected <span class="text-gradient">Works.</span></h2>
             <div class="projects-grid">
-                <article class="project-card">
+                <article class="project-card" data-reveal>
                     <img src="images/alera_screen.jpg" alt="ALERA Gamma" class="project-img">
                     <span class="brand-tag">Healthcare Platform</span>
                     <h3>ALERA Gamma</h3>
@@ -76,7 +81,7 @@
                     </div>
                 </article>
 
-                <article class="project-card">
+                <article class="project-card" data-reveal>
                     <img src="images/carp.jpg" alt="Car Rental System" class="project-img">
                     <span class="brand-tag">Booking Engine</span>
                     <h3>Rental Flow</h3>
@@ -92,21 +97,24 @@
     </main>
 
     <footer>
-        <div class="footer-content">
+        <div class="footer-content container">
             <div class="footer-logo">
                 <img src="images/sad.jpg" alt="SAD Logo">
-                <span style="font-weight: 800; font-size: 1.2rem;">Emmanuel Drah</span>
+                <div class="brand-info">
+                    <span style="font-weight: 800; font-size: 1.2rem;">Emmanuel Drah</span>
+                    <span style="font-size: 0.7rem; opacity: 0.7; letter-spacing: 1px;">SUCCESS ABOVE DREAMS</span>
+                </div>
             </div>
-            <div class="social-links" style="display: flex; gap: 2rem; align-items: center;">
-                <a href="https://github.com/godsonteck" target="_blank">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub" style="width: 40px; height: 40px; filter: brightness(0) invert(1);">
+            <div class="social-links">
+                <a href="https://github.com/godsonteck" target="_blank" aria-label="GitHub">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub" style="width: 32px; height: 32px; filter: brightness(0) invert(1);">
                 </a>
-                <a href="mailto:emmanueldrah10@gmail.com">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/google/google-original.svg" alt="Email" style="width: 40px; height: 40px;">
+                <a href="mailto:emmanueldrah10@gmail.com" aria-label="Email">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/google/google-original.svg" alt="Email" style="width: 32px; height: 32px;">
                 </a>
             </div>
         </div>
-        <p style="text-align: center; margin-top: 4rem; font-size: 0.8rem; opacity: 0.6;">&copy; 2026 Emmanuel Drah. Handcrafted with Precision.</p>
+        <p style="text-align: center; margin-top: 4rem; font-size: 0.8rem; opacity: 0.5;">&copy; 2026 Emmanuel Drah. Digital Architect & Visionary.</p>
     </footer>
 
     <script src="main.js"></script>
