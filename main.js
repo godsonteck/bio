@@ -1,53 +1,49 @@
-// Simple JS for demonstration
-console.log('Portfolio site loaded');
-
-// Gallery modal functionality
-document.addEventListener('DOMContentLoaded', function() {
-    // Mobile nav toggle
+document.addEventListener('DOMContentLoaded', () => {
+    // Mobile Navigation Toggle
     const navToggle = document.getElementById('nav-toggle');
     const navLinks = document.querySelector('.nav-links');
+
     if (navToggle && navLinks) {
-        navToggle.addEventListener('click', function() {
+        navToggle.addEventListener('click', () => {
             navLinks.classList.toggle('show');
+            navToggle.textContent = navLinks.classList.contains('show') ? '✕' : '☰';
         });
-        // Close menu when clicking a nav link
-        navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => navLinks.classList.remove('show')));
     }
+
+    // Modal / Lightbox functionality
     const modal = document.getElementById('image-modal');
     const modalImg = document.getElementById('modal-image');
-    const closeBtn = document.getElementsByClassName('close')[0];
+    const closeBtn = document.querySelector('.close');
+    const clickableImages = document.querySelectorAll('.gallery-card img, .project-image-wrapper img, .image-gallery img.clickable');
 
-    // Get all gallery images
-    const galleryImages = document.querySelectorAll('.gallery-card img');
-
-    // Add click event to each gallery image
-    galleryImages.forEach(img => {
-        img.addEventListener('click', function() {
-            modal.style.display = 'block';
-            modalImg.src = this.src;
+    clickableImages.forEach(img => {
+        img.addEventListener('click', () => {
+            modal.style.display = 'flex';
+            modalImg.src = img.src;
         });
     });
 
-    // Get all clickable project images
-    const projectImages = document.querySelectorAll('.clickable');
-
-    // Add click event to each project image
-    projectImages.forEach(img => {
-        img.addEventListener('click', function() {
-            modal.style.display = 'block';
-            modalImg.src = this.src;
-        });
-    });
-
-    // Close modal when clicking the close button
-    closeBtn.addEventListener('click', function() {
-        modal.style.display = 'none';
-    });
-
-    // Close modal when clicking outside the image
-    modal.addEventListener('click', function(event) {
-        if (event.target === modal) {
+    if (closeBtn) {
+        closeBtn.addEventListener('click', () => {
             modal.style.display = 'none';
-        }
+        });
+    }
+
+    if (modal) {
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                modal.style.display = 'none';
+            }
+        });
+    }
+
+    // Smooth scroll for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            document.querySelector(this.getAttribute('href')).scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
     });
 });

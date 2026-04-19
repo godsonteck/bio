@@ -7,90 +7,66 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+    <div class="aurora-bg">
+        <div class="aurora-blob blob-1"></div>
+        <div class="aurora-blob blob-2"></div>
+    </div>
+
     <nav>
-        <div class="nav-left" style="display:flex;align-items:center;gap:1rem;">
-            <a href="index.html" class="brand-link" style="display:flex;align-items:center;gap:0.8rem;text-decoration:none;color:inherit;">
-                <img src="images/sad.jpg" alt="Success Above Dreams Logo">
-                <span class="brand-title">Emmanuel Drah</span>
-            </a>
-        </div>
-        <button id="nav-toggle" class="nav-toggle" aria-label="Toggle navigation">☰</button>
+        <a href="index.html" class="brand-link">
+            <img src="images/sad.jpg" alt="Emmanuel Drah Logo">
+            <span class="brand-title">Success Above Dreams</span>
+        </a>
+        <button id="nav-toggle" aria-label="Toggle navigation">☰</button>
         <div class="nav-links">
             <a href="index.html">Home</a>
             <a href="about.html">About</a>
             <a href="projects.html">Portfolio</a>
-            <a href="gallery.html">Gallery</a>
+            <a href="gallery.html" class="active">Gallery</a>
             <a href="contact.html">Contact</a>
         </div>
     </nav>
-    <section class="gallery">
-        <h2>Photo Gallery</h2>
-        <div class="gallery-grid">
-            <!-- Each image is wrapped in a card with a shadow and a lightbox modal on click -->
-            <div class="gallery-card"><img src="images/alera_screen.jpg" alt="ALERA Dashboard"></div>
-            <div class="gallery-card"><img src="images/alera_2.png" alt="ALERA UI 1"></div>
-            <div class="gallery-card"><img src="images/alera_3.png" alt="ALERA UI 2"></div>
-            <div class="gallery-card"><img src="images/alera_4.png" alt="ALERA UI 3"></div>
-            <div class="gallery-card"><img src="images/alera.jpg" alt="ALERA Logo"></div>
-            <div class="gallery-card"><img src="images/IMG_3346.JPG" alt="Gallery image"></div>
-            <div class="gallery-card"><img src="images/IMG_3500.JPG" alt="Gallery image"></div>
-            <div class="gallery-card"><img src="images/IMG_6147.JPG" alt="Gallery image"></div>
-            <div class="gallery-card"><img src="images/IMG_6343.JPG" alt="Gallery image"></div>
-            <div class="gallery-card"><img src="images/IMG_6375-1.JPG" alt="Gallery image"></div>
-            <div class="gallery-card"><img src="images/IMG_6542.JPG" alt="Gallery image"></div>
-            <div class="gallery-card"><img src="images/IMG_6543.JPG" alt="Gallery image"></div>
-            <div class="gallery-card"><img src="images/IMG_6590.JPG" alt="Gallery image"></div>
-            <div class="gallery-card"><img src="images/IMG_6594.JPG" alt="Gallery image"></div>
-            <div class="gallery-card"><img src="images/IMG_6622.JPG" alt="Gallery image"></div>
-            <div class="gallery-card"><img src="images/IMG-20251001-WA0033.jpg" alt="Gallery image"></div>
-            <div class="gallery-card"><img src="images/IMG-20251001-WA0035.jpg" alt="Gallery image"></div>
-            <div class="gallery-card"><img src="images/IMG-20251001-WA0036.jpg" alt="Gallery image"></div>
-            <div class="gallery-card"><img src="images/IMG-20251001-WA0039.jpg" alt="Gallery image"></div>
-            <div class="gallery-card"><img src="images/IMG-20251001-WA0044.jpg" alt="Gallery image"></div>
-            <div class="gallery-card"><img src="images/IMG-20251001-WA0045.jpg" alt="Gallery image"></div>
-            <div class="gallery-card"><img src="images/IMG-20251001-WA0049.jpg" alt="Gallery image"></div>
-            <div class="gallery-card"><img src="images/IMG-20251001-WA0054.jpg" alt="Gallery image"></div>
-            <div class="gallery-card"><img src="images/IMG-20251001-WA0056.jpg" alt="Gallery image"></div>
-            <div class="gallery-card"><img src="images/IMG-20251001-WA0077.jpg" alt="Gallery image"></div>
-            <div class="gallery-card"><img src="images/IMG-20251001-WA0080.jpg" alt="Gallery image"></div>
-            <div class="gallery-card"><img src="images/IMG-20251001-WA0086.jpg" alt="Gallery image"></div>
-            <div class="gallery-card"><img src="images/IMG-20251001-WA0087.jpg" alt="Gallery image"></div>
-            <div class="gallery-card"><img src="images/IMG-20251001-WA0088.jpg" alt="Gallery image"></div>
-            <div class="gallery-card"><img src="images/IMG-20251001-WA0089.jpg" alt="Gallery image"></div>
-            <div class="gallery-card"><img src="images/IMG-20251001-WA0090.jpg" alt="Gallery image"></div>
-            <div class="gallery-card"><img src="images/IMG-20251001-WA0091.jpg" alt="Gallery image"></div>
-            <div class="gallery-card"><img src="images/IMG-20251001-WA0092.jpg" alt="Gallery image"></div>
-            <div class="gallery-card"><img src="images/IMG-20251001-WA0093.jpg" alt="Gallery image"></div>
-            <div class="gallery-card"><img src="images/IMG-20251001-WA0094.jpg" alt="Gallery image"></div>
-            <div class="gallery-card"><img src="images/IMG-20251001-WA0095.jpg" alt="Gallery image"></div>
-            <div class="gallery-card"><img src="images/IMG-20251001-WA0096.jpg" alt="Gallery image"></div>
-            <div class="gallery-card"><img src="images/IMG-20251001-WA0097.jpg" alt="Gallery image"></div>
-            <div class="gallery-card"><img src="images/IMG-20251001-WA0098.jpg" alt="Gallery image"></div>
-            <div class="gallery-card"><img src="images/IMG-20251001-WA0099.jpg" alt="Gallery image"></div>
-            <div class="gallery-card"><img src="images/IMG-20251001-WA0100.jpg" alt="Gallery image"></div>
-            <div class="gallery-card"><img src="images/IMG-20251001-WA0101.jpg" alt="Gallery image"></div>
-            <div class="gallery-card"><img src="images/IMG-20251001-WA0102.jpg" alt="Gallery image"></div>
-            <div class="gallery-card"><img src="images/IMG-20251001-WA0103.jpg" alt="Gallery image"></div>
-            <div class="gallery-card"><img src="images/IMG-20251001-WA0104.jpg" alt="Gallery image"></div>
-            <div class="gallery-card"><img src="images/IMG-20251001-WA0105.jpg" alt="Gallery image"></div>
-            <div class="gallery-card"><img src="images/IMG-20251001-WA0106.jpg" alt="Gallery image"></div>
-            <div class="gallery-card"><img src="images/IMG-20251001-WA0107.jpg" alt="Gallery image"></div>
-            <div class="gallery-card"><img src="images/IMG-20251001-WA0108.jpg" alt="Gallery image"></div>
-            <div class="gallery-card"><img src="images/IMG-20251001-WA0109.jpg" alt="Gallery image"></div>
-            <div class="gallery-card"><img src="images/carp.jpg" alt="Gallery image"></div>
-            <div class="gallery-card"><img src="images/IMG-20251001-WA0110.jpg" alt="Gallery image"></div>
-            <div class="gallery-card"><img src="images/IMG-20251006-WA0047.jpg" alt="Gallery image"></div>
-            <div class="gallery-card"><img src="images/IMG-20251012-WA0105.jpg" alt="Gallery image"></div>
-            <div class="gallery-card"><img src="images/IMG-20251012-WA0118.jpg" alt="Gallery image"></div>
-            <div class="gallery-card"><img src="images/IMG-20251012-WA0121.jpg" alt="Gallery image"></div>
-            <div class="gallery-card"><img src="images/IMG-20251012-WA0124.jpg" alt="Gallery image"></div>
-            <div class="gallery-card"><img src="images/IMG-20251012-WA0130.jpg" alt="Gallery image"></div>
-            <div class="gallery-card"><img src="images/IMG-20251012-WA0150.jpg" alt="Gallery image"></div>
-            <div class="gallery-card"><img src="images/Screenshot_20251012-154526.jpg" alt="Gallery image"></div>
-            <div class="gallery-card"><img src="images/Screenshot_20251012-154536.jpg" alt="Gallery image"></div>
-            <div class="gallery-card"><img src="images/Screenshot_20251012-154555.jpg" alt="Gallery image"></div>
+
+    <main>
+        <section>
+            <h2>Visual Gallery</h2>
+            <p style="text-align: center; color: var(--text-dim); margin-bottom: 3rem;">A collection of interfaces, screenshots, and visual assets from my recent projects.</p>
+            
+            <div class="gallery-grid">
+                <div class="gallery-card"><img src="images/alera_screen.jpg" alt="ALERA Dashboard"></div>
+                <div class="gallery-card"><img src="images/alera_2.png" alt="ALERA Interface 1"></div>
+                <div class="gallery-card"><img src="images/alera_3.png" alt="ALERA Interface 2"></div>
+                <div class="gallery-card"><img src="images/alera_4.png" alt="ALERA Interface 3"></div>
+                <div class="gallery-card"><img src="images/alera.jpg" alt="ALERA Logo"></div>
+                <div class="gallery-card"><img src="images/carp.jpg" alt="Car Rental App"></div>
+                <div class="gallery-card"><img src="images/IMG_3346.JPG" alt="Gallery image"></div>
+                <div class="gallery-card"><img src="images/IMG_3500.JPG" alt="Gallery image"></div>
+                <div class="gallery-card"><img src="images/IMG_6147.JPG" alt="Gallery image"></div>
+                <div class="gallery-card"><img src="images/IMG_6343.JPG" alt="Gallery image"></div>
+                <div class="gallery-card"><img src="images/IMG_6375-1.JPG" alt="Gallery image"></div>
+                <div class="gallery-card"><img src="images/IMG_6542.JPG" alt="Gallery image"></div>
+                <div class="gallery-card"><img src="images/IMG_6543.JPG" alt="Gallery image"></div>
+                <div class="gallery-card"><img src="images/IMG_6590.JPG" alt="Gallery image"></div>
+                <div class="gallery-card"><img src="images/IMG_6594.JPG" alt="Gallery image"></div>
+                <div class="gallery-card"><img src="images/IMG_6622.JPG" alt="Gallery image"></div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="social-links">
+            <a href="mailto:emmanueldrah10@gmail.com" class="social-icon">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/google/google-original.svg" alt="Email">
+            </a>
+            <a href="https://linkedin.com/in/emmanueldrah10" target="_blank" class="social-icon">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" alt="LinkedIn">
+            </a>
+            <a href="https://github.com/godsonteck" target="_blank" class="social-icon">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub">
+            </a>
         </div>
-    </section>
+        <p class="copyright">&copy; 2026 Emmanuel Drah. Built with passion and precision.</p>
+    </footer>
 
     <!-- Modal for image popup -->
     <div id="image-modal" class="modal">
@@ -98,21 +74,6 @@
         <img class="modal-content" id="modal-image">
     </div>
 
-    <footer>
-        <div>
-            <a href="mailto:emmanueldrah10@gmail.com">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/google/google-original.svg" alt="Email" style="width:24px;height:24px;vertical-align:middle;">
-            </a>
-            <a href="https://linkedin.com/in/emmanueldrah10" target="_blank">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" alt="LinkedIn" style="width:24px;height:24px;vertical-align:middle;">
-            </a>
-            <a href="https://github.com/godsonteck" target="_blank">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub" style="width:24px;height:24px;vertical-align:middle;">
-            </a>
-        </div>
-        <div>emmanueldrah10@gmail.com | Accra, Ghana</div>
-        <div>&copy; 2025 Emmanuel Drah. Mobile App and Website Developer.</div>
-    </footer>
     <script src="main.js"></script>
 </body>
 </html>

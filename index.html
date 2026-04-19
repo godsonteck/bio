@@ -2,71 +2,110 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <!-- Use a responsive viewport for fluid layouts on mobile and desktop -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home | Emmanuel Drah - Mobile App and Website Developer</title>
+    <title>Emmanuel Drah | Mobile App & Web Developer</title>
+    <meta name="description" content="Portfolio of Emmanuel Drah, a mobile app and website developer specialized in high-performance healthcare platforms and cross-platform solutions.">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <!-- Wrapper to enforce desktop width and center the layout on large screens -->
-    <div class="desktop-wrapper">
+    <div class="aurora-bg">
+        <div class="aurora-blob blob-1"></div>
+        <div class="aurora-blob blob-2"></div>
+    </div>
+
     <nav>
-        <div class="nav-left" style="display:flex;align-items:center;gap:1rem;">
-            <a href="index.html" class="brand-link" style="display:flex;align-items:center;gap:0.8rem;text-decoration:none;color:inherit;">
-                <img src="images/sad.jpg" alt="Success Above Dreams Logo">
-                <span class="brand-title">Emmanuel Drah</span>
-            </a>
-        </div>
-        <button id="nav-toggle" class="nav-toggle" aria-label="Toggle navigation">☰</button>
+        <a href="index.html" class="brand-link">
+            <img src="images/sad.jpg" alt="Emmanuel Drah Logo">
+            <span class="brand-title">Success Above Dreams</span>
+        </a>
+        <button id="nav-toggle" aria-label="Toggle navigation">☰</button>
         <div class="nav-links">
-            <a href="index.html">Home</a>
+            <a href="index.html" class="active">Home</a>
             <a href="about.html">About</a>
             <a href="projects.html">Portfolio</a>
             <a href="gallery.html">Gallery</a>
             <a href="contact.html">Contact</a>
         </div>
     </nav>
+
     <header class="hero-section">
         <div class="hero-content">
-            <img src="images/sad.jpg" alt="Success Above Dreams Logo" class="profile-img">
+            <img src="images/sad.jpg" alt="Emmanuel Drah" class="profile-img">
             <h1>Emmanuel Drah</h1>
-            <p class="subtitle">Mobile App and Website Developer</p>
-            <p class="description">I build mobile applications and websites that solve real problems and create better user experiences</p>
+            <p class="subtitle">Mobile App & Web Developer</p>
+            <p class="description">I design and build premium digital experiences that solve complex problems with elegant code and intuitive design.</p>
             <div class="cta-btns">
-                <a href="projects.html" style="background: #00d4ff; color: #181824;">View My Projects</a>
-                <a href="contact.html" class="secondary" style="background: #00d4ff; color: #020f13; border-color: #00d4ff;">Contact Me</a>
+                <a href="projects.html" class="btn btn-primary">View Portfolio</a>
+                <a href="contact.html" class="btn btn-secondary">Get In Touch</a>
             </div>
         </div>
     </header>
-    <section>
-        <h2>About Me</h2>
-        <p>I am a mobile app and website developer based in Ghana. I specialize in creating mobile applications for iOS and Android platforms, as well as modern, responsive websites. My goal is to build apps and sites that are not only functional but also enjoyable to use.</p>
-        <p>My journey in development is driven by a passion for technology and problem-solving. I believe that good apps and websites can make people's lives easier, and I work hard to create solutions that truly help users.</p>
-        <p>My brand <strong>'Success Above Dreams'</strong> represents my belief that real success comes from taking action, not just dreaming. The shield in my logo symbolizes strength, protection, and reliability—qualities I bring to every project. The connected 'S' letters show how dreams and effort unite to create success.</p>
-        <div class="about-extra">
-            <h3>Website Developer</h3>
-            <p>I designed and developed this portfolio website myself, using modern web technologies and best practices. If you need a custom website or want to improve your online presence, feel free to <div class="io"><a href="contact.html">contact me</a>!</p></div>
-        </div>
-    </section>
-    <section>
-        <h2>My Recent Work</h2>
-        <div style="display:flex;flex-wrap:wrap;gap:2rem;justify-content:center;">
-            <div class="feature-card">
-                <img src="images/alera_screen.jpg" alt="ALERA Healthcare Platform" style="width:120px;height:120px;object-fit:cover;border-radius:16px;margin-bottom:1rem;" class="clickable">
-                <h3>ALERA Healthcare Platform</h3>
-                <p>A comprehensive healthcare management system connecting patients, providers, and emergency services with real-time tracking and role-based dashboards.</p>
-                <div style="color:#bdbdbd;font-size:1rem;margin-bottom:1.2rem;">React, FastAPI, WebSocket, PostgreSQL</div>
-                <a href="projects.html" style="color: #00d4ff;">View Details</a>
+
+    <main>
+        <section id="about">
+            <h2>About Me</h2>
+            <div class="hero-content" style="text-align: left; margin: 0 auto;">
+                <p>I am a Ghana-based developer specializing in creating high-performance mobile applications and modern, responsive websites. My approach combines technical excellence with a deep understanding of user experience.</p>
+                <br>
+                <p>My brand, <strong>'Success Above Dreams'</strong>, embodies the philosophy that real success comes from taking persistent action. Whether it's a complex healthcare platform or a sleek car rental system, I bring reliability and strength to every line of code.</p>
             </div>
-            <div class="feature-card">
-                <img src="images/carp.jpg" alt="Car Rental System" style="width:120px;height:120px;object-fit:cover;border-radius:16px;margin-bottom:1rem;" class="clickable">
-                <h3>Online Cross-Platform Car Rental System</h3>
-                <p>A web and mobile platform for booking, managing, and renting cars online. Built for both Android and iOS users, with real-time availability and secure payments.</p>
-                <div style="color:#bdbdbd;font-size:1rem;margin-bottom:1.2rem;">Flutter, Firebase, Web, Android, iOS</div>
-                <a href="projects.html" style="color: #00d4ff;">View Details</a>
+        </section>
+
+        <section id="work">
+            <h2>Featured Work</h2>
+            <div class="projects-grid">
+                <!-- ALERA -->
+                <article class="project-card">
+                    <div class="project-image-wrapper">
+                        <img src="images/alera_screen.jpg" alt="ALERA Healthcare Platform">
+                    </div>
+                    <div class="project-info">
+                        <h3>ALERA Healthcare Platform</h3>
+                        <p>A comprehensive healthcare ecosystem with real-time tracking, role-based dashboards, and secure data management.</p>
+                        <div class="tech-stack">
+                            <span class="tech-tag">React</span>
+                            <span class="tech-tag">FastAPI</span>
+                            <span class="tech-tag">WebSockets</span>
+                            <span class="tech-tag">PostgreSQL</span>
+                        </div>
+                        <a href="projects.html" class="project-link">Learn More <span>→</span></a>
+                    </div>
+                </article>
+
+                <!-- Car Rental -->
+                <article class="project-card">
+                    <div class="project-image-wrapper">
+                        <img src="images/carp.jpg" alt="Car Rental System">
+                    </div>
+                    <div class="project-info">
+                        <h3>Car Rental System</h3>
+                        <p>A cross-platform booking engine for car rentals with secure payments and real-time availability sync.</p>
+                        <div class="tech-stack">
+                            <span class="tech-tag">Flutter</span>
+                            <span class="tech-tag">Firebase</span>
+                            <span class="tech-tag">Dart</span>
+                        </div>
+                        <a href="projects.html" class="project-link">Learn More <span>→</span></a>
+                    </div>
+                </article>
             </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="social-links">
+            <a href="mailto:emmanueldrah10@gmail.com" class="social-icon">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/google/google-original.svg" alt="Email">
+            </a>
+            <a href="https://linkedin.com/in/emmanueldrah10" target="_blank" class="social-icon">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" alt="LinkedIn">
+            </a>
+            <a href="https://github.com/godsonteck" target="_blank" class="social-icon">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub">
+            </a>
         </div>
-    </section>
+        <p class="copyright">&copy; 2026 Emmanuel Drah. Built with passion and precision.</p>
+    </footer>
 
     <!-- Modal for image popup -->
     <div id="image-modal" class="modal">
@@ -74,25 +113,6 @@
         <img class="modal-content" id="modal-image">
     </div>
 
-    <footer>
-        <div>
-            <a href="mailto:emmanueldrah10@gmail.com">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/google/google-original.svg" alt="Email" style="width:24px;height:24px;vertical-align:middle;">
-            </a>
-            <a href="https://linkedin.com/in/your-link" target="_blank">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" alt="LinkedIn" style="width:24px;height:24px;vertical-align:middle;">
-            </a>
-            <a href="https://github.com/your-link" target="_blank">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub" style="width:24px;height:24px;vertical-align:middle;">
-            </a>
-        </div>
-        <div>
-            <a href="https://sites.google.com/view/emmanueldrah" target="_blank">Visit my other portfolio website</a>
-        </div>
-        <div>emmanueldrah10@gmail.com | Accra, Ghana</div>
-        <div>&copy; 2025 Emmanuel Drah. Mobile App and Website Developer.</div>
-    </footer>
     <script src="main.js"></script>
-    </div>
 </body>
 </html>
