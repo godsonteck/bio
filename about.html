@@ -7,6 +7,10 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+    <!-- Custom Cursor -->
+    <div class="cursor-dot" data-cursor-dot></div>
+    <div class="cursor-outline" data-cursor-outline></div>
+
     <nav id="navbar">
         <a href="index.html" class="brand">
             <img src="images/sad.jpg" alt="SAD Logo" class="logo-img">
@@ -109,7 +113,7 @@
             
             <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem;">
                 <!-- Award 1: NASPA -->
-                <div class="project-card" data-reveal>
+                <div class="project-card" data-reveal data-tilt data-tilt-max="5" data-tilt-speed="400" data-tilt-glare="true" data-tilt-max-glare="0.1">
                     <img src="images/IMG_6543.JPG" alt="NASPA Recognition" style="width: 100%; border-radius: var(--radius-md); box-shadow: var(--shadow); object-fit: cover; aspect-ratio: 4/5; object-position: top; margin-bottom: 1.5rem;">
                     <div>
                         <span style="font-size: 0.8rem; font-weight: 700; color: var(--accent); text-transform: uppercase; letter-spacing: 1px;">Ketu-North NASPA</span>
@@ -118,7 +122,7 @@
                     </div>
                 </div>
                 <!-- Award 2: Tech Fest -->
-                <div class="project-card" data-reveal>
+                <div class="project-card" data-reveal data-tilt data-tilt-max="5" data-tilt-speed="400" data-tilt-glare="true" data-tilt-max-glare="0.1">
                     <img src="images/IMG-20251001-WA0104.jpg" alt="Ho West Tech Fest Award" style="width: 100%; border-radius: var(--radius-md); box-shadow: var(--shadow); object-fit: cover; aspect-ratio: 4/5; object-position: top; margin-bottom: 1.5rem;">
                     <div>
                         <span style="font-size: 0.8rem; font-weight: 700; color: var(--accent); text-transform: uppercase; letter-spacing: 1px;">Ho West Annual Tech Fest</span>
@@ -127,7 +131,7 @@
                     </div>
                 </div>
                 <!-- Award 3: Education -->
-                <div class="project-card" data-reveal>
+                <div class="project-card" data-reveal data-tilt data-tilt-max="5" data-tilt-speed="400" data-tilt-glare="true" data-tilt-max-glare="0.1">
                     <img src="images/IMG-20251001-WA0093.jpg" alt="Awudome SHS" style="width: 100%; border-radius: var(--radius-md); box-shadow: var(--shadow); object-fit: cover; aspect-ratio: 4/5; object-position: top; margin-bottom: 1.5rem;">
                     <div>
                         <span style="font-size: 0.8rem; font-weight: 700; color: var(--accent); text-transform: uppercase; letter-spacing: 1px;">Awudome Senior High School</span>
@@ -136,7 +140,7 @@
                     </div>
                 </div>
                 <!-- Award 4: Collaboration -->
-                <div class="project-card" data-reveal>
+                <div class="project-card" data-reveal data-tilt data-tilt-max="5" data-tilt-speed="400" data-tilt-glare="true" data-tilt-max-glare="0.1">
                     <img src="images/IMG-20251001-WA0086.jpg" alt="Tech Fest Collaboration" style="width: 100%; border-radius: var(--radius-md); box-shadow: var(--shadow); object-fit: cover; aspect-ratio: 4/5; object-position: top; margin-bottom: 1.5rem;">
                     <div>
                         <span style="font-size: 0.8rem; font-weight: 700; color: var(--accent); text-transform: uppercase; letter-spacing: 1px;">2025 Tech Fest Collaboration</span>
@@ -169,6 +173,7 @@
         <p style="text-align: center; margin-top: 4rem; font-size: 0.8rem; opacity: 0.5;">&copy; 2026 Emmanuel Drah. Digital Architect & Visionary.</p>
     </footer>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.1/vanilla-tilt.min.js"></script>
     <script src="main.js"></script>
 </body>
 </html>

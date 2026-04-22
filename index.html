@@ -8,6 +8,10 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+    <!-- Custom Cursor -->
+    <div class="cursor-dot" data-cursor-dot></div>
+    <div class="cursor-outline" data-cursor-outline></div>
+
     <nav id="navbar">
         <a href="index.html" class="brand">
             <img src="images/sad.jpg" alt="SAD Logo" class="logo-img">
@@ -67,34 +71,65 @@
         <section id="toolkit" class="container" style="padding-top: 0;">
             <span class="section-tag">Technical Toolkit</span>
             <h2 class="section-title">My Expert <span class="text-gradient">Stack.</span></h2>
-            <div class="tech-grid" data-reveal>
-                <div class="tech-item">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg" alt="Flutter">
-                    <p style="font-size: 0.75rem; font-weight: 700; opacity: 0.8;">Flutter</p>
-                </div>
-                <div class="tech-item">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React">
-                    <p style="font-size: 0.75rem; font-weight: 700; opacity: 0.8;">React</p>
-                </div>
-                <div class="tech-item">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" alt="TypeScript">
-                    <p style="font-size: 0.75rem; font-weight: 700; opacity: 0.8;">TypeScript</p>
-                </div>
-                <div class="tech-item">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python">
-                    <p style="font-size: 0.75rem; font-weight: 700; opacity: 0.8;">Python</p>
-                </div>
-                <div class="tech-item">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg" alt="Firebase">
-                    <p style="font-size: 0.75rem; font-weight: 700; opacity: 0.8;">Firebase</p>
-                </div>
-                <div class="tech-item">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" alt="PostgreSQL">
-                    <p style="font-size: 0.75rem; font-weight: 700; opacity: 0.8;">PostgreSQL</p>
-                </div>
-                <div class="tech-item">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub">
-                    <p style="font-size: 0.75rem; font-weight: 700; opacity: 0.8;">GitHub</p>
+            <div class="marquee-container" data-reveal>
+                <div class="marquee-content">
+                    <div class="tech-item">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg" alt="Flutter">
+                        <p>Flutter</p>
+                    </div>
+                    <div class="tech-item">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React">
+                        <p>React</p>
+                    </div>
+                    <div class="tech-item">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" alt="TypeScript">
+                        <p>TypeScript</p>
+                    </div>
+                    <div class="tech-item">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python">
+                        <p>Python</p>
+                    </div>
+                    <div class="tech-item">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg" alt="Firebase">
+                        <p>Firebase</p>
+                    </div>
+                    <div class="tech-item">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" alt="PostgreSQL">
+                        <p>PostgreSQL</p>
+                    </div>
+                    <div class="tech-item">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub">
+                        <p>GitHub</p>
+                    </div>
+                    <!-- Duplicate for infinite scroll -->
+                    <div class="tech-item">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg" alt="Flutter">
+                        <p>Flutter</p>
+                    </div>
+                    <div class="tech-item">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React">
+                        <p>React</p>
+                    </div>
+                    <div class="tech-item">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" alt="TypeScript">
+                        <p>TypeScript</p>
+                    </div>
+                    <div class="tech-item">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python">
+                        <p>Python</p>
+                    </div>
+                    <div class="tech-item">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg" alt="Firebase">
+                        <p>Firebase</p>
+                    </div>
+                    <div class="tech-item">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" alt="PostgreSQL">
+                        <p>PostgreSQL</p>
+                    </div>
+                    <div class="tech-item">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub">
+                        <p>GitHub</p>
+                    </div>
                 </div>
             </div>
         </section>
@@ -103,7 +138,7 @@
             <span class="section-tag">Case Studies</span>
             <h2 class="section-title">Selected <span class="text-gradient">Works.</span></h2>
             <div class="projects-grid">
-                <article class="project-card" data-reveal>
+                <article class="project-card" data-reveal data-tilt data-tilt-max="5" data-tilt-speed="400" data-tilt-glare="true" data-tilt-max-glare="0.1">
                     <img src="images/alera_screen.jpg" alt="ALERA Gamma" class="project-img">
                     <span class="brand-tag">Healthcare Platform</span>
                     <h3>ALERA Gamma</h3>
@@ -116,7 +151,7 @@
                     </div>
                 </article>
 
-                <article class="project-card" data-reveal>
+                <article class="project-card" data-reveal data-tilt data-tilt-max="5" data-tilt-speed="400" data-tilt-glare="true" data-tilt-max-glare="0.1">
                     <img src="images/carp.jpg" alt="Car Rental System" class="project-img">
                     <span class="brand-tag">Booking Engine</span>
                     <h3>Rental Flow</h3>
@@ -155,6 +190,7 @@
         <p style="text-align: center; margin-top: 4rem; font-size: 0.8rem; opacity: 0.5;">&copy; 2026 Emmanuel Drah. Digital Architect & Visionary.</p>
     </footer>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.1/vanilla-tilt.min.js"></script>
     <script src="main.js"></script>
 </body>
 </html>

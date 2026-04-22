@@ -7,6 +7,10 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+    <!-- Custom Cursor -->
+    <div class="cursor-dot" data-cursor-dot></div>
+    <div class="cursor-outline" data-cursor-outline></div>
+
     <nav id="navbar">
         <a href="index.html" class="brand">
             <img src="images/sad.jpg" alt="SAD Logo" class="logo-img">
@@ -41,7 +45,7 @@
         <section class="container">
             <div class="projects-grid">
                 <!-- ALERA -->
-                <article class="project-card" data-reveal>
+                <article class="project-card" data-reveal data-tilt data-tilt-max="5" data-tilt-speed="400" data-tilt-glare="true" data-tilt-max-glare="0.1">
                     <img src="images/alera_screen.jpg" alt="ALERA" class="project-img">
                     <span class="brand-tag">Healthcare Platform</span>
                     <h3>ALERA Healthcare</h3>
@@ -54,7 +58,7 @@
                 </article>
 
                 <!-- Car Rental -->
-                <article class="project-card" data-reveal>
+                <article class="project-card" data-reveal data-tilt data-tilt-max="5" data-tilt-speed="400" data-tilt-glare="true" data-tilt-max-glare="0.1">
                     <img src="images/carp.jpg" alt="Car Rental" class="project-img">
                     <span class="brand-tag">Booking Engine</span>
                     <h3>Rental Flow</h3>
@@ -85,6 +89,7 @@
         <p style="text-align: center; margin-top: 4rem; font-size: 0.8rem; opacity: 0.5;">&copy; 2026 Emmanuel Drah. Digital Architect & Visionary.</p>
     </footer>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.1/vanilla-tilt.min.js"></script>
     <script src="main.js"></script>
 </body>
 </html>
