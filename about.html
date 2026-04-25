@@ -4,35 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About — Emmanuel Drah</title>
+    <meta name="description" content="Learn about Emmanuel Drah, a developer who believes technology should serve people. Success Above Dreams.">
+    <meta property="og:title" content="About — Emmanuel Drah">
+    <meta property="og:description" content="Learn about Emmanuel Drah, a developer who believes technology should serve people.">
+    <meta property="og:image" content="https://emmanueldrah.netlify.app/images/IMG_6590.JPG">
+    <meta property="og:url" content="https://emmanueldrah.netlify.app/about.html">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="canonical" href="https://emmanueldrah.netlify.app/about.html">
     <link rel="stylesheet" href="css/style.css">
+    <script src="js/components.js" defer></script>
 </head>
 <body>
-    <!-- Custom Cursor -->
-    <div class="cursor-dot" data-cursor-dot></div>
-    <div class="cursor-outline" data-cursor-outline></div>
-
-    <nav id="navbar">
-        <a href="index.html" class="brand">
-            <img src="images/sad.jpg" alt="SAD Logo" class="logo-img">
-            <div class="brand-info">
-                <span class="brand-name">Emmanuel Drah</span>
-                <span class="brand-tag">Success Above Dreams</span>
-            </div>
-        </a>
-        <div class="nav-links" id="nav-menu">
-            <a href="index.html">Home</a>
-            <a href="about.html">About</a>
-            <a href="projects.html">Portfolio</a>
-            <a href="gallery.html">Gallery</a>
-            <a href="contact.html">Contact</a>
-        </div>
-        <div style="display: flex; gap: 1rem; align-items: center;">
-            <button class="btn-theme" id="theme-btn" aria-label="Toggle Theme">🌙</button>
-            <button class="mobile-nav-toggle" id="mobile-toggle" aria-label="Open Menu">
-                <span class="hamburger"></span>
-            </button>
-        </div>
-    </nav>
+    <custom-cursor></custom-cursor>
+    <portfolio-nav></portfolio-nav>
 
     <main>
         <section class="hero" style="min-height: 50vh;">
@@ -152,26 +136,7 @@
         </section>
     </main>
 
-    <footer>
-        <div class="footer-content container">
-            <div class="footer-logo">
-                <img src="images/sad.jpg" alt="SAD Logo">
-                <div class="brand-info">
-                    <span style="font-weight: 800; font-size: 1.2rem;">Emmanuel Drah</span>
-                    <span style="font-size: 0.7rem; opacity: 0.7; letter-spacing: 1px;">SUCCESS ABOVE DREAMS</span>
-                </div>
-            </div>
-            <div class="social-links">
-                <a href="https://github.com/godsonteck" target="_blank" aria-label="GitHub">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub" style="width: 32px; height: 32px; filter: brightness(0) invert(1);">
-                </a>
-                <a href="mailto:emmanueldrah10@gmail.com" aria-label="Email">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/google/google-original.svg" alt="Email" style="width: 32px; height: 32px;">
-                </a>
-            </div>
-        </div>
-        <p style="text-align: center; margin-top: 4rem; font-size: 0.8rem; opacity: 0.5;">&copy; 2026 Emmanuel Drah. Digital Architect & Visionary.</p>
-    </footer>
+    <portfolio-footer></portfolio-footer>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.1/vanilla-tilt.min.js"></script>
     <script src="main.js"></script>

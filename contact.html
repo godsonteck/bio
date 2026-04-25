@@ -4,7 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact — Emmanuel Drah</title>
+    <meta name="description" content="Get in touch with Emmanuel Drah. Let's build something amazing together.">
+    <meta property="og:title" content="Contact — Emmanuel Drah">
+    <meta property="og:description" content="Get in touch with Emmanuel Drah. Let's build something amazing together.">
+    <meta property="og:image" content="https://emmanueldrah.netlify.app/images/sad.jpg">
+    <meta property="og:url" content="https://emmanueldrah.netlify.app/contact.html">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="canonical" href="https://emmanueldrah.netlify.app/contact.html">
     <link rel="stylesheet" href="css/style.css">
+    <script src="js/components.js" defer></script>
+    <script src="js/contact.js" defer></script>
     <style>
         .contact-form {
             background: var(--bg-card);
@@ -40,32 +49,8 @@
     </style>
 </head>
 <body>
-    <!-- Custom Cursor -->
-    <div class="cursor-dot" data-cursor-dot></div>
-    <div class="cursor-outline" data-cursor-outline></div>
-
-    <nav id="navbar">
-        <a href="index.html" class="brand">
-            <img src="images/sad.jpg" alt="SAD Logo" class="logo-img">
-            <div class="brand-info">
-                <span class="brand-name">Emmanuel Drah</span>
-                <span class="brand-tag">Success Above Dreams</span>
-            </div>
-        </a>
-        <div class="nav-links" id="nav-menu">
-            <a href="index.html">Home</a>
-            <a href="about.html">About</a>
-            <a href="projects.html">Portfolio</a>
-            <a href="gallery.html">Gallery</a>
-            <a href="contact.html">Contact</a>
-        </div>
-        <div style="display: flex; gap: 1rem; align-items: center;">
-            <button class="btn-theme" id="theme-btn" aria-label="Toggle Theme">🌙</button>
-            <button class="mobile-nav-toggle" id="mobile-toggle" aria-label="Open Menu">
-                <span class="hamburger"></span>
-            </button>
-        </div>
-    </nav>
+    <custom-cursor></custom-cursor>
+    <portfolio-nav></portfolio-nav>
 
     <main>
         <section class="hero" style="min-height: 40vh;">
@@ -78,7 +63,11 @@
 
         <section>
             <div style="max-width: 800px; margin: 0 auto;">
-                <form class="contact-form" name="contact" method="POST" data-netlify="true">
+                <div id="form-message" style="display: none; padding: 1rem; border-radius: var(--radius-md); margin-bottom: 1.5rem; text-align: center; font-weight: 700;"></div>
+                <form class="contact-form" id="contactForm" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" novalidate>
+                    <p style="display: none;">
+                        <label>Don’t fill this out if you're human: <input name="bot-field" /></label>
+                    </p>
                     <div class="form-group">
                         <label for="name">Your Name</label>
                         <input type="text" id="name" name="name" placeholder="John Doe" required>
@@ -91,35 +80,16 @@
                         <label for="message">Your Vision</label>
                         <textarea id="message" name="message" rows="5" placeholder="Tell me about what you're building, your goals, or even just a quick 'hello'..." required></textarea>
                     </div>
-                    <button type="submit" class="btn btn-primary" style="width: 100%; border: none; cursor: pointer;">Send Message</button>
+                    <button type="submit" class="btn btn-primary" id="submitBtn" style="width: 100%; border: none; cursor: pointer; display: flex; justify-content: center; align-items: center; gap: 0.5rem;">
+                        <span id="btnText">Send Message</span>
+                        <div id="btnSpinner" style="display: none; width: 20px; height: 20px; border: 2px solid rgba(255,255,255,0.3); border-radius: 50%; border-top-color: #fff; animation: spin 1s ease-in-out infinite;"></div>
+                    </button>
                 </form>
             </div>
         </section>
     </main>
 
-    <footer>
-        <div class="footer-content container">
-            <div class="footer-logo">
-                <img src="images/sad.jpg" alt="SAD Logo">
-                <div class="brand-info">
-                    <span style="font-weight: 800; font-size: 1.2rem;">Emmanuel Drah</span>
-                    <span style="font-size: 0.7rem; opacity: 0.7; letter-spacing: 1px;">SUCCESS ABOVE DREAMS</span>
-                </div>
-            </div>
-            <div class="social-links">
-                <a href="https://github.com/godsonteck" target="_blank" aria-label="GitHub">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub" style="width: 32px; height: 32px; filter: brightness(0) invert(1);">
-                </a>
-                <a href="mailto:emmanueldrah10@gmail.com" aria-label="Email">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/google/google-original.svg" alt="Email" style="width: 32px; height: 32px;">
-                </a>
-                <a href="tel:+233543671806" aria-label="Phone" style="display: flex; align-items: center; justify-content: center; width: 32px; height: 32px; border-radius: 50%; background: var(--accent); color: white; font-size: 0.8rem; text-decoration: none; font-weight: 800;">
-                    <span style="transform: rotate(90deg);">📞</span>
-                </a>
-            </div>
-        </div>
-        <p style="text-align: center; margin-top: 4rem; font-size: 0.8rem; opacity: 0.5;">&copy; 2026 Emmanuel Drah. Digital Architect & Visionary.</p>
-    </footer>
+    <portfolio-footer></portfolio-footer>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.1/vanilla-tilt.min.js"></script>
     <script src="main.js"></script>
