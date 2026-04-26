@@ -142,26 +142,35 @@ class CustomCursor extends HTMLElement {
     }
 
     initCursor() {
-        // Wait briefly for DOM to be fully ready if elements are added dynamically
         setTimeout(() => {
             const cursorDot = this.querySelector('[data-cursor-dot]');
             const cursorOutline = this.querySelector('[data-cursor-outline]');
 
             if (cursorDot && cursorOutline && window.matchMedia("(pointer: fine)").matches) {
-                window.addEventListener('mousemove', function (e) {
-                    const posX = e.clientX;
-                    const posY = e.clientY;
+                let mouseX = -100, mouseY = -100;
+                let outlineX = -100, outlineY = -100;
+                let rafId = null;
 
-                    cursorDot.style.left = \`\${posX}px\`;
-                    cursorDot.style.top = \`\${posY}px\`;
+                // Snap the dot instantly to cursor position
+                window.addEventListener('mousemove', (e) => {
+                    mouseX = e.clientX;
+                    mouseY = e.clientY;
+                    // Dot follows immediately — no lag
+                    cursorDot.style.transform = `translate(calc(${mouseX}px - 50%), calc(${mouseY}px - 50%))`;
+                }, { passive: true });
 
-                    cursorOutline.animate({
-                        left: \`\${posX}px\`,
-                        top: \`\${posY}px\`
-                    }, { duration: 500, fill: "forwards" });
-                });
+                // Outline smoothly interpolates behind the dot via rAF
+                const lerp = (a, b, t) => a + (b - a) * t;
 
-                // Set up mutation observer to catch newly added elements (like projects loaded later)
+                function animateOutline() {
+                    outlineX = lerp(outlineX, mouseX, 0.18);
+                    outlineY = lerp(outlineY, mouseY, 0.18);
+                    cursorOutline.style.transform = `translate(calc(${outlineX}px - 50%), calc(${outlineY}px - 50%))`;
+                    rafId = requestAnimationFrame(animateOutline);
+                }
+                animateOutline();
+
+                // Hover effects
                 const observer = new MutationObserver(this.attachHoverEffects.bind(this, cursorOutline));
                 observer.observe(document.body, { childList: true, subtree: true });
                 this.attachHoverEffects(cursorOutline);
