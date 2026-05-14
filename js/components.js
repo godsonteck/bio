@@ -12,7 +12,7 @@ class PortfolioNav extends HTMLElement {
                 <div class="nav-links" id="nav-menu">
                     <a href="index.html">Home</a>
                     <a href="about.html">About</a>
-                    <a href="projects.html">Portfolio</a>
+                    <a href="projects.html">My Projects</a>
                     <a href="gallery.html">Gallery</a>
                     <a href="contact.html">Contact</a>
                 </div>
