@@ -18,7 +18,7 @@
     --shadow-sm: 0 2px 4px rgba(0,0,0,0.05);
     --shadow: 0 10px 30px -10px rgba(0,0,0,0.1);
     --shadow-lg: 0 20px 50px -10px rgba(0,0,0,0.15);
-    --transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition: color 0.12s ease, background-color 0.12s ease, border-color 0.12s ease, box-shadow 0.12s ease, opacity 0.12s ease;
     --container-width: 1200px;
     --nav-height: 80px;
 }
@@ -52,7 +52,7 @@ body {
     color: var(--text-main);
     line-height: 1.6;
     overflow-x: hidden;
-    transition: background-color 0.4s ease, color 0.4s ease;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 /* --- Custom Scrollbar --- */
@@ -71,37 +71,8 @@ body {
 }
 
 /* --- Custom Cursor --- */
-.cursor-dot, .cursor-outline {
-    position: fixed;
-    top: 0;
-    left: 0;
-    border-radius: 50%;
-    z-index: 9999;
-    pointer-events: none;
-    will-change: transform;
-}
 
-.cursor-dot {
-    width: 8px;
-    height: 8px;
-    background-color: var(--accent);
-    transform: translate(-50%, -50%);
-}
 
-.cursor-outline {
-    width: 40px;
-    height: 40px;
-    border: 2px solid var(--accent-glow);
-    transform: translate(-50%, -50%);
-    transition: width 0.15s ease, height 0.15s ease, background-color 0.15s ease;
-}
-
-/* Hide default cursor on desktop */
-@media (hover: hover) and (pointer: fine) {
-    body, a, button {
-        cursor: none;
-    }
-}
 
 /* --- Navigation --- */
 nav {
