@@ -122,11 +122,54 @@
             </div>
         </section>
 
+        <section id="services" class="container">
+            <span class="section-tag">What I Offer</span>
+            <h2 class="section-title">My <span class="text-gradient">Services.</span></h2>
+            <div class="services-grid">
+                <div class="service-card" data-reveal>
+                    <div class="service-icon">💻</div>
+                    <h3>Web Development</h3>
+                    <p>Building responsive, modern web applications with React, TypeScript, and optimized performance in mind.</p>
+                </div>
+                <div class="service-card" data-reveal>
+                    <div class="service-icon">📱</div>
+                    <h3>Mobile Development</h3>
+                    <p>Creating native-quality mobile apps using Flutter that work seamlessly on iOS and Android.</p>
+                </div>
+                <div class="service-card" data-reveal>
+                    <div class="service-icon">⚙️</div>
+                    <h3>Backend Architecture</h3>
+                    <p>Designing scalable APIs and databases with Python, FastAPI, and PostgreSQL for reliable systems.</p>
+                </div>
+                <div class="service-card" data-reveal>
+                    <div class="service-icon">🏥</div>
+                    <h3>Healthcare Tech</h3>
+                    <p>Specialized in building compliant healthcare solutions that improve patient care and hospital workflows.</p>
+                </div>
+                <div class="service-card" data-reveal>
+                    <div class="service-icon">🔧</div>
+                    <h3>Technical Consultation</h3>
+                    <p>Providing guidance on tech stack selection, architecture decisions, and project optimization.</p>
+                </div>
+                <div class="service-card" data-reveal>
+                    <div class="service-icon">🚀</div>
+                    <h3>MVP to Scale</h3>
+                    <p>Taking your idea from prototype to production-ready product with performance and reliability.</p>
+                </div>
+            </div>
+        </section>
+
         <section id="work" class="container">
             <span class="section-tag">Case Studies</span>
             <h2 class="section-title">Selected <span class="text-gradient">Works.</span></h2>
+            <div class="project-filters" data-reveal>
+                <button class="filter-btn active" data-filter="all">All Projects</button>
+                <button class="filter-btn" data-filter="web">Web</button>
+                <button class="filter-btn" data-filter="mobile">Mobile</button>
+                <button class="filter-btn" data-filter="healthcare">Healthcare</button>
+            </div>
             <div class="projects-grid">
-                <article class="project-card" data-reveal data-tilt data-tilt-max="5" data-tilt-speed="400" data-tilt-glare="true" data-tilt-max-glare="0.1">
+                <article class="project-card" data-reveal data-filter="healthcare,web" data-tilt data-tilt-max="5" data-tilt-speed="400" data-tilt-glare="true" data-tilt-max-glare="0.1">
                     <img loading="lazy" src="images/alera_screen.jpg" alt="ALERA Gamma" class="project-img">
                     <span class="brand-tag">Healthcare Platform</span>
                     <h3>ALERA Gamma</h3>
@@ -143,7 +186,7 @@
                     </div>
                 </article>
 
-                <article class="project-card" data-reveal data-tilt data-tilt-max="5" data-tilt-speed="400" data-tilt-glare="true" data-tilt-max-glare="0.1">
+                <article class="project-card" data-reveal data-filter="mobile" data-tilt data-tilt-max="5" data-tilt-speed="400" data-tilt-glare="true" data-tilt-max-glare="0.1">
                     <img loading="lazy" src="images/carp.jpg" alt="Car Rental System" class="project-img">
                     <span class="brand-tag">Booking Engine</span>
                     <h3>Rental Flow</h3>
@@ -155,6 +198,36 @@
                     </div>
                     <div style="margin-top: 1.5rem; display: flex; gap: 1rem;">
                         <a href="https://github.com/godsonteck" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="padding: 0.5rem 1rem; font-size: 0.9rem;">Source Code ↗</a>
+                    </div>
+                </article>
+
+                <article class="project-card" data-reveal data-filter="web" data-tilt data-tilt-max="5" data-tilt-speed="400" data-tilt-glare="true" data-tilt-max-glare="0.1">
+                    <img loading="lazy" src="https://via.placeholder.com/400x200?text=Portfolio+Site" alt="Portfolio Site" class="project-img">
+                    <span class="brand-tag">Web Design</span>
+                    <h3>Personal Portfolio</h3>
+                    <p>A modern, responsive portfolio website showcasing projects with smooth animations and dark mode support.</p>
+                    <div class="tech-tags" style="margin-top: 1.5rem; display: flex; gap: 1rem; align-items: center;">
+                        <img loading="lazy" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML" style="width: 30px; height: 30px;">
+                        <img loading="lazy" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS" style="width: 30px; height: 30px;">
+                        <img loading="lazy" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript" style="width: 30px; height: 30px;">
+                    </div>
+                    <div style="margin-top: 1.5rem; display: flex; gap: 1rem;">
+                        <a href="https://emmanueldrah.netlify.app" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="padding: 0.5rem 1rem; font-size: 0.9rem;">View Live ↗</a>
+                    </div>
+                </article>
+
+                <article class="project-card" data-reveal data-filter="web,mobile" data-tilt data-tilt-max="5" data-tilt-speed="400" data-tilt-glare="true" data-tilt-max-glare="0.1">
+                    <img loading="lazy" src="https://via.placeholder.com/400x200?text=Task+Manager" alt="Task Manager App" class="project-img">
+                    <span class="brand-tag">Productivity Tool</span>
+                    <h3>TaskFlow</h3>
+                    <p>A cross-platform task management application with real-time sync, team collaboration, and offline support.</p>
+                    <div class="tech-tags" style="margin-top: 1.5rem; display: flex; gap: 1rem; align-items: center;">
+                        <img loading="lazy" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React" style="width: 30px; height: 30px;">
+                        <img loading="lazy" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg" alt="Firebase" style="width: 30px; height: 30px;">
+                        <img loading="lazy" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" alt="TypeScript" style="width: 30px; height: 30px;">
+                    </div>
+                    <div style="margin-top: 1.5rem; display: flex; gap: 1rem;">
+                        <a href="#" class="btn btn-outline" style="padding: 0.5rem 1rem; font-size: 0.9rem;">Coming Soon</a>
                     </div>
                 </article>
             </div>
