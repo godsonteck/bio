@@ -13,6 +13,32 @@ document.addEventListener('DOMContentLoaded', () => {
     };
     createScrollProgress();
 
+    // --- Project Filters ---
+    const filterBtns = document.querySelectorAll('.filter-btn');
+    const projectCards = document.querySelectorAll('[data-filter]');
+
+    filterBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            // Update active button
+            filterBtns.forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+
+            const filter = btn.getAttribute('data-filter');
+
+            projectCards.forEach(card => {
+                const cardFilters = card.getAttribute('data-filter') || '';
+                const matches = filter === 'all' || cardFilters.split(',').map(s => s.trim()).includes(filter);
+
+                if (matches) {
+                    card.style.display = '';
+                    card.style.animation = 'slideInUp 0.4s ease-out both';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        });
+    });
+
     // --- Reveal Animations with Stagger ---
     const observerOptions = {
         threshold: 0.15,
@@ -86,4 +112,130 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         }
     });
+
+    // --- Service Cards Spotlight Effect ---
+    document.getElementById("services")?.addEventListener("mousemove", e => {
+        for(const card of document.querySelectorAll(".service-card")) {
+            const rect = card.getBoundingClientRect(),
+                x = e.clientX - rect.left,
+                y = e.clientY - rect.top;
+
+            card.style.setProperty("--mouse-x", `${x}px`);
+            card.style.setProperty("--mouse-y", `${y}px`);
+        };
+    });
+
+    // --- Gallery Lightbox ---
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightbox-img');
+    const lightboxClose = document.getElementById('lightbox-close');
+
+    if (lightbox) {
+        // Attach click to the WHOLE gallery-item, not just img,
+        // so the overlay div never blocks the event.
+        document.querySelectorAll('.gallery-item').forEach(item => {
+            item.addEventListener('click', () => {
+                const img = item.querySelector('img');
+                if (!img) return;
+                lightboxImg.src = img.src;
+                lightboxImg.alt = img.alt;
+                lightbox.classList.add('active');
+                document.body.style.overflow = 'hidden';
+            });
+        });
+
+        const closeLightbox = () => {
+            lightbox.classList.remove('active');
+            document.body.style.overflow = '';
+        };
+
+        lightboxClose?.addEventListener('click', closeLightbox);
+        lightbox.addEventListener('click', (e) => {
+            if (e.target === lightbox) closeLightbox();
+        });
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && lightbox.classList.contains('active')) {
+                closeLightbox();
+            }
+        });
+    }
+
+    // --- Typewriter: "Success Above Dreams." ---
+    const sadMotto = document.getElementById('sad-motto');
+    if (sadMotto) {
+        const part1 = 'Success Above ';
+        const part2 = 'Dreams.';
+        let started = false;
+
+        const startTypewriter = () => {
+            if (started) return;
+            started = true;
+
+            // Clear existing content and set up structure
+            sadMotto.innerHTML = '';
+            sadMotto.classList.add('typing-cursor');
+
+            const gradientSpan = document.createElement('span');
+            gradientSpan.className = 'text-gradient';
+
+            let charIndex = 0;
+            const total = part1.length + part2.length;
+
+            const type = () => {
+                if (charIndex < part1.length) {
+                    // Typing normal text — insert before the gradient span
+                    const textNode = sadMotto.childNodes[charIndex] || null;
+                    sadMotto.insertBefore(
+                        document.createTextNode(part1[charIndex]),
+                        gradientSpan.parentNode ? gradientSpan : null
+                    );
+                } else {
+                    // Typing gradient text
+                    if (!sadMotto.contains(gradientSpan)) {
+                        sadMotto.appendChild(gradientSpan);
+                    }
+                    gradientSpan.textContent += part2[charIndex - part1.length];
+                }
+
+                charIndex++;
+                if (charIndex < total) {
+                    setTimeout(type, 75);
+                } else {
+                    // Remove cursor after a short pause
+                    setTimeout(() => sadMotto.classList.remove('typing-cursor'), 1200);
+                }
+            };
+
+            setTimeout(type, 400);
+        };
+
+        // Trigger when the element scrolls into view
+        const mottoObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    startTypewriter();
+                    mottoObserver.unobserve(sadMotto);
+                }
+            });
+        }, { threshold: 0.6 });
+
+        mottoObserver.observe(sadMotto);
+    }
+
+    // --- Text Word Animation Logic ---
+    document.querySelectorAll('.text-animate').forEach(el => {
+        const text = el.innerText;
+        el.innerHTML = '';
+        const words = text.split(' ');
+        words.forEach((word, index) => {
+            const span = document.createElement('span');
+            span.innerText = word + ' ';
+            span.className = 'animate-word';
+            span.style.animationDelay = `${index * 0.1}s`;
+            el.appendChild(span);
+        });
+    });
 });
+
+

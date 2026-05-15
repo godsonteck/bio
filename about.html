@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About — Emmanuel Drah</title>
-    <meta name="description" content="Learn about Emmanuel Drah, a developer who believes technology should serve people. Success Above Dreams.">
+    <meta name="description" content="Emmanuel Drah is a mobile and web developer from Dzodze, Ghana. He builds real-world software that solves real problems — guided by the principle: Success Above Dreams.">
     <meta property="og:title" content="About — Emmanuel Drah">
-    <meta property="og:description" content="Learn about Emmanuel Drah, a developer who believes technology should serve people.">
+    <meta property="og:description" content="Emmanuel Drah — developer, community builder, and creator of ALERA Healthcare.">
     <meta property="og:image" content="https://emmanueldrah.netlify.app/images/IMG_6590.JPG">
     <meta property="og:url" content="https://emmanueldrah.netlify.app/about.html">
     <meta name="twitter:card" content="summary_large_image">
@@ -15,161 +15,393 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap">
-    <link rel="stylesheet" href="css/style.css?v=2">
+    <link rel="stylesheet" href="css/style.css?v=3">
     <script src="js/components.js?v=2" defer></script>
+    <style>
+        /* About Hero */
+        .about-page-hero {
+            min-height: 55vh;
+            display: flex;
+            align-items: center;
+            padding: 8rem 5% 5rem;
+            background:
+                radial-gradient(circle at 10% 20%, rgba(var(--primary-rgb), 0.08) 0%, transparent 45%),
+                radial-gradient(circle at 90% 80%, rgba(var(--accent-rgb), 0.12) 0%, transparent 45%),
+                var(--bg-light);
+            position: relative;
+            overflow: hidden;
+        }
+        .about-page-hero::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background-size: 40px 40px;
+            background-image: radial-gradient(var(--border) 0.5px, transparent 0.5px);
+            opacity: 0.3;
+            animation: gridShift 20s linear infinite;
+        }
+        .about-page-hero-inner {
+            position: relative;
+            z-index: 1;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 5rem;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            width: 100%;
+        }
+        .about-page-hero-inner h1 {
+            font-size: clamp(2.5rem, 6vw, 4rem);
+            font-weight: 800;
+            line-height: 1.15;
+            letter-spacing: -0.04em;
+            margin-bottom: 1.25rem;
+        }
+        .about-page-hero-inner p {
+            font-size: 1.1rem;
+            color: var(--text-muted);
+            line-height: 1.8;
+            margin-bottom: 2rem;
+        }
+
+        /* Timeline */
+        .timeline {
+            display: flex;
+            flex-direction: column;
+            gap: 0;
+            position: relative;
+        }
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 20px;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: linear-gradient(to bottom, var(--accent), transparent);
+        }
+        .timeline-item {
+            display: flex;
+            gap: 2rem;
+            padding-bottom: 3rem;
+        }
+        .timeline-dot {
+            width: 42px;
+            height: 42px;
+            border-radius: 50%;
+            background: var(--bg-card);
+            border: 2px solid var(--accent);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.1rem;
+            flex-shrink: 0;
+            position: relative;
+            z-index: 1;
+        }
+        .timeline-body {
+            padding-top: 0.5rem;
+        }
+        .timeline-body h3 {
+            font-size: 1.1rem;
+            font-weight: 800;
+            margin-bottom: 0.2rem;
+        }
+        .timeline-body .timeline-meta {
+            font-size: 0.82rem;
+            font-weight: 700;
+            color: var(--accent);
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            margin-bottom: 0.6rem;
+        }
+        .timeline-body p {
+            font-size: 0.95rem;
+            color: var(--text-muted);
+            line-height: 1.7;
+        }
+
+        /* Skill Stack */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 1.5rem;
+        }
+        .skill-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-md);
+            padding: 1.5rem;
+            transition: border-color 0.2s ease, box-shadow 0.2s ease;
+        }
+        .skill-card:hover {
+            border-color: var(--accent);
+            box-shadow: 0 0 20px var(--accent-glow);
+        }
+        .skill-card h4 {
+            font-size: 0.8rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--accent);
+            margin-bottom: 1rem;
+        }
+        .skill-list {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            gap: 0.6rem;
+        }
+        .skill-list li {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            font-size: 0.95rem;
+            font-weight: 600;
+        }
+        .skill-list li img {
+            width: 20px;
+            height: 20px;
+        }
+
+        /* Awards */
+        .awards-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+        }
+        .award-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+        }
+        .award-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg), 0 0 25px var(--accent-glow);
+            border-color: var(--accent);
+        }
+        .award-card img {
+            width: 100%;
+            aspect-ratio: 4/3;
+            object-fit: contain;
+            object-position: center;
+            background: rgba(255, 255, 255, 0.05);
+            padding: 1rem;
+            display: block;
+        }
+        .award-card-body {
+            padding: 1.25rem 1.5rem;
+        }
+        .award-card-body .award-label {
+            font-size: 0.75rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--accent);
+            margin-bottom: 0.4rem;
+            display: block;
+        }
+        .award-card-body h3 {
+            font-size: 1.1rem;
+            font-weight: 800;
+            margin-bottom: 0.5rem;
+        }
+        .award-card-body p {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            line-height: 1.6;
+        }
+
+        @media (max-width: 900px) {
+            .about-page-hero-inner {
+                grid-template-columns: 1fr;
+                gap: 3rem;
+            }
+        }
+    </style>
 </head>
 <body>
     <portfolio-nav></portfolio-nav>
 
     <main>
-        <section class="hero" style="min-height: 50vh;">
-            <div class="hero-text">
-                <span class="section-tag">My Journey</span>
-                <h1>More than just <span class="text-gradient">code.</span></h1>
+        <!-- Hero -->
+        <section class="about-page-hero">
+            <div class="about-page-hero-inner">
+                <div>
+                    <span class="section-tag" style="animation: slideInUp 0.5s ease-out both;">My Journey</span>
+                    <h1 style="animation: slideInDown 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);">
+                        More than just<br><span class="text-gradient">code.</span>
+                    </h1>
+                    <p style="animation: slideInUp 0.7s ease-out 0.3s both;">
+                        I'm Emmanuel Drah — a developer from Dzodze, Ghana who turned a simple belief into a career: that well-built software can change the lives of real people in real communities. Not just in Silicon Valley. Here too.
+                    </p>
+                    <div style="animation: slideInUp 0.7s ease-out 0.45s both;">
+                        <a href="Tech_CV.docx" class="btn btn-primary" download>Download CV</a>
+                    </div>
+                </div>
+                <div style="animation: slideInRight 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);">
+                    <div class="hero-img-frame">
+                        <img src="images/IMG_6590.JPG" alt="Emmanuel Drah">
+                    </div>
+                </div>
             </div>
         </section>
 
+        <!-- Story / Timeline -->
         <section class="container">
-            <div class="grid-2-col">
-                <div class="hero-visual" data-reveal>
-                    <img src="images/IMG_6590.JPG" alt="Emmanuel" style="width: 100%; border-radius: var(--radius-lg); box-shadow: var(--shadow);">
+            <span class="section-tag" data-reveal>My Story</span>
+            <h2 class="section-title" data-reveal>Built from the <span class="text-gradient">ground up.</span></h2>
+            <div class="timeline" data-reveal>
+                <div class="timeline-item">
+                    <div class="timeline-dot">🎓</div>
+                    <div class="timeline-body">
+                        <p class="timeline-meta">2021 – 2023 · Ho Technical University</p>
+                        <h3>HND in Information & Communication Technology</h3>
+                        <p>Three years of turning curiosity into competence. I went beyond the curriculum — building my first Flutter apps, learning Python backend development, and discovering that I wanted to create systems, not just study them.</p>
+                    </div>
                 </div>
-                <div data-reveal>
-                    <h2 class="section-title">I love <span class="text-gradient">building.</span></h2>
-                    <p style="margin-bottom: 2rem; line-height: 1.8;">Good technology should be simple for the people who use it. That’s why I always try to put myself in the user's shoes. I want to understand their problems and build something that actually helps them. To me, being a developer means working hard to create a more connected and helpful world.</p>
-                    
-                    <div style="margin-bottom: 2rem;">
-                        <h3 style="font-size: 1.2rem; margin-bottom: 1rem; color: var(--text-main);">Work Experience</h3>
-                        <div style="border-left: 2px solid var(--accent); padding-left: 1.5rem; margin-bottom: 1.5rem;">
-                            <p style="font-weight: 700; margin: 0;">National Service Personnel – MIS & PR</p>
-                            <p style="font-size: 0.9rem; opacity: 0.8; margin: 0.2rem 0;">NHIS | Ho, Ghana</p>
-                            <p style="font-size: 0.95rem; margin-top: 0.5rem; opacity: 0.9;">I helped manage data systems and made sure everything ran smoothly. I also worked on digital content to help people get better service.</p>
-                        </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot">🏥</div>
+                    <div class="timeline-body">
+                        <p class="timeline-meta">2024 · National Health Insurance Authority — Ho, Ghana</p>
+                        <h3>National Service · MIS & Public Relations</h3>
+                        <p>During my service year, I managed data systems and handled digital communications for one of Ghana's most critical public institutions. It showed me firsthand how much healthcare depends on reliable software — and planted the seed for ALERA.</p>
                     </div>
-
-                    <div style="margin-bottom: 2rem;">
-                        <h3 style="font-size: 1.2rem; margin-bottom: 1rem; color: var(--text-main);">Education</h3>
-                        <div style="border-left: 2px solid var(--accent); padding-left: 1.5rem;">
-                            <p style="font-weight: 700; margin: 0;">HND ICT</p>
-                            <p style="font-size: 0.9rem; opacity: 0.8; margin: 0.2rem 0;">Ho Technical University (2021–2023)</p>
-                        </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot">⚡</div>
+                    <div class="timeline-body">
+                        <p class="timeline-meta">2024 – Present · Independent</p>
+                        <h3>Building ALERA & Freelance Development</h3>
+                        <p>I shipped ALERA — a full-scale, real-time healthcare coordination platform — from scratch. Nights, weekends, early mornings. Alongside that, I've taken on freelance projects helping businesses translate their ideas into production-ready software.</p>
                     </div>
-
-                    <p style="line-height: 1.8;">I grew up in Dzodze, Ketu North, Volta Region, Ghana. It’s a long way from Silicon Valley, but I always had big goals. From studying ICT to building real software, <strong>Success Above Dreams</strong> has always been my guide. It reminds me to work hard every day to achieve my goals.</p>
-                    <div style="margin-top: 2rem;">
-                        <a href="Tech_CV.docx" class="btn btn-primary" download style="display: inline-block;">Download CV</a>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot">🚀</div>
+                    <div class="timeline-body">
+                        <p class="timeline-meta">Next Chapter</p>
+                        <h3>What's Coming</h3>
+                        <p>I'm looking to join or collaborate with teams building meaningful products — whether that's a startup scaling its infrastructure, a healthcare organisation needing custom software, or a product company shipping mobile-first experiences.</p>
                     </div>
                 </div>
             </div>
         </section>
 
+        <!-- Technical Skills -->
         <section class="container" style="padding-top: 0;">
-            <span class="section-tag">Technical Toolkit</span>
-            <h2 class="section-title">My Expert <span class="text-gradient">Stack.</span></h2>
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem; margin-bottom: 3rem;">
-                <div style="background: var(--bg-card); padding: 1.5rem; border-radius: var(--radius-md); border: 1px solid var(--border); box-shadow: var(--shadow-sm);">
-                    <h3 style="font-size: 1.1rem; margin-bottom: 1rem; color: var(--accent);">Frontend</h3>
-                    <ul style="list-style: none; padding: 0; line-height: 2;">
-                        <li style="display: flex; align-items: center;"><img loading="lazy" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg" style="width:18px; margin-right:10px;" alt="Flutter">Flutter & Dart</li>
-                        <li style="display: flex; align-items: center;"><img loading="lazy" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" style="width:18px; margin-right:10px;" alt="React">React & Next.js</li>
-                        <li style="display: flex; align-items: center;"><img loading="lazy" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" style="width:18px; margin-right:10px;" alt="TypeScript">TypeScript / JS</li>
+            <span class="section-tag" data-reveal>Technical Skills</span>
+            <h2 class="section-title" data-reveal>What I build <span class="text-gradient">with.</span></h2>
+            <div class="skills-grid">
+                <div class="skill-card" data-reveal>
+                    <h4>Frontend</h4>
+                    <ul class="skill-list">
+                        <li><img loading="lazy" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="">React & Next.js</li>
+                        <li><img loading="lazy" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" alt="">TypeScript / JavaScript</li>
+                        <li><img loading="lazy" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="">HTML5 & CSS3</li>
                     </ul>
                 </div>
-                <div style="background: var(--bg-card); padding: 1.5rem; border-radius: var(--radius-md); border: 1px solid var(--border); box-shadow: var(--shadow-sm);">
-                    <h3 style="font-size: 1.1rem; margin-bottom: 1rem; color: var(--accent);">Backend</h3>
-                    <ul style="list-style: none; padding: 0; line-height: 2;">
-                        <li style="display: flex; align-items: center;"><img loading="lazy" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" style="width:18px; margin-right:10px;" alt="Python">Python / FastAPI</li>
-                        <li style="display: flex; align-items: center;"><img loading="lazy" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg" style="width:18px; margin-right:10px;" alt="Firebase">Firebase</li>
-                        <li style="display: flex; align-items: center;"><img loading="lazy" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" style="width:18px; margin-right:10px;" alt="PostgreSQL">PostgreSQL</li>
+                <div class="skill-card" data-reveal>
+                    <h4>Mobile</h4>
+                    <ul class="skill-list">
+                        <li><img loading="lazy" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg" alt="">Flutter & Dart</li>
+                        <li><img loading="lazy" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg" alt="">Firebase (Auth, Firestore)</li>
                     </ul>
                 </div>
-                <div style="background: var(--bg-card); padding: 1.5rem; border-radius: var(--radius-md); border: 1px solid var(--border); box-shadow: var(--shadow-sm);">
-                    <h3 style="font-size: 1.1rem; margin-bottom: 1rem; color: var(--accent);">Tools</h3>
-                    <ul style="list-style: none; padding: 0; line-height: 2;">
-                        <li class="tech-item" style="display: flex; align-items: center; min-width: auto; flex-direction: row; transition: none; transform: none;"><img loading="lazy" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" style="width:18px; height: 18px; margin-right:10px; margin-bottom: 0; filter: none;" alt="GitHub">Git &amp; GitHub</li>
-                        <li style="display: flex; align-items: center;"><img loading="lazy" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" style="width:18px; margin-right:10px;" alt="VS Code">VS Code</li>
-                        <li style="display: flex; align-items: center;"><img loading="lazy" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/androidstudio/androidstudio-original.svg" style="width:18px; margin-right:10px;" alt="Android Studio">Android Studio</li>
+                <div class="skill-card" data-reveal>
+                    <h4>Backend</h4>
+                    <ul class="skill-list">
+                        <li><img loading="lazy" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="">Python & FastAPI</li>
+                        <li><img loading="lazy" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" alt="">PostgreSQL</li>
+                        <li><img loading="lazy" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redis/redis-original.svg" alt="">REST APIs & WebSockets</li>
+                    </ul>
+                </div>
+                <div class="skill-card" data-reveal>
+                    <h4>Tools & Workflow</h4>
+                    <ul class="skill-list">
+                        <li><img loading="lazy" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="">Git & GitHub</li>
+                        <li><img loading="lazy" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" alt="">VS Code</li>
+                        <li><img loading="lazy" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/androidstudio/androidstudio-original.svg" alt="">Android Studio</li>
                     </ul>
                 </div>
             </div>
         </section>
 
-        <section class="container">
-            <span class="section-tag">Beyond the Code</span>
-            <h2 class="section-title">Life Outside the <span class="text-gradient">Screen.</span></h2>
-            <p style="margin-bottom: 3rem; max-width: 800px; line-height: 1.8;">I believe that the best ideas come from the real world. These are some photos from events I've attended and people I've met. These moments help me see things in a new way.</p>
-            
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem;">
-                <!-- Community Item 1 -->
-                <div class="gallery-item" style="display: flex; flex-direction: column;" data-reveal>
-                    <img loading="lazy" src="images/IMG-20251001-WA0109.jpg" alt="Ho West Tech Fest 2025" style="width: 100%; border-radius: var(--radius-md); box-shadow: var(--shadow); aspect-ratio: 4/5; object-fit: cover;">
-                    <p style="margin-top: 1rem; font-weight: 700; color: var(--accent);">Ho West Tech Fest 2025</p>
-                    <p style="font-size: 0.9rem; opacity: 0.8;">I went to the Ho West Annual Tech Fest to see how technology is growing in our local community.</p>
+        <!-- Personal Section -->
+        <section class="container" style="padding-top: 4rem;">
+            <span class="section-tag" data-reveal>The Human Element</span>
+            <h2 class="section-title" data-reveal>Life Outside the <span class="text-gradient">IDE.</span></h2>
+            <p style="color: var(--text-muted); font-size: 1.05rem; max-width: 600px; margin-bottom: 3rem; line-height: 1.8;" data-reveal>
+                Code is just syntax without the people it serves. Whether I'm collaborating with fellow developers, exploring my community, or simply finding a quiet moment to recharge—I believe that living a full life offline is what makes my work online so impactful.
+            </p>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem; margin-bottom: 4rem;">
+                <div class="award-card" data-reveal>
+                    <img loading="lazy" src="images/sad.jpg" alt="Emmanuel Drah" style="object-position: center; height: 250px; object-fit: cover; background: none; padding: 0;">
+                    <div class="award-card-body" style="padding: 1rem;">
+                        <p style="font-size: 0.9rem; color: var(--text-muted); margin: 0;">Focusing on the big picture and planning the next move.</p>
+                    </div>
                 </div>
-                <!-- Community Item 2 -->
-                <div class="gallery-item" style="display: flex; flex-direction: column;" data-reveal>
-                    <img loading="lazy" src="images/IMG-20251001-WA0110.jpg" alt="Tech Fest Grounds" style="width: 100%; border-radius: var(--radius-md); box-shadow: var(--shadow); aspect-ratio: 4/5; object-fit: cover;">
-                    <p style="margin-top: 1rem; font-weight: 700; color: var(--accent);">Faces of the Fest</p>
-                    <p style="font-size: 0.9rem; opacity: 0.8;">Every face at this event had a story. Being in that atmosphere reminded me why I build — people are always the point.</p>
+                <div class="award-card" data-reveal>
+                    <img loading="lazy" src="images/IMG_6594.JPG" alt="Out and about" style="object-position: top; height: 250px; object-fit: cover; background: none; padding: 0;">
+                    <div class="award-card-body" style="padding: 1rem;">
+                        <p style="font-size: 0.9rem; color: var(--text-muted); margin: 0;">Stepping away from the screen to experience the world.</p>
+                    </div>
                 </div>
-                <!-- Community Item 3 -->
-                <div class="gallery-item" style="display: flex; flex-direction: column;" data-reveal>
-                    <img loading="lazy" src="images/NASPA AWRDS.JPG" alt="NASPA Service Year Team" style="width: 100%; border-radius: var(--radius-md); box-shadow: var(--shadow); aspect-ratio: 4/5; object-fit: cover;">
-                    <p style="margin-top: 1rem; font-weight: 700; color: var(--accent);">National Service — Ketu-North</p>
-                    <p style="font-size: 0.9rem; opacity: 0.8;">My service year team at the NASPA awards. A year of showing up, putting in the work, and learning what public service actually demands.</p>
-                </div>
-                <!-- Community Item 4 -->
-                <div class="gallery-item" style="display: flex; flex-direction: column;" data-reveal>
-                    <img loading="lazy" src="images/IMG-20251001-WA0106.jpg" alt="Tech Fest Encounter" style="width: 100%; border-radius: var(--radius-md); box-shadow: var(--shadow); aspect-ratio: 4/5; object-fit: cover;">
-                    <p style="margin-top: 1rem; font-weight: 700; color: var(--accent);">Conversations That Count</p>
-                    <p style="font-size: 0.9rem; opacity: 0.8;">I often get my best ideas when I'm away from my desk. Talking with the right people can help solve problems in a way that no tutorial can.</p>
+                <div class="award-card" data-reveal>
+                    <img loading="lazy" src="images/IMG_6147.JPG" alt="Community connection" style="object-position: center; height: 250px; object-fit: cover; background: none; padding: 0;">
+                    <div class="award-card-body" style="padding: 1rem;">
+                        <p style="font-size: 0.9rem; color: var(--text-muted); margin: 0;">Connecting with people — the real drivers of technology.</p>
+                    </div>
                 </div>
             </div>
         </section>
 
+        <!-- Recognition & Awards -->
         <section class="container">
-            <span class="section-tag">Recognition & Awards</span>
-            <p style="margin-bottom: 3rem; max-width: 800px; line-height: 1.8;">I’m very happy to have my work recognized. These awards remind me that the software I build is actually helping people.</p>
-            
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem;">
-                <!-- Award 1: NASPA -->
-                <div class="project-card" data-reveal data-tilt data-tilt-max="5" data-tilt-speed="400" data-tilt-glare="true" data-tilt-max-glare="0.1">
-                    <img loading="lazy" src="images/IMG_6543.JPG" alt="NASPA Recognition" style="width: 100%; border-radius: var(--radius-md); box-shadow: var(--shadow); object-fit: cover; aspect-ratio: 4/5; object-position: top; margin-bottom: 1.5rem;">
-                    <div>
-                        <span style="font-size: 0.8rem; font-weight: 700; color: var(--accent); text-transform: uppercase; letter-spacing: 1px;">Ketu-North NASPA</span>
-                        <h3 style="margin: 0.5rem 0; font-size: 1.2rem;">Commitment Beyond Duty</h3>
-                        <p style="font-size: 0.9rem; opacity: 0.8; line-height: 1.5;">I was honored for a year of hard work during my service. It taught me that every job is an opportunity to help others.</p>
+            <span class="section-tag" data-reveal>Recognition</span>
+            <h2 class="section-title" data-reveal>Beyond the <span class="text-gradient">keyboard.</span></h2>
+            <p style="color: var(--text-muted); font-size: 1.05rem; max-width: 600px; margin-bottom: 3rem; line-height: 1.8;" data-reveal>
+                The best validation of my work comes not from metrics, but from people. These are the moments that reminded me that showing up consistently is always worth it.
+            </p>
+            <div class="awards-grid">
+                <div class="award-card" data-reveal>
+                    <img loading="lazy" src="images/tech%20fest.jpeg" alt="VR Technology Training Certificate">
+                    <div class="award-card-body">
+                        <span class="award-label">Ho West Tech Fest · KNUST · 2025</span>
+                        <h3>Immersive VR Engineering</h3>
+                        <p>Successfully completed a 14-day intensive program on "Re-Imagining Community Tourism Through Immersive VR Technologies" organized by DIPPER LAB (KNUST) and CYNOSOL. A recognition of advancing digital tourism experiences.</p>
                     </div>
                 </div>
-                <!-- Award 2: Tech Fest -->
-                <div class="project-card" data-reveal data-tilt data-tilt-max="5" data-tilt-speed="400" data-tilt-glare="true" data-tilt-max-glare="0.1">
-                    <img loading="lazy" src="images/IMG-20251001-WA0104.jpg" alt="Ho West Tech Fest Award" style="width: 100%; border-radius: var(--radius-md); box-shadow: var(--shadow); object-fit: cover; aspect-ratio: 4/5; object-position: top; margin-bottom: 1.5rem;">
-                    <div>
-                        <span style="font-size: 0.8rem; font-weight: 700; color: var(--accent); text-transform: uppercase; letter-spacing: 1px;">Ho West Annual Tech Fest</span>
-                        <h3 style="margin: 0.5rem 0; font-size: 1.2rem;">Innovation on the Ground</h3>
-                        <p style="font-size: 0.9rem; opacity: 0.8; line-height: 1.5;">Taking technology to the streets. The 2025 Tech Fest was about proving that the digital future starts with real-world solutions that touch every corner of Ho West.</p>
+                <div class="award-card" data-reveal>
+                    <img loading="lazy" src="images/naspa1.jpeg" alt="NASPA Publicity Committee Member">
+                    <div class="award-card-body">
+                        <span class="award-label">NASPA Ketu North · 2023/2024</span>
+                        <h3>Publicity Committee Member</h3>
+                        <p>Awarded for exceptional service and dedication to the National Service Personnel Association. Recognized for effectively managing communications and prioritizing the needs of the community through strategic outreach.</p>
                     </div>
                 </div>
-                <!-- Award 3: Education -->
-                <div class="project-card" data-reveal data-tilt data-tilt-max="5" data-tilt-speed="400" data-tilt-glare="true" data-tilt-max-glare="0.1">
-                    <img loading="lazy" src="images/IMG-20251001-WA0093.jpg" alt="Ho West Tech Fest 3rd Edition Launch" style="width: 100%; border-radius: var(--radius-md); box-shadow: var(--shadow); object-fit: cover; aspect-ratio: 4/5; object-position: top; margin-bottom: 1.5rem;">
-                    <div>
-                        <span style="font-size: 0.8rem; font-weight: 700; color: var(--accent); text-transform: uppercase; letter-spacing: 1px;">Ho West Tech Fest — 3rd Edition</span>
-                        <h3 style="margin: 0.5rem 0; font-size: 1.2rem;">The Launch Day</h3>
-                        <p style="font-size: 0.9rem; opacity: 0.8; line-height: 1.5;">This was the launch day for the 3rd edition of the Tech Fest. It was great to see it grow and see how hard work pays off.</p>
+                <div class="award-card" data-reveal>
+                    <img loading="lazy" src="images/naspa2.jpeg" alt="NASPA Social Media Influencer">
+                    <div class="award-card-body">
+                        <span class="award-label">NASPA Ketu North · 2023/2024</span>
+                        <h3>Social Media Influencer</h3>
+                        <p>Commended for leveraging digital platforms to amplify the association's impact. This recognition highlights a commitment to building community engagement, awareness, and digital presence during the service term.</p>
                     </div>
                 </div>
-                <!-- Award 4: Collaboration -->
-                <div class="project-card" data-reveal data-tilt data-tilt-max="5" data-tilt-speed="400" data-tilt-glare="true" data-tilt-max-glare="0.1">
-                    <img loading="lazy" src="images/IMG-20251001-WA0086.jpg" alt="Tech Fest Collaboration" style="width: 100%; border-radius: var(--radius-md); box-shadow: var(--shadow); object-fit: cover; aspect-ratio: 4/5; object-position: top; margin-bottom: 1.5rem;">
-                    <div>
-                        <span style="font-size: 0.8rem; font-weight: 700; color: var(--accent); text-transform: uppercase; letter-spacing: 1px;">2025 Tech Fest Collaboration</span>
-                        <h3 style="margin: 0.5rem 0; font-size: 1.2rem;">The Spirit of Shared Vision</h3>
-                        <p style="font-size: 0.9rem; opacity: 0.8; line-height: 1.5;">Technology is better when built together. This milestone celebrates the partnerships and human connections that drive innovation across our region.</p>
+                <div class="award-card" data-reveal>
+                    <img loading="lazy" src="images/naspa3.jpeg" alt="NASPA Most Hardworking Committee Member">
+                    <div class="award-card-body">
+                        <span class="award-label">NASPA Ketu North · 2023/2024</span>
+                        <h3>Most Hardworking Member</h3>
+                        <p>Honored as the most hardworking committee member, reflecting relentless work ethic and unyielding dedication. A true testament to the core philosophy of 'Success Above Dreams'—showing up and doing the work.</p>
                     </div>
                 </div>
             </div>
         </section>
+
     </main>
 
     <portfolio-footer></portfolio-footer>
