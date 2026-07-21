@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Projects — Emmanuel Drah</title>
+    <title>Projects — Emmanuel Drah</title>
     <meta name="description" content="Explore the projects of Emmanuel Drah — including ALERA, a full-scale healthcare platform, and Rental Flow, a Flutter-based car booking engine.">
-    <meta property="og:title" content="My Projects — Emmanuel Drah">
+    <meta property="og:title" content="Projects — Emmanuel Drah">
     <meta property="og:description" content="Explore selected case studies by Emmanuel Drah, from healthcare platforms to booking engines.">
     <meta property="og:image" content="https://emmanueldrah.netlify.app/images/alera_screen.jpg">
     <meta property="og:url" content="https://emmanueldrah.netlify.app/projects.html">
@@ -13,281 +13,76 @@
     <link rel="canonical" href="https://emmanueldrah.netlify.app/projects.html">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap">
     <link rel="preload" href="images/alera_screen.jpg" as="image">
-    <link rel="stylesheet" href="css/style.css?v=3">
-    <script src="js/components.js?v=2" defer></script>
-    <style>
-        /* --- Projects Page Hero --- */
-        .projects-hero {
-            min-height: 50vh;
-            display: flex;
-            align-items: center;
-            padding: 8rem 5% 4rem;
-            background:
-                radial-gradient(circle at 10% 20%, rgba(var(--primary-rgb), 0.08) 0%, transparent 40%),
-                radial-gradient(circle at 90% 80%, rgba(var(--accent-rgb), 0.12) 0%, transparent 40%),
-                var(--bg-light);
-            position: relative;
-            overflow: hidden;
-        }
-        .projects-hero::before {
-            content: '';
-            position: absolute;
-            inset: 0;
-            background-size: 40px 40px;
-            background-image: radial-gradient(var(--border) 0.5px, transparent 0.5px);
-            opacity: 0.3;
-            animation: gridShift 20s linear infinite;
-        }
-        .projects-hero-inner {
-            position: relative;
-            z-index: 1;
-            max-width: 700px;
-        }
-        .projects-hero-inner h1 {
-            font-size: clamp(2.5rem, 7vw, 4.5rem);
-            font-weight: 800;
-            line-height: 1.1;
-            letter-spacing: -0.04em;
-            margin-bottom: 1.25rem;
-        }
-        .projects-hero-inner p {
-            font-size: 1.15rem;
-            color: var(--text-muted);
-            line-height: 1.7;
-            max-width: 560px;
-        }
-
-        /* --- Compact Project List Layout (Wovy-inspired) --- */
-        .project-list {
-            display: flex;
-            flex-direction: column;
-            gap: 1.5rem;
-        }
-
-        .project-item {
-            background: var(--bg-card);
-            border: 1px solid var(--border);
-            border-radius: var(--radius-lg);
-            overflow: hidden;
-            display: grid;
-            grid-template-columns: 1fr 1.4fr;
-            gap: 0;
-            transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
-            box-shadow: var(--shadow-sm);
-        }
-
-        .project-item:hover {
-            transform: translateY(-4px);
-            box-shadow: var(--shadow-lg), 0 0 30px var(--accent-glow);
-            border-color: var(--accent);
-        }
-
-        .project-item-img {
-            position: relative;
-            overflow: hidden;
-        }
-
-        .project-item-img img {
-            width: 100%;
-            height: 100%;
-            min-height: 260px;
-            object-fit: cover;
-            object-position: center top;
-            transition: transform 0.5s ease;
-            display: block;
-        }
-
-        .project-item:hover .project-item-img img {
-            transform: scale(1.06);
-        }
-
-        .project-item-body {
-            padding: 2.5rem;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            gap: 1.5rem;
-        }
-
-        .project-item-header {}
-
-        .project-number {
-            font-size: 0.75rem;
-            font-weight: 800;
-            text-transform: uppercase;
-            letter-spacing: 0.15em;
-            color: var(--accent);
-            margin-bottom: 0.75rem;
-            display: block;
-        }
-
-        .project-item-header h2 {
-            font-size: clamp(1.5rem, 3vw, 2rem);
-            font-weight: 800;
-            letter-spacing: -0.03em;
-            margin-bottom: 0.75rem;
-            line-height: 1.2;
-        }
-
-        .project-item-header p {
-            color: var(--text-muted);
-            font-size: 1rem;
-            line-height: 1.75;
-        }
-
-        .project-screenshots {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 0.5rem;
-        }
-
-        .project-screenshots img {
-            width: 100%;
-            aspect-ratio: 16/10;
-            object-fit: cover;
-            border-radius: var(--radius-sm);
-            border: 1px solid var(--border);
-        }
-
-        .project-item-footer {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            flex-wrap: wrap;
-            gap: 1rem;
-        }
-
-        .tech-pill-list {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.5rem;
-        }
-
-        .tech-pill {
-            display: flex;
-            align-items: center;
-            gap: 0.4rem;
-            background: var(--bg-light);
-            border: 1px solid var(--border);
-            border-radius: 100px;
-            padding: 0.25rem 0.75rem;
-            font-size: 0.78rem;
-            font-weight: 700;
-            color: var(--text-muted);
-        }
-
-        .tech-pill img {
-            width: 16px;
-            height: 16px;
-        }
-
-        .project-item-cta {
-            display: flex;
-            gap: 0.75rem;
-            flex-wrap: wrap;
-        }
-
-        .project-item-cta .btn {
-            padding: 0.65rem 1.4rem;
-            font-size: 0.9rem;
-        }
-
-        @media (max-width: 768px) {
-            .project-item {
-                grid-template-columns: 1fr;
-            }
-            .project-item-img img {
-                min-height: 200px;
-            }
-            .project-item-body {
-                padding: 1.5rem;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="css/style.css?v=4">
+    <script src="js/components.js?v=3" defer></script>
 </head>
 <body>
     <portfolio-nav></portfolio-nav>
 
     <main>
-        <section class="projects-hero">
-            <div class="projects-hero-inner">
-                <span class="section-tag" data-reveal>Case Studies</span>
-                <h1 data-reveal>Crafted with purpose.<br><span class="text-gradient">Shipped to production.</span></h1>
-                <p data-reveal>These are not just side projects. Each one started as a real problem I saw around me and decided to solve. Here is a look into what I built and why it matters.</p>
+        <!-- Page Hero -->
+        <section class="hero" style="min-height: 60vh; padding-top: 10rem; padding-bottom: 4rem;">
+            <div class="projects-hero-inner container">
+                <span class="section-tag">Case Studies</span>
+                <h1 style="font-size: clamp(2.5rem, 7vw, 4rem); line-height: 1.1; margin-bottom: 1.25rem;">
+                    Crafted with purpose.<br><span class="text-gradient">Shipped to production.</span>
+                </h1>
+                <p style="font-size: 1.15rem; color: var(--text-muted); line-height: 1.7; max-width: 600px;">
+                    These are not side projects. Each one started as a real problem I saw around me and decided to solve. Here is a look into what I built and why it matters.
+                </p>
             </div>
         </section>
 
-        <section class="container" style="padding-top: 5rem; padding-bottom: 8rem;">
-            <div class="project-list">
+        <!-- Projects Grid Showcase -->
+        <section class="container" style="padding-top: 4rem; padding-bottom: 8rem;">
+            <div class="home-projects-list">
 
-                <!-- ALERA Healthcare Platform -->
-                <article class="project-item" data-reveal>
-                    <div class="project-item-img">
-                        <img loading="lazy" src="images/alera_screen.jpg" alt="ALERA Healthcare Platform Interface">
+                <!-- Project 1: ALERA -->
+                <article class="home-project-card">
+                    <div class="home-project-img">
+                        <img loading="lazy" src="images/alera_screen.jpg" alt="ALERA Gamma Healthcare Coordination Platform">
                     </div>
-                    <div class="project-item-body">
-                        <div class="project-item-header">
-                            <span class="project-number">Project 01 · Healthcare Platform</span>
-                            <h2>ALERA Healthcare</h2>
-                            <p>Hospitals in Ghana were losing critical time because doctors, labs, and emergency teams couldn't share information efficiently. I built ALERA to fix that. It is a full-scale, real-time healthcare platform that connects every department — from patient intake and lab results to pharmacy inventory and ambulance dispatch — into a single unified dashboard. The result: faster decisions, better care.</p>
+                    <div class="home-project-body">
+                        <div>
+                            <span class="section-tag" style="background: rgba(13, 148, 136, 0.1); border-color: rgba(13, 148, 136, 0.2); color: var(--ghteal-light); margin-bottom: 0.75rem;">Healthcare Coordination</span>
+                            <h3>ALERA Healthcare</h3>
+                            <p>
+                                Hospitals frequently struggle with uncoordinated flows and slow report delivery. I built ALERA to connect critical medical pipelines in real-time. It enables doctors, lab technicians, pharmacies, and dispatch services to instantly update inventory, review patient profiles, and communicate smoothly.
+                            </p>
                         </div>
-                        <div class="project-screenshots">
-                            <img loading="lazy" src="images/alera_2.png" alt="ALERA Patient Records">
-                            <img loading="lazy" src="images/alera_3.png" alt="ALERA Lab Reports">
-                            <img loading="lazy" src="images/alera_4.png" alt="ALERA Pharmacy">
-                        </div>
-                        <div class="project-item-footer">
-                            <div class="tech-pill-list">
-                                <span class="tech-pill">
-                                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React"> React
-                                </span>
-                                <span class="tech-pill">
-                                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python"> FastAPI
-                                </span>
-                                <span class="tech-pill">
-                                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" alt="PostgreSQL"> PostgreSQL
-                                </span>
-                                <span class="tech-pill">
-                                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" alt="TypeScript"> TypeScript
-                                </span>
+                        <div class="home-project-footer">
+                            <div class="tech-pill-row">
+                                <span class="tech-pill">React</span>
+                                <span class="tech-pill">Python</span>
+                                <span class="tech-pill">FastAPI</span>
+                                <span class="tech-pill">PostgreSQL</span>
                             </div>
-                            <div class="project-item-cta">
-                                <a href="https://alera-gamma.vercel.app" target="_blank" rel="noopener noreferrer" class="btn btn-primary">View Live ↗</a>
-                                <a href="#" class="btn btn-outline">Source Code</a>
-                            </div>
+                            <a href="https://alera-gamma.vercel.app" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="padding: 0.6rem 1.2rem; font-size: 0.75rem;">Live Demo ↗</a>
                         </div>
                     </div>
                 </article>
 
-                <!-- Rental Flow -->
-                <article class="project-item" data-reveal>
-                    <div class="project-item-img">
-                        <img loading="lazy" src="images/carp.jpg" alt="Rental Flow Car Booking App">
+                <!-- Project 2: Rental Flow -->
+                <article class="home-project-card">
+                    <div class="home-project-img">
+                        <img loading="lazy" src="images/carp.jpg" alt="Rental Flow Car Booking System">
                     </div>
-                    <div class="project-item-body">
-                        <div class="project-item-header">
-                            <span class="project-number">Project 02 · Mobile Booking Engine</span>
-                            <h2>Rental Flow</h2>
-                            <p>For my final year project, I chose a problem I saw every day — renting a vehicle in Ghana requires too many calls, too much back-and-forth, and zero transparency. Rental Flow is a cross-platform mobile app that brings the entire process online: browse available cars, select a date range, confirm a booking, and track your rental — all in under three minutes. Built to feel as smooth as the car you're booking.</p>
+                    <div class="home-project-body">
+                        <div>
+                            <span class="section-tag" style="background: rgba(217, 119, 6, 0.1); border-color: rgba(217, 119, 6, 0.2); color: var(--ghgold-light); margin-bottom: 0.75rem;">Vehicle Booking Engine</span>
+                            <h3>Rental Flow</h3>
+                            <p>
+                                Vehicle renting in Ho relies on dozens of calls and complete lack of booking transparency. Rental Flow puts this entire dynamic on a clean, robust mobile engine. Built with Flutter, users can browse vehicles, track dates, confirm schedules, and secure rentals in under 3 minutes.
+                            </p>
                         </div>
-                        <div class="project-item-footer">
-                            <div class="tech-pill-list">
-                                <span class="tech-pill">
-                                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg" alt="Flutter"> Flutter
-                                </span>
-                                <span class="tech-pill">
-                                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg" alt="Firebase"> Firebase
-                                </span>
-                                <span class="tech-pill">
-                                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dart/dart-original.svg" alt="Dart"> Dart
-                                </span>
+                        <div class="home-project-footer">
+                            <div class="tech-pill-row">
+                                <span class="tech-pill">Flutter</span>
+                                <span class="tech-pill">Dart</span>
+                                <span class="tech-pill">Firebase</span>
                             </div>
-                            <div class="project-item-cta">
-                                <a href="https://github.com/godsonteck" target="_blank" rel="noopener noreferrer" class="btn btn-outline">Source Code ↗</a>
-                            </div>
+                            <a href="https://github.com/godsonteck" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="padding: 0.6rem 1.2rem; font-size: 0.75rem;">GitHub Source ↗</a>
                         </div>
                     </div>
                 </article>
@@ -298,7 +93,6 @@
 
     <portfolio-footer></portfolio-footer>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.1/vanilla-tilt.min.js" defer></script>
     <script src="main.js"></script>
 </body>
 </html>

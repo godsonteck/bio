@@ -13,238 +13,28 @@
     <link rel="canonical" href="https://emmanueldrah.netlify.app/about.html">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap">
-    <link rel="stylesheet" href="css/style.css?v=3">
-    <script src="js/components.js?v=2" defer></script>
-    <style>
-        /* About Hero */
-        .about-page-hero {
-            min-height: 55vh;
-            display: flex;
-            align-items: center;
-            padding: 8rem 5% 5rem;
-            background:
-                radial-gradient(circle at 10% 20%, rgba(var(--primary-rgb), 0.08) 0%, transparent 45%),
-                radial-gradient(circle at 90% 80%, rgba(var(--accent-rgb), 0.12) 0%, transparent 45%),
-                var(--bg-light);
-            position: relative;
-            overflow: hidden;
-        }
-        .about-page-hero::before {
-            content: '';
-            position: absolute;
-            inset: 0;
-            background-size: 40px 40px;
-            background-image: radial-gradient(var(--border) 0.5px, transparent 0.5px);
-            opacity: 0.3;
-            animation: gridShift 20s linear infinite;
-        }
-        .about-page-hero-inner {
-            position: relative;
-            z-index: 1;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 5rem;
-            align-items: center;
-            max-width: 1200px;
-            margin: 0 auto;
-            width: 100%;
-        }
-        .about-page-hero-inner h1 {
-            font-size: clamp(2.5rem, 6vw, 4rem);
-            font-weight: 800;
-            line-height: 1.15;
-            letter-spacing: -0.04em;
-            margin-bottom: 1.25rem;
-        }
-        .about-page-hero-inner p {
-            font-size: 1.1rem;
-            color: var(--text-muted);
-            line-height: 1.8;
-            margin-bottom: 2rem;
-        }
-
-        /* Timeline */
-        .timeline {
-            display: flex;
-            flex-direction: column;
-            gap: 0;
-            position: relative;
-        }
-        .timeline::before {
-            content: '';
-            position: absolute;
-            left: 20px;
-            top: 0;
-            bottom: 0;
-            width: 2px;
-            background: linear-gradient(to bottom, var(--accent), transparent);
-        }
-        .timeline-item {
-            display: flex;
-            gap: 2rem;
-            padding-bottom: 3rem;
-        }
-        .timeline-dot {
-            width: 42px;
-            height: 42px;
-            border-radius: 50%;
-            background: var(--bg-card);
-            border: 2px solid var(--accent);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.1rem;
-            flex-shrink: 0;
-            position: relative;
-            z-index: 1;
-        }
-        .timeline-body {
-            padding-top: 0.5rem;
-        }
-        .timeline-body h3 {
-            font-size: 1.1rem;
-            font-weight: 800;
-            margin-bottom: 0.2rem;
-        }
-        .timeline-body .timeline-meta {
-            font-size: 0.82rem;
-            font-weight: 700;
-            color: var(--accent);
-            letter-spacing: 0.05em;
-            text-transform: uppercase;
-            margin-bottom: 0.6rem;
-        }
-        .timeline-body p {
-            font-size: 0.95rem;
-            color: var(--text-muted);
-            line-height: 1.7;
-        }
-
-        /* Skill Stack */
-        .skills-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 1.5rem;
-        }
-        .skill-card {
-            background: var(--bg-card);
-            border: 1px solid var(--border);
-            border-radius: var(--radius-md);
-            padding: 1.5rem;
-            transition: border-color 0.2s ease, box-shadow 0.2s ease;
-        }
-        .skill-card:hover {
-            border-color: var(--accent);
-            box-shadow: 0 0 20px var(--accent-glow);
-        }
-        .skill-card h4 {
-            font-size: 0.8rem;
-            font-weight: 800;
-            text-transform: uppercase;
-            letter-spacing: 0.1em;
-            color: var(--accent);
-            margin-bottom: 1rem;
-        }
-        .skill-list {
-            list-style: none;
-            padding: 0;
-            display: flex;
-            flex-direction: column;
-            gap: 0.6rem;
-        }
-        .skill-list li {
-            display: flex;
-            align-items: center;
-            gap: 0.75rem;
-            font-size: 0.95rem;
-            font-weight: 600;
-        }
-        .skill-list li img {
-            width: 20px;
-            height: 20px;
-        }
-
-        /* Awards */
-        .awards-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 1.5rem;
-        }
-        .award-card {
-            background: var(--bg-card);
-            border: 1px solid var(--border);
-            border-radius: var(--radius-lg);
-            overflow: hidden;
-            transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
-        }
-        .award-card:hover {
-            transform: translateY(-5px);
-            box-shadow: var(--shadow-lg), 0 0 25px var(--accent-glow);
-            border-color: var(--accent);
-        }
-        .award-card img {
-            width: 100%;
-            aspect-ratio: 4/3;
-            object-fit: contain;
-            object-position: center;
-            background: rgba(255, 255, 255, 0.05);
-            padding: 1rem;
-            display: block;
-        }
-        .award-card-body {
-            padding: 1.25rem 1.5rem;
-        }
-        .award-card-body .award-label {
-            font-size: 0.75rem;
-            font-weight: 800;
-            text-transform: uppercase;
-            letter-spacing: 0.1em;
-            color: var(--accent);
-            margin-bottom: 0.4rem;
-            display: block;
-        }
-        .award-card-body h3 {
-            font-size: 1.1rem;
-            font-weight: 800;
-            margin-bottom: 0.5rem;
-        }
-        .award-card-body p {
-            font-size: 0.9rem;
-            color: var(--text-muted);
-            line-height: 1.6;
-        }
-
-        @media (max-width: 900px) {
-            .about-page-hero-inner {
-                grid-template-columns: 1fr;
-                gap: 3rem;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="css/style.css?v=4">
+    <script src="js/components.js?v=3" defer></script>
 </head>
 <body>
     <portfolio-nav></portfolio-nav>
 
     <main>
-        <!-- Hero -->
-        <section class="about-page-hero">
-            <div class="about-page-hero-inner">
+        <!-- Hero Section -->
+        <section class="hero" style="min-height: 70vh; padding-top: 10rem; padding-bottom: 4rem;">
+            <div class="hero-grid container">
                 <div>
-                    <span class="section-tag" style="animation: slideInUp 0.5s ease-out both;">My Journey</span>
-                    <h1 style="animation: slideInDown 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);">
+                    <span class="section-tag">My Journey</span>
+                    <h1 style="font-size: clamp(2.5rem, 6vw, 3.8rem); line-height: 1.1; margin-bottom: 1.5rem;">
                         More than just<br><span class="text-gradient">code.</span>
                     </h1>
-                    <p style="animation: slideInUp 0.7s ease-out 0.3s both;">
+                    <p style="font-size: 1.1rem; line-height: 1.75; color: var(--text-muted); margin-bottom: 2rem;">
                         I'm Emmanuel Drah — a developer from Dzodze, Ghana who turned a simple belief into a career: that well-built software can change the lives of real people in real communities. Not just in Silicon Valley. Here too.
                     </p>
-                    <div style="animation: slideInUp 0.7s ease-out 0.45s both;">
-                        <a href="Tech_CV.docx" class="btn btn-primary" download>Download CV</a>
-                    </div>
+                    <a href="Tech_CV.docx" class="btn btn-primary" download>Download CV</a>
                 </div>
-                <div style="animation: slideInRight 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);">
-                    <div class="hero-img-frame">
+                <div class="hero-visual">
+                    <div class="hero-img-frame" style="max-width: 280px; aspect-ratio: 1;">
                         <img src="images/IMG_6590.JPG" alt="Emmanuel Drah">
                     </div>
                 </div>
@@ -252,10 +42,10 @@
         </section>
 
         <!-- Story / Timeline -->
-        <section class="container">
-            <span class="section-tag" data-reveal>My Story</span>
-            <h2 class="section-title" data-reveal>Built from the <span class="text-gradient">ground up.</span></h2>
-            <div class="timeline" data-reveal>
+        <section class="container" style="padding-top: 4rem; padding-bottom: 6rem;">
+            <span class="section-tag">My Story</span>
+            <h2 class="section-title">Built from the <span class="text-gradient">ground up.</span></h2>
+            <div class="timeline">
                 <div class="timeline-item">
                     <div class="timeline-dot">🎓</div>
                     <div class="timeline-body">
@@ -280,133 +70,50 @@
                         <p>I shipped ALERA — a full-scale, real-time healthcare coordination platform — from scratch. Nights, weekends, early mornings. Alongside that, I've taken on freelance projects helping businesses translate their ideas into production-ready software.</p>
                     </div>
                 </div>
-                <div class="timeline-item">
-                    <div class="timeline-dot">🚀</div>
-                    <div class="timeline-body">
-                        <p class="timeline-meta">Next Chapter</p>
-                        <h3>What's Coming</h3>
-                        <p>I'm looking to join or collaborate with teams building meaningful products — whether that's a startup scaling its infrastructure, a healthcare organisation needing custom software, or a product company shipping mobile-first experiences.</p>
+            </div>
+        </section>
+
+        <!-- Recognition & Awards Grid -->
+        <section class="container" style="padding-top: 0; padding-bottom: 8rem;">
+            <span class="section-tag">Recognition</span>
+            <h2 class="section-title">Beyond the <span class="text-gradient">keyboard.</span></h2>
+            <div class="gallery-grid">
+                <div class="gallery-item" style="cursor: default;">
+                    <div class="gallery-img-wrap">
+                        <img loading="lazy" src="images/tech fest.jpeg" alt="VR Training CNUST">
+                    </div>
+                    <div class="gallery-caption">
+                        <span class="brand-tag" style="color: var(--ghgold-light); font-size: 0.7rem;">Ho West Tech Fest · 2025</span>
+                        <h3 style="font-size: 1.1rem; margin-bottom: 0.5rem; margin-top: 0.5rem;">Immersive VR Engineering</h3>
+                        <p style="font-size: 0.85rem; color: var(--text-muted); line-height: 1.5;">Completed an intensive program on VR tourism integrations with DIPPER LAB (KNUST) and CYNOSOL.</p>
+                    </div>
+                </div>
+                <div class="gallery-item" style="cursor: default;">
+                    <div class="gallery-img-wrap">
+                        <img loading="lazy" src="images/naspa1.jpeg" alt="NASPA Award Certificate">
+                    </div>
+                    <div class="gallery-caption">
+                        <span class="brand-tag" style="color: var(--ghgold-light); font-size: 0.7rem;">NASPA Ketu North</span>
+                        <h3 style="font-size: 1.1rem; margin-bottom: 0.5rem; margin-top: 0.5rem;">Publicity Committee</h3>
+                        <p style="font-size: 0.85rem; color: var(--text-muted); line-height: 1.5;">Recognized for exceptional communication management and public service coordination.</p>
+                    </div>
+                </div>
+                <div class="gallery-item" style="cursor: default;">
+                    <div class="gallery-img-wrap">
+                        <img loading="lazy" src="images/naspa2.jpeg" alt="NASPA Social Media Influencer">
+                    </div>
+                    <div class="gallery-caption">
+                        <span class="brand-tag" style="color: var(--ghgold-light); font-size: 0.7rem;">NASPA Ketu North</span>
+                        <h3 style="font-size: 1.1rem; margin-bottom: 0.5rem; margin-top: 0.5rem;">Digital Influencer Award</h3>
+                        <p style="font-size: 0.85rem; color: var(--text-muted); line-height: 1.5;">Honored for leveraging digital platforms to scale community impact and awareness.</p>
                     </div>
                 </div>
             </div>
         </section>
-
-        <!-- Technical Skills -->
-        <section class="container" style="padding-top: 0;">
-            <span class="section-tag" data-reveal>Technical Skills</span>
-            <h2 class="section-title" data-reveal>What I build <span class="text-gradient">with.</span></h2>
-            <div class="skills-grid">
-                <div class="skill-card" data-reveal>
-                    <h4>Frontend</h4>
-                    <ul class="skill-list">
-                        <li><img loading="lazy" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="">React & Next.js</li>
-                        <li><img loading="lazy" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" alt="">TypeScript / JavaScript</li>
-                        <li><img loading="lazy" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="">HTML5 & CSS3</li>
-                    </ul>
-                </div>
-                <div class="skill-card" data-reveal>
-                    <h4>Mobile</h4>
-                    <ul class="skill-list">
-                        <li><img loading="lazy" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg" alt="">Flutter & Dart</li>
-                        <li><img loading="lazy" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg" alt="">Firebase (Auth, Firestore)</li>
-                    </ul>
-                </div>
-                <div class="skill-card" data-reveal>
-                    <h4>Backend</h4>
-                    <ul class="skill-list">
-                        <li><img loading="lazy" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="">Python & FastAPI</li>
-                        <li><img loading="lazy" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" alt="">PostgreSQL</li>
-                        <li><img loading="lazy" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redis/redis-original.svg" alt="">REST APIs & WebSockets</li>
-                    </ul>
-                </div>
-                <div class="skill-card" data-reveal>
-                    <h4>Tools & Workflow</h4>
-                    <ul class="skill-list">
-                        <li><img loading="lazy" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="">Git & GitHub</li>
-                        <li><img loading="lazy" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" alt="">VS Code</li>
-                        <li><img loading="lazy" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/androidstudio/androidstudio-original.svg" alt="">Android Studio</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-
-        <!-- Personal Section -->
-        <section class="container" style="padding-top: 4rem;">
-            <span class="section-tag" data-reveal>The Human Element</span>
-            <h2 class="section-title" data-reveal>Life Outside the <span class="text-gradient">IDE.</span></h2>
-            <p style="color: var(--text-muted); font-size: 1.05rem; max-width: 600px; margin-bottom: 3rem; line-height: 1.8;" data-reveal>
-                Code is just syntax without the people it serves. Whether I'm collaborating with fellow developers, exploring my community, or simply finding a quiet moment to recharge—I believe that living a full life offline is what makes my work online so impactful.
-            </p>
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem; margin-bottom: 4rem;">
-                <div class="award-card" data-reveal>
-                    <img loading="lazy" src="images/sad.jpg" alt="Emmanuel Drah" style="object-position: center; height: 250px; object-fit: cover; background: none; padding: 0;">
-                    <div class="award-card-body" style="padding: 1rem;">
-                        <p style="font-size: 0.9rem; color: var(--text-muted); margin: 0;">Focusing on the big picture and planning the next move.</p>
-                    </div>
-                </div>
-                <div class="award-card" data-reveal>
-                    <img loading="lazy" src="images/IMG_6594.JPG" alt="Out and about" style="object-position: top; height: 250px; object-fit: cover; background: none; padding: 0;">
-                    <div class="award-card-body" style="padding: 1rem;">
-                        <p style="font-size: 0.9rem; color: var(--text-muted); margin: 0;">Stepping away from the screen to experience the world.</p>
-                    </div>
-                </div>
-                <div class="award-card" data-reveal>
-                    <img loading="lazy" src="images/IMG_6147.JPG" alt="Community connection" style="object-position: center; height: 250px; object-fit: cover; background: none; padding: 0;">
-                    <div class="award-card-body" style="padding: 1rem;">
-                        <p style="font-size: 0.9rem; color: var(--text-muted); margin: 0;">Connecting with people — the real drivers of technology.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Recognition & Awards -->
-        <section class="container">
-            <span class="section-tag" data-reveal>Recognition</span>
-            <h2 class="section-title" data-reveal>Beyond the <span class="text-gradient">keyboard.</span></h2>
-            <p style="color: var(--text-muted); font-size: 1.05rem; max-width: 600px; margin-bottom: 3rem; line-height: 1.8;" data-reveal>
-                The best validation of my work comes not from metrics, but from people. These are the moments that reminded me that showing up consistently is always worth it.
-            </p>
-            <div class="awards-grid">
-                <div class="award-card" data-reveal>
-                    <img loading="lazy" src="images/tech%20fest.jpeg" alt="VR Technology Training Certificate">
-                    <div class="award-card-body">
-                        <span class="award-label">Ho West Tech Fest · KNUST · 2025</span>
-                        <h3>Immersive VR Engineering</h3>
-                        <p>Successfully completed a 14-day intensive program on "Re-Imagining Community Tourism Through Immersive VR Technologies" organized by DIPPER LAB (KNUST) and CYNOSOL. A recognition of advancing digital tourism experiences.</p>
-                    </div>
-                </div>
-                <div class="award-card" data-reveal>
-                    <img loading="lazy" src="images/naspa1.jpeg" alt="NASPA Publicity Committee Member">
-                    <div class="award-card-body">
-                        <span class="award-label">NASPA Ketu North · 2023/2024</span>
-                        <h3>Publicity Committee Member</h3>
-                        <p>Awarded for exceptional service and dedication to the National Service Personnel Association. Recognized for effectively managing communications and prioritizing the needs of the community through strategic outreach.</p>
-                    </div>
-                </div>
-                <div class="award-card" data-reveal>
-                    <img loading="lazy" src="images/naspa2.jpeg" alt="NASPA Social Media Influencer">
-                    <div class="award-card-body">
-                        <span class="award-label">NASPA Ketu North · 2023/2024</span>
-                        <h3>Social Media Influencer</h3>
-                        <p>Commended for leveraging digital platforms to amplify the association's impact. This recognition highlights a commitment to building community engagement, awareness, and digital presence during the service term.</p>
-                    </div>
-                </div>
-                <div class="award-card" data-reveal>
-                    <img loading="lazy" src="images/naspa3.jpeg" alt="NASPA Most Hardworking Committee Member">
-                    <div class="award-card-body">
-                        <span class="award-label">NASPA Ketu North · 2023/2024</span>
-                        <h3>Most Hardworking Member</h3>
-                        <p>Honored as the most hardworking committee member, reflecting relentless work ethic and unyielding dedication. A true testament to the core philosophy of 'Success Above Dreams'—showing up and doing the work.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
     </main>
 
     <portfolio-footer></portfolio-footer>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.1/vanilla-tilt.min.js" defer></script>
     <script src="main.js"></script>
 </body>
 </html>

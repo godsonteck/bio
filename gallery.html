@@ -13,75 +13,8 @@
     <link rel="canonical" href="https://emmanueldrah.netlify.app/gallery.html">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap">
-    <link rel="stylesheet" href="css/style.css?v=3">
-    <script src="js/components.js?v=2" defer></script>
-    <style>
-        .gallery-hero {
-            min-height: 45vh;
-            display: flex;
-            align-items: center;
-            padding: 8rem 5% 4rem;
-            background:
-                radial-gradient(circle at 15% 30%, rgba(var(--primary-rgb), 0.08) 0%, transparent 45%),
-                radial-gradient(circle at 85% 70%, rgba(var(--accent-rgb), 0.12) 0%, transparent 45%),
-                var(--bg-light);
-            position: relative;
-            overflow: hidden;
-            text-align: center;
-        }
-        .gallery-hero::before {
-            content: '';
-            position: absolute;
-            inset: 0;
-            background-size: 40px 40px;
-            background-image: radial-gradient(var(--border) 0.5px, transparent 0.5px);
-            opacity: 0.3;
-            animation: gridShift 20s linear infinite;
-        }
-        .gallery-hero-inner {
-            position: relative;
-            z-index: 1;
-            max-width: 700px;
-            margin: 0 auto;
-        }
-        .gallery-hero-inner h1 {
-            font-size: clamp(2.5rem, 7vw, 4rem);
-            font-weight: 800;
-            line-height: 1.1;
-            letter-spacing: -0.04em;
-            margin-bottom: 1.25rem;
-        }
-        .gallery-hero-inner p {
-            font-size: 1.15rem;
-            color: var(--text-muted);
-            line-height: 1.7;
-        }
-
-        .gallery-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-            gap: 1.5rem;
-        }
-
-        .gallery-item {
-            border-radius: var(--radius-md);
-            background: var(--bg-card);
-            box-shadow: var(--shadow);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            cursor: pointer;
-            overflow: hidden;
-        }
-
-        .gallery-item:hover {
-            transform: translateY(-6px);
-            box-shadow: 0 20px 40px rgba(0,0,0,0.18), 0 0 20px var(--accent-glow);
-        }
-
-        @media (max-width: 600px) {
-            .gallery-grid { grid-template-columns: 1fr 1fr; }
-        }
-    </style>
+    <link rel="stylesheet" href="css/style.css?v=4">
+    <script src="js/components.js?v=3" defer></script>
 </head>
 <body>
     <portfolio-nav></portfolio-nav>
@@ -93,18 +26,24 @@
     </div>
 
     <main>
-        <section class="gallery-hero">
-            <div class="gallery-hero-inner">
-                <span class="section-tag" data-reveal>Visual Archive</span>
-                <h1 data-reveal>A Glimpse into the <span class="text-gradient">Process.</span></h1>
-                <p data-reveal>From hospital dashboards built in the early hours of the morning to award ceremonies and community tech festivals — this is the work behind the work.</p>
+        <!-- Page Hero -->
+        <section class="hero" style="min-height: 50vh; padding-top: 10rem; padding-bottom: 4rem;">
+            <div class="gallery-hero-inner container" style="text-align: center; margin: 0 auto;">
+                <span class="section-tag">Visual Archive</span>
+                <h1 style="font-size: clamp(2.5rem, 7vw, 4rem); line-height: 1.1; margin-bottom: 1.25rem;">
+                    A Glimpse into the <span class="text-gradient">Process.</span>
+                </h1>
+                <p style="font-size: 1.15rem; color: var(--text-muted); line-height: 1.7; max-width: 600px; margin: 0 auto;">
+                    From hospital dashboards built in the early hours of the morning to award ceremonies and community tech festivals — this is the work behind the work.
+                </p>
             </div>
         </section>
 
+        <!-- Gallery Grid -->
         <section class="container" style="padding-top: 4rem; padding-bottom: 8rem;">
             <div class="gallery-grid">
 
-                <div class="gallery-item" data-reveal>
+                <div class="gallery-item">
                     <div class="gallery-img-wrap">
                         <img loading="lazy" src="images/alera_screen.jpg" alt="ALERA Healthcare Interface">
                         <div class="gallery-overlay"><div class="gallery-zoom-icon">🔍</div></div>
@@ -114,7 +53,7 @@
                     </div>
                 </div>
 
-                <div class="gallery-item" data-reveal>
+                <div class="gallery-item">
                     <div class="gallery-img-wrap">
                         <img loading="lazy" src="images/IMG_6590.JPG" alt="Emmanuel Drah — Digital Architect">
                         <div class="gallery-overlay"><div class="gallery-zoom-icon">🔍</div></div>
@@ -124,7 +63,7 @@
                     </div>
                 </div>
 
-                <div class="gallery-item" data-reveal>
+                <div class="gallery-item">
                     <div class="gallery-img-wrap">
                         <img loading="lazy" src="images/carp.jpg" alt="Rental Flow Application">
                         <div class="gallery-overlay"><div class="gallery-zoom-icon">🔍</div></div>
@@ -134,7 +73,7 @@
                     </div>
                 </div>
 
-                <div class="gallery-item" data-reveal>
+                <div class="gallery-item">
                     <div class="gallery-img-wrap">
                         <img loading="lazy" src="images/alera_2.png" alt="ALERA Patient Records Dashboard">
                         <div class="gallery-overlay"><div class="gallery-zoom-icon">🔍</div></div>
@@ -144,7 +83,7 @@
                     </div>
                 </div>
 
-                <div class="gallery-item" data-reveal>
+                <div class="gallery-item">
                     <div class="gallery-img-wrap">
                         <img loading="lazy" src="images/IMG-20251001-WA0109.jpg" alt="Ho West Tech Fest 2025">
                         <div class="gallery-overlay"><div class="gallery-zoom-icon">🔍</div></div>
@@ -154,7 +93,7 @@
                     </div>
                 </div>
 
-                <div class="gallery-item" data-reveal>
+                <div class="gallery-item">
                     <div class="gallery-img-wrap">
                         <img loading="lazy" src="images/IMG-20251001-WA0104.jpg" alt="Excellence in Innovation Award">
                         <div class="gallery-overlay"><div class="gallery-zoom-icon">🔍</div></div>
@@ -164,9 +103,9 @@
                     </div>
                 </div>
 
-                <div class="gallery-item" data-reveal>
+                <div class="gallery-item">
                     <div class="gallery-img-wrap">
-                        <img loading="lazy" src="images/IMG_6543.JPG" alt="NASPA Recognition Event" style="object-position: top;">
+                        <img loading="lazy" src="images/IMG_6543.JPG" alt="NASPA Recognition Event">
                         <div class="gallery-overlay"><div class="gallery-zoom-icon">🔍</div></div>
                     </div>
                     <div class="gallery-caption">
@@ -174,94 +113,13 @@
                     </div>
                 </div>
 
-                <div class="gallery-item" data-reveal>
+                <div class="gallery-item">
                     <div class="gallery-img-wrap">
-                        <img loading="lazy" src="images/IMG-20251001-WA0093.jpg" alt="Ho West Tech Fest 3rd Edition Launch" style="object-position: top;">
+                        <img loading="lazy" src="images/IMG-20251001-WA0093.jpg" alt="Ho West Tech Fest 3rd Edition Launch">
                         <div class="gallery-overlay"><div class="gallery-zoom-icon">🔍</div></div>
                     </div>
                     <div class="gallery-caption">
-                        <p>The launch of the 3rd edition of the Ho West Annual Tech Fest — proof this movement was only growing stronger.</p>
-                    </div>
-                </div>
-
-                <div class="gallery-item" data-reveal>
-                    <div class="gallery-img-wrap">
-                        <img loading="lazy" src="images/alera_3.png" alt="ALERA Lab Reporting System">
-                        <div class="gallery-overlay"><div class="gallery-zoom-icon">🔍</div></div>
-                    </div>
-                    <div class="gallery-caption">
-                        <p>Real-time lab reporting — cutting wait times and improving patient outcomes with every result generated.</p>
-                    </div>
-                </div>
-
-                <div class="gallery-item" data-reveal>
-                    <div class="gallery-img-wrap">
-                        <img loading="lazy" src="images/NASPA AWRDS.JPG" alt="NASPA Team" style="object-position: top;">
-                        <div class="gallery-overlay"><div class="gallery-zoom-icon">🔍</div></div>
-                    </div>
-                    <div class="gallery-caption">
-                        <p>The NASPA team — building lasting connections through shared service and unyielding hard work.</p>
-                    </div>
-                </div>
-
-                <div class="gallery-item" data-reveal>
-                    <div class="gallery-img-wrap">
-                        <img loading="lazy" src="images/alera_4.png" alt="ALERA Pharmacy Integration">
-                        <div class="gallery-overlay"><div class="gallery-zoom-icon">🔍</div></div>
-                    </div>
-                    <div class="gallery-caption">
-                        <p>Pharmacy integration — managing critical inventory to ensure medications are always in stock when needed.</p>
-                    </div>
-                </div>
-
-                <div class="gallery-item" data-reveal>
-                    <div class="gallery-img-wrap">
-                        <img loading="lazy" src="images/IMG-20251001-WA0033.jpg" alt="Community Engagement">
-                        <div class="gallery-overlay"><div class="gallery-zoom-icon">🔍</div></div>
-                    </div>
-                    <div class="gallery-caption">
-                        <p>Community-first: Engaging with local developers to brainstorm and build real solutions to real problems.</p>
-                    </div>
-                </div>
-
-                <!-- New Personal Additions -->
-                <div class="gallery-item" data-reveal>
-                    <div class="gallery-img-wrap">
-                        <img loading="lazy" src="images/sad.jpg" alt="Emmanuel Drah Portrait">
-                        <div class="gallery-overlay"><div class="gallery-zoom-icon">🔍</div></div>
-                    </div>
-                    <div class="gallery-caption">
-                        <p>A moment of reflection. Because "Success Above Dreams" requires both deep focus and a clear mind.</p>
-                    </div>
-                </div>
-
-                <div class="gallery-item" data-reveal>
-                    <div class="gallery-img-wrap">
-                        <img loading="lazy" src="images/IMG_3500.JPG" alt="Collaboration and Teamwork" style="object-position: top;">
-                        <div class="gallery-overlay"><div class="gallery-zoom-icon">🔍</div></div>
-                    </div>
-                    <div class="gallery-caption">
-                        <p>Collaboration in action — bouncing ideas around, whiteboarding, and finding elegant solutions.</p>
-                    </div>
-                </div>
-
-                <div class="gallery-item" data-reveal>
-                    <div class="gallery-img-wrap">
-                        <img loading="lazy" src="images/IMG_6343.JPG" alt="Tech Community Networking">
-                        <div class="gallery-overlay"><div class="gallery-zoom-icon">🔍</div></div>
-                    </div>
-                    <div class="gallery-caption">
-                        <p>Connecting with the tech community — sharing insights, growing, and learning from other developers.</p>
-                    </div>
-                </div>
-
-                <div class="gallery-item" data-reveal>
-                    <div class="gallery-img-wrap">
-                        <img loading="lazy" src="images/IMG_3346.JPG" alt="Finding Balance Outside Work">
-                        <div class="gallery-overlay"><div class="gallery-zoom-icon">🔍</div></div>
-                    </div>
-                    <div class="gallery-caption">
-                        <p>Finding balance. The best code is often written after stepping away from the screen and experiencing life.</p>
+                        <p>The launch of the 3rd edition of the Ho West Annual Tech Fest.</p>
                     </div>
                 </div>
 
