@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projects — Emmanuel Drah</title>
+    <title>My Projects — Emmanuel Drah</title>
     <meta name="description" content="Explore the projects of Emmanuel Drah — including ALERA, a full-scale healthcare platform, and Rental Flow, a Flutter-based car booking engine.">
-    <meta property="og:title" content="Projects — Emmanuel Drah">
+    <meta property="og:title" content="My Projects — Emmanuel Drah">
     <meta property="og:description" content="Explore selected case studies by Emmanuel Drah, from healthcare platforms to booking engines.">
     <meta property="og:image" content="https://emmanueldrah.netlify.app/images/alera_screen.jpg">
     <meta property="og:url" content="https://emmanueldrah.netlify.app/projects.html">
@@ -13,6 +13,7 @@
     <link rel="canonical" href="https://emmanueldrah.netlify.app/projects.html">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
     <link rel="preload" href="images/alera_screen.jpg" as="image">
     <link rel="stylesheet" href="css/style.css?v=4">
     <script src="js/components.js?v=3" defer></script>
@@ -21,68 +22,78 @@
     <portfolio-nav></portfolio-nav>
 
     <main>
-        <!-- Page Hero -->
-        <section class="hero" style="min-height: 60vh; padding-top: 10rem; padding-bottom: 4rem;">
-            <div class="projects-hero-inner container">
+        <section class="hero" style="min-height: 60vh; padding: 9rem 0 4rem;">
+            <div class="container">
                 <span class="section-tag">Case Studies</span>
-                <h1 style="font-size: clamp(2.5rem, 7vw, 4rem); line-height: 1.1; margin-bottom: 1.25rem;">
-                    Crafted with purpose.<br><span class="text-gradient">Shipped to production.</span>
-                </h1>
-                <p style="font-size: 1.15rem; color: var(--text-muted); line-height: 1.7; max-width: 600px;">
-                    These are not side projects. Each one started as a real problem I saw around me and decided to solve. Here is a look into what I built and why it matters.
+                <h1 class="text-animate">Crafted with purpose.<br><span class="text-gradient">Shipped to production.</span></h1>
+                <p style="color: var(--text-muted); font-size: 1.15rem; max-width: 600px; margin-top: 1rem; line-height: 1.75;">
+                    These are not just side projects. Each one started as a real problem I saw around me and decided to solve. Here is a look into what I built and why it matters.
                 </p>
             </div>
         </section>
 
-        <!-- Projects Grid Showcase -->
-        <section class="container" style="padding-top: 4rem; padding-bottom: 8rem;">
+        <section class="container" style="padding-top: 1rem; padding-bottom: 8rem;">
             <div class="home-projects-list">
 
-                <!-- Project 1: ALERA -->
-                <article class="home-project-card">
+                <!-- ALERA Healthcare Platform -->
+                <article class="home-project-card" data-reveal style="grid-template-columns: 1fr 1.2fr;">
                     <div class="home-project-img">
-                        <img loading="lazy" src="images/alera_screen.jpg" alt="ALERA Gamma Healthcare Coordination Platform">
+                        <img loading="lazy" src="images/alera_screen.jpg" alt="ALERA Healthcare Platform Interface">
                     </div>
                     <div class="home-project-body">
                         <div>
-                            <span class="section-tag" style="background: rgba(13, 148, 136, 0.1); border-color: rgba(13, 148, 136, 0.2); color: var(--ghteal-light); margin-bottom: 0.75rem;">Healthcare Coordination</span>
+                            <span class="brand-tag">Project 01 · Healthcare Platform</span>
                             <h3>ALERA Healthcare</h3>
-                            <p>
-                                Hospitals frequently struggle with uncoordinated flows and slow report delivery. I built ALERA to connect critical medical pipelines in real-time. It enables doctors, lab technicians, pharmacies, and dispatch services to instantly update inventory, review patient profiles, and communicate smoothly.
-                            </p>
+                            <p>Hospitals in Ghana were losing critical time because doctors, labs, and emergency teams couldn't share information efficiently. I built ALERA to fix that. It is a full-scale, real-time healthcare platform that connects every department — from patient intake and lab results to pharmacy inventory and ambulance dispatch — into a single unified dashboard. The result: faster decisions, better care.</p>
                         </div>
                         <div class="home-project-footer">
                             <div class="tech-pill-row">
-                                <span class="tech-pill">React</span>
-                                <span class="tech-pill">Python</span>
-                                <span class="tech-pill">FastAPI</span>
-                                <span class="tech-pill">PostgreSQL</span>
+                                <span class="tech-pill">
+                                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React"> React
+                                </span>
+                                <span class="tech-pill">
+                                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python"> FastAPI
+                                </span>
+                                <span class="tech-pill">
+                                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" alt="PostgreSQL"> PostgreSQL
+                                </span>
+                                <span class="tech-pill">
+                                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" alt="TypeScript"> TypeScript
+                                </span>
                             </div>
-                            <a href="https://alera-gamma.vercel.app" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="padding: 0.6rem 1.2rem; font-size: 0.75rem;">Live Demo ↗</a>
+                            <div style="display: flex; gap: 0.75rem;">
+                                <a href="https://alera-gamma.vercel.app" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="padding: 0.5rem 1rem; font-size: 0.75rem;">View Live ↗</a>
+                            </div>
                         </div>
                     </div>
                 </article>
 
-                <!-- Project 2: Rental Flow -->
-                <article class="home-project-card">
+                <!-- Rental Flow -->
+                <article class="home-project-card" data-reveal style="grid-template-columns: 1fr 1.2fr;">
                     <div class="home-project-img">
-                        <img loading="lazy" src="images/carp.jpg" alt="Rental Flow Car Booking System">
+                        <img loading="lazy" src="images/carp.jpg" alt="Rental Flow Car Booking App">
                     </div>
                     <div class="home-project-body">
                         <div>
-                            <span class="section-tag" style="background: rgba(217, 119, 6, 0.1); border-color: rgba(217, 119, 6, 0.2); color: var(--ghgold-light); margin-bottom: 0.75rem;">Vehicle Booking Engine</span>
+                            <span class="brand-tag">Project 02 · Mobile Booking Engine</span>
                             <h3>Rental Flow</h3>
-                            <p>
-                                Vehicle renting in Ho relies on dozens of calls and complete lack of booking transparency. Rental Flow puts this entire dynamic on a clean, robust mobile engine. Built with Flutter, users can browse vehicles, track dates, confirm schedules, and secure rentals in under 3 minutes.
-                            </p>
+                            <p>For my final year project, I chose a problem I saw every day — renting a vehicle in Ghana requires too many calls, too much back-and-forth, and zero transparency. Rental Flow is a cross-platform mobile app that brings the entire process online: browse available cars, select a date range, confirm a booking, and track your rental — all in under three minutes. Built to feel as smooth as the car you're booking.</p>
                         </div>
                         <div class="home-project-footer">
                             <div class="tech-pill-row">
-                                <span class="tech-pill">Flutter</span>
-                                <span class="tech-pill">Dart</span>
-                                <span class="tech-pill">Firebase</span>
+                                <span class="tech-pill">
+                                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg" alt="Flutter"> Flutter
+                                </span>
+                                <span class="tech-pill">
+                                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg" alt="Firebase"> Firebase
+                                </span>
+                                <span class="tech-pill">
+                                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dart/dart-original.svg" alt="Dart"> Dart
+                                </span>
                             </div>
-                            <a href="https://github.com/godsonteck" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="padding: 0.6rem 1.2rem; font-size: 0.75rem;">GitHub Source ↗</a>
+                            <div style="display: flex; gap: 0.75rem;">
+                                <a href="https://github.com/godsonteck" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="padding: 0.5rem 1rem; font-size: 0.75rem;">Source Code ↗</a>
+                            </div>
                         </div>
                     </div>
                 </article>

@@ -1,6 +1,6 @@
 /*
-   Emmanuel Drah Portfolio - Award Winning Web Components
-   Designed with pride by Kofi Mensah to offer custom, hand-crafted aesthetic and zero template feel.
+   Emmanuel Drah Portfolio - Award-Winning Shared Web Components
+   Designed with pride by Kofi Mensah to offer a premium, bespoke feel.
 */
 
 class PortfolioNav extends HTMLElement {

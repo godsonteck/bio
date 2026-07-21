@@ -1,46 +1,46 @@
 /*
-   Emmanuel Drah Portfolio - Award Winning UX/UI Stylesheet
-   Design and Architecture by Kofi Mensah
-   Theme: Deep Ghanaian Night Sky with Custom Gold, Teal, and Amber accents
+   Emmanuel Drah Portfolio - Award-Winning Premium Multi-page Stylesheet
+   Designed proudly by Kofi Mensah
+   Theme: Deep Ghanaian Night Sky with Custom Gold, Teal, and Amber Accents
 */
 
 @import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,700;12..96,800&family=Sora:wght@300;400;500;600;700;800&display=swap');
 
 :root {
-    /* Color System */
-    --night-deep: #03050C;
-    --night-light: #070B16;
-    --night-card: #0C1122;
+    /* Color Palette - Premium Tones */
+    --night-deep: #05070F;
+    --night-light: #0A0E1A;
+    --night-card: #0F1426;
     --border: rgba(255, 255, 255, 0.05);
     --border-hover: rgba(255, 255, 255, 0.1);
 
     --ghgold: #D97706;
     --ghgold-light: #F59E0B;
-    --ghgold-glow: rgba(217, 119, 6, 0.12);
+    --ghgold-glow: rgba(217, 119, 6, 0.15);
 
     --ghteal: #0D9488;
     --ghteal-light: #14B8A6;
-    --ghteal-glow: rgba(13, 148, 136, 0.12);
+    --ghteal-glow: rgba(13, 148, 136, 0.15);
 
     --ghamber: #EA580C;
     --ghamber-light: #F97316;
-    --ghamber-glow: rgba(234, 88, 12, 0.12);
+    --ghamber-glow: rgba(234, 88, 12, 0.15);
 
     --text-main: #F8FAFC;
     --text-muted: #94A3B8;
 
-    --radius-lg: 32px;
-    --radius-md: 20px;
-    --radius-sm: 12px;
+    --radius-lg: 24px;
+    --radius-md: 16px;
+    --radius-sm: 8px;
 
-    --shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.8);
-    --shadow-lg: 0 30px 60px -20px rgba(0, 0, 0, 0.9);
-    --transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    --shadow: 0 12px 30px -10px rgba(0, 0, 0, 0.7);
+    --shadow-lg: 0 24px 60px -12px rgba(0, 0, 0, 0.8);
+    --transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
     --container-width: 1200px;
     --nav-height: 80px;
 }
 
-/* Base Settings */
+/* Base resets */
 * {
     margin: 0;
     padding: 0;
@@ -74,7 +74,7 @@ h1, h2, h3, h4, .brand-name {
     background: var(--night-deep);
 }
 ::-webkit-scrollbar-thumb {
-    background: #1F2937;
+    background: #1E293B;
     border-radius: 10px;
 }
 ::-webkit-scrollbar-thumb:hover {
@@ -106,7 +106,7 @@ nav {
     z-index: 1000;
     padding: 0 5%;
     height: var(--nav-height);
-    background: rgba(3, 5, 12, 0.85);
+    background: rgba(5, 7, 15, 0.85);
     backdrop-filter: blur(24px);
     -webkit-backdrop-filter: blur(24px);
     border-bottom: 1px solid var(--border);
@@ -118,7 +118,7 @@ nav {
 
 nav.scrolled {
     height: 70px;
-    background: rgba(3, 5, 12, 0.95);
+    background: rgba(5, 7, 15, 0.95);
     border-bottom-color: var(--border-hover);
     box-shadow: var(--shadow);
 }
@@ -204,7 +204,7 @@ nav.scrolled {
     color: var(--text-main);
 }
 
-/* Fullscreen Menu Overlay for stunning mobile UX/UI */
+/* Immersive Fullscreen Mobile Navigation Overlay */
 .mobile-menu-overlay {
     position: fixed;
     inset: 0;
