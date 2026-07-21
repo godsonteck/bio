@@ -1,651 +1,165 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Emmanuel Drah — Mobile & Web Architect</title>
     <meta name="description" content="Emmanuel Drah builds high-performance mobile and web applications — from the ALERA healthcare platform to Flutter booking engines. Based in Ghana.">
-
-    <!-- Open Graph / Social Media -->
     <meta property="og:title" content="Emmanuel Drah — Mobile & Web Architect">
-    <meta property="og:description" content="Emmanuel Drah builds high-performance mobile and web applications. Explore his work and philosophy.">
+    <meta property="og:description" content="Emmanuel Drah builds high-performance mobile and web applications. Explore his work and services.">
     <meta property="og:image" content="https://emmanueldrah.netlify.app/images/sad.jpg">
     <meta property="og:url" content="https://emmanueldrah.netlify.app/">
     <meta name="twitter:card" content="summary_large_image">
     <link rel="canonical" href="https://emmanueldrah.netlify.app/">
-
-    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Syne:wght@700;800&display=swap" rel="stylesheet">
-
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        night: {
-                            DEFAULT: '#05070F',
-                            light: '#0A0E1A',
-                            card: '#0F1426',
-                            border: '#1E293B',
-                            muted: '#94A3B8',
-                        },
-                        ghgold: {
-                            DEFAULT: '#D97706',
-                            light: '#F59E0B',
-                            glow: 'rgba(217, 119, 6, 0.2)',
-                        },
-                        ghteal: {
-                            DEFAULT: '#0D9488',
-                            light: '#14B8A6',
-                            glow: 'rgba(13, 148, 136, 0.2)',
-                        },
-                        ghamber: {
-                            DEFAULT: '#EA580C',
-                            light: '#F97316',
-                            glow: 'rgba(234, 88, 12, 0.2)',
-                        }
-                    },
-                    fontFamily: {
-                        sans: ['Plus Jakarta Sans', 'sans-serif'],
-                        display: ['Syne', 'sans-serif'],
-                    },
-                    backgroundImage: {
-                        'kente-gradient': 'linear-gradient(90deg, #D97706 0%, #EA580C 33%, #0D9488 66%, #D97706 100%)',
-                    }
-                }
-            }
-        }
-    </script>
-
-    <style>
-        /* Custom Animations & Interactions */
-        @keyframes subtle-float {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-8px); }
-        }
-        .float-animation {
-            animation: subtle-float 6s ease-in-out infinite;
-        }
-
-        /* Custom Glassmorphism */
-        .glass-panel {
-            background: rgba(10, 14, 26, 0.8);
-            backdrop-filter: blur(16px);
-            border: 1px solid rgba(255, 255, 255, 0.05);
-        }
-
-        /* Subtle Kente Geometric Border Accent */
-        .kente-bar {
-            height: 4px;
-            background: linear-gradient(90deg, #D97706 0%, #EA580C 25%, #0D9488 50%, #1E293B 75%, #D97706 100%);
-            background-size: 200% auto;
-            animation: kente-shift 8s linear infinite;
-        }
-
-        @keyframes kente-shift {
-            to { background-position: 200% center; }
-        }
-
-        /* Reveal animations on scroll */
-        .reveal {
-            opacity: 0;
-            transform: translateY(24px);
-            transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
-        }
-        .reveal.active {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        /* Hover glows */
-        .hover-gold-glow {
-            transition: all 0.3s ease;
-        }
-        .hover-gold-glow:hover {
-            text-shadow: 0 0 12px rgba(217, 119, 6, 0.4);
-            color: #F59E0B;
-        }
-    </style>
+    <link rel="preload" href="images/IMG_6590.JPG" as="image">
+    <link rel="stylesheet" href="css/style.css?v=4">
+    <script src="js/components.js?v=3" defer></script>
 </head>
-<body class="bg-night text-gray-100 font-sans selection:bg-ghgold selection:text-night overflow-x-hidden">
-    <div class="kente-bar w-full fixed top-0 z-[1100]"></div>
+<body>
+    <portfolio-nav></portfolio-nav>
 
-    <!-- Header Navigation -->
-    <header class="fixed top-1 w-full z-50 transition-all duration-300 px-4 md:px-8 lg:px-16" id="navbar">
-        <div class="max-w-7xl mx-auto flex items-center justify-between py-4 px-6 md:px-8 glass-panel rounded-2xl border border-gray-800/60 mt-4">
-            <a href="#home" class="flex items-center gap-3 group">
-                <img src="images/sad.jpg" alt="SAD Logo" class="w-10 h-10 rounded-xl object-cover border border-ghgold/30 group-hover:scale-105 duration-300">
-                <div class="flex flex-col">
-                    <span class="font-display font-extrabold text-base tracking-tight text-white group-hover:text-ghgold-light duration-300">Emmanuel Drah</span>
-                    <span class="text-[10px] font-bold text-ghteal tracking-wider uppercase">Success Above Dreams</span>
+    <header class="hero">
+        <div class="hero-grid container">
+            <div class="hero-text">
+                <span class="section-tag">Mobile & Web Architect</span>
+                <h1>
+                    Building products that <br><span class="text-gradient">actually matter.</span>
+                </h1>
+                <p>
+                    I'm Emmanuel — an ICT graduate from <strong>Ho Technical University</strong>. I design and engineer mission-critical systems like <strong>ALERA</strong> (for hospital coordination) and production-ready mobile applications that solve real daily struggles in Ghana.
+                </p>
+                <div class="cta-group">
+                    <a href="projects.html" class="btn btn-primary">Selected Work</a>
+                    <a href="Tech_CV.docx" class="btn btn-outline" download>Download CV</a>
                 </div>
-            </a>
-
-            <!-- Desktop Nav Links -->
-            <nav class="hidden md:flex items-center gap-8 text-sm font-semibold tracking-wide text-gray-300">
-                <a href="#home" class="hover:text-ghgold-light duration-300 transition-colors">Home</a>
-                <a href="#philosophy" class="hover:text-ghgold-light duration-300 transition-colors">Philosophy</a>
-                <a href="#skills" class="hover:text-ghgold-light duration-300 transition-colors">Skills</a>
-                <a href="#services" class="hover:text-ghgold-light duration-300 transition-colors">What I Build</a>
-                <a href="#work" class="hover:text-ghgold-light duration-300 transition-colors">Selected Work</a>
-                <a href="#contact" class="hover:text-ghgold-light duration-300 transition-colors">Contact</a>
-            </nav>
-
-            <!-- Action Button -->
-            <div class="flex items-center gap-4">
-                <a href="#contact" class="hidden sm:inline-flex bg-gradient-to-r from-ghgold to-ghamber text-white font-extrabold text-xs px-5 py-2.5 rounded-xl uppercase tracking-wider hover:shadow-[0_0_20px_rgba(217,119,6,0.4)] transition-all hover:-translate-y-0.5 duration-300">Hire Him</a>
-                <button id="mobile-toggle" class="md:hidden text-white hover:text-ghgold focus:outline-none" aria-label="Toggle menu">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                        <path id="hamburger-icon" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M4 6h16M4 12h16m-7 6h7"></path>
-                    </svg>
-                </button>
+                <div class="stats-bar">
+                    <div class="stat-item">
+                        <span class="stat-number">2+</span>
+                        <span class="stat-label">Years Building</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">5+</span>
+                        <span class="stat-label">Shipped Apps</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">3</span>
+                        <span class="stat-label">Tech Awards</span>
+                    </div>
+                </div>
             </div>
-        </div>
-
-        <!-- Mobile Drawer -->
-        <div id="mobile-menu" class="hidden md:hidden absolute left-4 right-4 top-24 glass-panel border border-gray-800 rounded-2xl p-6 flex flex-col gap-4 shadow-2xl">
-            <a href="#home" class="mobile-link text-lg font-bold text-gray-200 py-2 border-b border-gray-800">Home</a>
-            <a href="#philosophy" class="mobile-link text-lg font-bold text-gray-200 py-2 border-b border-gray-800">Philosophy</a>
-            <a href="#skills" class="mobile-link text-lg font-bold text-gray-200 py-2 border-b border-gray-800">Skills</a>
-            <a href="#services" class="mobile-link text-lg font-bold text-gray-200 py-2 border-b border-gray-800">What I Build</a>
-            <a href="#work" class="mobile-link text-lg font-bold text-gray-200 py-2 border-b border-gray-800">Selected Work</a>
-            <a href="#contact" class="mobile-link text-lg font-bold text-gray-200 py-2">Contact</a>
+            <div class="hero-visual">
+                <div class="hero-img-frame">
+                    <img src="images/IMG_6590.JPG" alt="Emmanuel Drah">
+                </div>
+            </div>
         </div>
     </header>
 
-    <!-- Hero Section -->
-    <section id="home" class="min-h-screen relative pt-36 pb-20 md:py-32 flex items-center justify-center overflow-hidden px-4 md:px-8 lg:px-16">
-        <!-- Radial Gradients to deliver a premium night aesthetic -->
-        <div class="absolute inset-0 bg-[radial-gradient(circle_at_15%_25%,rgba(217,119,6,0.06),transparent_40%),radial-gradient(circle_at_85%_75%,rgba(13,148,136,0.08),transparent_45%)] pointer-events-none"></div>
-
-        <div class="max-w-7xl mx-auto w-full grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center relative z-10">
-            <!-- Left Info -->
-            <div class="lg:col-span-7 flex flex-col items-start space-y-6">
-                <div class="inline-flex items-center gap-2 bg-night-card border border-gray-800 px-4 py-2 rounded-full shadow-inner">
-                    <span class="flex h-2 w-2 rounded-full bg-ghteal animate-pulse"></span>
-                    <span class="text-xs font-bold text-gray-300 tracking-wider uppercase">Available for Real-World Impact</span>
-                </div>
-
-                <h1 class="font-display font-extrabold text-4xl sm:text-5xl lg:text-6xl text-white tracking-tight leading-[1.05]">
-                    Building products that <br class="hidden sm:inline">
-                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-ghgold via-ghamber to-ghteal">actually matter.</span>
-                </h1>
-
-                <p class="text-gray-400 text-base sm:text-lg leading-relaxed max-w-2xl">
-                    I'm Emmanuel — an ICT graduate from <strong class="text-white">Ho Technical University</strong>. I don't build generic student projects. I design and engineer mission-critical systems like <strong class="text-white">ALERA</strong> (for hospital coordination) and production-ready mobile engines that solve real daily struggles in Ghana.
-                </p>
-
-                <!-- Stats Bar -->
-                <div class="grid grid-cols-3 gap-6 sm:gap-12 py-4 border-y border-gray-800/50 w-full max-w-lg">
-                    <div class="flex flex-col">
-                        <span class="font-display font-extrabold text-2xl sm:text-3xl text-ghgold">2+</span>
-                        <span class="text-[10px] sm:text-xs font-bold text-gray-500 uppercase tracking-wider">Years Building</span>
+    <main>
+        <!-- Philosophy / Success Above Dreams -->
+        <section id="philosophy" class="container">
+            <span class="section-tag">Core Beliefs</span>
+            <h2 class="section-title">Success Above <span class="text-gradient">Dreams.</span></h2>
+            <div class="about-grid">
+                <div class="about-img-col">
+                    <div class="about-img-wrapper" style="aspect-ratio: 4/3;">
+                        <img src="images/sad.jpg" alt="Success Above Dreams Motto">
                     </div>
-                    <div class="flex flex-col">
-                        <span class="font-display font-extrabold text-2xl sm:text-3xl text-ghteal">5+</span>
-                        <span class="text-[10px] sm:text-xs font-bold text-gray-500 uppercase tracking-wider">Shipped Apps</span>
-                    </div>
-                    <div class="flex flex-col">
-                        <span class="font-display font-extrabold text-2xl sm:text-3xl text-ghamber">3</span>
-                        <span class="text-[10px] sm:text-xs font-bold text-gray-500 uppercase tracking-wider">Tech Awards</span>
+                    <div class="about-badge">
+                        🏆 Honorable Recognition<br><small style="font-weight:400; opacity:0.9;">Ho West Tech Fest 2025</small>
                     </div>
                 </div>
-
-                <div class="flex flex-wrap gap-4 pt-2">
-                    <a href="#work" class="bg-gradient-to-r from-ghgold to-ghamber text-white font-extrabold text-sm px-8 py-4 rounded-xl uppercase tracking-wider hover:shadow-[0_0_24px_rgba(217,119,6,0.3)] transition-all hover:-translate-y-0.5 duration-300">Explore Selected Work</a>
-                    <a href="Tech_CV.docx" download class="bg-night-card border border-gray-800 hover:border-ghteal/50 text-white font-extrabold text-sm px-8 py-4 rounded-xl uppercase tracking-wider transition-all duration-300 hover:bg-night-card/80">Download CV</a>
-                </div>
-            </div>
-
-            <!-- Right Visual (focused and premium layout frame) -->
-            <div class="lg:col-span-5 flex justify-center relative">
-                <!-- Decorative Gold/Teal glow rings behind profile frame -->
-                <div class="absolute -inset-4 bg-gradient-to-tr from-ghgold/10 to-ghteal/10 rounded-3xl blur-2xl pointer-events-none"></div>
-
-                <div class="relative w-72 h-96 sm:w-80 sm:h-[420px] rounded-3xl overflow-hidden shadow-2xl border-2 border-gray-800/80 group">
-                    <img src="images/IMG_6590.JPG" alt="Emmanuel Drah" class="w-full h-full object-cover object-top group-hover:scale-105 duration-700 ease-out">
-                    <div class="absolute inset-0 bg-gradient-to-t from-night via-transparent to-transparent opacity-80"></div>
-
-                    <div class="absolute bottom-6 left-6 right-6 glass-panel border border-gray-800/80 rounded-2xl p-4 flex flex-col">
-                        <span class="text-[10px] font-extrabold text-ghgold-light tracking-widest uppercase">Honorable Recognition</span>
-                        <span class="font-display font-extrabold text-white text-sm sm:text-base mt-1">Excellence in Innovation</span>
-                        <span class="text-gray-400 text-[10px] sm:text-xs mt-0.5">Ho West Tech Fest 2025</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Philosophy Section -->
-    <section id="philosophy" class="reveal py-24 bg-night-light border-y border-gray-800/40 relative px-4 md:px-8 lg:px-16">
-        <div class="absolute inset-0 bg-[radial-gradient(circle_at_right_50%,rgba(13,148,136,0.03),transparent_40%)] pointer-events-none"></div>
-
-        <div class="max-w-7xl mx-auto w-full">
-            <div class="text-center md:text-left max-w-3xl mb-16">
-                <span class="text-xs font-extrabold text-ghteal tracking-widest uppercase block mb-3">Core Beliefs</span>
-                <h2 class="font-display font-extrabold text-3xl sm:text-4xl lg:text-5xl text-white tracking-tight leading-[1.1]">
-                    Success Above <span class="text-transparent bg-clip-text bg-gradient-to-r from-ghgold to-ghamber">Dreams.</span>
-                </h2>
-            </div>
-
-            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-                <div class="lg:col-span-5 relative flex justify-center">
-                    <div class="w-full max-w-sm aspect-[4/3] rounded-3xl overflow-hidden border border-gray-800/80 relative">
-                        <img src="images/sad.jpg" alt="Success Above Dreams" class="w-full h-full object-cover">
-                        <div class="absolute inset-0 bg-gradient-to-t from-night/90 via-transparent to-transparent"></div>
-                        <div class="absolute bottom-6 left-6 right-6">
-                            <span class="text-xs font-bold text-ghgold-light">Motto for Life & Code</span>
-                            <p class="text-white font-display font-extrabold text-lg mt-1">"Success Above Dreams"</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="lg:col-span-7 flex flex-col space-y-6">
-                    <p class="text-gray-300 text-lg sm:text-xl font-medium leading-relaxed italic border-l-4 border-ghgold pl-6">
+                <div class="about-text-col">
+                    <p>
                         "Dreams give you direction. But success is forged in the discipline of sitting down, launching your IDE at midnight, and wrestling with critical bugs until they break."
                     </p>
-
-                    <p class="text-gray-400 text-base sm:text-lg leading-relaxed">
-                        When I designed <strong class="text-white">ALERA</strong>, my focus was not the syntax. It was the nurse on night duty who needs patient details in seconds, or the remote ambulance driver coordinating an emergency. This grounded approach—building to resolve real pain—is what shifts a student to a professional.
+                    <p>
+                        When I designed <strong>ALERA</strong>, my focus was not the syntax. It was the nurse on night duty who needs patient details in seconds, or the remote ambulance driver coordinating an emergency. This grounded approach is what shifts a student to a professional.
                     </p>
-
-                    <!-- Core Attributes Grid -->
-                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 pt-4">
-                        <div class="flex gap-4">
-                            <div class="w-12 h-12 rounded-2xl bg-ghgold/10 border border-ghgold/20 flex items-center justify-center text-ghgold text-xl shrink-0">⚡</div>
-                            <div>
-                                <h4 class="font-extrabold text-white text-sm tracking-wide">Performance-Obsessed</h4>
-                                <p class="text-gray-400 text-xs mt-1">Lightweight bundles, clean caching, and zero lag on older phones.</p>
+                    <div class="about-qualities">
+                        <div class="quality-item">
+                            <span class="quality-icon">⚡</span>
+                            <div class="quality-text">
+                                <strong>Performance-Obsessed</strong>
+                                <span>Lightweight bundles, clean caching, and zero lag on older phones.</span>
                             </div>
                         </div>
-                        <div class="flex gap-4">
-                            <div class="w-12 h-12 rounded-2xl bg-ghteal/10 border border-ghteal/20 flex items-center justify-center text-ghteal text-xl shrink-0">🎯</div>
-                            <div>
-                                <h4 class="font-extrabold text-white text-sm tracking-wide">Problem-Led Architecture</h4>
-                                <p class="text-gray-400 text-xs mt-1">No build-for-trends. I focus on concrete tools that deliver value instantly.</p>
+                        <div class="quality-item">
+                            <span class="quality-icon">🎯</span>
+                            <div class="quality-text">
+                                <strong>Problem-Led Architecture</strong>
+                                <span>I build concrete tools that deliver immediate value, avoiding unnecessary trends.</span>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Skills & Tools Section (Premium Non-Duplicated Grid) -->
-    <section id="skills" class="reveal py-24 relative px-4 md:px-8 lg:px-16">
-        <div class="max-w-7xl mx-auto w-full">
-            <div class="text-center max-w-3xl mx-auto mb-16">
-                <span class="text-xs font-extrabold text-ghamber tracking-widest uppercase block mb-3">Technical Stack</span>
-                <h2 class="font-display font-extrabold text-3xl sm:text-4xl text-white tracking-tight leading-none">
-                    My Premium <span class="text-transparent bg-clip-text bg-gradient-to-r from-ghgold to-ghteal">Toolkit.</span>
-                </h2>
-                <p class="text-gray-400 mt-4 text-sm sm:text-base">No repetitive visual clutter. A clean, hand-picked set of expert technologies I utilize daily to engineer robust products.</p>
-            </div>
-
-            <!-- Modern, structured grid showing clear expertise -->
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
-                <!-- Flutter -->
-                <div class="bg-night-card border border-gray-800/80 rounded-2xl p-6 flex flex-col items-center justify-center hover:border-ghteal/50 hover:shadow-[0_0_20px_rgba(13,148,136,0.15)] transition-all duration-300 group">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg" alt="Flutter" class="w-12 h-12 group-hover:scale-110 duration-300">
-                    <span class="font-bold text-white text-sm mt-4">Flutter</span>
-                    <span class="text-[10px] text-ghteal font-bold uppercase mt-1">Mobile & Web</span>
+        <!-- Toolkit (Non-Duplicated & Beautiful Grid) -->
+        <section id="toolkit" class="container" style="padding-top: 0;">
+            <span class="section-tag">Technical Stack</span>
+            <h2 class="section-title">My Expert <span class="text-gradient">Toolkit.</span></h2>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <h4>Frontend</h4>
+                    <ul class="skill-list">
+                        <li><img loading="lazy" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React">React / Next.js</li>
+                        <li><img loading="lazy" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" alt="TypeScript">TypeScript</li>
+                        <li><img loading="lazy" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5">Tailwind CSS</li>
+                    </ul>
                 </div>
-                <!-- React / Next -->
-                <div class="bg-night-card border border-gray-800/80 rounded-2xl p-6 flex flex-col items-center justify-center hover:border-ghgold/50 hover:shadow-[0_0_20px_rgba(217,119,6,0.15)] transition-all duration-300 group">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React" class="w-12 h-12 group-hover:scale-110 duration-300">
-                    <span class="font-bold text-white text-sm mt-4">React / Next.js</span>
-                    <span class="text-[10px] text-ghgold font-bold uppercase mt-1">Frontend Development</span>
+                <div class="skill-card">
+                    <h4>Mobile</h4>
+                    <ul class="skill-list">
+                        <li><img loading="lazy" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg" alt="Flutter">Flutter & Dart</li>
+                        <li><img loading="lazy" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg" alt="Firebase">Firebase</li>
+                    </ul>
                 </div>
-                <!-- TypeScript -->
-                <div class="bg-night-card border border-gray-800/80 rounded-2xl p-6 flex flex-col items-center justify-center hover:border-ghamber/50 hover:shadow-[0_0_20px_rgba(234,88,12,0.15)] transition-all duration-300 group">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" alt="TypeScript" class="w-12 h-12 group-hover:scale-110 duration-300">
-                    <span class="font-bold text-white text-sm mt-4">TypeScript</span>
-                    <span class="text-[10px] text-ghamber font-bold uppercase mt-1">Robust Logic</span>
+                <div class="skill-card">
+                    <h4>Backend</h4>
+                    <ul class="skill-list">
+                        <li><img loading="lazy" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python">Python & FastAPI</li>
+                        <li><img loading="lazy" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" alt="PostgreSQL">PostgreSQL</li>
+                    </ul>
                 </div>
-                <!-- Python / FastAPI -->
-                <div class="bg-night-card border border-gray-800/80 rounded-2xl p-6 flex flex-col items-center justify-center hover:border-ghteal/50 hover:shadow-[0_0_20px_rgba(13,148,136,0.15)] transition-all duration-300 group">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python" class="w-12 h-12 group-hover:scale-110 duration-300">
-                    <span class="font-bold text-white text-sm mt-4">Python / FastAPI</span>
-                    <span class="text-[10px] text-ghteal font-bold uppercase mt-1">High-Speed APIs</span>
-                </div>
-                <!-- PostgreSQL -->
-                <div class="bg-night-card border border-gray-800/80 rounded-2xl p-6 flex flex-col items-center justify-center hover:border-ghamber/50 hover:shadow-[0_0_20px_rgba(234,88,12,0.15)] transition-all duration-300 group">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" alt="PostgreSQL" class="w-12 h-12 group-hover:scale-110 duration-300">
-                    <span class="font-bold text-white text-sm mt-4">PostgreSQL</span>
-                    <span class="text-[10px] text-ghamber font-bold uppercase mt-1">Resilient Storage</span>
-                </div>
-                <!-- Firebase -->
-                <div class="bg-night-card border border-gray-800/80 rounded-2xl p-6 flex flex-col items-center justify-center hover:border-ghgold/50 hover:shadow-[0_0_20px_rgba(217,119,6,0.15)] transition-all duration-300 group">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg" alt="Firebase" class="w-12 h-12 group-hover:scale-110 duration-300">
-                    <span class="font-bold text-white text-sm mt-4">Firebase</span>
-                    <span class="text-[10px] text-ghgold font-bold uppercase mt-1">Real-time DB / Auth</span>
-                </div>
-                <!-- Tailwind CSS -->
-                <div class="bg-night-card border border-gray-800/80 rounded-2xl p-6 flex flex-col items-center justify-center hover:border-ghteal/50 hover:shadow-[0_0_20px_rgba(13,148,136,0.15)] transition-all duration-300 group">
-                    <svg class="w-12 h-12 text-ghteal-light group-hover:scale-110 duration-300" viewBox="0 0 24 24" fill="currentColor">
-                        <path d="M12.001 4.8c-3.2 0-5.2 1.6-6 4.8 1.2-1.6 2.6-2.2 4.2-1.8.913.228 1.565.89 2.288 1.624C13.666 10.618 15.027 12 18.001 12c3.2 0 5.2-1.6 6-4.8-1.2 1.6-2.6 2.2-4.2 1.8-.913-.228-1.565-.89-2.288-1.624C16.337 6.182 14.976 4.8 12.001 4.8zm-6 7.2c-3.2 0-5.2 1.6-6 4.8 1.2-1.6 2.6-2.2 4.2-1.8.913.228 1.565.89 2.288 1.624 1.177 1.194 2.538 2.576 5.512 2.576 3.2 0 5.2-1.6 6-4.8-1.2 1.6-2.6 2.2-4.2 1.8-.913-.228-1.565-.89-2.288-1.624C10.337 13.382 8.976 12 6.001 12z"/>
-                    </svg>
-                    <span class="font-bold text-white text-sm mt-4">Tailwind CSS</span>
-                    <span class="text-[10px] text-ghteal font-bold uppercase mt-1">Premium Styling</span>
-                </div>
-                <!-- Git & GitHub -->
-                <div class="bg-night-card border border-gray-800/80 rounded-2xl p-6 flex flex-col items-center justify-center hover:border-ghgold/50 hover:shadow-[0_0_20px_rgba(217,119,6,0.15)] transition-all duration-300 group">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="Git" class="w-12 h-12 invert brightness-200 group-hover:scale-110 duration-300">
-                    <span class="font-bold text-white text-sm mt-4">Git & GitHub</span>
-                    <span class="text-[10px] text-ghgold font-bold uppercase mt-1">Version Control</span>
+                <div class="skill-card">
+                    <h4>Workflow</h4>
+                    <ul class="skill-list">
+                        <li><img loading="lazy" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub">Git & GitHub</li>
+                    </ul>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- What I Build Section (Service offerings with real weight) -->
-    <section id="services" class="reveal py-24 bg-night-light border-y border-gray-800/40 relative px-4 md:px-8 lg:px-16">
-        <div class="max-w-7xl mx-auto w-full">
-            <div class="text-center md:text-left max-w-3xl mb-16">
-                <span class="text-xs font-extrabold text-ghteal tracking-widest uppercase block mb-3">Service Offerings</span>
-                <h2 class="font-display font-extrabold text-3xl sm:text-4xl text-white tracking-tight leading-none">
-                    Built for your <span class="text-transparent bg-clip-text bg-gradient-to-r from-ghteal to-ghamber">specific need.</span>
-                </h2>
-                <p class="text-gray-400 mt-4 text-base sm:text-lg">I don't offer generic templates or simple modifications. I deliver reliable, production-grade applications built to withstand high loads.</p>
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <!-- Web Development -->
-                <div class="bg-night-card border border-gray-800/60 rounded-3xl p-8 hover:border-ghgold/45 duration-300 hover:shadow-[0_12px_24px_rgba(217,119,6,0.1)] flex flex-col justify-between">
-                    <div>
-                        <div class="w-12 h-12 rounded-2xl bg-ghgold/10 border border-ghgold/20 flex items-center justify-center text-ghgold text-xl mb-6">💻</div>
-                        <h3 class="font-display font-extrabold text-lg text-white">Full-Stack Web Dev</h3>
-                        <p class="text-gray-400 text-sm mt-4 leading-relaxed">
-                            Engineered fast, interactive responsive layouts using React, Next.js, and clean Tailwind structures, backed by production-ready APIs.
-                        </p>
-                    </div>
-                    <span class="text-[11px] font-bold text-ghgold uppercase tracking-wider mt-8 block">Scalable & Responsive</span>
+        <!-- Services Section (What I Build) -->
+        <section id="services" class="container">
+            <span class="section-tag">Service Offerings</span>
+            <h2 class="section-title">Built for your <span class="text-gradient">specific needs.</span></h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <span class="service-icon">💻</span>
+                    <h3>Full-Stack Web Dev</h3>
+                    <p>Engineered fast, interactive responsive layouts using React, Next.js, and clean Tailwind structures, backed by production-ready APIs.</p>
                 </div>
-
-                <!-- Mobile Development -->
-                <div class="bg-night-card border border-gray-800/60 rounded-3xl p-8 hover:border-ghteal/45 duration-300 hover:shadow-[0_12px_24px_rgba(13,148,136,0.1)] flex flex-col justify-between">
-                    <div>
-                        <div class="w-12 h-12 rounded-2xl bg-ghteal/10 border border-ghteal/20 flex items-center justify-center text-ghteal text-xl mb-6">📱</div>
-                        <h3 class="font-display font-extrabold text-lg text-white">Native Flutter Apps</h3>
-                        <p class="text-gray-400 text-sm mt-4 leading-relaxed">
-                            Cross-platform native-feeling applications built with Dart and Flutter. High-performance, tailored offline caching, and responsive workflows.
-                        </p>
-                    </div>
-                    <span class="text-[11px] font-bold text-ghteal uppercase tracking-wider mt-8 block">iOS & Android Mastery</span>
+                <div class="service-card">
+                    <span class="service-icon">📱</span>
+                    <h3>Native Flutter Apps</h3>
+                    <p>Cross-platform native-feeling applications built with Dart and Flutter. High-performance, tailored offline caching, and responsive workflows.</p>
                 </div>
-
-                <!-- Specialized Healthcare Systems -->
-                <div class="bg-night-card border border-gray-800/60 rounded-3xl p-8 hover:border-ghamber/45 duration-300 hover:shadow-[0_12px_24px_rgba(234,88,12,0.1)] flex flex-col justify-between">
-                    <div>
-                        <div class="w-12 h-12 rounded-2xl bg-ghamber/10 border border-ghamber/20 flex items-center justify-center text-ghamber text-xl mb-6">🏥</div>
-                        <h3 class="font-display font-extrabold text-lg text-white">Healthcare Solutions</h3>
-                        <p class="text-gray-400 text-sm mt-4 leading-relaxed">
-                            Custom software architecture built with hospital workflows in mind: real-time patient coordination, instant inventory updates, and high reliability.
-                        </p>
-                    </div>
-                    <span class="text-[11px] font-bold text-ghamber uppercase tracking-wider mt-8 block">Mission-Critical Integrity</span>
+                <div class="service-card">
+                    <span class="service-icon">🏥</span>
+                    <h3>Healthcare Solutions</h3>
+                    <p>Custom software architecture built with hospital workflows in mind: real-time patient coordination, instant inventory updates, and high reliability.</p>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+    </main>
 
-    <!-- Selected Work Section -->
-    <section id="work" class="reveal py-24 relative px-4 md:px-8 lg:px-16">
-        <div class="max-w-7xl mx-auto w-full">
-            <div class="text-center max-w-3xl mx-auto mb-16">
-                <span class="text-xs font-extrabold text-ghgold tracking-widest uppercase block mb-3">Portfolio Case Studies</span>
-                <h2 class="font-display font-extrabold text-3xl sm:text-4xl text-white tracking-tight">
-                    Projects I <span class="text-transparent bg-clip-text bg-gradient-to-r from-ghgold to-ghteal">Stand Behind.</span>
-                </h2>
-                <p class="text-gray-400 mt-4 text-sm sm:text-base">Real systems designed with purpose, and tested on real users under realistic constraints.</p>
-            </div>
+    <portfolio-footer></portfolio-footer>
 
-            <!-- Case Studies List -->
-            <div class="flex flex-col gap-16">
-                <!-- Case Study 1: ALERA -->
-                <article class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center bg-night-card/50 border border-gray-800/80 p-6 md:p-8 rounded-3xl relative overflow-hidden group">
-                    <div class="absolute inset-0 bg-gradient-to-br from-ghteal/5 via-transparent to-transparent opacity-0 group-hover:opacity-100 duration-500 pointer-events-none"></div>
-
-                    <!-- Left Imagery -->
-                    <div class="lg:col-span-5 space-y-4">
-                        <div class="rounded-2xl overflow-hidden border border-gray-800 relative group-hover:border-ghteal/30 duration-300">
-                            <img src="images/alera_screen.jpg" alt="ALERA Healthcare Platform Interface" class="w-full h-auto object-cover">
-                        </div>
-                        <div class="grid grid-cols-3 gap-2">
-                            <div class="rounded-xl overflow-hidden border border-gray-800/80"><img src="images/alera_2.png" alt="ALERA UI Detail" class="w-full h-full object-cover"></div>
-                            <div class="rounded-xl overflow-hidden border border-gray-800/80"><img src="images/alera_3.png" alt="ALERA UI Detail" class="w-full h-full object-cover"></div>
-                            <div class="rounded-xl overflow-hidden border border-gray-800/80"><img src="images/alera_4.png" alt="ALERA UI Detail" class="w-full h-full object-cover"></div>
-                        </div>
-                    </div>
-
-                    <!-- Right Case details -->
-                    <div class="lg:col-span-7 flex flex-col justify-center space-y-6">
-                        <div class="flex items-center gap-3">
-                            <span class="text-[10px] font-extrabold text-ghteal bg-ghteal/10 border border-ghteal/20 px-3 py-1 rounded-full uppercase">Healthcare Coordination</span>
-                            <span class="text-[10px] font-bold text-gray-500 uppercase">Vercel Shipped</span>
-                        </div>
-
-                        <h3 class="font-display font-extrabold text-2xl sm:text-3xl text-white">ALERA Healthcare</h3>
-
-                        <p class="text-gray-400 text-sm sm:text-base leading-relaxed">
-                            Hospitals in Ghana frequently struggle with slow lab reporting and uncoordinated patient flows. I built ALERA to connect critical pipelines in real-time. It enables doctors, lab technicians, pharmacies, and dispatch services to instantly update inventory, review profiles, and communicate smoothly.
-                        </p>
-
-                        <div class="flex flex-wrap gap-2">
-                            <span class="text-[11px] font-bold text-gray-400 bg-night border border-gray-800 px-3 py-1 rounded-full">React</span>
-                            <span class="text-[11px] font-bold text-gray-400 bg-night border border-gray-800 px-3 py-1 rounded-full">Python</span>
-                            <span class="text-[11px] font-bold text-gray-400 bg-night border border-gray-800 px-3 py-1 rounded-full">FastAPI</span>
-                            <span class="text-[11px] font-bold text-gray-400 bg-night border border-gray-800 px-3 py-1 rounded-full">PostgreSQL</span>
-                            <span class="text-[11px] font-bold text-gray-400 bg-night border border-gray-800 px-3 py-1 rounded-full">WebSockets</span>
-                        </div>
-
-                        <div class="pt-2">
-                            <a href="https://alera-gamma.vercel.app" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-sm font-extrabold text-ghteal-light hover:text-white duration-300">
-                                View Live Platform <span class="text-lg">↗</span>
-                            </a>
-                        </div>
-                    </div>
-                </article>
-
-                <!-- Case Study 2: Rental Flow -->
-                <article class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center bg-night-card/50 border border-gray-800/80 p-6 md:p-8 rounded-3xl relative overflow-hidden group">
-                    <div class="absolute inset-0 bg-gradient-to-br from-ghgold/5 via-transparent to-transparent opacity-0 group-hover:opacity-100 duration-500 pointer-events-none"></div>
-
-                    <!-- Right imagery -->
-                    <div class="lg:col-span-5 lg:order-2 space-y-4">
-                        <div class="rounded-2xl overflow-hidden border border-gray-800 relative group-hover:border-ghgold/30 duration-300 aspect-[4/3]">
-                            <img src="images/carp.jpg" alt="Rental Flow Car Booking App" class="w-full h-full object-cover">
-                        </div>
-                    </div>
-
-                    <!-- Left Case details -->
-                    <div class="lg:col-span-7 flex flex-col justify-center space-y-6">
-                        <div class="flex items-center gap-3">
-                            <span class="text-[10px] font-extrabold text-ghgold bg-ghgold/10 border border-ghgold/20 px-3 py-1 rounded-full uppercase">Vehicle Booking Engine</span>
-                            <span class="text-[10px] font-bold text-gray-500 uppercase">Final Year MVP Shipped</span>
-                        </div>
-
-                        <h3 class="font-display font-extrabold text-2xl sm:text-3xl text-white">Rental Flow</h3>
-
-                        <p class="text-gray-400 text-sm sm:text-base leading-relaxed">
-                            Vehicle rental in Ho often depends on dozens of phone calls and complete lack of transparency. Rental Flow puts this entire dynamic on a clean, robust mobile engine. Users can browse vehicles, track dates, confirm schedules, and secure rentals in under 3 minutes.
-                        </p>
-
-                        <div class="flex flex-wrap gap-2">
-                            <span class="text-[11px] font-bold text-gray-400 bg-night border border-gray-800 px-3 py-1 rounded-full">Flutter</span>
-                            <span class="text-[11px] font-bold text-gray-400 bg-night border border-gray-800 px-3 py-1 rounded-full">Dart</span>
-                            <span class="text-[11px] font-bold text-gray-400 bg-night border border-gray-800 px-3 py-1 rounded-full">Firebase</span>
-                            <span class="text-[11px] font-bold text-gray-400 bg-night border border-gray-800 px-3 py-1 rounded-full">Auth & Analytics</span>
-                        </div>
-
-                        <div class="pt-2">
-                            <a href="https://github.com/godsonteck" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-sm font-extrabold text-ghgold-light hover:text-white duration-300">
-                                Explore GitHub Source <span class="text-lg">↗</span>
-                            </a>
-                        </div>
-                    </div>
-                </article>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="reveal py-24 bg-night-light border-t border-gray-800/40 relative px-4 md:px-8 lg:px-16">
-        <div class="max-w-7xl mx-auto w-full grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
-
-            <!-- Info and Direct channels -->
-            <div class="lg:col-span-5 flex flex-col space-y-6">
-                <span class="text-xs font-extrabold text-ghamber tracking-widest uppercase block">Let's Connect</span>
-                <h2 class="font-display font-extrabold text-3xl sm:text-4xl text-white tracking-tight">Let's build <span class="text-transparent bg-clip-text bg-gradient-to-r from-ghgold to-ghamber">something real.</span></h2>
-                <p class="text-gray-400 text-sm sm:text-base leading-relaxed">
-                    Have an upcoming integration? Need a high-performance system designed for scale? Get in touch directly, and I will respond to your inquiry within 24 hours.
-                </p>
-
-                <!-- Channels -->
-                <div class="space-y-4 pt-4">
-                    <a href="mailto:emmanueldrah10@gmail.com" class="flex items-center gap-4 p-4 rounded-2xl bg-night-card border border-gray-800 hover:border-ghgold/30 duration-300">
-                        <span class="w-10 h-10 rounded-xl bg-ghgold/10 border border-ghgold/20 flex items-center justify-center text-ghgold">✉️</span>
-                        <div class="flex flex-col">
-                            <span class="text-xs text-gray-500 font-bold uppercase">Direct Email</span>
-                            <span class="text-sm font-bold text-white">emmanueldrah10@gmail.com</span>
-                        </div>
-                    </a>
-
-                    <a href="tel:+233543671806" class="flex items-center gap-4 p-4 rounded-2xl bg-night-card border border-gray-800 hover:border-ghteal/30 duration-300">
-                        <span class="w-10 h-10 rounded-xl bg-ghteal/10 border border-ghteal/20 flex items-center justify-center text-ghteal">📞</span>
-                        <div class="flex flex-col">
-                            <span class="text-xs text-gray-500 font-bold uppercase">Call Directly</span>
-                            <span class="text-sm font-bold text-white">+233 543 671 806</span>
-                        </div>
-                    </a>
-
-                    <a href="https://github.com/godsonteck" target="_blank" rel="noopener noreferrer" class="flex items-center gap-4 p-4 rounded-2xl bg-night-card border border-gray-800 hover:border-ghamber/30 duration-300">
-                        <span class="w-10 h-10 rounded-xl bg-ghamber/10 border border-ghamber/20 flex items-center justify-center text-ghamber">💻</span>
-                        <div class="flex flex-col">
-                            <span class="text-xs text-gray-500 font-bold uppercase">GitHub Profile</span>
-                            <span class="text-sm font-bold text-white">github.com/godsonteck</span>
-                        </div>
-                    </a>
-                </div>
-            </div>
-
-            <!-- Netlify Form Integration -->
-            <div class="lg:col-span-7 bg-night-card border border-gray-800 p-6 sm:p-10 rounded-3xl relative">
-                <h3 class="font-display font-extrabold text-xl text-white mb-2">Send a Secure Inquiry</h3>
-                <p class="text-gray-400 text-xs sm:text-sm mb-6">Fill out this quick form and I will coordinate details with you.</p>
-
-                <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" class="space-y-6">
-                    <input type="hidden" name="form-name" value="contact" />
-                    <p class="hidden">
-                        <label>Don't fill this out if you're human: <input name="bot-field" /></label>
-                    </p>
-
-                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                        <div class="flex flex-col space-y-2">
-                            <label class="text-xs font-bold text-gray-400 uppercase tracking-wider">Your Name</label>
-                            <input type="text" name="name" required placeholder="John Doe" class="bg-night border border-gray-800 rounded-xl px-4 py-3 text-sm focus:border-ghgold focus:outline-none focus:ring-1 focus:ring-ghgold duration-300 text-white">
-                        </div>
-                        <div class="flex flex-col space-y-2">
-                            <label class="text-xs font-bold text-gray-400 uppercase tracking-wider">Email Address</label>
-                            <input type="email" name="email" required placeholder="john@example.com" class="bg-night border border-gray-800 rounded-xl px-4 py-3 text-sm focus:border-ghgold focus:outline-none focus:ring-1 focus:ring-ghgold duration-300 text-white">
-                        </div>
-                    </div>
-
-                    <div class="flex flex-col space-y-2">
-                        <label class="text-xs font-bold text-gray-400 uppercase tracking-wider">Subject</label>
-                        <input type="text" name="subject" required placeholder="Let's build ALERA integration, vehicle booking systems, etc." class="bg-night border border-gray-800 rounded-xl px-4 py-3 text-sm focus:border-ghgold focus:outline-none focus:ring-1 focus:ring-ghgold duration-300 text-white">
-                    </div>
-
-                    <div class="flex flex-col space-y-2">
-                        <label class="text-xs font-bold text-gray-400 uppercase tracking-wider">Your Message</label>
-                        <textarea name="message" required rows="5" placeholder="Outline your project scope, target deadline, and specific needs..." class="bg-night border border-gray-800 rounded-xl px-4 py-3 text-sm focus:border-ghgold focus:outline-none focus:ring-1 focus:ring-ghgold duration-300 text-white resize-none"></textarea>
-                    </div>
-
-                    <button type="submit" class="w-full bg-gradient-to-r from-ghgold to-ghamber text-white font-extrabold text-sm py-4 rounded-xl uppercase tracking-wider hover:shadow-[0_0_24px_rgba(217,119,6,0.3)] hover:-translate-y-0.5 duration-300 transition-all">
-                        Send Secure Message
-                    </button>
-                </form>
-            </div>
-
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="py-12 border-t border-gray-800/60 bg-night px-4 md:px-8 lg:px-16 text-center text-gray-500 text-xs">
-        <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-6">
-            <div class="flex items-center gap-3">
-                <img src="images/sad.jpg" alt="SAD Logo" class="w-8 h-8 rounded-lg object-cover">
-                <span class="font-display font-extrabold text-white">Emmanuel Drah</span>
-            </div>
-            <span>&copy; <span id="year"></span> Emmanuel Drah. All Rights Reserved. Designed proudly in Ghana.</span>
-        </div>
-    </footer>
-
-    <!-- Vanilla Javascript Interactions -->
-    <script>
-        // Set dynamic year in footer
-        document.getElementById('year').textContent = new Date().getFullYear();
-
-        // Mobile drawer toggler logic
-        const mobileToggle = document.getElementById('mobile-toggle');
-        const mobileMenu = document.getElementById('mobile-menu');
-        const hamburgerIcon = document.getElementById('hamburger-icon');
-
-        mobileToggle.addEventListener('click', () => {
-            const isHidden = mobileMenu.classList.contains('hidden');
-            if (isHidden) {
-                mobileMenu.classList.remove('hidden');
-                // Transform to 'X' state
-                hamburgerIcon.setAttribute('d', 'M6 18L18 6M6 6l12 12');
-            } else {
-                mobileMenu.classList.add('hidden');
-                // Restore standard hamburger bars
-                hamburgerIcon.setAttribute('d', 'M4 6h16M4 12h16m-7 6h7');
-            }
-        });
-
-        // Close mobile drawer on link click
-        const mobileLinks = document.querySelectorAll('.mobile-link');
-        mobileLinks.forEach(link => {
-            link.addEventListener('click', () => {
-                mobileMenu.classList.add('hidden');
-                hamburgerIcon.setAttribute('d', 'M4 6h16M4 12h16m-7 6h7');
-            });
-        });
-
-        // Simple custom intersection observer for reveals on scroll
-        const revealItems = document.querySelectorAll('#philosophy, #skills, #services, #work, #contact');
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        };
-
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('reveal', 'active');
-                    observer.unobserve(entry.target);
-                }
-            });
-        }, observerOptions);
-
-        revealItems.forEach(item => {
-            observer.observe(item);
-        });
-
-        // Sticky Navbar dynamic scroll background styling
-        const navbar = document.getElementById('navbar');
-        window.addEventListener('scroll', () => {
-            if (window.scrollY > 20) {
-                navbar.classList.add('backdrop-blur-xl', 'bg-night/90');
-            } else {
-                navbar.classList.remove('backdrop-blur-xl', 'bg-night/90');
-            }
-        });
-    </script>
+    <script src="main.js"></script>
 </body>
 </html>
