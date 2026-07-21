@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Emmanuel Drah — Mobile & Web Architect</title>
+    <title>Emmanuel Drah — Mobile & Web Developer</title>
     <meta name="description" content="Emmanuel Drah builds high-performance mobile and web applications — from the ALERA healthcare platform to Flutter booking engines. Based in Ghana.">
-    <meta property="og:title" content="Emmanuel Drah — Mobile & Web Architect">
+    <meta property="og:title" content="Emmanuel Drah — Mobile & Web Developer">
     <meta property="og:description" content="Emmanuel Drah builds high-performance mobile and web applications. Explore his work and services.">
     <meta property="og:image" content="https://emmanueldrah.netlify.app/images/sad.jpg">
     <meta property="og:url" content="https://emmanueldrah.netlify.app/">
@@ -13,6 +13,8 @@
     <link rel="canonical" href="https://emmanueldrah.netlify.app/">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
     <link rel="preload" href="images/IMG_6590.JPG" as="image">
     <link rel="stylesheet" href="css/style.css?v=4">
     <script src="js/components.js?v=3" defer></script>
@@ -23,15 +25,15 @@
     <header class="hero">
         <div class="hero-grid container">
             <div class="hero-text">
-                <span class="section-tag">Mobile & Web Architect</span>
-                <h1>
-                    Building products that <br><span class="text-gradient">actually matter.</span>
+                <span class="section-tag">Mobile & Web Developer</span>
+                <h1 class="text-animate">
+                    Building software that<br><span class="text-gradient">actually matters.</span>
                 </h1>
                 <p>
-                    I'm Emmanuel — an ICT graduate from <strong>Ho Technical University</strong>. I design and engineer mission-critical systems like <strong>ALERA</strong> (for hospital coordination) and production-ready mobile applications that solve real daily struggles in Ghana.
+                    I'm Emmanuel — an ICT graduate from <strong>Ho Technical University</strong> and a full-stack developer building high-performance mobile and web applications. From <strong>ALERA</strong>, a real-time healthcare platform used in hospitals, to Flutter apps that make everyday services effortlessly accessible.
                 </p>
                 <div class="cta-group">
-                    <a href="projects.html" class="btn btn-primary">Selected Work</a>
+                    <a href="projects.html" class="btn btn-primary">View My Work</a>
                     <a href="Tech_CV.docx" class="btn btn-outline" download>Download CV</a>
                 </div>
                 <div class="stats-bar">
@@ -41,7 +43,7 @@
                     </div>
                     <div class="stat-item">
                         <span class="stat-number">5+</span>
-                        <span class="stat-label">Shipped Apps</span>
+                        <span class="stat-label">Projects Shipped</span>
                     </div>
                     <div class="stat-item">
                         <span class="stat-number">3</span>
@@ -58,39 +60,49 @@
     </header>
 
     <main>
-        <!-- Philosophy / Success Above Dreams -->
-        <section id="philosophy" class="container">
-            <span class="section-tag">Core Beliefs</span>
-            <h2 class="section-title">Success Above <span class="text-gradient">Dreams.</span></h2>
+
+        <!-- About / Philosophy -->
+        <section id="about" class="container">
+            <span class="section-tag" data-reveal>My Philosophy</span>
+            <h2 class="section-title" id="sad-motto" data-reveal>Success Above Dreams.</h2>
             <div class="about-grid">
-                <div class="about-img-col">
-                    <div class="about-img-wrapper" style="aspect-ratio: 4/3;">
-                        <img src="images/sad.jpg" alt="Success Above Dreams Motto">
+                <div class="about-img-col" data-reveal>
+                    <div class="about-img-wrapper">
+                        <img src="images/IMG_6590.JPG" alt="Emmanuel Drah — focused and building">
                     </div>
                     <div class="about-badge">
-                        🏆 Honorable Recognition<br><small style="font-weight:400; opacity:0.9;">Ho West Tech Fest 2025</small>
+                        🏆 Excellence in Innovation<br><small style="font-weight:400; opacity:0.9;">Ho West Tech Fest 2025</small>
                     </div>
                 </div>
                 <div class="about-text-col">
-                    <p>
-                        "Dreams give you direction. But success is forged in the discipline of sitting down, launching your IDE at midnight, and wrestling with critical bugs until they break."
-                    </p>
-                    <p>
-                        When I designed <strong>ALERA</strong>, my focus was not the syntax. It was the nurse on night duty who needs patient details in seconds, or the remote ambulance driver coordinating an emergency. This grounded approach is what shifts a student to a professional.
-                    </p>
-                    <div class="about-qualities">
+                    <div data-reveal>
+                        <p>
+                            <strong>Success Above Dreams</strong> is not just a motto — it is a discipline. Dreams give you direction, but it is the daily decision to sit down, open your IDE at midnight, and push through every bug that actually builds something people rely on.
+                        </p>
+                        <p style="margin-top: 1.5rem;">
+                            When I built ALERA, I was not thinking about code. I was thinking about the nurse who needs a patient's lab result in 30 seconds, not 30 minutes. That clarity — keeping real people at the center of every technical decision — is what separates good software from software that genuinely changes things.
+                        </p>
+                    </div>
+                    <div class="about-qualities" data-reveal>
                         <div class="quality-item">
                             <span class="quality-icon">⚡</span>
                             <div class="quality-text">
-                                <strong>Performance-Obsessed</strong>
-                                <span>Lightweight bundles, clean caching, and zero lag on older phones.</span>
+                                <strong>Performance-First Mindset</strong>
+                                <span>Every millisecond counts. I obsess over speed, efficiency, and scalability.</span>
                             </div>
                         </div>
                         <div class="quality-item">
                             <span class="quality-icon">🎯</span>
                             <div class="quality-text">
-                                <strong>Problem-Led Architecture</strong>
-                                <span>I build concrete tools that deliver immediate value, avoiding unnecessary trends.</span>
+                                <strong>Problem-Driven Development</strong>
+                                <span>I don't build features. I build solutions to real, tangible problems.</span>
+                            </div>
+                        </div>
+                        <div class="quality-item">
+                            <span class="quality-icon">🤝</span>
+                            <div class="quality-text">
+                                <strong>Community Commitment</strong>
+                                <span>From Tech Fest to NASPA — I invest in the ecosystem around me.</span>
                             </div>
                         </div>
                     </div>
@@ -98,64 +110,114 @@
             </div>
         </section>
 
-        <!-- Toolkit (Non-Duplicated & Beautiful Grid) -->
+        <!-- Technical Toolkit -->
         <section id="toolkit" class="container" style="padding-top: 0;">
-            <span class="section-tag">Technical Stack</span>
-            <h2 class="section-title">My Expert <span class="text-gradient">Toolkit.</span></h2>
-            <div class="skills-grid">
+            <span class="section-tag" data-reveal>Technical Toolkit</span>
+            <h2 class="section-title" data-reveal>My Expert Stack.</h2>
+            <div class="skills-grid" data-reveal>
                 <div class="skill-card">
-                    <h4>Frontend</h4>
+                    <h4>Frontend Engineering</h4>
                     <ul class="skill-list">
-                        <li><img loading="lazy" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React">React / Next.js</li>
-                        <li><img loading="lazy" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" alt="TypeScript">TypeScript</li>
-                        <li><img loading="lazy" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5">Tailwind CSS</li>
+                        <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React"> React / Next.js</li>
+                        <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" alt="TypeScript"> TypeScript</li>
+                        <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5"> CSS3 & HTML5</li>
                     </ul>
                 </div>
                 <div class="skill-card">
-                    <h4>Mobile</h4>
+                    <h4>Mobile Solutions</h4>
                     <ul class="skill-list">
-                        <li><img loading="lazy" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg" alt="Flutter">Flutter & Dart</li>
-                        <li><img loading="lazy" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg" alt="Firebase">Firebase</li>
+                        <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg" alt="Flutter"> Flutter</li>
+                        <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dart/dart-original.svg" alt="Dart"> Dart</li>
+                        <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/android/android-original.svg" alt="Android"> Native Integrations</li>
                     </ul>
                 </div>
                 <div class="skill-card">
-                    <h4>Backend</h4>
+                    <h4>Backend & Data</h4>
                     <ul class="skill-list">
-                        <li><img loading="lazy" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python">Python & FastAPI</li>
-                        <li><img loading="lazy" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" alt="PostgreSQL">PostgreSQL</li>
-                    </ul>
-                </div>
-                <div class="skill-card">
-                    <h4>Workflow</h4>
-                    <ul class="skill-list">
-                        <li><img loading="lazy" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub">Git & GitHub</li>
+                        <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python"> Python / FastAPI</li>
+                        <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" alt="PostgreSQL"> PostgreSQL</li>
+                        <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg" alt="Firebase"> Firebase</li>
                     </ul>
                 </div>
             </div>
         </section>
 
-        <!-- Services Section (What I Build) -->
+        <!-- Services -->
         <section id="services" class="container">
-            <span class="section-tag">Service Offerings</span>
-            <h2 class="section-title">Built for your <span class="text-gradient">specific needs.</span></h2>
+            <span class="section-tag" data-reveal>What I Offer</span>
+            <h2 class="section-title" data-reveal>Built for your specific need.</h2>
             <div class="services-grid">
-                <div class="service-card">
-                    <span class="service-icon">💻</span>
-                    <h3>Full-Stack Web Dev</h3>
-                    <p>Engineered fast, interactive responsive layouts using React, Next.js, and clean Tailwind structures, backed by production-ready APIs.</p>
+                <div class="service-card" data-reveal>
+                    <div class="service-icon">💻</div>
+                    <h3>Web Development</h3>
+                    <p>Building fast, responsive web applications with React and TypeScript. Pixel-perfect UIs, optimised performance, and clean architecture from day one.</p>
                 </div>
-                <div class="service-card">
-                    <span class="service-icon">📱</span>
-                    <h3>Native Flutter Apps</h3>
-                    <p>Cross-platform native-feeling applications built with Dart and Flutter. High-performance, tailored offline caching, and responsive workflows.</p>
+                <div class="service-card" data-reveal>
+                    <div class="service-icon">📱</div>
+                    <h3>Mobile Development</h3>
+                    <p>Cross-platform Flutter apps that feel native on both iOS and Android. From beautiful onboarding flows to complex, data-heavy features.</p>
                 </div>
-                <div class="service-card">
-                    <span class="service-icon">🏥</span>
-                    <h3>Healthcare Solutions</h3>
-                    <p>Custom software architecture built with hospital workflows in mind: real-time patient coordination, instant inventory updates, and high reliability.</p>
+                <div class="service-card" data-reveal>
+                    <div class="service-icon">⚙️</div>
+                    <h3>Backend Architecture</h3>
+                    <p>Designing resilient, production-grade APIs with Python and FastAPI, backed by PostgreSQL databases built to handle real-world load.</p>
                 </div>
             </div>
         </section>
+
+        <!-- Selected Work -->
+        <section id="work" class="container">
+            <span class="section-tag" data-reveal>Selected Work</span>
+            <h2 class="section-title" data-reveal>Projects I stand behind.</h2>
+            <div class="home-projects-list">
+
+                <article class="home-project-card" data-reveal>
+                    <div class="home-project-img">
+                        <img loading="lazy" src="images/alera_screen.jpg" alt="ALERA Healthcare Platform">
+                    </div>
+                    <div class="home-project-body">
+                        <div>
+                            <span class="brand-tag">Healthcare Platform</span>
+                            <h3>ALERA Gamma</h3>
+                            <p>A real-time healthcare coordination platform connecting doctors, labs, pharmacies, and ambulances into one unified system — built to save lives, not just streamline workflows.</p>
+                        </div>
+                        <div class="home-project-footer">
+                            <div class="tech-pill-row">
+                                <span class="tech-pill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React"> React</span>
+                                <span class="tech-pill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python"> FastAPI</span>
+                                <span class="tech-pill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" alt="PostgreSQL"> PostgreSQL</span>
+                            </div>
+                            <a href="projects.html" class="home-project-link">Read Case Study ↗</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="home-project-card" data-reveal>
+                    <div class="home-project-img">
+                        <img loading="lazy" src="images/carp.jpg" alt="Rental Flow Car Booking App">
+                    </div>
+                    <div class="home-project-body">
+                        <div>
+                            <span class="brand-tag">Mobile · Booking Engine</span>
+                            <h3>Rental Flow</h3>
+                            <p>A cross-platform Flutter app that eliminates the friction from vehicle rentals — browse, book, and track in under three minutes. Built as my final year project and shipped to production.</p>
+                        </div>
+                        <div class="home-project-footer">
+                            <div class="tech-pill-row">
+                                <span class="tech-pill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg" alt="Flutter"> Flutter</span>
+                                <span class="tech-pill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg" alt="Firebase"> Firebase</span>
+                            </div>
+                            <a href="projects.html" class="home-project-link">Read Case Study ↗</a>
+                        </div>
+                    </div>
+                </article>
+
+            </div>
+            <div class="see-all-wrap" data-reveal>
+                <a href="projects.html" class="btn btn-outline">See Full Case Studies →</a>
+            </div>
+        </section>
+
     </main>
 
     <portfolio-footer></portfolio-footer>
