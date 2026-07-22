@@ -138,6 +138,7 @@ h1, h2, h3, h4, .brand-name {
 nav {
     position: fixed;
     top: 4px;
+    left: 0;
     width: 100%;
     z-index: 1000;
     padding: 0 5%;
@@ -1201,11 +1202,13 @@ footer {
     nav {
         height: var(--nav-height) !important;
         top: 0 !important;
+        left: 0 !important;
+        width: 100% !important;
         background: rgba(5, 7, 15, 0.7) !important;
         backdrop-filter: blur(20px) !important;
         -webkit-backdrop-filter: blur(20px) !important;
         border-bottom: 1px solid rgba(255, 255, 255, 0.06) !important;
-        padding: 0 1.5rem !important;
+        padding: 0 1rem !important;
     }
 
     nav.scrolled {
@@ -1225,23 +1228,43 @@ footer {
     }
 
     .brand-name {
-        font-size: 1.05rem !important;
+        font-size: 1.02rem !important;
         letter-spacing: -0.02em !important;
     }
 
-    /* Remove the slogan from the navbar on mobile */
+    /* Keep the slogan proudly displayed in the navbar on mobile */
     .brand-tag {
-        display: none !important;
+        display: block !important;
+        font-size: 0.55rem !important;
+        color: var(--ghgold-light) !important;
+        margin-top: 1px !important;
+        font-weight: 700 !important;
+        text-transform: uppercase !important;
+        letter-spacing: 0.05em !important;
+    }
+
+    /* Hide the slogan on extremely small mobile screens to prevent overlap */
+    @media (max-width: 340px) {
+        .brand-tag {
+            display: none !important;
+        }
     }
 
     /* Clean navigation layout */
     .mobile-nav-toggle-wrap {
-        gap: 0.75rem !important;
+        gap: 0.5rem !important;
     }
 
-    /* Hire Him button in header */
+    /* Display Hire Him button compactly on mobile */
     .btn-nav-hire {
-        display: none !important;
+        display: inline-flex !important;
+        padding: 0.45rem 0.85rem !important;
+        font-size: 0.75rem !important;
+        border-radius: 8px !important;
+        font-weight: 700 !important;
+        background: linear-gradient(135deg, var(--ghgold) 0%, var(--ghamber) 100%) !important;
+        color: white !important;
+        border: none !important;
     }
 
     .mobile-nav-toggle {
