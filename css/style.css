@@ -1284,25 +1284,60 @@ footer {
         background: rgba(255, 255, 255, 0.08) !important;
     }
 
-    /* Fullscreen menu overlay update */
+    /* Dropdown menu overlay update (does NOT cover the whole screen!) */
     .mobile-menu-overlay {
-        background: rgba(3, 5, 12, 0.96) !important;
-        backdrop-filter: blur(25px) !important;
-        -webkit-backdrop-filter: blur(25px) !important;
-        transition: opacity 0.35s cubic-bezier(0.16, 1, 0.3, 1) !important;
+        position: fixed !important;
+        top: 64px !important;
+        left: 0 !important;
+        right: 0 !important;
+        bottom: auto !important;
+        height: auto !important;
+        max-height: calc(100vh - 64px) !important;
+        background: rgba(5, 7, 15, 0.95) !important;
+        backdrop-filter: blur(16px) !important;
+        -webkit-backdrop-filter: blur(16px) !important;
+        border-bottom: 1.5px solid rgba(255, 255, 255, 0.08) !important;
+        padding: 2.25rem 1.5rem !important;
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: flex-start !important;
+        align-items: stretch !important;
+        opacity: 0 !important;
+        transform: translateY(-10px) !important;
+        pointer-events: none !important;
+        transition: opacity 0.3s ease, transform 0.3s cubic-bezier(0.16, 1, 0.3, 1) !important;
+        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5) !important;
+    }
+
+    .mobile-menu-overlay.active {
+        opacity: 1 !important;
+        transform: translateY(0) !important;
+        pointer-events: all !important;
     }
 
     .mobile-menu-content {
-        gap: 1.75rem !important;
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 1.15rem !important;
+        text-align: left !important;
+        align-items: stretch !important;
+        width: 100% !important;
     }
 
     .mobile-menu-content a {
-        font-size: 1.85rem !important;
-        letter-spacing: -0.03em !important;
+        font-family: 'Bricolage Grotesque', sans-serif !important;
+        font-size: 1.35rem !important;
+        font-weight: 700 !important;
+        text-decoration: none !important;
         color: var(--text-muted) !important;
+        padding: 0.55rem 0 !important;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.04) !important;
+        display: flex !important;
+        justify-content: space-between !important;
+        align-items: center !important;
         opacity: 0;
-        transform: translateY(15px);
-        transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1) !important;
+        transform: translateY(10px);
+        transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1) !important;
     }
 
     .mobile-menu-overlay.active .mobile-menu-content a {
@@ -1311,15 +1346,29 @@ footer {
     }
 
     /* Staggered transition delays for menu links */
-    .mobile-menu-overlay.active .mobile-menu-content a:nth-child(1) { transition-delay: 0.1s !important; }
-    .mobile-menu-overlay.active .mobile-menu-content a:nth-child(2) { transition-delay: 0.15s !important; }
-    .mobile-menu-overlay.active .mobile-menu-content a:nth-child(3) { transition-delay: 0.2s !important; }
-    .mobile-menu-overlay.active .mobile-menu-content a:nth-child(4) { transition-delay: 0.25s !important; }
-    .mobile-menu-overlay.active .mobile-menu-content a:nth-child(5) { transition-delay: 0.3s !important; }
+    .mobile-menu-overlay.active .mobile-menu-content a:nth-child(1) { transition-delay: 0.05s !important; }
+    .mobile-menu-overlay.active .mobile-menu-content a:nth-child(2) { transition-delay: 0.1s !important; }
+    .mobile-menu-overlay.active .mobile-menu-content a:nth-child(3) { transition-delay: 0.15s !important; }
+    .mobile-menu-overlay.active .mobile-menu-content a:nth-child(4) { transition-delay: 0.2s !important; }
+    .mobile-menu-overlay.active .mobile-menu-content a:nth-child(5) { transition-delay: 0.25s !important; }
+
+    .mobile-menu-content a::after {
+        content: '→';
+        font-size: 1.1rem;
+        opacity: 0.2;
+        transition: var(--transition);
+        color: var(--ghgold-light);
+    }
+
+    .mobile-menu-content a:hover::after, .mobile-menu-content a.active::after {
+        opacity: 1;
+        transform: translateX(4px);
+    }
 
     .mobile-menu-content a.active {
         color: var(--ghgold-light) !important;
         font-weight: 800 !important;
+        border-bottom-color: rgba(217, 119, 6, 0.2) !important;
     }
 
     /* 2. Mobile Typography & Spacing System (8px Grid Alignment) */
