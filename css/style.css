@@ -471,11 +471,16 @@ nav.scrolled {
 .btn-primary {
     background: linear-gradient(135deg, var(--ghgold) 0%, var(--ghamber) 100%);
     color: white;
+    box-shadow: 0 4px 15px rgba(217, 119, 6, 0.15);
 }
 
 .btn-primary:hover {
     transform: translateY(-2px);
     box-shadow: 0 12px 24px rgba(217, 119, 6, 0.3);
+}
+
+.btn:active {
+    transform: scale(0.97) !important;
 }
 
 .btn-outline {
@@ -1259,7 +1264,7 @@ footer {
         gap: 0.5rem !important;
     }
 
-    /* Display Hire Him button compactly on mobile */
+    /* Display Hire Me button compactly on mobile */
     .btn-nav-hire {
         display: inline-flex !important;
         padding: 0.45rem 0.85rem !important;

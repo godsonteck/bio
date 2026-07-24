@@ -25,7 +25,7 @@ class PortfolioNav extends HTMLElement {
                 </div>
 
                 <div class="mobile-nav-toggle-wrap" style="display: flex; gap: 1rem; align-items: center;">
-                    <a href="contact.html" class="btn btn-primary btn-nav-hire">Hire Him</a>
+                    <a href="contact.html" class="btn btn-primary btn-nav-hire">Hire Me</a>
                     <button class="mobile-nav-toggle" id="mobile-toggle" aria-label="Toggle Navigation Menu" aria-expanded="false" aria-controls="nav-menu">
                         <span class="hamburger"></span>
                     </button>
