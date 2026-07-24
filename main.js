@@ -222,20 +222,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
         mottoObserver.observe(sadMotto);
     }
-
-    // --- Text Word Animation Logic ---
-    document.querySelectorAll('.text-animate').forEach(el => {
-        const text = el.innerText;
-        el.innerHTML = '';
-        const words = text.split(' ');
-        words.forEach((word, index) => {
-            const span = document.createElement('span');
-            span.innerText = word + ' ';
-            span.className = 'animate-word';
-            span.style.animationDelay = `${index * 0.1}s`;
-            el.appendChild(span);
-        });
-    });
 });
 
 
