@@ -7,27 +7,27 @@
 @import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,700;12..96,800&family=Sora:wght@300;400;500;600;700;800&display=swap');
 
 :root {
-    /* Color Palette - Premium Tones */
-    --night-deep: #05070F;
-    --night-light: #0A0E1A;
-    --night-card: #0F1426;
-    --border: rgba(255, 255, 255, 0.05);
-    --border-hover: rgba(255, 255, 255, 0.1);
+    /* Color Palette - Deep Forest Green (#0A3D2A), Warm Gold (#D4AF37), Cream/off-white, Dark Charcoal */
+    --night-deep: #080C0A; /* Elegant near-black dark charcoal with a hint of forest depth */
+    --night-light: #0F1512; /* Charcoal transition */
+    --night-card: #151D19; /* Premium card charcoal with deep forest green undertones */
+    --border: rgba(250, 247, 242, 0.06); /* Cream off-white subtle border */
+    --border-hover: rgba(250, 247, 242, 0.12);
 
-    --ghgold: #D97706;
-    --ghgold-light: #F59E0B;
-    --ghgold-glow: rgba(217, 119, 6, 0.15);
+    --ghgold: #D4AF37; /* Warm Gold */
+    --ghgold-light: #E8C867; /* Brighter Warm Gold */
+    --ghgold-glow: rgba(212, 175, 55, 0.15);
 
-    --ghteal: #0D9488;
-    --ghteal-light: #14B8A6;
-    --ghteal-glow: rgba(13, 148, 136, 0.15);
+    --ghteal: #0A3D2A; /* Deep Forest Green */
+    --ghteal-light: #1F7353; /* Lighter Forest Green for accents */
+    --ghteal-glow: rgba(10, 61, 42, 0.25);
 
-    --ghamber: #EA580C;
-    --ghamber-light: #F97316;
-    --ghamber-glow: rgba(234, 88, 12, 0.15);
+    --ghamber: #7A5C1E; /* Rich Golden Amber / Bronze */
+    --ghamber-light: #C5A059; /* Bright Warm Gold/Bronze */
+    --ghamber-glow: rgba(122, 92, 30, 0.15);
 
-    --text-main: #F8FAFC;
-    --text-muted: #94A3B8;
+    --text-main: #FAF7F2; /* Cream/Off-White for supreme premium readability */
+    --text-muted: #A3B5AE; /* Soft sage/charcoal muted text */
 
     --radius-lg: 24px;
     --radius-md: 16px;
@@ -120,7 +120,7 @@ h1, h2, h3, h4, .brand-name {
 /* Kente Bar Accent */
 .kente-bar {
     height: 4px;
-    background: linear-gradient(90deg, var(--ghgold) 0%, var(--ghamber) 25%, var(--ghteal) 50%, var(--ghgold) 75%, var(--ghgold) 100%);
+    background: linear-gradient(90deg, var(--ghgold) 0%, var(--ghteal-light) 25%, var(--ghteal) 50%, var(--ghgold-light) 75%, var(--ghgold) 100%);
     background-size: 200% auto;
     animation: kente-shift 8s linear infinite;
     position: fixed;
@@ -143,7 +143,7 @@ nav {
     z-index: 1000;
     padding: 0 5%;
     height: var(--nav-height);
-    background: rgba(5, 7, 15, 0.85);
+    background: rgba(8, 12, 10, 0.85); /* Deep Forest Charcoal transparent */
     backdrop-filter: blur(24px);
     -webkit-backdrop-filter: blur(24px);
     border-bottom: 1px solid var(--border);
@@ -155,7 +155,7 @@ nav {
 
 nav.scrolled {
     height: 70px;
-    background: rgba(5, 7, 15, 0.95);
+    background: rgba(8, 12, 10, 0.95);
     border-bottom-color: var(--border-hover);
     box-shadow: var(--shadow);
 }
@@ -245,7 +245,7 @@ nav.scrolled {
 .mobile-menu-overlay {
     position: fixed;
     inset: 0;
-    background: rgba(3, 5, 12, 0.98);
+    background: rgba(8, 12, 10, 0.98);
     z-index: 1050;
     display: flex;
     flex-direction: column;
@@ -1071,7 +1071,7 @@ input:focus, textarea:focus, select:focus {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(3, 5, 12, 0.98);
+    background: rgba(8, 12, 10, 0.98);
     z-index: 2000;
     display: flex;
     justify-content: center;
@@ -1213,17 +1213,17 @@ footer {
         top: 0 !important;
         left: 0 !important;
         width: 100% !important;
-        background: rgba(5, 7, 15, 0.7) !important;
+        background: rgba(8, 12, 10, 0.7) !important;
         backdrop-filter: blur(20px) !important;
         -webkit-backdrop-filter: blur(20px) !important;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.06) !important;
+        border-bottom: 1px solid rgba(250, 247, 242, 0.06) !important;
         padding: 0 1rem !important;
     }
 
     nav.scrolled {
         height: var(--nav-height) !important;
-        background: rgba(5, 7, 15, 0.85) !important;
-        border-bottom-color: rgba(255, 255, 255, 0.1) !important;
+        background: rgba(8, 12, 10, 0.85) !important;
+        border-bottom-color: rgba(250, 247, 242, 0.1) !important;
     }
 
     .brand {
@@ -1302,10 +1302,10 @@ footer {
         bottom: auto !important;
         height: auto !important;
         max-height: calc(100vh - 64px) !important;
-        background: rgba(5, 7, 15, 0.95) !important;
+        background: rgba(8, 12, 10, 0.95) !important;
         backdrop-filter: blur(16px) !important;
         -webkit-backdrop-filter: blur(16px) !important;
-        border-bottom: 1.5px solid rgba(255, 255, 255, 0.08) !important;
+        border-bottom: 1.5px solid rgba(250, 247, 242, 0.08) !important;
         padding: 2.25rem 1.5rem !important;
         display: flex !important;
         flex-direction: column !important;
