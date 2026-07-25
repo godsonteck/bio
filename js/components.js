@@ -1,12 +1,11 @@
 /*
-   Emmanuel Drah Portfolio - Award-Winning Shared Web Components
-   Designed with pride by Kofi Mensah to offer a premium, bespoke feel.
+   Emmanuel Drah Portfolio - Shared Web Components
+   Theme: Technical & Systems-Inspired Shared Header Navigation and Footer.
 */
 
 class PortfolioNav extends HTMLElement {
     connectedCallback() {
         this.innerHTML = `
-            <div class="kente-bar"></div>
             <nav id="navbar">
                 <a href="index.html" class="brand">
                     <img src="images/sad.jpg" alt="SAD Logo" class="logo-img">
@@ -115,11 +114,14 @@ class PortfolioFooter extends HTMLElement {
                         <div class="footer-logo">
                             <img src="images/sad.jpg" alt="Success Above Dreams Logo">
                             <div class="brand-info">
-                                <span class="brand-name" style="font-size: 1.1rem; color: #FFF;">Emmanuel Drah</span>
-                                <span class="brand-tag" style="font-size: 0.6rem; color: var(--ghgold-light);">Success Above Dreams</span>
+                                <span class="brand-name" style="font-size: 1.1rem; color: var(--text-main);">Emmanuel Drah</span>
+                                <span class="brand-tag" style="font-size: 0.65rem; color: var(--accent); font-family: var(--font-mono); font-weight: 600;">Success Above Dreams</span>
                             </div>
                         </div>
-                        <p style="font-size: 0.8rem; color: var(--text-muted);">&copy; ${new Date().getFullYear()} Emmanuel Drah. Built with pride in Ghana.</p>
+                        <div style="text-align: right; display: flex; flex-direction: column; gap: 0.25rem;">
+                            <p style="font-size: 0.8rem; color: var(--text-muted); margin: 0;">&copy; ${new Date().getFullYear()} Emmanuel Drah. Built with pride in Ghana.</p>
+                            <p style="font-size: 0.75rem; color: var(--accent); font-family: var(--font-mono); font-weight: 600; margin: 0; letter-spacing: 0.05em;">Proudly powered by Success Above Dreams</p>
+                        </div>
                     </div>
                 </div>
             </footer>
