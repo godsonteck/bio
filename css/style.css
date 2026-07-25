@@ -65,7 +65,7 @@ body::before {
     background-image: url('../images/sad.jpg');
     background-repeat: no-repeat;
     background-position: center;
-    background-size: 35%;
+    background-size: 50%;
     opacity: 0.04;
     pointer-events: none;
     z-index: 0;
