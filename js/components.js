@@ -8,7 +8,7 @@ class PortfolioNav extends HTMLElement {
         this.innerHTML = `
             <nav id="navbar">
                 <a href="index.html" class="brand">
-                    <img src="images/sad.jpg" alt="SAD Logo" class="logo-img">
+                    <img src="images/sad.jpg" alt="Success Above Dreams logo" class="logo-img">
                     <div class="brand-info">
                         <span class="brand-name">Emmanuel Drah</span>
                         <span class="brand-tag">Success Above Dreams</span>
@@ -20,9 +20,9 @@ class PortfolioNav extends HTMLElement {
                     <a href="the-brand.html">The Brand</a>
                     <a href="about.html">About</a>
                     <a href="projects.html">Work</a>
+                    <a href="gallery.html">Gallery</a>
                     <a href="case-studies.html">Case Studies</a>
                     <a href="certifications.html">Certifications</a>
-                    <a href="insights.html">Insights</a>
                     <a href="resume.html">Resume</a>
                     <a href="contact.html" class="btn btn-primary btn-nav-hire">Let's Talk</a>
                 </div>
@@ -41,9 +41,9 @@ class PortfolioNav extends HTMLElement {
                     <a href="the-brand.html" class="mobile-menu-link">The Brand</a>
                     <a href="about.html" class="mobile-menu-link">About</a>
                     <a href="projects.html" class="mobile-menu-link">Work</a>
+                    <a href="gallery.html" class="mobile-menu-link">Gallery</a>
                     <a href="case-studies.html" class="mobile-menu-link">Case Studies</a>
                     <a href="certifications.html" class="mobile-menu-link">Certifications</a>
-                    <a href="insights.html" class="mobile-menu-link">Insights</a>
                     <a href="resume.html" class="mobile-menu-link">Resume</a>
                     <a href="contact.html" class="mobile-menu-link">Talk</a>
                 </div>
@@ -120,7 +120,7 @@ class PortfolioFooter extends HTMLElement {
                     <div class="footer-content">
                         <div class="footer-brand-block">
                             <div class="footer-logo">
-                                <img src="images/sad.jpg" alt="Success Above Dreams Logo">
+                                <img src="images/sad.jpg" alt="Success Above Dreams logo">
                                 <div class="brand-info">
                                     <span class="brand-tag" style="font-size: 0.68rem; color: var(--accent); font-family: var(--font-mono); font-weight: 600;">Success Above Dreams</span>
                                 </div>
