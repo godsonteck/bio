@@ -161,67 +161,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // --- Typewriter: "Success Above Dreams." ---
-    const sadMotto = document.getElementById('sad-motto');
-    if (sadMotto) {
-        const part1 = 'Success Above ';
-        const part2 = 'Dreams.';
-        let started = false;
-
-        const startTypewriter = () => {
-            if (started) return;
-            started = true;
-
-            // Clear existing content and set up structure
-            sadMotto.innerHTML = '';
-            sadMotto.classList.add('typing-cursor');
-
-            const gradientSpan = document.createElement('span');
-            gradientSpan.className = 'text-gradient';
-
-            let charIndex = 0;
-            const total = part1.length + part2.length;
-
-            const type = () => {
-                if (charIndex < part1.length) {
-                    // Typing normal text — insert before the gradient span
-                    const textNode = sadMotto.childNodes[charIndex] || null;
-                    sadMotto.insertBefore(
-                        document.createTextNode(part1[charIndex]),
-                        gradientSpan.parentNode ? gradientSpan : null
-                    );
-                } else {
-                    // Typing gradient text
-                    if (!sadMotto.contains(gradientSpan)) {
-                        sadMotto.appendChild(gradientSpan);
-                    }
-                    gradientSpan.textContent += part2[charIndex - part1.length];
-                }
-
-                charIndex++;
-                if (charIndex < total) {
-                    setTimeout(type, 75);
-                } else {
-                    // Remove cursor after a short pause
-                    setTimeout(() => sadMotto.classList.remove('typing-cursor'), 1200);
-                }
-            };
-
-            setTimeout(type, 400);
-        };
-
-        // Trigger when the element scrolls into view
-        const mottoObserver = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    startTypewriter();
-                    mottoObserver.unobserve(sadMotto);
-                }
-            });
-        }, { threshold: 0.6 });
-
-        mottoObserver.observe(sadMotto);
-    }
 });
 
 

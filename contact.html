@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact — Emmanuel Drah</title>
-    <meta name="description" content="Have a system to build or database to secure? Get in touch with Emmanuel Drah — developer and builder based in Ho, Ghana.">
+    <meta name="description" content="Need a website or digital system that works well and is easy to manage? Contact Emmanuel Drah and tell me what you need.">
     <meta property="og:title" content="Contact — Emmanuel Drah">
-    <meta property="og:description" content="Get in touch with Emmanuel Drah. Let's build secure, fast, and local-first software systems.">
+    <meta property="og:description" content="Contact Emmanuel Drah to talk about a simple, practical digital project for your business.">
     <meta property="og:image" content="https://emmanueldrah.netlify.app/images/sad.jpg">
     <meta property="og:url" content="https://emmanueldrah.netlify.app/contact.html">
     <meta name="twitter:card" content="summary_large_image">
@@ -24,13 +24,11 @@
             <div class="container contact-inner">
                 <!-- Left: Info -->
                 <div class="contact-info">
-                    <span class="section-tag">Let's Connect</span>
+                    <span class="section-tag">Let's connect</span>
                     <h1 class="text-animate">
-                        Have an idea?<br><span class="text-gradient">Let's build it.</span>
+                        Let's talk about your project.
                     </h1>
-                    <p style="color: var(--text-muted); font-size: 1.05rem; line-height: 1.8; margin-top: 1rem; margin-bottom: 2.5rem;">
-                        Whether you need an offline-first desktop environment, a cross-platform mobile app, a secure custom database structure, or professional network configurations — my inbox is open. I am based in Ho, Volta Region, and am fully available for new collaborations.
-                    </p>
+                    <p class="section-intro">If you need a clear website or a system that keeps working, send the details and I will reply soon.</p>
                     <div class="contact-methods">
                         <a href="mailto:emmanueldrah10@gmail.com" class="contact-method">
                             <div class="contact-method-icon">✉️</div>
@@ -58,9 +56,16 @@
 
                 <!-- Right: Form -->
                 <div class="contact-form-wrap" data-reveal>
-                    <h2 style="font-size: 1.6rem; font-weight: 800; margin-bottom: 0.5rem;">Send a Message</h2>
-                    <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 2rem;">I typically respond within 24 hours.</p>
+                    <div class="hero-visual" style="margin-bottom: 1.5rem;">
+                        <div class="hero-img-frame">
+                            <img src="images/IMG_6590.JPG" alt="Emmanuel Drah portrait" loading="lazy">
+                        </div>
+                    </div>
+                    <h2 style="font-size: 1.6rem; font-weight: 800; margin-bottom: 0.5rem;">Tell me about your project</h2>
+                    <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 1rem;">I usually reply within a day. If you have a timeline, mention it—real projects need honest scheduling.</p>
+                    <div id="form-message" class="form-message" style="display: none; margin-bottom: 1rem;" aria-live="polite"></div>
                     <form id="contactForm" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" novalidate>
+                        <input type="hidden" name="form-name" value="contact">
                         <p style="display: none;">
                             <label>Don't fill this out: <input name="bot-field"></label>
                         </p>
@@ -76,23 +81,41 @@
                         </div>
                         <div class="form-group">
                             <label for="subject">Subject</label>
-                            <input type="text" id="subject" name="subject" placeholder="Project inquiry, custom system request, security review...">
+                            <input type="text" id="subject" name="subject" placeholder="Project topic or need">
                         </div>
                         <div class="form-group">
                             <label for="message">Your Message</label>
-                            <textarea id="message" name="message" rows="5" placeholder="Describe the system, database, or features you need built, along with your timelines..." required></textarea>
+                            <textarea id="message" name="message" rows="5" placeholder="Tell me what you need and when you need it." required></textarea>
                         </div>
                         <button type="submit" class="btn btn-primary" id="submitBtn" style="width: 100%; font-size: 0.9rem;">
-                            <span>Send Message</span>
+                            <span>Tell me what you're building</span>
                         </button>
                     </form>
+                </div>
+            </div>
+        </section>
+
+        <section class="container" style="padding: 4rem 0 6rem;">
+            <h2 class="section-title">What happens next</h2>
+            <div class="contact-steps">
+                <div class="contact-step">
+                    <strong>1. Send the real problem</strong>
+                    <p>Tell me what is not working today, who uses it, and what you need to improve.</p>
+                </div>
+                <div class="contact-step">
+                    <strong>2. I review it honestly</strong>
+                    <p>I will read your details and respond with a clear idea of what is possible and what matters most.</p>
+                </div>
+                <div class="contact-step">
+                    <strong>3. We decide the next step</strong>
+                    <p>From a simple audit to a full build plan, we will choose the path that makes the most sense for your project.</p>
                 </div>
             </div>
         </section>
     </main>
 
     <portfolio-footer></portfolio-footer>
-
     <script src="main.js"></script>
+    <script src="js/contact.js" defer></script>
 </body>
 </html>

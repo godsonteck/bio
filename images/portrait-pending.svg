@@ -1,0 +1,9 @@
+<svg width="1200" height="1500" viewBox="0 0 1200 1500" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="1500" fill="#0B0E14"/>
+  <rect x="105" y="105" width="990" height="1290" rx="30" fill="#0F172A" stroke="#10B981" stroke-width="4"/>
+  <circle cx="600" cy="540" r="230" fill="#111827" stroke="#34D399" stroke-width="10"/>
+  <path d="M462 1030C495 930 540 880 600 880C660 880 705 930 738 1030" stroke="#34D399" stroke-width="18" stroke-linecap="round"/>
+  <path d="M510 630C510 570 550 520 600 520C650 520 690 570 690 630V700C690 760 650 810 600 810C550 810 510 760 510 700V630Z" stroke="#34D399" stroke-width="16"/>
+  <text x="600" y="1185" text-anchor="middle" fill="#F3F4F6" font-family="Arial, sans-serif" font-size="52" font-weight="700">Portrait pending</text>
+  <text x="600" y="1260" text-anchor="middle" fill="#9CA3AF" font-family="Arial, sans-serif" font-size="28">Please provide a clean headshot on a plain background.</text>
+</svg>

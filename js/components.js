@@ -17,14 +17,17 @@ class PortfolioNav extends HTMLElement {
 
                 <div class="nav-links" id="nav-menu">
                     <a href="index.html">Home</a>
+                    <a href="the-brand.html">The Brand</a>
                     <a href="about.html">About</a>
-                    <a href="projects.html">Projects</a>
-                    <a href="gallery.html">Gallery</a>
-                    <a href="contact.html">Contact</a>
+                    <a href="projects.html">Work</a>
+                    <a href="case-studies.html">Case Studies</a>
+                    <a href="certifications.html">Certifications</a>
+                    <a href="insights.html">Insights</a>
+                    <a href="resume.html">Resume</a>
+                    <a href="contact.html" class="btn btn-primary btn-nav-hire">Let's Talk</a>
                 </div>
 
                 <div class="mobile-nav-toggle-wrap" style="display: flex; gap: 1rem; align-items: center;">
-                    <a href="contact.html" class="btn btn-primary btn-nav-hire">Hire Me</a>
                     <button class="mobile-nav-toggle" id="mobile-toggle" aria-label="Toggle Navigation Menu" aria-expanded="false" aria-controls="nav-menu">
                         <span class="hamburger"></span>
                     </button>
@@ -35,10 +38,14 @@ class PortfolioNav extends HTMLElement {
             <div class="mobile-menu-overlay" id="mobile-overlay">
                 <div class="mobile-menu-content">
                     <a href="index.html" class="mobile-menu-link">Home</a>
-                    <a href="about.html" class="mobile-menu-link">About Me</a>
-                    <a href="projects.html" class="mobile-menu-link">Selected Work</a>
-                    <a href="gallery.html" class="mobile-menu-link">Visual Gallery</a>
-                    <a href="contact.html" class="mobile-menu-link">Contact</a>
+                    <a href="the-brand.html" class="mobile-menu-link">The Brand</a>
+                    <a href="about.html" class="mobile-menu-link">About</a>
+                    <a href="projects.html" class="mobile-menu-link">Work</a>
+                    <a href="case-studies.html" class="mobile-menu-link">Case Studies</a>
+                    <a href="certifications.html" class="mobile-menu-link">Certifications</a>
+                    <a href="insights.html" class="mobile-menu-link">Insights</a>
+                    <a href="resume.html" class="mobile-menu-link">Resume</a>
+                    <a href="contact.html" class="mobile-menu-link">Talk</a>
                 </div>
             </div>
         `;
@@ -111,16 +118,32 @@ class PortfolioFooter extends HTMLElement {
             <footer>
                 <div class="container">
                     <div class="footer-content">
-                        <div class="footer-logo">
-                            <img src="images/sad.jpg" alt="Success Above Dreams Logo">
-                            <div class="brand-info">
-                                <span class="brand-name" style="font-size: 1.1rem; color: var(--text-main);">Emmanuel Drah</span>
-                                <span class="brand-tag" style="font-size: 0.65rem; color: var(--accent); font-family: var(--font-mono); font-weight: 600;">Success Above Dreams</span>
+                        <div class="footer-brand-block">
+                            <div class="footer-logo">
+                                <img src="images/sad.jpg" alt="Success Above Dreams Logo">
+                                <div class="brand-info">
+                                    <span class="brand-tag" style="font-size: 0.68rem; color: var(--accent); font-family: var(--font-mono); font-weight: 600;">Success Above Dreams</span>
+                                </div>
+                            </div>
+                            <p style="font-size: 0.75rem; color: var(--accent); font-family: var(--font-mono); font-weight: 600; margin: 0; letter-spacing: 0.05em;">Dreams are the beginning, not the proof.</p>
+                        </div>
+
+                        <div class="footer-links-wrap">
+                            <div class="footer-links-group">
+                                <a href="the-brand.html">The Brand</a>
+                                <a href="projects.html">Work</a>
+                                <a href="case-studies.html">Case Studies</a>
+                            </div>
+                            <div class="footer-links-group">
+                                <a href="about.html">About</a>
+                                <a href="resume.html">Resume</a>
+                                <a href="contact.html">Contact</a>
                             </div>
                         </div>
-                        <div style="text-align: right; display: flex; flex-direction: column; gap: 0.25rem;">
-                            <p style="font-size: 0.8rem; color: var(--text-muted); margin: 0;">&copy; ${new Date().getFullYear()} Emmanuel Drah. Built with pride in Ghana.</p>
-                            <p style="font-size: 0.75rem; color: var(--accent); font-family: var(--font-mono); font-weight: 600; margin: 0; letter-spacing: 0.05em;">Proudly powered by Success Above Dreams</p>
+
+                        <div class="footer-meta">
+                            <a href="the-brand.html" class="footer-brand-link">See the philosophy</a>
+                            <p style="font-size: 0.78rem; color: var(--text-muted); margin: 0;">&copy; ${new Date().getFullYear()} Success Above Dreams</p>
                         </div>
                     </div>
                 </div>

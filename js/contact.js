@@ -2,10 +2,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const contactForm = document.getElementById('contactForm');
     const formMessage = document.getElementById('form-message');
     const submitBtn = document.getElementById('submitBtn');
-    const btnText = document.getElementById('btnText');
-    const btnSpinner = document.getElementById('btnSpinner');
 
-    if (!contactForm) return;
+    if (!contactForm || !formMessage || !submitBtn) return;
 
     // Helper to show message
     const showMessage = (msg, isError = false) => {
@@ -18,17 +16,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Helper to set loading state
     const setLoading = (isLoading) => {
-        if (isLoading) {
-            submitBtn.disabled = true;
-            submitBtn.style.opacity = '0.7';
-            btnText.style.display = 'none';
-            btnSpinner.style.display = 'block';
-        } else {
-            submitBtn.disabled = false;
-            submitBtn.style.opacity = '1';
-            btnText.style.display = 'block';
-            btnSpinner.style.display = 'none';
-        }
+        if (!submitBtn) return;
+
+        submitBtn.disabled = isLoading;
+        submitBtn.style.opacity = isLoading ? '0.7' : '1';
     };
 
     // Basic email validation regex

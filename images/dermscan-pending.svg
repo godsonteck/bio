@@ -1,0 +1,14 @@
+<svg width="1200" height="900" viewBox="0 0 1200 900" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="900" fill="#0B0E14"/>
+  <rect x="75" y="75" width="1050" height="750" rx="30" fill="#111827" stroke="#10B981" stroke-width="4"/>
+  <rect x="155" y="170" width="350" height="520" rx="28" fill="#0F172A" stroke="#2DD4BF" stroke-opacity="0.6"/>
+  <rect x="560" y="210" width="430" height="36" rx="10" fill="#1F2937"/>
+  <rect x="560" y="276" width="312" height="22" rx="10" fill="#1F2937"/>
+  <rect x="560" y="322" width="390" height="22" rx="10" fill="#1F2937"/>
+  <rect x="560" y="390" width="250" height="180" rx="24" fill="#0F172A" stroke="#10B981" stroke-opacity="0.7"/>
+  <circle cx="685" cy="470" r="58" stroke="#34D399" stroke-width="16"/>
+  <path d="M685 430V510" stroke="#34D399" stroke-width="14" stroke-linecap="round"/>
+  <path d="M645 470H725" stroke="#34D399" stroke-width="14" stroke-linecap="round"/>
+  <text x="600" y="705" text-anchor="middle" fill="#F3F4F6" font-family="Arial, sans-serif" font-size="40" font-weight="700">Screenshot pending</text>
+  <text x="600" y="760" text-anchor="middle" fill="#9CA3AF" font-family="Arial, sans-serif" font-size="24">Send the real DermScan AI screen or app recording for this card.</text>
+</svg>

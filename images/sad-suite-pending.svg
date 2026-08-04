@@ -1,0 +1,13 @@
+<svg width="1200" height="900" viewBox="0 0 1200 900" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="900" fill="#0B0E14"/>
+  <rect x="60" y="60" width="1080" height="780" rx="28" fill="#111827" stroke="#10B981" stroke-width="4"/>
+  <rect x="140" y="160" width="920" height="510" rx="18" fill="#0F172A" stroke="#2DD4BF" stroke-opacity="0.4"/>
+  <rect x="220" y="246" width="250" height="210" rx="16" fill="#111827" stroke="#10B981" stroke-opacity="0.6"/>
+  <rect x="520" y="246" width="420" height="38" rx="10" fill="#1F2937"/>
+  <rect x="520" y="308" width="320" height="20" rx="10" fill="#1F2937"/>
+  <rect x="520" y="348" width="360" height="20" rx="10" fill="#1F2937"/>
+  <rect x="520" y="396" width="280" height="20" rx="10" fill="#1F2937"/>
+  <rect x="520" y="440" width="340" height="20" rx="10" fill="#1F2937"/>
+  <text x="600" y="705" text-anchor="middle" fill="#F3F4F6" font-family="Arial, sans-serif" font-size="42" font-weight="700">Screenshot pending</text>
+  <text x="600" y="760" text-anchor="middle" fill="#9CA3AF" font-family="Arial, sans-serif" font-size="24">Send the real SAD Desktop Suite app screen for this project card.</text>
+</svg>
