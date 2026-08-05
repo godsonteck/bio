@@ -1,0 +1,38 @@
+jimp read [img]
+
+Read and image into jimp. (PNG, JPEG, TIFF, BMP, or GIF)
+
+Jimp Configuration:
+  --plugins, -p   Jimp plugins to load.                                  [array]
+  --types, -t     Jimp types to load.                                    [array]
+  --loadFont, -f  Path of font to load and be used in text operations   [string]
+  --output, -o    file to output from jimp. (PNG, JPEG, TIFF, or BMP)
+  --actions, -a   actions (image manipulation) to run on the input image. Loaded
+                  functions _colorType, _deflateLevel, _deflateStrategy,
+                  _filterType, _quality, autocrop, background, backgroundQuiet,
+                  blit, blur, brightness, circle, clone, cloneQuiet, color,
+                  colorType, colour, composite, contain, contrast, convolute,
+                  convolution, cover, crop, cropQuiet, deflateLevel,
+                  deflateStrategy, displace, dither16, dither565, fade,
+                  filterType, fisheye, flip, gaussian, grayscale, greyscale,
+                  invert, mask, mirror, normalize, opacity, opaque, pixelate,
+                  posterize, print, quality, resize, rotate, scale, scaleToFit,
+                  scan, scanQuiet, sepia, shadow, threshold              [array]
+
+Options:
+  --help         Show help                                             [boolean]
+  --version      Show version number                                   [boolean]
+  --verbose, -v  enable more logging                                   [boolean]
+
+Examples:
+  jimp read path/to/image.png -a greyscale  Apply image manipulations functions
+  -a  resize 150 -1 --output output.jpg
+  jimp read path/to/image.png --loadFont    Use fonts
+  FONT_SANS_8_WHITE -a yarnprint 0 0 "Some
+  text" --output output.jpg
+  jimp read path/to/image.png --plugins     Use plugins
+  @jimp/plugin-circle -a circle --output
+  output.jpg
+  jimp read path/to/image.png -a blit       Use blit composite or mask
+  /path/to/image.png 0 0 --output
+  output.jpg

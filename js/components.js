@@ -125,7 +125,7 @@ class PortfolioFooter extends HTMLElement {
                                     <span class="brand-tag" style="font-size: 0.68rem; color: var(--accent); font-family: var(--font-mono); font-weight: 600;">Success Above Dreams</span>
                                 </div>
                             </div>
-                            <p class="footer-intro">Set your mind to it and you will do it.</p>
+                            <p class="footer-intro">Dreams are the beginning, not the proof.</p>
                         </div>
 
                         <div class="footer-links-wrap">
