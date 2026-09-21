@@ -1,4 +1,8 @@
-# Netlify configuration for performance
+# Netlify configuration for performance and clean URLs
+
+[build.processing.html]
+  pretty_urls = true
+
 
 [[headers]]
   # Cache images for 1 year (they're fingerprinted/don't change without a new deploy)

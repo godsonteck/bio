@@ -90,11 +90,32 @@ class PortfolioNav extends HTMLElement {
             }
         });
 
-        const currentPath = window.location.pathname.split('/').pop() || 'index.html';
+        // Ensure favicon is present on every page
+        if (!document.querySelector("link[rel*='icon']")) {
+            const fav = document.createElement('link');
+            fav.rel = 'icon';
+            fav.type = 'image/jpeg';
+            fav.href = 'images/sad.jpg';
+            document.head.appendChild(fav);
+
+            const apple = document.createElement('link');
+            apple.rel = 'apple-touch-icon';
+            apple.href = 'images/sad.jpg';
+            document.head.appendChild(apple);
+        }
+
+        const getSlug = (url) => {
+            if (!url) return 'index';
+            const clean = url.split('#')[0].split('?')[0].split('/').pop() || '';
+            return clean.replace(/\.html$/, '') || 'index';
+        };
+
+        const currentSlug = getSlug(window.location.pathname);
 
         // desktop links active check
         navLinks.forEach(link => {
-            if (link.getAttribute('href') === currentPath) {
+            const linkSlug = getSlug(link.getAttribute('href'));
+            if (linkSlug === currentSlug) {
                 link.classList.add('active');
                 link.setAttribute('aria-current', 'page');
             } else {
@@ -105,7 +126,8 @@ class PortfolioNav extends HTMLElement {
 
         // mobile overlay links active check
         overlayLinks.forEach(link => {
-            if (link.getAttribute('href') === currentPath) {
+            const linkSlug = getSlug(link.getAttribute('href'));
+            if (linkSlug === currentSlug) {
                 link.classList.add('active');
             } else {
                 link.classList.remove('active');
