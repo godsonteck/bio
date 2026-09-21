@@ -13,6 +13,48 @@ document.addEventListener('DOMContentLoaded', () => {
     };
     createScrollProgress();
 
+    // --- Dynamic Custom Cursor (fine pointer / desktop only) ---
+    if (window.matchMedia('(pointer: fine)').matches) {
+        const dot = document.createElement('div');
+        const ring = document.createElement('div');
+        dot.className = 'cursor-dot';
+        ring.className = 'cursor-ring';
+        document.body.appendChild(dot);
+        document.body.appendChild(ring);
+        document.body.classList.add('has-custom-cursor');
+
+        let mouseX = -100, mouseY = -100;
+        let ringX = -100, ringY = -100;
+        let isVisible = false;
+
+        window.addEventListener('mousemove', (e) => {
+            mouseX = e.clientX;
+            mouseY = e.clientY;
+            dot.style.left = `${mouseX}px`;
+            dot.style.top = `${mouseY}px`;
+            if (!isVisible) {
+                dot.style.opacity = '1';
+                ring.style.opacity = '1';
+                isVisible = true;
+            }
+        });
+
+        document.addEventListener('mouseleave', () => {
+            dot.style.opacity = '0';
+            ring.style.opacity = '0';
+            isVisible = false;
+        });
+
+        const animateRing = () => {
+            ringX += (mouseX - ringX) * 0.18;
+            ringY += (mouseY - ringY) * 0.18;
+            ring.style.left = `${ringX}px`;
+            ring.style.top = `${ringY}px`;
+            requestAnimationFrame(animateRing);
+        };
+        requestAnimationFrame(animateRing);
+    }
+
     // --- Project Filters ---
     const filterBtns = document.querySelectorAll('.filter-btn');
     const projectCards = document.querySelectorAll('[data-filter]');
