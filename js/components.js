@@ -11,7 +11,7 @@ class PortfolioNav extends HTMLElement {
                     <img src="images/sad.jpg" alt="Success Above Dreams logo" class="logo-img">
                     <div class="brand-info">
                         <span class="brand-name">Emmanuel Drah</span>
-                        <span class="brand-tag">Success Above Dreams</span>
+                        <span class="brand-tag"><span class="live-pulse-dot"></span>Success Above Dreams</span>
                     </div>
                 </a>
 
@@ -20,8 +20,9 @@ class PortfolioNav extends HTMLElement {
                     <a href="the-brand.html">The Brand</a>
                     <a href="about.html">About</a>
                     <a href="projects.html">Work</a>
-                    <a href="gallery.html">Gallery</a>
+                    <a href="services.html">Services</a>
                     <a href="case-studies.html">Case Studies</a>
+                    <a href="gallery.html">Gallery</a>
                     <a href="certifications.html">Certifications</a>
                     <a href="resume.html">Resume</a>
                     <a href="contact.html" class="btn btn-primary btn-nav-hire">Let's Talk</a>
@@ -41,8 +42,9 @@ class PortfolioNav extends HTMLElement {
                     <a href="the-brand.html" class="mobile-menu-link">The Brand</a>
                     <a href="about.html" class="mobile-menu-link">About</a>
                     <a href="projects.html" class="mobile-menu-link">Work</a>
-                    <a href="gallery.html" class="mobile-menu-link">Gallery</a>
+                    <a href="services.html" class="mobile-menu-link">Services</a>
                     <a href="case-studies.html" class="mobile-menu-link">Case Studies</a>
+                    <a href="gallery.html" class="mobile-menu-link">Gallery</a>
                     <a href="certifications.html" class="mobile-menu-link">Certifications</a>
                     <a href="resume.html" class="mobile-menu-link">Resume</a>
                     <a href="contact.html" class="mobile-menu-link">Talk</a>
@@ -122,28 +124,40 @@ class PortfolioFooter extends HTMLElement {
                             <div class="footer-logo">
                                 <img src="images/sad.jpg" alt="Success Above Dreams logo">
                                 <div class="brand-info">
-                                    <span class="brand-tag" style="font-size: 0.68rem; color: var(--accent); font-family: var(--font-mono); font-weight: 600;">Success Above Dreams</span>
+                                    <span class="brand-name" style="font-size: 1.05rem;">Emmanuel Drah</span>
+                                    <span class="brand-tag" style="font-size: 0.68rem; color: var(--accent); font-family: var(--font-mono); font-weight: 600;"><span class="live-pulse-dot"></span>Success Above Dreams</span>
                                 </div>
                             </div>
-                            <p class="footer-intro">Dreams are the beginning, not the proof.</p>
+                            <p class="footer-creed">"Dreams are the beginning, not the proof. Success is what quiet discipline builds when nobody is watching."</p>
+                            <div class="footer-origin">
+                                <span>🇬🇭 Ho, Volta Region, Ghana</span>
+                                <span style="opacity: 0.35;">·</span>
+                                <span>Built for reality, not applause</span>
+                            </div>
                         </div>
 
                         <div class="footer-links-wrap">
                             <div class="footer-links-group">
+                                <span style="font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-muted); font-family: var(--font-mono); margin-bottom: 0.5rem; display: block;">Navigation</span>
+                                <a href="index.html">Home</a>
                                 <a href="the-brand.html">The Brand</a>
-                                <a href="projects.html">Work</a>
-                                <a href="case-studies.html">Case Studies</a>
+                                <a href="about.html">About</a>
+                                <a href="services.html">Services</a>
                             </div>
                             <div class="footer-links-group">
-                                <a href="about.html">About</a>
+                                <span style="font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-muted); font-family: var(--font-mono); margin-bottom: 0.5rem; display: block;">Work &amp; Story</span>
+                                <a href="projects.html">Live Projects</a>
+                                <a href="case-studies.html">Case Studies</a>
+                                <a href="gallery.html">Gallery</a>
                                 <a href="resume.html">Resume</a>
-                                <a href="contact.html">Contact</a>
                             </div>
                         </div>
 
                         <div class="footer-meta">
-                            <a href="the-brand.html" class="footer-brand-link">See the philosophy</a>
-                            <p style="font-size: 0.78rem; color: var(--text-muted); margin: 0;">&copy; ${new Date().getFullYear()} Success Above Dreams</p>
+                            <a href="https://wa.me/233543671806?text=Hello%20Emmanuel%2C%20I%20saw%20your%20portfolio%20and%20would%20like%20to%20talk%20about%20a%20project." target="_blank" rel="noopener noreferrer" class="btn-whatsapp" style="margin-bottom: 0.85rem;">
+                                <span>💬 Chat on WhatsApp</span>
+                            </a>
+                            <p style="font-size: 0.78rem; color: var(--text-muted); margin: 0;">&copy; ${new Date().getFullYear()} Success Above Dreams. All rights reserved.</p>
                         </div>
                     </div>
                 </div>

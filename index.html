@@ -15,7 +15,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
     <link rel="preload" href="images/manuel.jpg" as="image">
-    <link rel="stylesheet" href="css/style.css?v=4">
+    <link rel="stylesheet" href="css/style.css?v=5">
     <script src="js/components.js?v=3" defer></script>
 </head>
 <body>
@@ -24,6 +24,7 @@
     <header class="hero">
         <div class="hero-grid container">
             <div class="hero-text">
+                <div class="brand-status-badge"><span class="live-pulse-dot"></span> Available for new projects &middot; Ho, Ghana</div>
                 <span class="section-tag">Hi, I'm Emmanuel</span>
                 <h1 class="text-animate" style="font-size: clamp(2rem, 5.5vw, 3.5rem); margin-bottom: 1rem; line-height: 1.05;">
                     Full-stack developer building systems that hold up under pressure.
@@ -78,10 +79,11 @@
     <main>
 
         <section class="container">
-            <div class="about-preview">
+            <div class="about-preview" data-reveal>
                 <div class="about-preview-text">
+                    <div class="accent-divider"></div>
                     <h2 class="section-title">I build from the real problem, not the pitch.</h2>
-                    <p class="section-intro">Success Above Dreams is my software brand, but the real work is simpler than that. I build systems that solve the kind of problems people deal with every day — from healthcare workflows to desktop tools that still work when the internet does not.</p>
+                    <p class="section-intro">Success Above Dreams is my software brand, but the real work is simpler than that. I build systems that solve the kind of problems people deal with every day — from hospitality web portals to e-commerce platforms that work in real Ghanaian conditions.</p>
                     <a href="about.html" class="btn btn-outline">Read my story</a>
                 </div>
                 <div class="about-preview-card">
@@ -130,34 +132,42 @@
             <h2 class="section-title">Featured work</h2>
             <div class="preview-grid">
                 <article class="case-study-card">
-                    <img src="https://alera-manuel.vercel.app/images/lab_imaging.png" alt="ALERA healthcare platform screenshot from the live website" loading="lazy">
+                    <img src="images/nsvilla-hero.jpeg" alt="NS Luxury Villa property in Ho, Ghana" loading="lazy">
                     <div class="card-body">
-                        <h3>ALERA Clinical Platform</h3>
-                        <p>Built for medical teams that need patient records, pharmacy tracking, and lab results to move together without delay.</p>
-                        <a href="projects.html#clinical-platform" class="btn btn-outline">View story</a>
+                        <div style="display: flex; gap: 0.5rem; flex-wrap: wrap; margin-bottom: 0.5rem;">
+                            <span class="brand-tag" style="background: rgba(16, 185, 129, 0.15); color: #10b981; border-color: rgba(16, 185, 129, 0.3); font-size: 0.7rem;">Built For My Workplace</span>
+                            <span class="brand-tag" style="font-size: 0.7rem;">Live Portal</span>
+                        </div>
+                        <h3>NS Luxury Villa</h3>
+                        <p>Working as a receptionist at NS Luxury Villa, I designed, built, and deployed their official web portal to showcase rooms, amenities, and rooftop venue bookings while enabling instant guest reservations.</p>
+                        <div style="display: flex; gap: 0.5rem; align-items: center; margin-top: 1rem; flex-wrap: wrap;">
+                            <a href="projects.html#nsvilla" class="btn btn-outline" style="font-size: 0.8rem; padding: 0.5rem 0.9rem;">View details</a>
+                            <a href="https://nsvilla.com" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="font-size: 0.8rem; padding: 0.5rem 0.9rem;">Live site ↗</a>
+                        </div>
                     </div>
                 </article>
                 <article class="case-study-card">
-                    <div class="pending-visual" aria-label="SAD Desktop Suite visual"><strong>Operational systems</strong><span>SAD Desktop Suite</span></div>
-                    <div class="card-body">
-                        <h3>SAD Desktop Suite</h3>
-                        <p>Designed for schools, clinics, and businesses that cannot depend on constant internet connectivity.</p>
-                        <a href="projects.html#sad-suite" class="btn btn-outline">View story</a>
+                    <div style="aspect-ratio: 4/3; background: #050505; display: flex; align-items: center; justify-content: center; overflow: hidden;">
+                        <img src="images/crcosmetics-logo.jpeg" alt="CR Cosmetics and Essentials brand logo" loading="lazy" style="object-fit: contain; width: 100%; height: 100%; padding: 1.5rem;">
                     </div>
-                </article>
-                <article class="case-study-card">
-                    <div class="pending-visual" aria-label="DermScan AI visual"><strong>Practical product thinking</strong><span>DermScan AI</span></div>
                     <div class="card-body">
-                        <h3>DermScan AI</h3>
-                        <p>A mobile-first system built to bring faster skin screening guidance to users with limited access to specialists.</p>
-                        <a href="projects.html#dermscan" class="btn btn-outline">View story</a>
+                        <div style="display: flex; gap: 0.5rem; flex-wrap: wrap; margin-bottom: 0.5rem;">
+                            <span class="brand-tag" style="background: rgba(217, 119, 6, 0.15); color: #f59e0b; border-color: rgba(217, 119, 6, 0.3); font-size: 0.7rem;">Commercial Live Store</span>
+                            <span class="brand-tag" style="font-size: 0.7rem;">E-Commerce</span>
+                        </div>
+                        <h3>CR Cosmetics &amp; Essentials</h3>
+                        <p>Modern e-commerce platform built for authentic skincare, cosmetics, and everyday essentials in Ghana. Features fast product search, category navigation, structured SEO, and nationwide delivery.</p>
+                        <div style="display: flex; gap: 0.5rem; align-items: center; margin-top: 1rem; flex-wrap: wrap;">
+                            <a href="projects.html#crcosmetics" class="btn btn-outline" style="font-size: 0.8rem; padding: 0.5rem 0.9rem;">View details</a>
+                            <a href="https://crcosmeticsgh.com" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="font-size: 0.8rem; padding: 0.5rem 0.9rem;">Live store ↗</a>
+                        </div>
                     </div>
                 </article>
             </div>
         </section>
 
         <section class="container">
-            <div class="cta-strip">
+            <div class="cta-strip" data-reveal>
                 <div>
                     <h2 style="margin: 0;">Need something that actually works for your team?</h2>
                     <p>Tell me what is giving you trouble and I will tell you what I think is worth building next.</p>

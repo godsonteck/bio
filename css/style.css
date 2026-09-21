@@ -49,12 +49,17 @@ html {
 
 body {
     font-family: var(--font-sans);
-    background: radial-gradient(circle at top, rgba(16, 185, 129, 0.08), transparent 30%), var(--night-deep);
+    background:
+        radial-gradient(ellipse at 60% -10%, rgba(16, 185, 129, 0.13), transparent 55%),
+        radial-gradient(ellipse at 95% 35%,  rgba(217, 119, 6, 0.04), transparent 40%),
+        radial-gradient(ellipse at 5%  75%,  rgba(16, 185, 129, 0.05), transparent 48%),
+        var(--night-deep);
     color: var(--text-main);
     line-height: 1.6;
     overflow-x: hidden;
     letter-spacing: -0.01em;
     position: relative;
+    min-height: 100vh;
 }
 
 body.no-scroll {
@@ -62,18 +67,25 @@ body.no-scroll {
     height: 100vh;
 }
 
-/* Logo Watermark Background */
+/* Logo Watermark Background - blended seamlessly without square box edges */
 body::before {
     content: "";
     position: fixed;
-    inset: 0;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: min(540px, 85vw);
+    height: min(540px, 85vw);
     background-image: url('../images/sad.jpg');
     background-repeat: no-repeat;
     background-position: center;
-    background-size: 50%;
-    opacity: 0.04;
+    background-size: contain;
+    mix-blend-mode: screen;
+    opacity: 0.035;
     pointer-events: none;
     z-index: 0;
+    mask-image: radial-gradient(circle at center, rgba(0,0,0,1) 30%, rgba(0,0,0,0) 70%);
+    -webkit-mask-image: radial-gradient(circle at center, rgba(0,0,0,1) 30%, rgba(0,0,0,0) 70%);
 }
 
 header, main, footer, nav, #navbar {
@@ -355,6 +367,16 @@ p, h1, h2, h3, h4, a, span, button, li {
     border-bottom: 1px solid rgba(255,255,255,0.04);
 }
 
+/* Subtle green scan line at hero bottom */
+.hero::after {
+    content: '';
+    position: absolute;
+    bottom: -1px; left: 0; right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--accent), transparent);
+    opacity: 0.28;
+}
+
 .hero-grid {
     display: grid;
     grid-template-columns: minmax(0, 1.2fr) minmax(0, 0.8fr);
@@ -436,7 +458,7 @@ p, h1, h2, h3, h4, a, span, button, li {
     border-radius: var(--radius-md);
     overflow: hidden;
     border: 1px solid var(--border);
-    box-shadow: var(--shadow);
+    box-shadow: var(--shadow), 0 0 40px rgba(16, 185, 129, 0.07);
 }
 
 .hero-img-frame img {
@@ -512,6 +534,8 @@ p, h1, h2, h3, h4, a, span, button, li {
 
 .btn-primary:hover {
     background: var(--accent-light);
+    transform: translateY(-1px);
+    box-shadow: 0 8px 24px rgba(16, 185, 129, 0.3);
 }
 
 .btn:active {
@@ -856,16 +880,18 @@ section {
 .home-project-card {
     background: var(--night-card);
     border: 1px solid var(--border);
-    border-radius: var(--radius-md);
+    border-radius: var(--radius-lg);
     overflow: hidden;
     display: grid;
     grid-template-columns: 1fr 1.2fr;
     gap: 0;
     transition: var(--transition);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.55);
 }
 
 .home-project-card:hover {
-    border-color: var(--accent);
+    border-color: rgba(16, 185, 129, 0.3);
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.65), 0 0 40px rgba(16, 185, 129, 0.07);
 }
 
 .home-project-img {
@@ -1486,9 +1512,18 @@ input:focus, textarea:focus, select:focus {
 
 /* Footer layout */
 footer {
-    padding: 3.25rem 0 2.25rem;
+    padding: 3.5rem 0 2.5rem;
     border-top: 1px solid var(--border);
     background: linear-gradient(180deg, rgba(5, 7, 11, 0.96), rgba(5, 7, 11, 1));
+    position: relative;
+}
+
+footer::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 5%; right: 5%;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(16, 185, 129, 0.28), transparent);
 }
 
 .footer-content {
@@ -2003,4 +2038,276 @@ footer {
     .home-project-link {
         align-self: flex-end;
     }
+}
+
+/* ==========================================================================
+   BRAND IDENTITY & SOUL - Success Above Dreams (SAD)
+   ========================================================================== */
+
+/* Live Pulse Status Dot */
+.live-pulse-dot {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: var(--accent);
+    box-shadow: 0 0 0 rgba(16, 185, 129, 0.4);
+    animation: pulseGlow 2s infinite cubic-bezier(0.66, 0, 0, 1);
+    margin-right: 6px;
+    vertical-align: middle;
+}
+
+@keyframes pulseGlow {
+    0% {
+        box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7);
+    }
+    70% {
+        box-shadow: 0 0 0 8px rgba(16, 185, 129, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(16, 185, 129, 0);
+    }
+}
+
+.brand-status-badge {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.35rem 0.85rem;
+    background: rgba(16, 185, 129, 0.08);
+    border: 1px solid rgba(16, 185, 129, 0.25);
+    border-radius: 9999px;
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    color: var(--accent-light);
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    margin-bottom: 1.25rem;
+}
+
+/* Soul Story Quote Callout */
+.story-callout {
+    position: relative;
+    background: linear-gradient(135deg, rgba(15, 19, 28, 0.95), rgba(11, 14, 20, 0.98));
+    border: 1px solid rgba(16, 185, 129, 0.2);
+    border-left: 3px solid var(--accent);
+    border-radius: var(--radius-md);
+    padding: 1.75rem 2rem;
+    margin: 2rem 0;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
+}
+
+.story-callout::before {
+    content: "“";
+    position: absolute;
+    top: -0.6rem;
+    left: 1.25rem;
+    font-size: 3.5rem;
+    line-height: 1;
+    font-family: Georgia, serif;
+    color: rgba(16, 185, 129, 0.25);
+    pointer-events: none;
+}
+
+.story-callout p {
+    font-size: 1.02rem;
+    line-height: 1.75;
+    color: var(--text-main);
+    font-style: italic;
+    margin-bottom: 0.75rem;
+}
+
+.story-callout cite {
+    display: block;
+    font-size: 0.8rem;
+    font-family: var(--font-mono);
+    font-style: normal;
+    color: var(--accent);
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+}
+
+/* Brand Creed Banner */
+.brand-creed-banner {
+    position: relative;
+    overflow: hidden;
+    background: radial-gradient(circle at 80% 20%, rgba(16, 185, 129, 0.08), transparent 50%),
+                linear-gradient(180deg, rgba(15, 19, 28, 0.95), rgba(7, 9, 14, 0.98));
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: var(--radius-lg);
+    padding: 3rem 2.5rem;
+    margin: 3.5rem 0;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+.brand-creed-banner::after {
+    content: "";
+    position: absolute;
+    right: -2rem;
+    bottom: -2rem;
+    width: 220px;
+    height: 220px;
+    background-image: url('../images/sad.jpg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    opacity: 0.04;
+    mix-blend-mode: screen;
+    pointer-events: none;
+}
+
+.brand-creed-banner h3 {
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+    letter-spacing: -0.02em;
+    color: #fff;
+}
+
+.brand-creed-banner p {
+    color: var(--text-muted);
+    font-size: 1.05rem;
+    line-height: 1.8;
+    max-width: 800px;
+    margin-bottom: 1.5rem;
+}
+
+/* WhatsApp CTA Button */
+.btn-whatsapp {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: #25D366;
+    color: #05070B !important;
+    font-weight: 700;
+    padding: 0.75rem 1.4rem;
+    border-radius: var(--radius-sm);
+    text-decoration: none;
+    transition: var(--transition);
+    font-size: 0.88rem;
+    border: none;
+}
+
+.btn-whatsapp:hover {
+    background: #22bf5b;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(37, 211, 102, 0.3);
+}
+
+/* Brand Footer Tagline */
+.footer-creed {
+    margin-top: 0.75rem;
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    line-height: 1.65;
+    max-width: 380px;
+    font-style: italic;
+}
+
+.footer-origin {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    color: var(--accent);
+    margin-top: 0.5rem;
+}
+
+/* Accent Divider — thin emerald line */
+.accent-divider {
+    width: 48px; height: 2px;
+    background: var(--accent);
+    border-radius: 2px;
+    margin-bottom: 1.25rem;
+}
+
+/* Brand Slogan */
+.brand-slogan {
+    font-size: clamp(1.1rem, 2.2vw, 1.5rem);
+    color: var(--text-muted);
+    font-style: italic;
+    letter-spacing: -0.01em;
+    margin-top: 0.5rem;
+    line-height: 1.5;
+}
+
+/* Brand Principles Grid */
+.brand-principles {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    margin: 2.5rem 0;
+}
+
+.principle-card {
+    background: var(--night-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    padding: 1.75rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    transition: var(--transition);
+    position: relative;
+    overflow: hidden;
+}
+
+.principle-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0;
+    width: 3px; height: 0;
+    background: var(--accent);
+    transition: height 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.principle-card:hover {
+    border-color: rgba(16, 185, 129, 0.25);
+    transform: translateY(-2px);
+}
+
+.principle-card:hover::before { height: 100%; }
+
+.principle-number {
+    font-family: var(--font-mono);
+    font-size: 0.65rem;
+    font-weight: 700;
+    color: var(--accent);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+.principle-card h4 {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--text-main);
+}
+
+.principle-card p {
+    font-size: 0.87rem;
+    color: var(--text-muted);
+    line-height: 1.7;
+}
+
+/* Live Project Badge (amber) */
+.live-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.25rem 0.7rem;
+    background: rgba(245, 158, 11, 0.1);
+    border: 1px solid rgba(245, 158, 11, 0.28);
+    border-radius: 9999px;
+    font-family: var(--font-mono);
+    font-size: 0.65rem;
+    font-weight: 700;
+    color: #F59E0B;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+}
+
+/* Text gradient warm (amber) */
+.text-gradient-warm {
+    background: linear-gradient(135deg, #F59E0B, #FBBF24);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
 }
