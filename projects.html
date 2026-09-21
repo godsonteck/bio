@@ -3,124 +3,184 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Projects & Live Deployments — Emmanuel Drah</title>
-    <meta name="description" content="Explore live deployed projects by Emmanuel Drah — including NS Luxury Villa (nsvilla.com) and CR Cosmetics & Essentials (crcosmeticsgh.com).">
-    <meta property="og:title" content="My Projects & Live Deployments — Emmanuel Drah">
-    <meta property="og:description" content="Explore live deployed systems built and launched by Emmanuel Drah, including NS Luxury Villa (nsvilla.com) and CR Cosmetics & Essentials (crcosmeticsgh.com).">
+    <title>Selected Work — Emmanuel Drah</title>
+    <meta name="description" content="Selected work catalogue by Emmanuel Drah: live deployed systems, hospitality booking engines, and commercial platforms.">
+    <meta property="og:title" content="Selected Work — Emmanuel Drah">
+    <meta property="og:description" content="Live deployed systems and commercial platforms engineered by Emmanuel Drah.">
     <meta property="og:image" content="https://emmanueldrah.vercel.app/images/manuel.jpg">
     <meta property="og:url" content="https://emmanueldrah.vercel.app/projects.html">
     <meta name="twitter:card" content="summary_large_image">
     <link rel="canonical" href="https://emmanueldrah.vercel.app/projects.html">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preload" href="images/manuel.jpg" as="image">
     <link rel="icon" type="image/jpeg" href="images/sad.jpg">
     <link rel="apple-touch-icon" href="images/sad.jpg">
-    <link rel="stylesheet" href="css/style.css?v=5">
-    <script src="js/components.js?v=3" defer></script>
+    <link rel="stylesheet" href="css/style.css?v=6">
+    <script src="js/components.js?v=4" defer></script>
 </head>
 <body>
     <portfolio-nav></portfolio-nav>
 
+    <!-- Masthead -->
+    <header class="monograph-masthead">
+        <div class="monograph-container">
+            <div class="masthead-meta-row">
+                <span class="masthead-location">Production Catalogue</span>
+                <span class="masthead-status">Verified Deployments</span>
+                <span class="mono-label">Success Above Dreams</span>
+            </div>
+
+            <h1 class="serif-display masthead-title">
+                Selected Works &amp; <span class="serif-italic">Deployments</span>
+            </h1>
+
+            <p class="masthead-statement">
+                Systems built for real business stakes &mdash; engineered from actual operational friction, tested in production, and maintained for everyday reliability.
+            </p>
+        </div>
+    </header>
+
     <main>
-        <section class="agency-hero" style="min-height: 50vh; padding: 8rem 0 3rem;">
-            <div class="agency-container">
-                <div class="agency-hero-top">
-                    <span class="status-chip"><span class="live-pulse-dot"></span> Live Deployments</span>
-                    <span>Production Archive</span>
-                    <span>Ho, Ghana</span>
+        <!-- Project Exhibition Spreads -->
+        <section class="exhibition-section">
+            <div class="monograph-container">
+                <!-- Project 01: NS Luxury Villa -->
+                <article class="exhibition-item" id="nsvilla">
+                    <div class="exhibition-media">
+                        <span class="exhibition-badge">Live in Production</span>
+                        <img src="images/nsvilla-hero.jpeg" alt="NS Luxury Villa in Ho, Ghana" loading="lazy">
+                    </div>
+                    <div class="exhibition-content">
+                        <span class="exhibition-category">01 / Hospitality Platform</span>
+                        <h2 class="serif-display exhibition-title">NS Luxury Villa</h2>
+                        <p class="exhibition-description">
+                            Official digital web portal and direct guest reservation engine for Ho's premier boutique luxury villa. Built to showcase rooms, furnished apartments, event venues, and direct booking lines without third-party OTA commissions.
+                        </p>
+                        <div class="exhibition-specs">
+                            <span class="spec-pill">Boutique Hospitality</span>
+                            <span class="spec-pill">Direct Booking Engine</span>
+                            <span class="spec-pill">Local SEO &amp; Maps</span>
+                            <span class="spec-pill">Ho, Ghana</span>
+                        </div>
+                        <div class="exhibition-actions">
+                            <a href="https://nsvilla.com" target="_blank" rel="noopener noreferrer" class="btn-monograph-primary">Visit nsvilla.com &nearr;</a>
+                            <a href="case-studies.html#nsvilla" class="btn-monograph-subtle">Read Case Breakdown &rarr;</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Project 02: CR Cosmetics & Essentials -->
+                <article class="exhibition-item reversed" id="crcosmetics">
+                    <div class="exhibition-media" style="background: #08090b; display: flex; align-items: center; justify-content: center; padding: 3rem;">
+                        <span class="exhibition-badge">Live Commercial Store</span>
+                        <img src="images/crcosmetics-logo.jpeg" alt="CR Cosmetics and Essentials brand logo" loading="lazy" style="object-fit: contain; max-height: 240px; width: auto;">
+                    </div>
+                    <div class="exhibition-content">
+                        <span class="exhibition-category">02 / Commercial E-Commerce</span>
+                        <h2 class="serif-display exhibition-title">CR Cosmetics &amp; Essentials</h2>
+                        <p class="exhibition-description">
+                            Comprehensive e-commerce platform built for authentic skincare, haircare, and beauty retail across Ghana. Streamlined product taxonomy, swift mobile checkout, and structured organic SEO indexing.
+                        </p>
+                        <div class="exhibition-specs">
+                            <span class="spec-pill">E-Commerce Architecture</span>
+                            <span class="spec-pill">Nationwide Shipping Logistics</span>
+                            <span class="spec-pill">Mobile-First UI</span>
+                            <span class="spec-pill">Ghana</span>
+                        </div>
+                        <div class="exhibition-actions">
+                            <a href="https://crcosmeticsgh.com" target="_blank" rel="noopener noreferrer" class="btn-monograph-primary">Visit crcosmeticsgh.com &nearr;</a>
+                            <a href="case-studies.html#crcosmetics" class="btn-monograph-subtle">Read Case Breakdown &rarr;</a>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- System Index -->
+        <section class="exhibition-section">
+            <div class="monograph-container">
+                <div class="section-editorial-head">
+                    <div>
+                        <span class="section-editorial-subtitle">Archive</span>
+                        <h2 class="serif-display section-editorial-title">Platform Registry</h2>
+                    </div>
                 </div>
-                <div style="padding: 2.5rem 0 1rem;">
-                    <h1 class="agency-display-title" style="margin-bottom: 1rem;">
-                        Selected<br><span class="highlight">Works</span>
-                    </h1>
-                    <p class="agency-hero-sub" style="margin-bottom: 0;">
-                        Live production platforms, booking engines, and commercial systems engineered to work under real-world conditions.
-                    </p>
+
+                <div class="index-table">
+                    <div class="index-row">
+                        <span class="index-number">01</span>
+                        <div class="index-heading">NS Luxury Villa</div>
+                        <div class="index-body">Official web portal, direct booking engine, and Google Business local SEO for premier hospitality in Ho.</div>
+                        <div class="index-meta">Live &middot; nsvilla.com</div>
+                    </div>
+
+                    <div class="index-row">
+                        <span class="index-number">02</span>
+                        <div class="index-heading">CR Cosmetics &amp; Essentials</div>
+                        <div class="index-body">E-commerce storefront for beauty retail, structured catalogue management, and nationwide delivery support.</div>
+                        <div class="index-meta">Live &middot; crcosmeticsgh.com</div>
+                    </div>
+
+                    <div class="index-row">
+                        <span class="index-number">03</span>
+                        <div class="index-heading">NHIS Dzodze MIS Records</div>
+                        <div class="index-body">Public health database maintenance, grievance resolution data systems, and citizen communications support.</div>
+                        <div class="index-meta">National Service &middot; 2023–2024</div>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <!-- Project Showcases -->
-        <section class="agency-section" style="padding-top: 4rem;">
-            <div class="agency-container">
-                <div class="agency-work-grid">
-
-                    <!-- Project 01: NS Luxury Villa -->
-                    <article id="nsvilla" class="agency-project-item" data-reveal>
-                        <div class="agency-project-media">
-                            <span class="agency-live-tag"><span class="live-pulse-dot"></span> nsvilla.com &middot; Live</span>
-                            <img src="images/nsvilla-hero.jpeg" alt="NS Luxury Villa property architecture in Ho, Ghana" loading="lazy">
-                        </div>
-                        <div class="agency-project-info">
-                            <span class="agency-project-num">01 / HOSPITALITY PLATFORM</span>
-                            <h2 class="agency-project-title">NS Luxury Villa</h2>
-                            <p class="agency-project-brief">
-                                Working as a receptionist at NS Luxury Villa in Ho, I saw guests constantly calling with basic questions about rooms, rates, amenities, and directions. I designed, engineered, and deployed their complete web portal to showcase spaces and drive instant guest reservations.
-                            </p>
-                            <div class="agency-project-pills">
-                                <span class="agency-pill">Solo Build</span>
-                                <span class="agency-pill">Front Desk Insight</span>
-                                <span class="agency-pill">Booking Engine</span>
-                                <span class="agency-pill">Ho, Ghana</span>
-                            </div>
-                            <div class="agency-project-actions">
-                                <a href="https://nsvilla.com" target="_blank" rel="noopener noreferrer" class="btn-agency-primary">Visit Live Site (nsvilla.com) &nearr;</a>
-                                <a href="case-studies.html" class="btn-agency-outline">Read Case Study</a>
-                            </div>
-                        </div>
-                    </article>
-
-                    <!-- Project 02: CR Cosmetics & Essentials -->
-                    <article id="crcosmetics" class="agency-project-item reverse" data-reveal>
-                        <div class="agency-project-media" style="background: #040608; display: flex; align-items: center; justify-content: center;">
-                            <span class="agency-live-tag"><span class="live-pulse-dot"></span> crcosmeticsgh.com &middot; Live</span>
-                            <img src="images/crcosmetics-logo.jpeg" alt="CR Cosmetics and Essentials brand logo" loading="lazy" style="object-fit: contain; width: 75%; height: 75%; padding: 2rem;">
-                        </div>
-                        <div class="agency-project-info">
-                            <span class="agency-project-num">02 / E-COMMERCE SYSTEM</span>
-                            <h2 class="agency-project-title">CR Cosmetics</h2>
-                            <p class="agency-project-brief">
-                                A complete commercial e-commerce storefront for authentic skincare and cosmetics in Ghana. Scaled a local retail inventory into a fast, search-indexed platform with nationwide delivery across Ghana.
-                            </p>
-                            <div class="agency-project-pills">
-                                <span class="agency-pill">Commercial Storefront</span>
-                                <span class="agency-pill">Fast Catalog Search</span>
-                                <span class="agency-pill">Google SEO</span>
-                                <span class="agency-pill">Nationwide Reach</span>
-                            </div>
-                            <div class="agency-project-actions">
-                                <a href="https://crcosmeticsgh.com" target="_blank" rel="noopener noreferrer" class="btn-agency-primary">Visit Live Store (crcosmeticsgh.com) &nearr;</a>
-                                <a href="case-studies.html" class="btn-agency-outline">Read Case Study</a>
-                            </div>
-                        </div>
-                    </article>
-
+        <!-- Memoir Interlude -->
+        <section class="monograph-interlude">
+            <div class="monograph-container">
+                <blockquote class="serif-display interlude-quote">
+                    &ldquo;Software has to make life easier for the person who actually uses it every day. If it fails that, nothing else matters.&rdquo;
+                </blockquote>
+                <div class="interlude-signature">
+                    <div class="interlude-avatar">
+                        <img src="images/manuel.jpg" alt="Emmanuel Drah">
+                    </div>
+                    <div>
+                        <div class="interlude-author">Emmanuel Drah</div>
+                        <div class="interlude-role">Full-Stack Engineer &middot; Ho, Ghana</div>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <!-- Direct CTA -->
-        <section class="agency-contact-callout">
-            <div class="agency-container">
-                <span class="agency-section-label" style="margin-bottom: 1rem;">Have a Project?</span>
-                <h2 class="agency-contact-headline">
-                    Let’s build something <span class="accent-text">dependable.</span>
-                </h2>
-                <div class="agency-contact-links">
-                    <a href="https://wa.me/233543671806?text=Hello%20Emmanuel%2C%20I%20saw%20your%20portfolio%20and%20would%20like%20to%20talk%20about%20a%20project." target="_blank" rel="noopener noreferrer" class="agency-big-link whatsapp">
-                        <span>💬 WhatsApp Direct</span>
-                    </a>
-                    <a href="contact.html" class="agency-big-link email">
-                        <span>Send Project Brief &rarr;</span>
-                    </a>
+        <!-- Direct Line Salon -->
+        <section class="inquiry-salon">
+            <div class="monograph-container">
+                <div class="inquiry-layout">
+                    <div>
+                        <span class="mono-label" style="display: block; margin-bottom: 0.75rem;">Project Commissions</span>
+                        <h2 class="serif-display inquiry-title">Have a system in mind?</h2>
+                        <p class="inquiry-prose">
+                            I accept a limited number of client commissions each season. Reach out to discuss feasibility, architecture, and timeline.
+                        </p>
+                        <div class="direct-line-list">
+                            <a href="https://wa.me/233543671806" target="_blank" rel="noopener noreferrer" class="direct-line-item">
+                                <span class="direct-line-label">WhatsApp Direct</span>
+                                <span class="direct-line-val">+233 543 671 806 &nearr;</span>
+                            </a>
+                            <a href="mailto:emmanueldrah10@gmail.com" class="direct-line-item">
+                                <span class="direct-line-label">Direct Email</span>
+                                <span class="direct-line-val">emmanueldrah10@gmail.com</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div style="display: flex; flex-direction: column; justify-content: center; align-items: flex-start;">
+                        <a href="contact.html" class="btn-monograph-primary" style="padding: 1.25rem 2.5rem; font-size: 1rem;">
+                            Open Commission Inquiry &rarr;
+                        </a>
+                    </div>
                 </div>
             </div>
         </section>
     </main>
 
     <portfolio-footer></portfolio-footer>
-
     <script src="main.js"></script>
 </body>
 </html>

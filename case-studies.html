@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Case Studies — Emmanuel Drah</title>
-    <meta name="description" content="Detailed case studies from Emmanuel Drah: engineering and business outcomes for live systems NS Luxury Villa (nsvilla.com) and CR Cosmetics & Essentials (crcosmeticsgh.com).">
+    <meta name="description" content="In-depth case studies by Emmanuel Drah: engineering solutions and business outcomes for NS Luxury Villa and CR Cosmetics & Essentials.">
     <meta property="og:title" content="Case Studies — Emmanuel Drah">
-    <meta property="og:description" content="Engineering and business outcomes for live production systems by Emmanuel Drah.">
+    <meta property="og:description" content="Detailed engineering and operational outcomes for live deployed systems by Emmanuel Drah.">
     <meta property="og:image" content="https://emmanueldrah.vercel.app/images/manuel.jpg">
     <meta property="og:url" content="https://emmanueldrah.vercel.app/case-studies.html">
     <meta name="twitter:card" content="summary_large_image">
@@ -15,207 +15,180 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="icon" type="image/jpeg" href="images/sad.jpg">
     <link rel="apple-touch-icon" href="images/sad.jpg">
-    <link rel="stylesheet" href="css/style.css?v=5">
-    <script src="js/components.js?v=3" defer></script>
+    <link rel="stylesheet" href="css/style.css?v=6">
+    <script src="js/components.js?v=4" defer></script>
 </head>
 <body>
     <portfolio-nav></portfolio-nav>
 
-    <!-- Agency Hero -->
-    <header class="agency-hero">
-        <div class="agency-container">
-            <div class="agency-hero-top">
-                <span class="status-chip"><span class="live-pulse-dot"></span> In-Depth Breakdowns</span>
-                <span>Production Architecture</span>
-                <span>Success Above Dreams</span>
+    <!-- Masthead -->
+    <header class="monograph-masthead">
+        <div class="monograph-container">
+            <div class="masthead-meta-row">
+                <span class="masthead-location">Field Notes</span>
+                <span class="masthead-status">Production Breakdowns</span>
+                <span class="mono-label">Success Above Dreams</span>
             </div>
-            
-            <div class="agency-hero-main">
-                <div>
-                    <h1 class="agency-display-title">
-                        Case Studies
-                        <span class="highlight">Proven Systems</span>
-                    </h1>
-                    <p class="agency-hero-sub">
-                        Real operational problems, architectural decisions, and production outcomes for systems running in the wild.
-                    </p>
-                </div>
-            </div>
+
+            <h1 class="serif-display masthead-title">
+                Case Studies &amp; <span class="serif-italic">Architecture</span>
+            </h1>
+
+            <p class="masthead-statement">
+                Honest accounts of systems built for real operations: the operational bottlenecks, the architectural choices, and the measurable outcomes.
+            </p>
         </div>
     </header>
 
     <main>
         <!-- Case Study 01: NS Luxury Villa -->
-        <article class="agency-case-article" id="nsvilla">
-            <div class="agency-container">
-                <div class="agency-case-layout">
-                    <!-- Media Sticky Column -->
-                    <div class="agency-case-media-wrap">
+        <article class="exhibition-section" id="nsvilla">
+            <div class="monograph-container">
+                <div class="exhibition-item">
+                    <div class="exhibition-media">
+                        <span class="exhibition-badge">Case 01 &middot; Live Portal</span>
                         <img src="images/nsvilla-hero.jpeg" alt="NS Luxury Villa property in Ho, Ghana" loading="lazy">
-                        <div class="agency-case-meta-bar">
-                            <div>
-                                <span class="agency-pill" style="margin-bottom: 0.35rem;"><span class="live-pulse-dot"></span> Live in Production</span>
-                                <div style="font-family: var(--font-mono); font-size: 0.8rem; color: var(--text-muted);">nsvilla.com · Ho, Ghana</div>
-                            </div>
-                            <a href="https://nsvilla.com" target="_blank" rel="noopener noreferrer" class="btn-agency-primary">Visit Live Site &nearr;</a>
+                    </div>
+                    <div class="exhibition-content">
+                        <span class="exhibition-category">01 / Hospitality Platform</span>
+                        <h2 class="serif-display exhibition-title">NS Luxury Villa</h2>
+                        <p class="exhibition-description">
+                            Transitioning boutique lodging in Ho from front-desk phone overload to an autonomous, high-speed direct reservation engine.
+                        </p>
+                        <div class="exhibition-specs">
+                            <span class="spec-pill">0% OTA Commission Lost</span>
+                            <span class="spec-pill">&lt;1s Mobile Load</span>
+                            <span class="spec-pill">Direct WhatsApp Booking</span>
+                            <span class="spec-pill">nsvilla.com</span>
+                        </div>
+                        <div class="exhibition-actions">
+                            <a href="https://nsvilla.com" target="_blank" rel="noopener noreferrer" class="btn-monograph-primary">Visit Live Portal &nearr;</a>
                         </div>
                     </div>
+                </div>
 
-                    <!-- Details Column -->
-                    <div class="agency-case-details">
-                        <div>
-                            <span class="agency-case-tag">01 / HOSPITALITY PLATFORM</span>
-                            <h2 class="agency-case-title">NS Luxury Villa</h2>
-                            <p style="font-size: 1.1rem; color: var(--text-muted); line-height: 1.6; margin-top: 1rem;">
-                                Transitioning premier boutique hospitality in Ho from chaotic phone-call desk inquiries to a streamlined web booking portal.
-                            </p>
+                <div class="index-table" style="margin-top: 3.5rem;">
+                    <div class="index-row">
+                        <span class="index-number">A</span>
+                        <div class="index-heading">The Operational Bottleneck</div>
+                        <div class="index-body">
+                            As a receptionist at NS Luxury Villa, I experienced the operational friction directly. Travelers looking for quality lodging in Ho had no digital point of reference. Phone lines at the front desk were constantly tied up answering routine inquiries about room tiers, current pricing, amenities, and driving directions.
                         </div>
+                        <div class="index-meta">The Problem</div>
+                    </div>
 
-                        <!-- Stats -->
-                        <div class="agency-stats-grid">
-                            <div class="agency-stat-box">
-                                <span class="agency-stat-num">0%</span>
-                                <span class="agency-stat-label">OTA Fees Lost</span>
-                            </div>
-                            <div class="agency-stat-box">
-                                <span class="agency-stat-num">&lt;1s</span>
-                                <span class="agency-stat-label">Load Time</span>
-                            </div>
-                            <div class="agency-stat-box">
-                                <span class="agency-stat-num">24/7</span>
-                                <span class="agency-stat-label">Direct Availability</span>
-                            </div>
+                    <div class="index-row">
+                        <span class="index-number">B</span>
+                        <div class="index-heading">The Engineering Approach</div>
+                        <div class="index-body">
+                            Designed and deployed a responsive, lightweight web portal optimized for mobile visitors. The platform highlights room imagery, amenities, transparent rates, and direct WhatsApp and phone booking flows that connect guests directly with the reception desk in one tap.
                         </div>
+                        <div class="index-meta">The Architecture</div>
+                    </div>
 
-                        <!-- Challenge -->
-                        <div class="agency-case-block">
-                            <span class="agency-case-section-sub">The Bottleneck</span>
-                            <h4>Zero online visibility & front desk overload</h4>
-                            <p>
-                                As a receptionist at NS Luxury Villa, I experienced the operational friction firsthand: travelers searched online for quality lodging in Ho, but the villa had no digital portal. Front-desk phone lines were constantly tied up answering routine questions regarding room tiers, amenities, pricing, and directions.
-                            </p>
+                    <div class="index-row">
+                        <span class="index-number">C</span>
+                        <div class="index-heading">The Real Outcome</div>
+                        <div class="index-body">
+                            Guests now browse room tiers independently before calling. The villa established high organic local search credibility on Google Maps, and direct reservations bypassed third-party booking commissions completely.
                         </div>
-
-                        <!-- Approach -->
-                        <div class="agency-case-block">
-                            <span class="agency-case-section-sub">The Engineering Approach</span>
-                            <h4>Clean visual architecture & direct conversion triggers</h4>
-                            <p>
-                                I designed and deployed a high-speed web portal optimized for mobile visitors. The platform highlights room galleries, explicit amenities, transparent rates, and direct WhatsApp / phone booking flows that connect prospective guests directly with reception in one tap.
-                            </p>
-                        </div>
-
-                        <!-- Outcome -->
-                        <div class="agency-case-block">
-                            <span class="agency-case-section-sub">The Outcome</span>
-                            <h4>Autonomous guest inquiries & verified brand presence</h4>
-                            <p>
-                                Guests now browse room types and check policies independently prior to calling. The villa established high organic local search credibility, and direct reservations bypassed third-party booking commissions completely.
-                            </p>
-                        </div>
-
-                        <div>
-                            <a href="https://nsvilla.com" target="_blank" rel="noopener noreferrer" class="btn-agency-outline">Launch nsvilla.com &nearr;</a>
-                        </div>
+                        <div class="index-meta">The Result</div>
                     </div>
                 </div>
             </div>
         </article>
 
         <!-- Case Study 02: CR Cosmetics & Essentials -->
-        <article class="agency-case-article" id="crcosmetics">
-            <div class="agency-container">
-                <div class="agency-case-layout">
-                    <!-- Media Sticky Column -->
-                    <div class="agency-case-media-wrap">
-                        <div style="aspect-ratio: 16/10; background: #07090c; display: flex; align-items: center; justify-content: center; padding: 2rem;">
-                            <img src="images/crcosmetics-logo.jpeg" alt="CR Cosmetics and Essentials brand logo" loading="lazy" style="object-fit: contain; max-height: 80%; width: auto;">
+        <article class="exhibition-section" id="crcosmetics">
+            <div class="monograph-container">
+                <div class="exhibition-item reversed">
+                    <div class="exhibition-media" style="background: #08090b; display: flex; align-items: center; justify-content: center; padding: 3rem;">
+                        <span class="exhibition-badge">Case 02 &middot; Live E-Commerce</span>
+                        <img src="images/crcosmetics-logo.jpeg" alt="CR Cosmetics and Essentials brand logo" loading="lazy" style="object-fit: contain; max-height: 240px; width: auto;">
+                    </div>
+                    <div class="exhibition-content">
+                        <span class="exhibition-category">02 / Commercial E-Commerce</span>
+                        <h2 class="serif-display exhibition-title">CR Cosmetics &amp; Essentials</h2>
+                        <p class="exhibition-description">
+                            Engineering a dedicated digital storefront for an authentic beauty brand with inventory cataloging, mobile shopping, and nationwide logistics.
+                        </p>
+                        <div class="exhibition-specs">
+                            <span class="spec-pill">Automated Order Intake</span>
+                            <span class="spec-pill">Nationwide Delivery</span>
+                            <span class="spec-pill">Structured SEO</span>
+                            <span class="spec-pill">crcosmeticsgh.com</span>
                         </div>
-                        <div class="agency-case-meta-bar">
-                            <div>
-                                <span class="agency-pill" style="margin-bottom: 0.35rem;"><span class="live-pulse-dot"></span> Commercial E-Commerce</span>
-                                <div style="font-family: var(--font-mono); font-size: 0.8rem; color: var(--text-muted);">crcosmeticsgh.com · Ghana</div>
-                            </div>
-                            <a href="https://crcosmeticsgh.com" target="_blank" rel="noopener noreferrer" class="btn-agency-primary">Visit Live Store &nearr;</a>
+                        <div class="exhibition-actions">
+                            <a href="https://crcosmeticsgh.com" target="_blank" rel="noopener noreferrer" class="btn-monograph-primary">Visit Live Store &nearr;</a>
                         </div>
                     </div>
+                </div>
 
-                    <!-- Details Column -->
-                    <div class="agency-case-details">
-                        <div>
-                            <span class="agency-case-tag">02 / E-COMMERCE SYSTEM</span>
-                            <h2 class="agency-case-title">CR Cosmetics &amp; Essentials</h2>
-                            <p style="font-size: 1.1rem; color: var(--text-muted); line-height: 1.6; margin-top: 1rem;">
-                                Engineering a dedicated digital storefront for an authentic beauty brand with inventory cataloging, mobile shopping, and nationwide logistics.
-                            </p>
+                <div class="index-table" style="margin-top: 3.5rem;">
+                    <div class="index-row">
+                        <span class="index-number">A</span>
+                        <div class="index-heading">The Operational Bottleneck</div>
+                        <div class="index-body">
+                            Selling strictly through Instagram and WhatsApp status updates created constant customer confusion over pricing, stock availability, and shipping costs. The business owner spent hours typing out product details, confirming payments manually, and fielding stock inquiries.
                         </div>
+                        <div class="index-meta">The Problem</div>
+                    </div>
 
-                        <!-- Stats -->
-                        <div class="agency-stats-grid">
-                            <div class="agency-stat-box">
-                                <span class="agency-stat-num">100%</span>
-                                <span class="agency-stat-label">Product Catalog</span>
-                            </div>
-                            <div class="agency-stat-box">
-                                <span class="agency-stat-num">Ghana</span>
-                                <span class="agency-stat-label">Nationwide Shipping</span>
-                            </div>
-                            <div class="agency-stat-box">
-                                <span class="agency-stat-num">Live</span>
-                                <span class="agency-stat-label">Store Deployed</span>
-                            </div>
+                    <div class="index-row">
+                        <span class="index-number">B</span>
+                        <div class="index-heading">The Engineering Approach</div>
+                        <div class="index-body">
+                            Developed and published a dedicated e-commerce catalog at crcosmeticsgh.com featuring category filtering, clear skincare specifications, transparent pricing, and a smooth checkout path designed specifically for mobile data networks in Ghana.
                         </div>
+                        <div class="index-meta">The Architecture</div>
+                    </div>
 
-                        <!-- Challenge -->
-                        <div class="agency-case-block">
-                            <span class="agency-case-section-sub">The Bottleneck</span>
-                            <h4>Fragmented DM selling & inventory confusion</h4>
-                            <p>
-                                Selling strictly through Instagram and WhatsApp status updates created constant customer confusion over pricing, stock availability, and shipping costs. The business owner spent hours typing out product details, confirming payments manually, and fielding stock inquiries.
-                            </p>
+                    <div class="index-row">
+                        <span class="index-number">C</span>
+                        <div class="index-heading">The Real Outcome</div>
+                        <div class="index-body">
+                            Orders now arrive structured with delivery addresses and item selections clearly enumerated. The business gained national discoverability on Google search and established buyer confidence for customers outside the Volta Region.
                         </div>
-
-                        <!-- Approach -->
-                        <div class="agency-case-block">
-                            <span class="agency-case-section-sub">The Engineering Approach</span>
-                            <h4>Structured product taxonomies & fast checkout flow</h4>
-                            <p>
-                                Developed and published a dedicated e-commerce catalog at crcosmeticsgh.com featuring category filtering, clear skincare specifications, transparent pricing, and a smooth checkout path designed specifically for mobile data networks in Ghana.
-                            </p>
-                        </div>
-
-                        <!-- Outcome -->
-                        <div class="agency-case-block">
-                            <span class="agency-case-section-sub">The Outcome</span>
-                            <h4>Credible brand perception & nationwide order fulfillment</h4>
-                            <p>
-                                Orders now arrive structured with delivery addresses and item selections clearly enumerated. The business gained national discoverability on Google search and established buyer confidence for customers outside the Volta Region.
-                            </p>
-                        </div>
-
-                        <div>
-                            <a href="https://crcosmeticsgh.com" target="_blank" rel="noopener noreferrer" class="btn-agency-outline">Launch crcosmeticsgh.com &nearr;</a>
-                        </div>
+                        <div class="index-meta">The Result</div>
                     </div>
                 </div>
             </div>
         </article>
 
-        <!-- Agency Contact Callout -->
-        <section class="agency-contact-callout">
-            <div class="agency-container">
-                <span class="agency-section-label">Next Steps</span>
-                <h2 class="agency-contact-headline">
-                    HAVE A SYSTEM TO BUILD?<br>
-                    <span class="accent-text">LET'S TALK.</span>
-                </h2>
-                <div class="agency-contact-links">
-                    <a href="https://wa.me/233543671806" target="_blank" rel="noopener noreferrer" class="agency-big-link whatsapp">
-                        <span>WhatsApp Direct &nearr;</span>
-                    </a>
-                    <a href="mailto:emmanueldrah10@gmail.com" class="agency-big-link email">
-                        <span>emmanueldrah10@gmail.com</span>
-                    </a>
+        <!-- Memoir Interlude -->
+        <section class="monograph-interlude">
+            <div class="monograph-container">
+                <blockquote class="serif-display interlude-quote">
+                    &ldquo;Under Success Above Dreams, the product is not the dream itself &mdash; it is the proof that the idea can survive contact with reality.&rdquo;
+                </blockquote>
+                <div class="interlude-signature">
+                    <div class="interlude-avatar">
+                        <img src="images/manuel.jpg" alt="Emmanuel Drah">
+                    </div>
+                    <div>
+                        <div class="interlude-author">Emmanuel Drah</div>
+                        <div class="interlude-role">Founder &middot; Success Above Dreams &middot; Ho, Ghana</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Direct Line Salon -->
+        <section class="inquiry-salon">
+            <div class="monograph-container">
+                <div class="inquiry-layout">
+                    <div>
+                        <span class="mono-label" style="display: block; margin-bottom: 0.75rem;">Custom Project</span>
+                        <h2 class="serif-display inquiry-title">Need a system tailored to your bottleneck?</h2>
+                        <p class="inquiry-prose">
+                            Tell me what is not working in your daily operations, and let's construct a solution that works for your team.
+                        </p>
+                    </div>
+                    <div style="display: flex; flex-direction: column; justify-content: center; align-items: flex-start;">
+                        <a href="contact.html" class="btn-monograph-primary" style="padding: 1.25rem 2.5rem; font-size: 1rem;">
+                            Discuss Your Project &rarr;
+                        </a>
+                    </div>
                 </div>
             </div>
         </section>

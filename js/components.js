@@ -1,41 +1,41 @@
-/*
-   Emmanuel Drah Portfolio - Shared Web Components
-   Theme: Technical & Systems-Inspired Shared Header Navigation and Footer.
-*/
+/* ==========================================================================
+   EMMANUEL DRAH — BESPOKE WEB COMPONENTS (NAV & FOOTER)
+   Theme: Editorial Luxury Monograph & Creative Engineering Studio
+   ========================================================================== */
 
 class PortfolioNav extends HTMLElement {
     connectedCallback() {
         this.innerHTML = `
             <nav id="navbar">
                 <a href="index.html" class="brand">
-                    <img src="images/sad.jpg" alt="Success Above Dreams logo" class="logo-img">
-                    <div class="brand-info">
-                        <span class="brand-name">Emmanuel Drah</span>
-                        <span class="brand-tag"><span class="live-pulse-dot"></span>Success Above Dreams</span>
+                    <div class="brand-monogram">
+                        <img src="images/sad.jpg" alt="Emmanuel Drah &middot; S.A.D.">
+                    </div>
+                    <div class="brand-meta">
+                        <span class="brand-title">Emmanuel Drah</span>
+                        <span class="brand-creed">Success Above Dreams</span>
                     </div>
                 </a>
 
                 <div class="nav-links" id="nav-menu">
-                    <a href="index.html">Home</a>
-                    <a href="projects.html">Work</a>
+                    <a href="index.html">Index</a>
+                    <a href="projects.html">Selected Work</a>
                     <a href="case-studies.html">Case Studies</a>
                     <a href="about.html">About</a>
                     <a href="the-brand.html">The Brand</a>
-                    <a href="contact.html" class="btn btn-primary btn-nav-hire">Contact</a>
+                    <a href="contact.html" class="btn-nav-touch">Contact &nearr;</a>
                 </div>
 
-                <div class="mobile-nav-toggle-wrap" style="display: flex; gap: 1rem; align-items: center;">
-                    <button class="mobile-nav-toggle" id="mobile-toggle" aria-label="Toggle Navigation Menu" aria-expanded="false" aria-controls="nav-menu">
-                        <span class="hamburger"></span>
-                    </button>
-                </div>
+                <button class="mobile-nav-toggle" id="mobile-toggle" aria-label="Toggle Navigation Menu" aria-expanded="false">
+                    <span class="hamburger"></span>
+                </button>
             </nav>
 
             <!-- Fullscreen Immersive Mobile Navigation Overlay -->
             <div class="mobile-menu-overlay" id="mobile-overlay">
                 <div class="mobile-menu-content">
-                    <a href="index.html" class="mobile-menu-link">Home</a>
-                    <a href="projects.html" class="mobile-menu-link">Work</a>
+                    <a href="index.html" class="mobile-menu-link">Index</a>
+                    <a href="projects.html" class="mobile-menu-link">Selected Work</a>
                     <a href="case-studies.html" class="mobile-menu-link">Case Studies</a>
                     <a href="about.html" class="mobile-menu-link">About</a>
                     <a href="the-brand.html" class="mobile-menu-link">The Brand</a>
@@ -75,7 +75,7 @@ class PortfolioNav extends HTMLElement {
 
         // Active page navigation styling on scroll and load
         window.addEventListener('scroll', () => {
-            if (window.scrollY > 40) {
+            if (window.scrollY > 30) {
                 navbar.classList.add('scrolled');
             } else {
                 navbar.classList.remove('scrolled');
@@ -104,7 +104,6 @@ class PortfolioNav extends HTMLElement {
 
         const currentSlug = getSlug(window.location.pathname);
 
-        // desktop links active check
         navLinks.forEach(link => {
             const linkSlug = getSlug(link.getAttribute('href'));
             if (linkSlug === currentSlug) {
@@ -116,7 +115,6 @@ class PortfolioNav extends HTMLElement {
             }
         });
 
-        // mobile overlay links active check
         overlayLinks.forEach(link => {
             const linkSlug = getSlug(link.getAttribute('href'));
             if (linkSlug === currentSlug) {
@@ -132,47 +130,49 @@ class PortfolioFooter extends HTMLElement {
     connectedCallback() {
         this.innerHTML = `
             <footer>
-                <div class="container">
-                    <div class="footer-content">
-                        <div class="footer-brand-block">
-                            <div class="footer-logo">
-                                <img src="images/sad.jpg" alt="Success Above Dreams logo">
-                                <div class="brand-info">
-                                    <span class="brand-name" style="font-size: 1.05rem;">Emmanuel Drah</span>
-                                    <span class="brand-tag" style="font-size: 0.68rem; color: var(--accent); font-family: var(--font-mono); font-weight: 600;"><span class="live-pulse-dot"></span>Success Above Dreams</span>
-                                </div>
-                            </div>
-                            <p class="footer-creed">"Dreams are the beginning, not the proof. Success is what quiet discipline builds when nobody is watching."</p>
-                            <div class="footer-origin">
-                                <span>🇬🇭 Ho, Volta Region, Ghana</span>
-                                <span style="opacity: 0.35;">·</span>
-                                <span>Built for reality, not applause</span>
-                            </div>
+                <div class="monograph-container">
+                    <div class="footer-inner">
+                        <div class="footer-brand-side">
+                            <p class="footer-quote">
+                                &ldquo;Dreams are the beginning, not the proof. Success is what quiet discipline builds when nobody is watching.&rdquo;
+                            </p>
+                            <p style="color: var(--text-secondary); font-size: 0.92rem; margin-top: 0.5rem;">
+                                Emmanuel Drah &middot; Engineer &amp; Founder of Success Above Dreams.
+                            </p>
+                            <p style="font-family: var(--font-mono); font-size: 0.72rem; color: var(--accent-warm); margin-top: 0.75rem; text-transform: uppercase; letter-spacing: 0.08em;">
+                                Ho, Volta Region, Ghana
+                            </p>
                         </div>
 
-                        <div class="footer-links-wrap">
-                            <div class="footer-links-group">
-                                <span style="font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-muted); font-family: var(--font-mono); margin-bottom: 0.5rem; display: block;">Navigation</span>
-                                <a href="index.html">Home</a>
-                                <a href="the-brand.html">The Brand</a>
-                                <a href="about.html">About</a>
-                                <a href="services.html">Services</a>
-                            </div>
-                            <div class="footer-links-group">
-                                <span style="font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-muted); font-family: var(--font-mono); margin-bottom: 0.5rem; display: block;">Work &amp; Story</span>
-                                <a href="projects.html">Live Projects</a>
+                        <div class="footer-nav-groups">
+                            <div class="footer-col">
+                                <span class="footer-col-title">Navigation</span>
+                                <a href="index.html">Index</a>
+                                <a href="projects.html">Selected Work</a>
                                 <a href="case-studies.html">Case Studies</a>
-                                <a href="gallery.html">Gallery</a>
-                                <a href="resume.html">Resume</a>
+                                <a href="about.html">About</a>
+                                <a href="the-brand.html">The Brand</a>
+                            </div>
+                            <div class="footer-col">
+                                <span class="footer-col-title">Selected Live</span>
+                                <a href="https://nsvilla.com" target="_blank" rel="noopener noreferrer">NS Luxury Villa &nearr;</a>
+                                <a href="https://crcosmeticsgh.com" target="_blank" rel="noopener noreferrer">CR Cosmetics Store &nearr;</a>
+                                <a href="services.html">Commissions</a>
+                                <a href="resume.html">Curriculum Vitae</a>
+                            </div>
+                            <div class="footer-col">
+                                <span class="footer-col-title">Direct Inquiries</span>
+                                <a href="https://wa.me/233543671806" target="_blank" rel="noopener noreferrer">WhatsApp Direct &nearr;</a>
+                                <a href="mailto:emmanueldrah10@gmail.com">emmanueldrah10@gmail.com</a>
+                                <a href="tel:+233543671806">+233 543 671 806</a>
+                                <a href="contact.html">Project Salon &rarr;</a>
                             </div>
                         </div>
+                    </div>
 
-                        <div class="footer-meta">
-                            <a href="https://wa.me/233543671806?text=Hello%20Emmanuel%2C%20I%20saw%20your%20portfolio%20and%20would%20like%20to%20talk%20about%20a%20project." target="_blank" rel="noopener noreferrer" class="btn-whatsapp" style="margin-bottom: 0.85rem;">
-                                <span>💬 Chat on WhatsApp</span>
-                            </a>
-                            <p style="font-size: 0.78rem; color: var(--text-muted); margin: 0;">&copy; ${new Date().getFullYear()} Success Above Dreams. All rights reserved.</p>
-                        </div>
+                    <div class="footer-bottom">
+                        <span>&copy; ${new Date().getFullYear()} Emmanuel Drah &middot; Success Above Dreams.</span>
+                        <span>Crafted in Ho, Ghana &middot; Built for reality, not applause.</span>
                     </div>
                 </div>
             </footer>

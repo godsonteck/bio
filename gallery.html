@@ -6,7 +6,7 @@
     <title>Gallery — Emmanuel Drah</title>
     <meta name="description" content="A visual journey through Emmanuel Drah's work — from live deployed platforms like NS Luxury Villa and CR Cosmetics to community innovation at the Ho West Tech Fest.">
     <meta property="og:title" content="Gallery — Emmanuel Drah">
-    <meta property="og:description" content="A visual journey through Emmanuel Drah's work, live deployed systems, and community engagements.">
+    <meta property="og:description" content="Visual archive of Emmanuel Drah's work, live deployed systems, and community engagements in Ghana.">
     <meta property="og:image" content="https://emmanueldrah.vercel.app/images/manuel.jpg">
     <meta property="og:url" content="https://emmanueldrah.vercel.app/gallery.html">
     <meta name="twitter:card" content="summary_large_image">
@@ -15,282 +15,135 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="icon" type="image/jpeg" href="images/sad.jpg">
     <link rel="apple-touch-icon" href="images/sad.jpg">
-    <link rel="stylesheet" href="css/style.css?v=5">
-    <script src="js/components.js?v=3" defer></script>
+    <link rel="stylesheet" href="css/style.css?v=6">
+    <script src="js/components.js?v=4" defer></script>
 </head>
 <body>
     <portfolio-nav></portfolio-nav>
 
-    <!-- Lightbox Modal -->
-    <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Image Viewer">
-        <button class="lightbox-close" id="lightbox-close" aria-label="Close image viewer">&#x2715;</button>
-        <img id="lightbox-img" src="" alt="Gallery image full view">
-    </div>
+    <!-- Masthead -->
+    <header class="monograph-masthead">
+        <div class="monograph-container">
+            <div class="masthead-meta-row">
+                <span class="masthead-location">Visual Record</span>
+                <span class="masthead-status">Field Archives</span>
+                <span class="mono-label">Success Above Dreams</span>
+            </div>
 
-    <main>
-    <!-- Agency Hero -->
-    <header class="agency-hero">
-        <div class="agency-container">
-            <div class="agency-hero-top">
-                <span class="status-chip"><span class="live-pulse-dot"></span> Visual Archives</span>
-                <span>Production &middot; Events &middot; Community</span>
-                <span>Success Above Dreams</span>
-            </div>
-            
-            <div class="agency-hero-main">
-                <div>
-                    <h1 class="agency-display-title">
-                        Visual<br>Record
-                        <span class="highlight">In The Field</span>
-                    </h1>
-                    <p class="agency-hero-sub">
-                        The people, systems, community workshops, and behind-the-scenes engineering across Ghana.
-                    </p>
-                </div>
-            </div>
+            <h1 class="serif-display masthead-title">
+                Visual Archive &amp; <span class="serif-italic">Field Notes</span>
+            </h1>
+
+            <p class="masthead-statement">
+                The people, systems, community technology festivals, and behind-the-scenes engineering across Ghana.
+            </p>
         </div>
     </header>
 
-        <section class="container gallery-section">
-            <div class="gallery-category">
-                <div class="gallery-category-header">
+    <main>
+        <!-- Deployed Systems Photos -->
+        <section class="exhibition-section">
+            <div class="monograph-container">
+                <div class="section-editorial-head">
                     <div>
-                        <span class="section-tag">Live Systems &amp; Deployments</span>
-                        <h2 class="gallery-category-title">The systems I build &amp; deploy</h2>
+                        <span class="section-editorial-subtitle">Live Platforms</span>
+                        <h2 class="serif-display section-editorial-title">Deployed Systems</h2>
                     </div>
-                    <p class="gallery-category-description">Snapshots from live deployed work — web portals, e-commerce architectures, and digital systems built for everyday commercial use.</p>
                 </div>
-                <div class="gallery-grid">
-                    <div class="gallery-item" data-reveal>
-                        <div class="gallery-img-wrap">
-                            <img loading="lazy" src="images/nsvilla-hero.jpeg" alt="NS Luxury Villa property architecture in Ho, Ghana">
-                            <div class="gallery-overlay"><div class="gallery-zoom-icon">🔍</div></div>
+
+                <div class="photo-essay-grid">
+                    <div class="photo-essay-card">
+                        <div class="photo-essay-media">
+                            <img src="images/nsvilla-hero.jpeg" alt="NS Luxury Villa in Ho, Ghana" loading="lazy">
                         </div>
-                        <div class="gallery-caption">
-                            <p>NS Luxury Villa in Ho, Volta Region — official web platform designed, developed, and deployed (nsvilla.com).</p>
+                        <div class="photo-essay-caption">
+                            <span class="photo-essay-tag">Hospitality Platform</span>
+                            <div class="photo-essay-title">NS Luxury Villa &mdash; Ho, Ghana</div>
                         </div>
                     </div>
 
-                    <div class="gallery-item" data-reveal>
-                        <div class="gallery-img-wrap">
-                            <img loading="lazy" src="images/nsvilla-pool.jpeg" alt="NS Luxury Villa pool and lounge ambiance">
-                            <div class="gallery-overlay"><div class="gallery-zoom-icon">🔍</div></div>
+                    <div class="photo-essay-card">
+                        <div class="photo-essay-media" style="background: #08090b; display: flex; align-items: center; justify-content: center; padding: 2rem;">
+                            <img src="images/crcosmetics-logo.jpeg" alt="CR Cosmetics and Essentials" loading="lazy" style="object-fit: contain; max-height: 180px; width: auto;">
                         </div>
-                        <div class="gallery-caption">
-                            <p>Poolside relaxation and outdoor amenities at NS Luxury Villa (nsvilla.com).</p>
-                        </div>
-                    </div>
-
-                    <div class="gallery-item" data-reveal>
-                        <div class="gallery-img-wrap" style="background: #050505;">
-                            <img loading="lazy" src="images/crcosmetics-logo.jpeg" alt="CR Cosmetics and Essentials brand emblem" style="object-fit: contain; padding: 1rem;">
-                            <div class="gallery-overlay"><div class="gallery-zoom-icon">🔍</div></div>
-                        </div>
-                        <div class="gallery-caption">
-                            <p>CR Cosmetics and Essentials — live retail e-commerce platform deployed for nationwide beauty shopping (crcosmeticsgh.com).</p>
+                        <div class="photo-essay-caption">
+                            <span class="photo-essay-tag">Commercial E-Commerce</span>
+                            <div class="photo-essay-title">CR Cosmetics &amp; Essentials &mdash; Ghana</div>
                         </div>
                     </div>
                 </div>
             </div>
+        </section>
 
-            <div class="gallery-category">
-                <div class="gallery-category-header">
+        <!-- Community & Innovation Photos -->
+        <section class="exhibition-section">
+            <div class="monograph-container">
+                <div class="section-editorial-head">
                     <div>
-                        <span class="section-tag">Community</span>
-                        <h2 class="gallery-category-title">The people and places around the work</h2>
+                        <span class="section-editorial-subtitle">Community &amp; Tech Fests</span>
+                        <h2 class="serif-display section-editorial-title">In the Community</h2>
                     </div>
-                    <p class="gallery-category-description">Some of these moments are about events, some are about learning, and some are about showing up for the community while building something of my own.</p>
                 </div>
-                <div class="gallery-grid">
-                    <div class="gallery-item" data-reveal>
-                        <div class="gallery-img-wrap">
-                            <img loading="lazy" src="images/the-launch-day-of-the-tech-fest.jpg" alt="Launch day of the Ho West Tech Fest">
-                            <div class="gallery-overlay"><div class="gallery-zoom-icon">🔍</div></div>
+
+                <div class="photo-essay-grid">
+                    <div class="photo-essay-card">
+                        <div class="photo-essay-media">
+                            <img src="images/vr-class-in-session.jpg" alt="Emmanuel Drah in VR class at Ho West Tech Fest" loading="lazy">
                         </div>
-                        <div class="gallery-caption">
-                            <p>Launch day at the Ho West Tech Fest, with the kind of energy that makes learning feel real.</p>
+                        <div class="photo-essay-caption">
+                            <span class="photo-essay-tag">Ho West Tech Fest 2025</span>
+                            <div class="photo-essay-title">Virtual Reality Lab Session</div>
                         </div>
                     </div>
 
-                    <div class="gallery-item" data-reveal>
-                        <div class="gallery-img-wrap">
-                            <img loading="lazy" src="images/vr-class-in-session.jpg" alt="Virtual reality class in session at the tech fest">
-                            <div class="gallery-overlay"><div class="gallery-zoom-icon">🔍</div></div>
+                    <div class="photo-essay-card">
+                        <div class="photo-essay-media">
+                            <img src="images/me-at-the-naspa-awards-night.jpg" alt="Emmanuel Drah at NASPA awards night" loading="lazy">
                         </div>
-                        <div class="gallery-caption">
-                            <p>Hands-on VR sessions that gave local people a chance to see what these tools can do.</p>
-                        </div>
-                    </div>
-
-                    <div class="gallery-item" data-reveal>
-                        <div class="gallery-img-wrap">
-                            <img loading="lazy" src="images/met-with-likeminded-people-at-the-tech-fest.jpg" alt="Meeting with likeminded people at the tech fest">
-                            <div class="gallery-overlay"><div class="gallery-zoom-icon">🔍</div></div>
-                        </div>
-                        <div class="gallery-caption">
-                            <p>Conversations with people who care about building and sharing ideas across the region.</p>
+                        <div class="photo-essay-caption">
+                            <span class="photo-essay-tag">NSS Year Group 2023/2024</span>
+                            <div class="photo-essay-title">NASPA Gala &amp; Awards Night</div>
                         </div>
                     </div>
 
-                    <div class="gallery-item" data-reveal>
-                        <div class="gallery-img-wrap">
-                            <img loading="lazy" src="images/young-lads.jpg" alt="Young builders and learners engaging with technology in the community">
-                            <div class="gallery-overlay"><div class="gallery-zoom-icon">🔍</div></div>
+                    <div class="photo-essay-card">
+                        <div class="photo-essay-media">
+                            <img src="images/receiving-awards-for-the-most-hardworking-committee-member.jpg" alt="Receiving Most Hardworking Committee Member award" loading="lazy">
                         </div>
-                        <div class="gallery-caption">
-                            <p>Young learners getting close to technology in a way that feels practical and encouraging.</p>
-                        </div>
-                    </div>
-
-                    <div class="gallery-item" data-reveal>
-                        <div class="gallery-img-wrap">
-                            <img loading="lazy" src="images/publicity-committee.jpg" alt="The publicity committee during a recognition moment" style="object-position: top;">
-                            <div class="gallery-overlay"><div class="gallery-zoom-icon">🔍</div></div>
-                        </div>
-                        <div class="gallery-caption">
-                            <p>A behind-the-scenes look at the work that goes into making events come alive.</p>
+                        <div class="photo-essay-caption">
+                            <span class="photo-essay-tag">Public Service Recognition</span>
+                            <div class="photo-essay-title">Hardworking Committee Member Honour</div>
                         </div>
                     </div>
 
-                    <div class="gallery-item" data-reveal>
-                        <div class="gallery-img-wrap">
-                            <img loading="lazy" src="images/executive-meeting-naspa.jpg" alt="Executive meeting with NASPA members">
-                            <div class="gallery-overlay"><div class="gallery-zoom-icon">🔍</div></div>
+                    <div class="photo-essay-card">
+                        <div class="photo-essay-media">
+                            <img src="images/publicity-committee.jpg" alt="NASPA Publicity Committee" loading="lazy">
                         </div>
-                        <div class="gallery-caption">
-                            <p>Moments of planning and partnership that helped the work feel more connected to people.</p>
-                        </div>
-                    </div>
-
-                    <div class="gallery-item" data-reveal>
-                        <div class="gallery-img-wrap">
-                            <img loading="lazy" src="images/with-pascal-the-photographer-of-the-naspa-year-group.jpg" alt="A moment with the photographer during the NSS year">
-                            <div class="gallery-overlay"><div class="gallery-zoom-icon">🔍</div></div>
-                        </div>
-                        <div class="gallery-caption">
-                            <p>Capturing the story with people who were part of the same journey.</p>
-                        </div>
-                    </div>
-
-                    <div class="gallery-item" data-reveal>
-                        <div class="gallery-img-wrap">
-                            <img loading="lazy" src="images/with-naspa-prezo-s-wife-and-at-the-same-time-in-law.jpg" alt="A warm moment with the NASPA president’s wife">
-                            <div class="gallery-overlay"><div class="gallery-zoom-icon">🔍</div></div>
-                        </div>
-                        <div class="gallery-caption">
-                            <p>A reminder that the relationships built around the work matter just as much as the work itself.</p>
+                        <div class="photo-essay-caption">
+                            <span class="photo-essay-tag">Publicity &amp; MIS</span>
+                            <div class="photo-essay-title">NASPA Ketu North Committee</div>
                         </div>
                     </div>
                 </div>
             </div>
+        </section>
 
-            <div class="gallery-category">
-                <div class="gallery-category-header">
+        <!-- Direct Line Salon -->
+        <section class="inquiry-salon">
+            <div class="monograph-container">
+                <div class="inquiry-layout">
                     <div>
-                        <span class="section-tag">Recognition</span>
-                        <h2 class="gallery-category-title">The milestones that came with the work</h2>
+                        <span class="mono-label" style="display: block; margin-bottom: 0.75rem;">Next Steps</span>
+                        <h2 class="serif-display inquiry-title">Let’s collaborate.</h2>
+                        <p class="inquiry-prose">
+                            Reach out directly through WhatsApp or email to discuss building your next project.
+                        </p>
                     </div>
-                    <p class="gallery-category-description">Some of these moments were formal, some were quiet, but all of them reflect growth, effort, and the value of showing up consistently.</p>
-                </div>
-                <div class="gallery-grid">
-                    <div class="gallery-item" data-reveal>
-                        <div class="gallery-img-wrap">
-                            <img loading="lazy" src="images/naspa-dinner-and-awards-night.jpg" alt="Emmanuel Drah at the NASPA dinner and awards night" style="object-position: top;">
-                            <div class="gallery-overlay"><div class="gallery-zoom-icon">🔍</div></div>
-                        </div>
-                        <div class="gallery-caption">
-                            <p>A night of recognition, but also a reminder that the work is never only about one moment.</p>
-                        </div>
-                    </div>
-
-                    <div class="gallery-item" data-reveal>
-                        <div class="gallery-img-wrap">
-                            <img loading="lazy" src="images/me-at-the-naspa-awards-night.jpg" alt="A personal moment at the NASPA awards night">
-                            <div class="gallery-overlay"><div class="gallery-zoom-icon">🔍</div></div>
-                        </div>
-                        <div class="gallery-caption">
-                            <p>A personal moment from the night, showing how far consistency can carry a person.</p>
-                        </div>
-                    </div>
-
-                    <div class="gallery-item" data-reveal>
-                        <div class="gallery-img-wrap">
-                            <img loading="lazy" src="images/receiving-awards-for-the-most-hardworking-committee-member.jpg" alt="Recognition for being the most hardworking committee member" style="object-position: top;">
-                            <div class="gallery-overlay"><div class="gallery-zoom-icon">🔍</div></div>
-                        </div>
-                        <div class="gallery-caption">
-                            <p>A recognition that reflected the effort behind the scenes, not just the visible result.</p>
-                        </div>
-                    </div>
-
-                    <div class="gallery-item" data-reveal>
-                        <div class="gallery-img-wrap">
-                            <img loading="lazy" src="images/me-at-the-naspa-awards-night.jpg" alt="A personal moment at the NASPA awards night" style="object-position: top;">
-                            <div class="gallery-overlay"><div class="gallery-zoom-icon">🔍</div></div>
-                        </div>
-                        <div class="gallery-caption">
-                            <p>Another milestone that reminded me how much quiet work goes into visible recognition.</p>
-                        </div>
-                    </div>
-
-                    <div class="gallery-item" data-reveal>
-                        <div class="gallery-img-wrap">
-                            <img loading="lazy" src="images/naspa1.jpeg" alt="NASPA awards ceremony capture">
-                            <div class="gallery-overlay"><div class="gallery-zoom-icon">🔍</div></div>
-                        </div>
-                        <div class="gallery-caption">
-                            <p>A snapshot from the awards ceremony that felt like part of a bigger story.</p>
-                        </div>
-                    </div>
-
-                    <div class="gallery-item" data-reveal>
-                        <div class="gallery-img-wrap">
-                            <img loading="lazy" src="images/naspa2.jpeg" alt="Another moment from the NASPA awards night">
-                            <div class="gallery-overlay"><div class="gallery-zoom-icon">🔍</div></div>
-                        </div>
-                        <div class="gallery-caption">
-                            <p>Another moment from the night that captured the atmosphere of recognition and gratitude.</p>
-                        </div>
-                    </div>
-
-                    <div class="gallery-item" data-reveal>
-                        <div class="gallery-img-wrap">
-                            <img loading="lazy" src="images/naspa3.jpeg" alt="Award event group photo at NASPA awards">
-                            <div class="gallery-overlay"><div class="gallery-zoom-icon">🔍</div></div>
-                        </div>
-                        <div class="gallery-caption">
-                            <p>A group photo that reminds me how much of this journey has been shared with others.</p>
-                        </div>
-                    </div>
-
-                    <div class="gallery-item" data-reveal>
-                        <div class="gallery-img-wrap">
-                            <img loading="lazy" src="images/awarded-a-laptop-at-the-tech-fest.jpeg" alt="Awarded a laptop at the Tech Fest">
-                            <div class="gallery-overlay"><div class="gallery-zoom-icon">🔍</div></div>
-                        </div>
-                        <div class="gallery-caption">
-                            <p>A moment from the Tech Fest that felt like recognition for the effort and growth behind the work.</p>
-                        </div>
-                    </div>
-
-                    <div class="gallery-item" data-reveal>
-                        <div class="gallery-img-wrap">
-                            <img loading="lazy" src="images/receiving-award-for-being-the-best-student-in-the-virtual-reality-class.jpeg" alt="Receiving award for best student in the virtual reality class">
-                            <div class="gallery-overlay"><div class="gallery-zoom-icon">🔍</div></div>
-                        </div>
-                        <div class="gallery-caption">
-                            <p>A milestone in hands-on learning that reminded me how much growth can come from showing up.</p>
-                        </div>
-                    </div>
-
-                    <div class="gallery-item" data-reveal>
-                        <div class="gallery-img-wrap">
-                            <img loading="lazy" src="images/receiving-the-certificate-for-being-part-of-the-virtual-reality-class.jpeg" alt="Receiving certificate for being part of the virtual reality class">
-                            <div class="gallery-overlay"><div class="gallery-zoom-icon">🔍</div></div>
-                        </div>
-                        <div class="gallery-caption">
-                            <p>A small but meaningful reminder of steady progress and the value of learning by doing.</p>
-                        </div>
+                    <div style="display: flex; flex-direction: column; justify-content: center; align-items: flex-start;">
+                        <a href="contact.html" class="btn-monograph-primary" style="padding: 1.25rem 2.5rem; font-size: 1rem;">
+                            Start a Conversation &rarr;
+                        </a>
                     </div>
                 </div>
             </div>
@@ -298,7 +151,6 @@
     </main>
 
     <portfolio-footer></portfolio-footer>
-
     <script src="main.js"></script>
 </body>
 </html>
