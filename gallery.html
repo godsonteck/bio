@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gallery — Emmanuel Drah</title>
-    <meta name="description" content="A visual journey through Emmanuel Drah's work — from live deployed platforms like NS Luxury Villa and CR Cosmetics to community innovation at the Ho West Tech Fest.">
+    <meta name="description" content="Visual memories and field photos from Emmanuel Drah: live deployed platforms, tech festivals, and community work across Ghana.">
     <meta property="og:title" content="Gallery — Emmanuel Drah">
-    <meta property="og:description" content="Visual archive of Emmanuel Drah's work, live deployed systems, and community engagements in Ghana.">
+    <meta property="og:description" content="Visual memories from Emmanuel Drah's work and community engagements in Ghana.">
     <meta property="og:image" content="https://emmanueldrah.vercel.app/images/manuel.jpg">
     <meta property="og:url" content="https://emmanueldrah.vercel.app/gallery.html">
     <meta name="twitter:card" content="summary_large_image">
@@ -15,135 +15,126 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="icon" type="image/jpeg" href="images/sad.jpg">
     <link rel="apple-touch-icon" href="images/sad.jpg">
-    <link rel="stylesheet" href="css/style.css?v=6">
-    <script src="js/components.js?v=4" defer></script>
+    <link rel="stylesheet" href="css/style.css?v=7">
+    <script src="js/components.js?v=5" defer></script>
 </head>
 <body>
     <portfolio-nav></portfolio-nav>
 
-    <!-- Masthead -->
-    <header class="monograph-masthead">
-        <div class="monograph-container">
-            <div class="masthead-meta-row">
-                <span class="masthead-location">Visual Record</span>
-                <span class="masthead-status">Field Archives</span>
-                <span class="mono-label">Success Above Dreams</span>
-            </div>
-
-            <h1 class="serif-display masthead-title">
-                Visual Archive &amp; <span class="serif-italic">Field Notes</span>
-            </h1>
-
-            <p class="masthead-statement">
-                The people, systems, community technology festivals, and behind-the-scenes engineering across Ghana.
-            </p>
-        </div>
-    </header>
+    <!-- Lightbox Modal -->
+    <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Image Viewer" style="display: none; position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0,0,0,0.9); z-index: 999; align-items: center; justify-content: center; padding: 2rem;">
+        <button id="lightbox-close" style="position: absolute; top: 1.5rem; right: 2rem; background: none; border: none; color: white; font-size: 2rem; cursor: pointer;">&times;</button>
+        <img id="lightbox-img" src="" alt="Full view" style="max-height: 85vh; max-width: 90vw; border-radius: 8px;">
+    </div>
 
     <main>
-        <!-- Deployed Systems Photos -->
-        <section class="exhibition-section">
-            <div class="monograph-container">
-                <div class="section-editorial-head">
-                    <div>
-                        <span class="section-editorial-subtitle">Live Platforms</span>
-                        <h2 class="serif-display section-editorial-title">Deployed Systems</h2>
-                    </div>
+        <section class="hero-section" style="padding: 4rem 0 2.5rem;">
+            <div class="container">
+                <span class="section-eyebrow">Visual Memories</span>
+                <h1 class="hero-headline" style="font-size: clamp(2rem, 3.5vw, 2.8rem); margin-bottom: 0.75rem;">
+                    Gallery &amp; field photos
+                </h1>
+                <p class="hero-subhead" style="max-width: 680px;">
+                    Snapshots from live deployments, community technology festivals, and behind-the-scenes work across the Volta Region and Ghana.
+                </p>
+            </div>
+        </section>
+
+        <!-- Live Systems -->
+        <section class="section-wrap" style="padding-top: 0; border-top: none;">
+            <div class="container">
+                <div class="section-head">
+                    <span class="section-eyebrow">Deployments</span>
+                    <h2 class="section-title">Live Systems</h2>
                 </div>
 
-                <div class="photo-essay-grid">
-                    <div class="photo-essay-card">
-                        <div class="photo-essay-media">
-                            <img src="images/nsvilla-hero.jpeg" alt="NS Luxury Villa in Ho, Ghana" loading="lazy">
+                <div class="photo-gallery-grid">
+                    <div class="memory-card">
+                        <div class="memory-media">
+                            <img src="images/nsvilla-hero.jpeg" alt="NS Luxury Villa property in Ho, Ghana" loading="lazy">
                         </div>
-                        <div class="photo-essay-caption">
-                            <span class="photo-essay-tag">Hospitality Platform</span>
-                            <div class="photo-essay-title">NS Luxury Villa &mdash; Ho, Ghana</div>
+                        <div class="memory-caption">
+                            <span class="memory-event">Hospitality Platform</span>
+                            <div class="memory-title">NS Luxury Villa &mdash; Ho, Ghana</div>
                         </div>
                     </div>
 
-                    <div class="photo-essay-card">
-                        <div class="photo-essay-media" style="background: #08090b; display: flex; align-items: center; justify-content: center; padding: 2rem;">
+                    <div class="memory-card">
+                        <div class="memory-media" style="background: #0d0d12; display: flex; align-items: center; justify-content: center; padding: 2rem;">
                             <img src="images/crcosmetics-logo.jpeg" alt="CR Cosmetics and Essentials" loading="lazy" style="object-fit: contain; max-height: 180px; width: auto;">
                         </div>
-                        <div class="photo-essay-caption">
-                            <span class="photo-essay-tag">Commercial E-Commerce</span>
-                            <div class="photo-essay-title">CR Cosmetics &amp; Essentials &mdash; Ghana</div>
+                        <div class="memory-caption">
+                            <span class="memory-event">Commercial E-Commerce</span>
+                            <div class="memory-title">CR Cosmetics &amp; Essentials &mdash; Ghana</div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Community & Innovation Photos -->
-        <section class="exhibition-section">
-            <div class="monograph-container">
-                <div class="section-editorial-head">
-                    <div>
-                        <span class="section-editorial-subtitle">Community &amp; Tech Fests</span>
-                        <h2 class="serif-display section-editorial-title">In the Community</h2>
-                    </div>
+        <!-- Community & Tech Fest -->
+        <section class="section-wrap">
+            <div class="container">
+                <div class="section-head">
+                    <span class="section-eyebrow">Community</span>
+                    <h2 class="section-title">Tech festivals &amp; national service</h2>
                 </div>
 
-                <div class="photo-essay-grid">
-                    <div class="photo-essay-card">
-                        <div class="photo-essay-media">
-                            <img src="images/vr-class-in-session.jpg" alt="Emmanuel Drah in VR class at Ho West Tech Fest" loading="lazy">
+                <div class="photo-gallery-grid">
+                    <div class="memory-card">
+                        <div class="memory-media">
+                            <img src="images/vr-class-in-session.jpg" alt="Emmanuel in Virtual Reality lab" loading="lazy">
                         </div>
-                        <div class="photo-essay-caption">
-                            <span class="photo-essay-tag">Ho West Tech Fest 2025</span>
-                            <div class="photo-essay-title">Virtual Reality Lab Session</div>
-                        </div>
-                    </div>
-
-                    <div class="photo-essay-card">
-                        <div class="photo-essay-media">
-                            <img src="images/me-at-the-naspa-awards-night.jpg" alt="Emmanuel Drah at NASPA awards night" loading="lazy">
-                        </div>
-                        <div class="photo-essay-caption">
-                            <span class="photo-essay-tag">NSS Year Group 2023/2024</span>
-                            <div class="photo-essay-title">NASPA Gala &amp; Awards Night</div>
+                        <div class="memory-caption">
+                            <span class="memory-event">Ho West Tech Fest 2025</span>
+                            <div class="memory-title">Virtual Reality Lab Session</div>
                         </div>
                     </div>
 
-                    <div class="photo-essay-card">
-                        <div class="photo-essay-media">
-                            <img src="images/receiving-awards-for-the-most-hardworking-committee-member.jpg" alt="Receiving Most Hardworking Committee Member award" loading="lazy">
+                    <div class="memory-card">
+                        <div class="memory-media">
+                            <img src="images/me-at-the-naspa-awards-night.jpg" alt="Emmanuel at NASPA awards" loading="lazy">
                         </div>
-                        <div class="photo-essay-caption">
-                            <span class="photo-essay-tag">Public Service Recognition</span>
-                            <div class="photo-essay-title">Hardworking Committee Member Honour</div>
+                        <div class="memory-caption">
+                            <span class="memory-event">NSS Year Group 2023/2024</span>
+                            <div class="memory-title">NASPA Gala &amp; Awards Night</div>
                         </div>
                     </div>
 
-                    <div class="photo-essay-card">
-                        <div class="photo-essay-media">
-                            <img src="images/publicity-committee.jpg" alt="NASPA Publicity Committee" loading="lazy">
+                    <div class="memory-card">
+                        <div class="memory-media">
+                            <img src="images/receiving-awards-for-the-most-hardworking-committee-member.jpg" alt="Receiving Hardworking Member Award" loading="lazy">
                         </div>
-                        <div class="photo-essay-caption">
-                            <span class="photo-essay-tag">Publicity &amp; MIS</span>
-                            <div class="photo-essay-title">NASPA Ketu North Committee</div>
+                        <div class="memory-caption">
+                            <span class="memory-event">Public Service Recognition</span>
+                            <div class="memory-title">Most Hardworking Committee Member</div>
+                        </div>
+                    </div>
+
+                    <div class="memory-card">
+                        <div class="memory-media">
+                            <img src="images/publicity-committee.jpg" alt="Publicity Committee Ketu North" loading="lazy">
+                        </div>
+                        <div class="memory-caption">
+                            <span class="memory-event">Ketu North Community</span>
+                            <div class="memory-title">Publicity Committee Member</div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Direct Line Salon -->
-        <section class="inquiry-salon">
-            <div class="monograph-container">
-                <div class="inquiry-layout">
+        <!-- Callout -->
+        <section class="section-wrap">
+            <div class="container">
+                <div class="creed-banner" style="text-align: left; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 2rem;">
                     <div>
-                        <span class="mono-label" style="display: block; margin-bottom: 0.75rem;">Next Steps</span>
-                        <h2 class="serif-display inquiry-title">Let’s collaborate.</h2>
-                        <p class="inquiry-prose">
-                            Reach out directly through WhatsApp or email to discuss building your next project.
-                        </p>
+                        <h3 style="font-size: 1.4rem; font-weight: 800; color: var(--text-main); margin-bottom: 0.5rem;">Let's build something together</h3>
+                        <p style="color: var(--text-muted); font-size: 0.95rem;">Reach out directly on WhatsApp or submit a project message.</p>
                     </div>
-                    <div style="display: flex; flex-direction: column; justify-content: center; align-items: flex-start;">
-                        <a href="contact.html" class="btn-monograph-primary" style="padding: 1.25rem 2.5rem; font-size: 1rem;">
-                            Start a Conversation &rarr;
-                        </a>
+                    <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+                        <a href="https://wa.me/233543671806" target="_blank" rel="noopener noreferrer" class="btn-whatsapp">Chat on WhatsApp &nearr;</a>
+                        <a href="contact.html" class="btn-warm-outline">Send a Message &rarr;</a>
                     </div>
                 </div>
             </div>
