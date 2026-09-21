@@ -17,15 +17,11 @@ class PortfolioNav extends HTMLElement {
 
                 <div class="nav-links" id="nav-menu">
                     <a href="index.html">Home</a>
-                    <a href="the-brand.html">The Brand</a>
-                    <a href="about.html">About</a>
                     <a href="projects.html">Work</a>
-                    <a href="services.html">Services</a>
                     <a href="case-studies.html">Case Studies</a>
-                    <a href="gallery.html">Gallery</a>
-                    <a href="certifications.html">Certifications</a>
-                    <a href="resume.html">Resume</a>
-                    <a href="contact.html" class="btn btn-primary btn-nav-hire">Let's Talk</a>
+                    <a href="about.html">About</a>
+                    <a href="the-brand.html">The Brand</a>
+                    <a href="contact.html" class="btn btn-primary btn-nav-hire">Contact</a>
                 </div>
 
                 <div class="mobile-nav-toggle-wrap" style="display: flex; gap: 1rem; align-items: center;">
@@ -39,15 +35,11 @@ class PortfolioNav extends HTMLElement {
             <div class="mobile-menu-overlay" id="mobile-overlay">
                 <div class="mobile-menu-content">
                     <a href="index.html" class="mobile-menu-link">Home</a>
-                    <a href="the-brand.html" class="mobile-menu-link">The Brand</a>
-                    <a href="about.html" class="mobile-menu-link">About</a>
                     <a href="projects.html" class="mobile-menu-link">Work</a>
-                    <a href="services.html" class="mobile-menu-link">Services</a>
                     <a href="case-studies.html" class="mobile-menu-link">Case Studies</a>
-                    <a href="gallery.html" class="mobile-menu-link">Gallery</a>
-                    <a href="certifications.html" class="mobile-menu-link">Certifications</a>
-                    <a href="resume.html" class="mobile-menu-link">Resume</a>
-                    <a href="contact.html" class="mobile-menu-link">Talk</a>
+                    <a href="about.html" class="mobile-menu-link">About</a>
+                    <a href="the-brand.html" class="mobile-menu-link">The Brand</a>
+                    <a href="contact.html" class="mobile-menu-link">Contact</a>
                 </div>
             </div>
         `;
