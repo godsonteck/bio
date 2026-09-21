@@ -23,46 +23,36 @@
 <body>
     <portfolio-nav></portfolio-nav>
 
-    <!-- Editorial Hero -->
-    <header class="hero-editorial">
-        <div class="container">
-            <div class="hero-editorial-grid">
+    <!-- Agency Hero -->
+    <header class="agency-hero">
+        <div class="agency-container">
+            <div class="agency-hero-top">
+                <span class="status-chip"><span class="live-pulse-dot"></span> Available for new projects</span>
+                <span>Ho, Ghana &middot; West Africa</span>
+                <span>Success Above Dreams &middot; Studio</span>
+            </div>
+            
+            <div class="agency-hero-main">
                 <div>
-                    <div class="hero-editorial-tagline">
-                        <span class="live-pulse-dot"></span>
-                        <span>Ho, Ghana &middot; Full-Stack Builder</span>
-                    </div>
-                    <h1 class="hero-editorial-title">
-                        Building digital systems that survive contact with reality.
+                    <h1 class="agency-display-title">
+                        Emmanuel<br>Drah
+                        <span class="highlight">Full-Stack</span>
                     </h1>
-                    <p class="hero-editorial-lead">
-                        I’m Emmanuel Drah, founder of <strong style="color: var(--text-main);">Success Above Dreams</strong>. I design, engineer, and deploy live web portals, booking engines, and e-commerce platforms built for practical day-to-day operations.
+                    <p class="agency-hero-sub">
+                        Building live digital platforms, booking portals, and commercial systems that hold up under real pressure.
                     </p>
-                    <div class="hero-editorial-actions">
-                        <a href="#featured-work" class="btn btn-primary">Explore Live Systems &darr;</a>
-                        <a href="contact.html" class="btn btn-outline">Start a Conversation</a>
-                    </div>
-                    <div class="hero-meta-ledger">
-                        <div class="meta-ledger-item">
-                            <span class="meta-ledger-label">Location</span>
-                            <span class="meta-ledger-value">Ho, Volta Region &middot; 6&deg;36'N</span>
-                        </div>
-                        <div class="meta-ledger-item">
-                            <span class="meta-ledger-label">Live Systems</span>
-                            <span class="meta-ledger-value">nsvilla.com &middot; crcosmeticsgh.com</span>
-                        </div>
-                        <div class="meta-ledger-item">
-                            <span class="meta-ledger-label">Studio</span>
-                            <span class="meta-ledger-value">Success Above Dreams</span>
-                        </div>
+                    <div class="agency-hero-ctas">
+                        <a href="#work" class="btn-agency-primary">Selected Work &darr;</a>
+                        <a href="contact.html" class="btn-agency-outline">Get in Touch</a>
                     </div>
                 </div>
-                <div>
-                    <div class="hero-portrait-frame" data-reveal>
+                
+                <div class="agency-hero-visual">
+                    <div class="agency-visual-card">
                         <img src="images/manuel.jpg" alt="Emmanuel Drah">
-                        <div class="hero-portrait-caption">
-                            <span>EMMANUEL DRAH</span>
-                            <span style="color: var(--amber);">BUILDER &middot; HO, GH</span>
+                        <div class="agency-visual-badge">
+                            <span>Emmanuel Drah</span>
+                            <span>Founder &middot; SAD Studio</span>
                         </div>
                     </div>
                 </div>
@@ -72,231 +62,133 @@
 
     <main>
 
-        <!-- Featured Work: Full-Format Project Spreads -->
-        <section class="container" id="featured-work">
-            <div class="section-header-editorial">
-                <div class="header-left">
-                    <span class="section-num">01 / Featured Systems</span>
-                    <h2 class="section-h2">Live production platforms.</h2>
-                    <p class="section-sub">These are not portfolio mockups or abandoned side-projects. They are active commercial platforms handling real customers every single day.</p>
+        <!-- Section 01: Selected Works (Massive Visual Showcases) -->
+        <section class="agency-section" id="work">
+            <div class="agency-container">
+                <div class="agency-section-head">
+                    <div>
+                        <span class="agency-section-label">Selected Projects</span>
+                        <h2 class="agency-section-title">Live Production</h2>
+                    </div>
+                    <a href="projects.html" class="btn-agency-outline">All Projects &rarr;</a>
                 </div>
-                <a href="projects.html" class="btn btn-outline">All projects &rarr;</a>
-            </div>
 
-            <div class="project-showcases">
-
-                <!-- Spread 01: NS Luxury Villa -->
-                <article class="project-spread" data-reveal>
-                    <div class="spread-media">
-                        <span class="spread-live-badge"><span class="live-pulse-dot"></span> nsvilla.com &middot; Live</span>
-                        <div class="spread-media-inner">
-                            <img src="images/nsvilla-hero.jpeg" alt="NS Luxury Villa property in Ho, Ghana" loading="lazy">
+                <div class="agency-work-grid">
+                    <!-- Project 01: NS Luxury Villa -->
+                    <article class="agency-project-item">
+                        <div class="agency-project-media">
+                            <span class="agency-live-tag"><span class="live-pulse-dot"></span> Live in Production</span>
+                            <img src="images/nsvilla-hero.jpeg" alt="NS Luxury Villa property architecture in Ho, Ghana" loading="lazy">
                         </div>
-                    </div>
-                    <div class="spread-content">
-                        <span class="spread-kicker">Hospitality &middot; Booking Portal</span>
-                        <h3 class="spread-title">NS Luxury Villa</h3>
-                        <p class="spread-desc">
-                            Working as a receptionist at NS Luxury Villa in Ho, I saw guests constantly calling with basic questions about rooms, venue bookings, amenities, and directions. I took the initiative to build and deploy their complete official web portal, giving visitors direct clarity and an instant reservation channel.
-                        </p>
-                        <div class="spread-specs">
-                            <div class="spec-entry">
-                                <span class="spec-label">Role</span>
-                                <span class="spec-val">Solo Full-Stack Build</span>
+                        <div class="agency-project-info">
+                            <span class="agency-project-num">01 / HOSPITALITY PLATFORM</span>
+                            <h3 class="agency-project-title">NS Luxury Villa</h3>
+                            <p class="agency-project-brief">
+                                Full official web portal and guest reservation system for Ho's premier luxury villa. Built to showcase rooms, amenities, directions, and direct bookings.
+                            </p>
+                            <div class="agency-project-pills">
+                                <span class="agency-pill">Web Portal</span>
+                                <span class="agency-pill">Booking Engine</span>
+                                <span class="agency-pill">Ho, Ghana</span>
                             </div>
-                            <div class="spec-entry">
-                                <span class="spec-label">Context</span>
-                                <span class="spec-val">Built from the Front Desk</span>
-                            </div>
-                            <div class="spec-entry">
-                                <span class="spec-label">Location</span>
-                                <span class="spec-val">Ho, Volta Region, Ghana</span>
-                            </div>
-                            <div class="spec-entry">
-                                <span class="spec-label">Status</span>
-                                <span class="spec-val" style="color: var(--accent);">Active &middot; Deployed Daily</span>
+                            <div class="agency-project-actions">
+                                <a href="https://nsvilla.com" target="_blank" rel="noopener noreferrer" class="btn-agency-primary">Visit nsvilla.com &nearr;</a>
+                                <a href="case-studies.html" class="btn-agency-outline">Case Study</a>
                             </div>
                         </div>
-                        <div class="spread-actions">
-                            <a href="https://nsvilla.com" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Visit Live Website &nearr;</a>
-                            <a href="case-studies.html" class="btn btn-outline">Read Case Study</a>
-                        </div>
-                    </div>
-                </article>
+                    </article>
 
-                <!-- Spread 02: CR Cosmetics & Essentials -->
-                <article class="project-spread reverse" data-reveal>
-                    <div class="spread-media">
-                        <span class="spread-live-badge"><span class="live-pulse-dot"></span> crcosmeticsgh.com &middot; Live</span>
-                        <div class="spread-media-inner" style="background: #040608; display: flex; align-items: center; justify-content: center;">
+                    <!-- Project 02: CR Cosmetics & Essentials -->
+                    <article class="agency-project-item reverse">
+                        <div class="agency-project-media" style="background: #05070a; display: flex; align-items: center; justify-content: center;">
+                            <span class="agency-live-tag"><span class="live-pulse-dot"></span> Live Commercial Store</span>
                             <img src="images/crcosmetics-logo.jpeg" alt="CR Cosmetics and Essentials brand logo" loading="lazy" style="object-fit: contain; width: 75%; height: 75%;">
                         </div>
+                        <div class="agency-project-info">
+                            <span class="agency-project-num">02 / E-COMMERCE SYSTEM</span>
+                            <h3 class="agency-project-title">CR Cosmetics</h3>
+                            <p class="agency-project-brief">
+                                Nationwide online storefront for authentic skincare and cosmetics in Ghana. Features instant catalog search, structured Google SEO schema, and nationwide delivery.
+                            </p>
+                            <div class="agency-project-pills">
+                                <span class="agency-pill">E-Commerce</span>
+                                <span class="agency-pill">Catalog Search</span>
+                                <span class="agency-pill">Nationwide Reach</span>
+                            </div>
+                            <div class="agency-project-actions">
+                                <a href="https://crcosmeticsgh.com" target="_blank" rel="noopener noreferrer" class="btn-agency-primary">Visit crcosmeticsgh.com &nearr;</a>
+                                <a href="case-studies.html" class="btn-agency-outline">Case Study</a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 02: Core Capabilities (Brutalist Studio Grid) -->
+        <section class="agency-section">
+            <div class="agency-container">
+                <div class="agency-section-head">
+                    <div>
+                        <span class="agency-section-label">Expertise</span>
+                        <h2 class="agency-section-title">Capabilities</h2>
                     </div>
-                    <div class="spread-content">
-                        <span class="spread-kicker">E-Commerce &middot; Nationwide Retail</span>
-                        <h3 class="spread-title">CR Cosmetics &amp; Essentials</h3>
-                        <p class="spread-desc">
-                            A complete commercial storefront engineered for authentic skincare and everyday beauty essentials in Ghana. Built with fast catalog search, structured search-engine markup for Google indexing, and frictionless order placement for customers across the country.
+                    <a href="about.html" class="btn-agency-outline">About Me &rarr;</a>
+                </div>
+
+                <div class="agency-capabilities-grid">
+                    <div class="agency-cap-box">
+                        <span class="agency-cap-num">01</span>
+                        <h3 class="agency-cap-title">Web Platforms</h3>
+                        <p class="agency-cap-desc">
+                            Modern web portals, reservation systems, and responsive frontends engineered to load fast on Ghanaian networks and spotty mobile connections.
                         </p>
-                        <div class="spread-specs">
-                            <div class="spec-entry">
-                                <span class="spec-label">Role</span>
-                                <span class="spec-val">Architecture, SEO &amp; Deployment</span>
-                            </div>
-                            <div class="spec-entry">
-                                <span class="spec-label">Context</span>
-                                <span class="spec-val">Commercial Storefront Launch</span>
-                            </div>
-                            <div class="spec-entry">
-                                <span class="spec-label">Reach</span>
-                                <span class="spec-val">Nationwide Delivery &middot; Ghana</span>
-                            </div>
-                            <div class="spec-entry">
-                                <span class="spec-label">Status</span>
-                                <span class="spec-val" style="color: var(--accent);">Active &middot; Deployed Daily</span>
-                            </div>
-                        </div>
-                        <div class="spread-actions">
-                            <a href="https://crcosmeticsgh.com" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Visit Live Store &nearr;</a>
-                            <a href="case-studies.html" class="btn btn-outline">Read Case Study</a>
-                        </div>
                     </div>
-                </article>
 
-            </div>
-        </section>
+                    <div class="agency-cap-box">
+                        <span class="agency-cap-num">02</span>
+                        <h3 class="agency-cap-title">E-Commerce</h3>
+                        <p class="agency-cap-desc">
+                            High-converting storefronts with real-time product search, mobile money integration, and structured Google SEO to drive organic customers.
+                        </p>
+                    </div>
 
-        <!-- Production Ledger (Tabular Systems Directory) -->
-        <section class="container">
-            <div class="section-header-editorial">
-                <div class="header-left">
-                    <span class="section-num">02 / Systems &amp; Track Record</span>
-                    <h2 class="section-h2">The Production Ledger</h2>
-                    <p class="section-sub">A verified index of deployed platforms, operational tools, and technical leadership.</p>
-                </div>
-            </div>
+                    <div class="agency-cap-box">
+                        <span class="agency-cap-num">03</span>
+                        <h3 class="agency-cap-title">Mobile &amp; Systems</h3>
+                        <p class="agency-cap-desc">
+                            Cross-platform tools and operational apps built for businesses that need dependable software for daily team routines.
+                        </p>
+                    </div>
 
-            <div class="ledger-container" data-reveal>
-                <table class="ledger-table">
-                    <thead>
-                        <tr>
-                            <th>Platform / Project</th>
-                            <th>Role &amp; Context</th>
-                            <th>Category</th>
-                            <th>Year</th>
-                            <th>Action</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td class="ledger-name">NS Luxury Villa</td>
-                            <td>Official hospitality booking engine &amp; guest portal</td>
-                            <td class="ledger-tag">Web &middot; Production</td>
-                            <td>2024 &ndash; Pres.</td>
-                            <td class="ledger-action"><a href="https://nsvilla.com" target="_blank" rel="noopener noreferrer">Visit ↗</a></td>
-                        </tr>
-                        <tr>
-                            <td class="ledger-name">CR Cosmetics &amp; Essentials</td>
-                            <td>E-commerce store with catalog search &amp; nationwide delivery</td>
-                            <td class="ledger-tag">Commerce &middot; SEO</td>
-                            <td>2024 &ndash; Pres.</td>
-                            <td class="ledger-action"><a href="https://crcosmeticsgh.com" target="_blank" rel="noopener noreferrer">Visit ↗</a></td>
-                        </tr>
-                        <tr>
-                            <td class="ledger-name">Success Above Dreams</td>
-                            <td>Independent software brand and engineering studio</td>
-                            <td class="ledger-tag">Brand &middot; Founder</td>
-                            <td>2024 &ndash; Pres.</td>
-                            <td class="ledger-action"><a href="the-brand.html">Read Story &rarr;</a></td>
-                        </tr>
-                        <tr>
-                            <td class="ledger-name">Ho West Tech Fest</td>
-                            <td>Best Learner Award in Virtual Reality &middot; Tech Fest 2025</td>
-                            <td class="ledger-tag">Award &middot; VR</td>
-                            <td>2025</td>
-                            <td class="ledger-action"><a href="certifications.html">Credentials &rarr;</a></td>
-                        </tr>
-                        <tr>
-                            <td class="ledger-name">NASPA Ketu North / NHIS</td>
-                            <td>MIS operations, committee leadership &amp; public communication</td>
-                            <td class="ledger-tag">Operations &middot; Public</td>
-                            <td>2023 &ndash; 2024</td>
-                            <td class="ledger-action"><a href="about.html">Background &rarr;</a></td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-        </section>
-
-        <!-- Studio Manifesto -->
-        <section class="container">
-            <div class="manifesto-editorial" data-reveal>
-                <span class="manifesto-kicker">The Founding Creed</span>
-                <p class="manifesto-lead-quote">
-                    &ldquo;Dreams are the beginning, not the proof. Success is what <em>quiet discipline</em> builds while nobody is watching.&rdquo;
-                </p>
-                <div class="manifesto-signoff">
-                    <strong>Emmanuel Drah</strong>
-                    <span>Founder &middot; Success Above Dreams &middot; Ho, Ghana</span>
-                </div>
-            </div>
-        </section>
-
-        <!-- Direct Action & Contact -->
-        <section class="container" style="padding-bottom: 6rem;">
-            <div class="section-header-editorial">
-                <div class="header-left">
-                    <span class="section-num">03 / Next Steps</span>
-                    <h2 class="section-h2">Have a problem worth solving?</h2>
-                    <p class="section-sub">Let’s talk through what is giving your team trouble and build something that actually holds up.</p>
-                </div>
-            </div>
-
-            <div class="contact-editorial-grid" data-reveal>
-                <div>
-                    <h3 style="font-size: 1.3rem; margin-bottom: 0.75rem; color: var(--text-main);">Direct Channels</h3>
-                    <p style="color: var(--text-muted); line-height: 1.7; margin-bottom: 1.5rem;">
-                        No agency middlemen or automated bots. You communicate directly with the engineer who designs and deploys your system.
-                    </p>
-                    <div class="contact-channels">
-                        <a href="https://wa.me/233543671806?text=Hello%20Emmanuel%2C%20I%20saw%20your%20portfolio%20and%20would%20like%20to%20talk%20about%20a%20project." target="_blank" rel="noopener noreferrer" class="contact-channel-card">
-                            <span class="channel-icon">💬</span>
-                            <div class="channel-info">
-                                <strong>WhatsApp</strong>
-                                <span>+233 543 671 806 &middot; Instant response</span>
-                            </div>
-                        </a>
-                        <a href="mailto:emmanueldrah10@gmail.com" class="contact-channel-card">
-                            <span class="channel-icon">✉️</span>
-                            <div class="channel-info">
-                                <strong>Email</strong>
-                                <span>emmanueldrah10@gmail.com &middot; Project briefings</span>
-                            </div>
-                        </a>
+                    <div class="agency-cap-box">
+                        <span class="agency-cap-num">04</span>
+                        <h3 class="agency-cap-title">Success Above Dreams</h3>
+                        <p class="agency-cap-desc">
+                            The software brand and discipline. Built on the belief that dreams are the beginning, not the proof — quiet discipline builds the rest.
+                        </p>
                     </div>
                 </div>
+            </div>
+        </section>
 
-                <div style="background: rgba(255, 255, 255, 0.02); border: 1px solid rgba(255, 255, 255, 0.08); padding: 2rem; border-radius: 6px;">
-                    <h3 style="font-size: 1.2rem; margin-bottom: 0.5rem; color: var(--text-main);">Send a Quick Message</h3>
-                    <p style="color: var(--text-muted); font-size: 0.88rem; margin-bottom: 1.5rem;">Briefly describe your project or operational need.</p>
-                    <form id="contactForm" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" novalidate>
-                        <input type="hidden" name="form-name" value="contact">
-                        <div class="form-group" style="margin-bottom: 1rem;">
-                            <label for="name">Your Name</label>
-                            <input type="text" id="name" name="name" placeholder="John Doe" required>
-                        </div>
-                        <div class="form-group" style="margin-bottom: 1rem;">
-                            <label for="email">Email Address</label>
-                            <input type="email" id="email" name="email" placeholder="john@example.com" required>
-                        </div>
-                        <div class="form-group" style="margin-bottom: 1.25rem;">
-                            <label for="message">What do you need built?</label>
-                            <textarea id="message" name="message" rows="4" placeholder="Share your goal, timeline, or current challenge." required></textarea>
-                        </div>
-                        <button type="submit" class="btn btn-primary" style="width: 100%;">
-                            <span>Send Message &rarr;</span>
-                        </button>
-                    </form>
+        <!-- Section 03: Bold Agency Contact Callout -->
+        <section class="agency-contact-callout">
+            <div class="agency-container">
+                <span class="agency-section-label" style="margin-bottom: 1rem;">Let's Connect</span>
+                <h2 class="agency-contact-headline">
+                    Let’s build something <span class="accent-text">that lasts.</span>
+                </h2>
+                <div class="agency-contact-links">
+                    <a href="https://wa.me/233543671806?text=Hello%20Emmanuel%2C%20I%20saw%20your%20portfolio%20and%20would%20like%20to%20talk%20about%20a%20project." target="_blank" rel="noopener noreferrer" class="agency-big-link whatsapp">
+                        <span>💬 WhatsApp Direct</span>
+                    </a>
+                    <a href="mailto:emmanueldrah10@gmail.com" class="agency-big-link email">
+                        <span>✉️ emmanueldrah10@gmail.com</span>
+                    </a>
+                    <a href="contact.html" class="agency-big-link email">
+                        <span>Send Project Brief &rarr;</span>
+                    </a>
                 </div>
             </div>
         </section>
