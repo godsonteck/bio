@@ -13,7 +13,7 @@ class PortfolioNav extends HTMLElement {
                         </div>
                         <div>
                             <span class="brand-name">Emmanuel Drah</span>
-                            <span class="brand-tagline">Full-Stack Developer &middot; Ho, Ghana</span>
+                            <span class="brand-tagline">Full-Stack Developer &middot; S.A.D.</span>
                         </div>
                     </a>
 
@@ -116,7 +116,7 @@ class PortfolioFooter extends HTMLElement {
                         <div class="footer-bio-col">
                             <div class="footer-bio-name">Emmanuel Drah</div>
                             <p class="footer-bio-text">
-                                Full-stack developer and founder of Success Above Dreams. Based in Ho, Volta Region, Ghana. Building practical software for real people and local operations.
+                                Full-stack developer and founder of Success Above Dreams. Building practical software for real businesses.
                             </p>
                             <div style="margin-top: 1.25rem;">
                                 <a href="https://wa.me/233543671806" target="_blank" rel="noopener noreferrer" class="btn-whatsapp" style="padding: 0.6rem 1.15rem; font-size: 0.85rem;">
@@ -149,7 +149,7 @@ class PortfolioFooter extends HTMLElement {
 
                     <div class="footer-bottom-clean">
                         <span>&copy; ${new Date().getFullYear()} Emmanuel Drah &middot; Success Above Dreams</span>
-                        <span>Built with care in Ho, Ghana &middot; Discipline over dreams.</span>
+                        <span>Built with discipline &middot; Success Above Dreams.</span>
                     </div>
                 </div>
             </footer>
