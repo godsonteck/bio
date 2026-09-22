@@ -22,6 +22,7 @@ class PortfolioNav extends HTMLElement {
                         <a href="projects.html">Projects</a>
                         <a href="case-studies.html">Case Studies</a>
                         <a href="about.html">My Story</a>
+                        <a href="gallery.html">Gallery</a>
                         <a href="the-brand.html">The Brand</a>
                         <a href="contact.html" class="btn-nav-talk">Get in Touch</a>
                     </div>
@@ -38,6 +39,7 @@ class PortfolioNav extends HTMLElement {
                 <a href="projects.html" class="mobile-menu-link">Projects</a>
                 <a href="case-studies.html" class="mobile-menu-link">Case Studies</a>
                 <a href="about.html" class="mobile-menu-link">My Story</a>
+                <a href="gallery.html" class="mobile-menu-link">Gallery</a>
                 <a href="the-brand.html" class="mobile-menu-link">The Brand</a>
                 <a href="contact.html" class="mobile-menu-link">Get in Touch</a>
             </div>
