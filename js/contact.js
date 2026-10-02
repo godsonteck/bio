@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
         formMessage.textContent = msg;
         formMessage.style.backgroundColor = isError ? 'rgba(255, 59, 48, 0.1)' : 'rgba(52, 199, 89, 0.1)';
         formMessage.style.color = isError ? '#ff3b30' : '#34c759';
-        formMessage.style.border = \`1px solid \${isError ? '#ff3b30' : '#34c759'}\`;
+        formMessage.style.border = `1px solid ${isError ? '#ff3b30' : '#34c759'}`;
     };
 
     // Helper to set loading state

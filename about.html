@@ -1,12 +1,12 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Story — Emmanuel Drah</title>
-    <meta name="description" content="Meet Emmanuel Drah, a full-stack developer in Ho, Ghana, building practical systems for real people and local businesses.">
+    <meta name="description" content="Meet Emmanuel Drah — a website and app developer and the founder of Success Above Dreams.">
     <meta property="og:title" content="My Story — Emmanuel Drah">
-    <meta property="og:description" content="The journey, experience, and motivation behind Emmanuel Drah's work in Ghana.">
+    <meta property="og:description" content="How Emmanuel Drah went from working at a hotel front desk to building websites and apps for businesses.">
     <meta property="og:image" content="https://emmanueldrah.vercel.app/images/manuel.jpg">
     <meta property="og:url" content="https://emmanueldrah.vercel.app/about.html">
     <meta name="twitter:card" content="summary_large_image">
@@ -15,11 +15,17 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="icon" type="image/jpeg" href="images/sad.jpg">
     <link rel="apple-touch-icon" href="images/sad.jpg">
-    <link rel="stylesheet" href="css/style.css?v=8">
-    <script src="js/components.js?v=6" defer></script>
+    <link rel="stylesheet" href="css/style.css?v=18">
+    <script src="js/components.js?v=16" defer></script>
 </head>
 <body>
     <portfolio-nav></portfolio-nav>
+
+    <!-- Lightbox Modal -->
+    <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Image Viewer">
+        <button id="lightbox-close" class="lightbox-close" aria-label="Close">&times;</button>
+        <img id="lightbox-img" src="" alt="Full view">
+    </div>
 
     <main>
         <!-- Hero / Intro -->
@@ -27,15 +33,15 @@
             <div class="container">
                 <div class="hero-grid">
                     <div>
-                        <span class="section-eyebrow">My Journey</span>
+                        <span class="section-eyebrow">My Story</span>
                         <h1 class="hero-headline">
-                            I build systems because I care about the people who have to live with the result.
+                            I am the person who stays until the job is done.
                         </h1>
                         <p class="hero-subhead">
-                            I am from Ghana, and I have always noticed the gap between how things are supposed to work on paper and how they actually work in daily life. That is where I begin.
+                            I&rsquo;m Emmanuel &mdash; from Ho, Ghana. I believe in showing up, following through, and treating every person with the same patience regardless of who they are. Everything I do carries the name <strong>Success Above Dreams</strong> &mdash; and that name means something to me.
                         </p>
                         <div class="hero-ctas">
-                            <a href="Emmanuel_Drah_CV.docx" class="btn-warm-primary" download>Download CV (.docx) &darr;</a>
+                            <a href="Emmanuel_Drah_CV.docx" class="btn-warm-primary" download>Download My CV (.docx) &darr;</a>
                             <a href="https://wa.me/233543671806" target="_blank" rel="noopener noreferrer" class="btn-whatsapp">Chat on WhatsApp &nearr;</a>
                         </div>
                     </div>
@@ -46,9 +52,9 @@
                             <div class="hero-photo-caption">
                                 <div>
                                     <div class="hero-caption-name">Emmanuel Drah</div>
-                                    <div style="font-size: 0.78rem; color: var(--text-muted);">Ho, Volta Region, Ghana</div>
+                                    <div style="font-size: 0.78rem; color: var(--text-muted);">Website &amp; App Developer</div>
                                 </div>
-                                <span class="hero-caption-role">Full-Stack Dev</span>
+                                <span class="hero-caption-role">Founder</span>
                             </div>
                         </div>
                     </div>
@@ -59,41 +65,44 @@
         <!-- Story Details -->
         <section class="section-wrap">
             <div class="container">
-                <div class="story-box">
+                                <div class="story-box">
                     <p class="story-lead">
-                        “Working at the front desk of a villa taught me more about real human friction than any software tutorial ever could.”
+                        &ldquo;The most important thing I learned has nothing to do with a classroom. It came from standing at a counter and paying attention to people.&rdquo;
                     </p>
                     <p class="story-body">
-                        By day, I work as a receptionist at <strong>NS Luxury Villa</strong> in Ho. When you spend your shifts checking guests into rooms, answering constant phone calls about rates, and sorting out everyday logistical details, you quickly see where the real bottlenecks are.
+                        I work at the reception desk of <strong>NS Luxury Villa</strong>. That means meeting guests, answering the same questions patiently for the hundredth time, sorting out confusion calmly when someone is frustrated, and making sure every person who walks through the door feels taken seriously. I have been doing it long enough to know that real, patient presence is rarer than people think.
                     </p>
                     <p class="story-body">
-                        I built <strong>nsvilla.com</strong> not as a hypothetical student project, but because our front desk genuinely needed it. Today, guests browse the rooms on their phones and arrive with their questions already answered. That direct, practical connection to real-world problems is the same approach I bring to every website, e-commerce store, or tool I build.
+                        Before this, I served at <strong>NHIS Dzodze</strong> during national service &mdash; helping ordinary people navigate their health insurance records. People came in confused or worried, and it was my job to make things clearer for them. That mattered to me more than the title.
                     </p>
                     <p class="story-body">
-                        Before this, I spent my national service year at <strong>NHIS Dzodze</strong>, managing member records in the health insurance database and supporting citizen inquiries. My technical education came from <strong>Ho Technical University</strong>, where I earned my Higher National Diploma in Information and Communication Technology.
+                        I studied at <strong>Ho Technical University</strong>, earning my HND in Information and Communication Technology. But the education I am most proud of comes from watching how people actually live and work &mdash; and figuring out how to be genuinely useful to them.
+                    </p>
+                    <p class="story-body">
+                        The name <strong>Success Above Dreams</strong> is a personal standard I chose in 2018. Not a brand tagline &mdash; a private promise. Do the work. Stay consistent. Be the person you said you would be, even on the days when nobody is watching.
                     </p>
                 </div>
 
                 <!-- Timeline -->
                 <div class="section-head">
-                    <span class="section-eyebrow">Milestones</span>
-                    <h2 class="section-title">Career timeline</h2>
+                    <span class="section-eyebrow">My Journey</span>
+                    <h2 class="section-title">Where I've been</h2>
                 </div>
 
                 <div class="timeline-clean">
                     <div class="timeline-row">
                         <span class="timeline-year">2024 &mdash; Present</span>
                         <div class="timeline-content">
-                            <h4>Receptionist &amp; Systems Developer &middot; NS Luxury Villa</h4>
-                            <p>Managing front-desk hospitality in Ho while developing and maintaining live software, including the official nsvilla.com booking portal and independent commercial stores.</p>
+                            <h4>Receptionist &middot; NS Luxury Villa</h4>
+                            <p>Every day I meet people from different places, backgrounds, and moods. My job is to make each of them feel at ease &mdash; whether they are checking in smoothly or something has gone wrong. I have learned that calm, clear communication is a real skill, and I have had to earn it daily.</p>
                         </div>
                     </div>
 
                     <div class="timeline-row">
                         <span class="timeline-year">2023 &mdash; 2024</span>
                         <div class="timeline-content">
-                            <h4>National Service (MIS &amp; PR) &middot; NHIS Dzodze</h4>
-                            <p>Supported Management Information Systems, handled member grievances, and maintained client database records across the Ketu North district.</p>
+                            <h4>National Service &middot; NHIS Dzodze</h4>
+                            <p>Health insurance is confusing for a lot of people. My role was to help them with records and answer their questions at the counter. What I remember most is the patience it required &mdash; and how much it mattered to the people in front of me when I got it right.</p>
                         </div>
                     </div>
 
@@ -101,7 +110,15 @@
                         <span class="timeline-year">2020 &mdash; 2023</span>
                         <div class="timeline-content">
                             <h4>Ho Technical University</h4>
-                            <p>Graduated with an HND in Information and Communication Technology, focusing on software engineering principles, database design, and systems analysis.</p>
+                            <p>I studied HND in Information and Communication Technology. Beyond the technical skills, university pushed me to be self-directed and to take initiative. I showed up. I did the work. I finished.</p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-row">
+                        <span class="timeline-year">2018</span>
+                        <div class="timeline-content">
+                            <h4>Success Above Dreams &middot; The name I chose</h4>
+                            <p>Not a company registration. A personal decision. I looked at the kind of person I wanted to be and I wrote it down as a commitment: success above the comfort of just dreaming about it. I have carried that with me into every room since.</p>
                         </div>
                     </div>
                 </div>
@@ -112,10 +129,10 @@
         <section class="section-wrap">
             <div class="container">
                 <div class="section-head">
-                    <span class="section-eyebrow">Moments &amp; Recognition</span>
-                    <h2 class="section-title">Community &amp; Tech Fests</h2>
+                    <span class="section-eyebrow">Proof, not talk</span>
+                    <h2 class="section-title">Moments earned, not given</h2>
                     <p class="section-desc">
-                        A look at moments of learning, public service, and connection with people across the Volta Region.
+                        These awards were not applied for. They came from people around me deciding that the effort they saw was worth acknowledging.
                     </p>
                 </div>
 
@@ -135,7 +152,7 @@
                             <img src="images/me-at-the-naspa-awards-night.jpg" alt="Emmanuel at NASPA awards night" loading="lazy">
                         </div>
                         <div class="memory-caption">
-                            <span class="memory-event">NSS Year Group 2023/2024</span>
+                            <span class="memory-event">NASPA &middot; NSS 2023/2024</span>
                             <div class="memory-title">Social Media Influencer of the Year</div>
                         </div>
                     </div>
@@ -145,7 +162,7 @@
                             <img src="images/receiving-awards-for-the-most-hardworking-committee-member.jpg" alt="Receiving Hardworking Committee Member award" loading="lazy">
                         </div>
                         <div class="memory-caption">
-                            <span class="memory-event">NASPA Awards Night</span>
+                            <span class="memory-event">NASPA &middot; NSS 2023/2024</span>
                             <div class="memory-title">Most Hardworking Committee Member</div>
                         </div>
                     </div>
@@ -168,8 +185,8 @@
             <div class="container">
                 <div class="creed-banner" style="text-align: left; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 2rem;">
                     <div>
-                        <h3 style="font-size: 1.4rem; font-weight: 800; color: var(--text-main); margin-bottom: 0.5rem;">Want to work together on something meaningful?</h3>
-                        <p style="color: var(--text-muted); font-size: 0.95rem;">Send me a message or connect directly on WhatsApp.</p>
+                        <h3 style="font-size: 1.4rem; font-weight: 800; color: var(--text-main); margin-bottom: 0.5rem;">Have something you'd like built?</h3>
+                        <p style="color: var(--text-muted); font-size: 0.95rem;">Send me a message or reach me directly on WhatsApp.</p>
                     </div>
                     <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
                         <a href="https://wa.me/233543671806" target="_blank" rel="noopener noreferrer" class="btn-whatsapp">Chat on WhatsApp &nearr;</a>
@@ -181,6 +198,6 @@
     </main>
 
     <portfolio-footer></portfolio-footer>
-    <script src="main.js"></script>
+    <script src="main.js?v=2"></script>
 </body>
 </html>

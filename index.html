@@ -1,12 +1,12 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Emmanuel Drah — Full-Stack Developer &amp; Founder</title>
-    <meta name="description" content="Emmanuel Drah is a full-stack developer and founder of Success Above Dreams. He builds practical websites, booking portals, and commercial systems for real businesses — creator of nsvilla.com and crcosmeticsgh.com.">
-    <meta property="og:title" content="Emmanuel Drah — Full-Stack Developer &amp; Founder">
-    <meta property="og:description" content="Building practical websites and systems for real businesses. Creator of nsvilla.com and crcosmeticsgh.com.">
+    <title>Emmanuel Drah — Builder &amp; Founder of Success Above Dreams</title>
+    <meta name="description" content="Emmanuel Drah is a full-stack developer and the founder of Success Above Dreams. Building digital products with quiet discipline, integrity, and purpose.">
+    <meta property="og:title" content="Emmanuel Drah — Builder &amp; Founder of Success Above Dreams">
+    <meta property="og:description" content="Building digital products with quiet discipline, integrity, and purpose.">
     <meta property="og:image" content="https://emmanueldrah.vercel.app/images/manuel.jpg">
     <meta property="og:url" content="https://emmanueldrah.vercel.app">
     <meta name="twitter:card" content="summary_large_image">
@@ -15,39 +15,45 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="icon" type="image/jpeg" href="images/sad.jpg">
     <link rel="apple-touch-icon" href="images/sad.jpg">
-    <link rel="stylesheet" href="css/style.css?v=8">
-    <script src="js/components.js?v=6" defer></script>
+    <link rel="stylesheet" href="css/style.css?v=18">
+    <script src="js/components.js?v=16" defer></script>
 </head>
-<body>
+<body data-page="index">
     <portfolio-nav></portfolio-nav>
 
-    <main>
-        <!-- Hero Section -->
+    <!-- Lightbox Modal -->
+    <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Image Viewer">
+        <button id="lightbox-close" class="lightbox-close" aria-label="Close">&times;</button>
+        <img id="lightbox-img" src="" alt="Full view">
+    </div>
+
+    <main id="main-content">
+        <!-- ── 01: Hero Section ── -->
         <section class="hero-section">
             <div class="container">
                 <div class="hero-grid">
                     <div>
                         <div style="margin-bottom: 1rem;">
                             <span class="status-chip">
-                                <span class="status-dot"></span> Available for new projects
+                                <span class="status-dot"></span> Available for select projects &amp; collaborations
                             </span>
                         </div>
 
-                        <span class="hero-greeting">👋 Hi, I'm Emmanuel Drah</span>
+                        <span class="hero-greeting">Hi, I'm Emmanuel Drah</span>
                         <h1 class="hero-headline">
-                            I build software that real businesses can rely on.
+                            I build digital products with the quiet discipline of someone who earned it from the ground up.
                         </h1>
 
                         <p class="hero-subhead">
-                            Full-stack developer and founder of <strong>Success Above Dreams</strong>. I engineer websites, booking portals, and commercial systems — the kind of software that solves real operational problems and actually gets used every day.
+                            I'm a full-stack developer and the founder of <a href="the-brand.html" style="color: var(--gold-light); font-weight: 700; text-decoration: underline; text-underline-offset: 3px;">Success Above Dreams</a>. Before I write code or design an interface, I think about people &mdash; what they actually need, how they actually live, and what would genuinely make their day simpler. That standard guides everything I put into the world.
                         </p>
 
                         <div class="hero-ctas">
-                            <a href="#projects" class="btn-warm-primary">See My Work &darr;</a>
-                            <a href="https://wa.me/233543671806?text=Hello%20Emmanuel%2C%20I%20saw%20your%20portfolio%20and%20would%20like%20to%20talk%20about%20a%20project." target="_blank" rel="noopener noreferrer" class="btn-whatsapp">
-                                <span>💬 Chat on WhatsApp</span>
+                            <a href="about.html" class="btn-warm-primary">My Story &rarr;</a>
+                            <a href="the-brand.html" class="btn-warm-outline">The Brand Philosophy &rarr;</a>
+                            <a href="https://wa.me/233543671806?text=Hello%20Emmanuel%2C%20I%20saw%20your%20website%20and%20would%20like%20to%20connect." target="_blank" rel="noopener noreferrer" class="btn-whatsapp">
+                                <span>WhatsApp Connect</span>
                             </a>
-                            <a href="about.html" class="btn-warm-outline">My Story &rarr;</a>
                         </div>
                     </div>
 
@@ -57,9 +63,9 @@
                             <div class="hero-photo-caption">
                                 <div>
                                     <div class="hero-caption-name">Emmanuel Drah</div>
-                                    <div style="font-size: 0.78rem; color: var(--text-muted);">Full-Stack Developer</div>
+                                    <div style="font-size: 0.78rem; color: var(--gold-light); letter-spacing: 0.08em; text-transform: uppercase;">Founder &middot; Success Above Dreams</div>
                                 </div>
-                                <span class="hero-caption-role">SAD Founder</span>
+                                <span class="hero-caption-role">Dzodze &middot; GH</span>
                             </div>
                         </div>
                     </div>
@@ -67,257 +73,189 @@
             </div>
         </section>
 
-        <!-- Featured Projects Section -->
-        <section class="section-wrap" id="projects">
-            <div class="container">
-                <div class="section-head">
-                    <span class="section-eyebrow">Featured Work</span>
-                    <h2 class="section-title">Systems running in production</h2>
-                    <p class="section-desc">
-                        These aren't concept mockups. These are live websites and platforms built to solve concrete operational problems.
-                    </p>
-                </div>
-
-                <div class="projects-grid">
-                    <!-- Project 01: NS Luxury Villa -->
-                    <article class="spotlight-card">
-                        <div class="spotlight-media">
-                            <span class="spotlight-badge"><span class="status-dot"></span> Live &middot; nsvilla.com</span>
-                            <img src="images/nsvilla-hero.jpeg" alt="NS Luxury Villa in Ho, Ghana" loading="lazy">
-                        </div>
-                        <div class="spotlight-info">
-                            <span class="spotlight-category">Hospitality &middot; Booking Portal</span>
-                            <h3 class="spotlight-title">NS Luxury Villa</h3>
-                            <p class="spotlight-story">
-                                NS Luxury Villa guests used to call the front desk for every room price, amenity question, and direction inquiry. I designed and deployed nsvilla.com to give travelers a complete picture of the property — room galleries, pricing, and a direct line via WhatsApp or phone to make a reservation.
-                            </p>
-                            <div class="spotlight-pills">
-                                <span class="tag-pill">Direct Booking</span>
-                                <span class="tag-pill">Mobile Fast</span>
-                                <span class="tag-pill">Google Maps SEO</span>
-                                <span class="tag-pill">Hospitality</span>
-                            </div>
-                            <div class="spotlight-actions">
-                                <a href="https://nsvilla.com" target="_blank" rel="noopener noreferrer" class="btn-warm-primary">Visit Live Site &nearr;</a>
-                                <a href="case-studies.html#nsvilla" class="btn-warm-outline">Read Project Story &rarr;</a>
-                            </div>
-                        </div>
-                    </article>
-
-                    <!-- Project 02: CR Cosmetics & Essentials -->
-                    <article class="spotlight-card reverse">
-                        <div class="spotlight-media" style="background: #0d0d12; display: flex; align-items: center; justify-content: center; padding: 2.5rem;">
-                            <span class="spotlight-badge"><span class="status-dot"></span> Live Store &middot; crcosmeticsgh.com</span>
-                            <img src="images/crcosmetics-logo.jpeg" alt="CR Cosmetics and Essentials" loading="lazy" style="object-fit: contain; max-height: 220px; width: auto;">
-                        </div>
-                        <div class="spotlight-info">
-                            <span class="spotlight-category">E-Commerce Store</span>
-                            <h3 class="spotlight-title">CR Cosmetics &amp; Essentials</h3>
-                            <p class="spotlight-story">
-                                A dedicated online beauty and skincare storefront. Instead of managing orders through messy WhatsApp statuses and repeated DM questions, this store provides structured catalog browsing, mobile checkout, and nationwide delivery support across Ghana.
-                            </p>
-                            <div class="spotlight-pills">
-                                <span class="tag-pill">Online Catalog</span>
-                                <span class="tag-pill">Nationwide Shipping</span>
-                                <span class="tag-pill">Mobile First</span>
-                                <span class="tag-pill">Ghana</span>
-                            </div>
-                            <div class="spotlight-actions">
-                                <a href="https://crcosmeticsgh.com" target="_blank" rel="noopener noreferrer" class="btn-warm-primary">Visit Live Store &nearr;</a>
-                                <a href="case-studies.html#crcosmetics" class="btn-warm-outline">Read Project Story &rarr;</a>
-                            </div>
-                        </div>
-                    </article>
-                </div>
-            </div>
-        </section>
-
-        <!-- Personal Story & Journey Preview -->
+        <!-- ── 02: Who I Am & The Brand Philosophy ── -->
         <section class="section-wrap">
             <div class="container">
                 <div class="section-head">
-                    <span class="section-eyebrow">My Background</span>
-                    <h2 class="section-title">The journey behind the code</h2>
+                    <span class="section-eyebrow">The Identity &amp; Standard</span>
+                    <h2 class="section-title">Success is what quiet discipline builds when nobody is watching.</h2>
                     <p class="section-desc">
-                        My perspective is shaped by the everyday realities of life and business in Ghana.
+                        I grew up understanding that talk is cheap. Anyone can have a dream. What separates people is what happens on the ordinary, unglamorous days when nobody is clapping.
                     </p>
                 </div>
 
-                <div class="story-box">
-                    <p class="story-lead">
-                        “I care about whether the software actually helps the person who has to open it every single morning.”
-                    </p>
-                    <p class="story-body">
-                        Growing up in Ghana, I noticed how often people had to work around broken or non-existent digital tools. After completing my degree in Information and Communication Technology at Ho Technical University, I spent my national service year at NHIS Dzodze managing public health records and member inquiries.
-                    </p>
-                    <p class="story-body">
-                        Working the reception desk at NS Luxury Villa taught me more about customer service and real workflow friction than any textbook. That is why I build systems that are easy to use, load fast on regular mobile connections, and solve actual problems.
-                    </p>
-                    <div style="margin-top: 1.5rem;">
-                        <a href="about.html" class="btn-warm-outline">Read Full Story &rarr;</a>
+                <div class="home-identity-grid">
+                    <!-- Left: Personal Story Lead -->
+                    <div class="story-box" style="margin-bottom: 0;">
+                        <p class="story-lead">
+                            &ldquo;Working at a front desk, handling health insurance records in Dzodze, and building software taught me the same truth: people don't care about your cleverness. They care if your work actually helps them.&rdquo;
+                        </p>
+                        <p class="story-body">
+                            My journey into technology wasn't handed to me. It came from hours at Ho Technical University, late nights debugging on slow hardware, and learning to pay deep attention to how real humans interact with digital tools.
+                        </p>
+                        <p class="story-body" style="margin-top: 1.5rem; padding-top: 1.5rem; border-top: 1px solid var(--accent-border);">
+                            <strong>Success Above Dreams</strong> is more than a name. It's how I live: act daily, start without permission, stay rooted.
+                            <a href="the-brand.html" style="color: var(--gold-light); font-weight: 700; text-decoration: underline; text-underline-offset: 4px; display: inline-block; margin-left: 0.25rem;">[Read the brand story &rarr;]</a>
+                        </p>
+                    </div>
+
+                    <!-- Right: The 3 Core Pillars -->
+                    <div>
+                        <div class="home-pillar-card">
+                            <span class="home-pillar-num">SAD / 01 &middot; Action</span>
+                            <h4>Choose to Act</h4>
+                            <p>A dream is a wish until you move. I don't wait for luck or permission. Real progress is made in the small, daily decisions to build.</p>
+                        </div>
+
+                        <div class="home-pillar-card">
+                            <span class="home-pillar-num">SAD / 02 &middot; Discipline</span>
+                            <h4>Quiet Consistency</h4>
+                            <p>The work that counts is the unglamorous kind, done daily without an audience. Applause comes later, if it comes at all.</p>
+                        </div>
+
+                        <div class="home-pillar-card">
+                            <span class="home-pillar-num">SAD / 03 &middot; Roots</span>
+                            <h4>Stay Rooted</h4>
+                            <p>I'm Ewe, from Dzodze, and I carry that humility and grit everywhere. Ambition that forgets where it comes from has nothing to stand on.</p>
+                        </div>
                     </div>
                 </div>
+            </div>
+        </section>
 
-                <!-- Real Photos of Achievements & Community -->
-                <h3 style="font-size: 1.25rem; font-weight: 700; color: var(--text-main); margin-bottom: 0.5rem;">Memories &amp; Recognitions</h3>
+        <!-- ── 03: The Craft — Curated Preview (No duplicates!) ── -->
+        <section class="section-wrap" style="background: linear-gradient(180deg, transparent, rgba(13, 25, 41, 0.35) 50%, transparent);">
+            <div class="container">
+                <div class="section-head">
+                    <span class="section-eyebrow">The Craft</span>
+                    <h2 class="section-title">Engineered for clarity, built to last.</h2>
+                    <p class="section-desc">
+                        A focused look at how I translate this discipline into software that people and businesses depend on daily.
+                    </p>
+                </div>
+
+                <div class="home-craft-grid">
+                    <div class="home-craft-card">
+                        <div>
+                            <span style="font-family: ui-monospace, monospace; font-size: 0.74rem; font-weight: 700; color: var(--gold); letter-spacing: 0.16em; text-transform: uppercase;">01 &middot; Modern Web</span>
+                            <h3 style="font-family: var(--font-display); font-size: 1.55rem; color: var(--white); margin: 0.6rem 0 0.8rem; line-height: 1.2;">Web Applications &amp; Platforms</h3>
+                            <p style="color: var(--text-muted); font-size: 0.94rem; line-height: 1.7;">From live commercial platforms like <em>nsvilla.com</em> and <em>crcosmeticsgh.com</em> to responsive portals engineered for high-conversion and speed.</p>
+                        </div>
+                        <div style="margin-top: 1.8rem;">
+                            <a href="projects.html" style="color: var(--gold-light); font-size: 0.82rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; display: inline-flex; align-items: center; gap: 0.4rem;">Explore Projects &rarr;</a>
+                        </div>
+                    </div>
+
+                    <div class="home-craft-card">
+                        <div>
+                            <span style="font-family: ui-monospace, monospace; font-size: 0.74rem; font-weight: 700; color: var(--gold); letter-spacing: 0.16em; text-transform: uppercase;">02 &middot; Cross-Platform</span>
+                            <h3 style="font-family: var(--font-display); font-size: 1.55rem; color: var(--white); margin: 0.6rem 0 0.8rem; line-height: 1.2;">Mobile &amp; Desktop Software</h3>
+                            <p style="color: var(--text-muted); font-size: 0.94rem; line-height: 1.7;">Performant native-feel applications across iOS, Android, Windows, and macOS with fluid user experiences, local storage, and offline reliability.</p>
+                        </div>
+                        <div style="margin-top: 1.8rem;">
+                            <a href="services.html" style="color: var(--gold-light); font-size: 0.82rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; display: inline-flex; align-items: center; gap: 0.4rem;">View Capabilities &rarr;</a>
+                        </div>
+                    </div>
+
+                    <div class="home-craft-card">
+                        <div>
+                            <span style="font-family: ui-monospace, monospace; font-size: 0.74rem; font-weight: 700; color: var(--gold); letter-spacing: 0.16em; text-transform: uppercase;">03 &middot; Systems &amp; Data</span>
+                            <h3 style="font-family: var(--font-display); font-size: 1.55rem; color: var(--white); margin: 0.6rem 0 0.8rem; line-height: 1.2;">Cloud, Databases &amp; APIs</h3>
+                            <p style="color: var(--text-muted); font-size: 0.94rem; line-height: 1.7;">Architected data structures, secure backend authentication, API integrations, and cloud infrastructure that scale seamlessly under load.</p>
+                        </div>
+                        <div style="margin-top: 1.8rem;">
+                            <a href="resume.html" style="color: var(--gold-light); font-size: 0.82rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; display: inline-flex; align-items: center; gap: 0.4rem;">Check Technical Stack &rarr;</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ── 04: Proof of Character & Journey ── -->
+        <section class="section-wrap">
+            <div class="container">
+                <div class="section-head">
+                    <span class="section-eyebrow">Life &amp; Character</span>
+                    <h2 class="section-title">Beyond the screen: leadership &amp; community.</h2>
+                    <p class="section-desc">
+                        Code is what I build, but character is who I am. Recognition earned through voluntary service, committee work, and continuous learning.
+                    </p>
+                </div>
+
                 <div class="photo-gallery-grid">
                     <div class="memory-card">
                         <div class="memory-media">
-                            <img src="images/vr-class-in-session.jpg" alt="Emmanuel in Virtual Reality lab" loading="lazy">
+                            <img src="images/receiving-awards-for-the-most-hardworking-committee-member.jpg" alt="Most Hardworking Committee Member award" loading="lazy">
+                        </div>
+                        <div class="memory-caption">
+                            <span class="memory-event">NASPA &middot; NSS 2023/2024</span>
+                            <div class="memory-title">Most Hardworking Committee Member</div>
+                        </div>
+                    </div>
+
+                    <div class="memory-card">
+                        <div class="memory-media">
+                            <img src="images/awarded-a-laptop-at-the-tech-fest.jpeg" alt="Awarded a laptop at Tech Fest" loading="lazy">
                         </div>
                         <div class="memory-caption">
                             <span class="memory-event">Ho West Tech Fest 2025</span>
-                            <div class="memory-title">Awarded Best Learner in Virtual Reality</div>
+                            <div class="memory-title">Awarded Laptop for Achievement</div>
                         </div>
                     </div>
 
                     <div class="memory-card">
                         <div class="memory-media">
-                            <img src="images/me-at-the-naspa-awards-night.jpg" alt="Emmanuel at NASPA awards" loading="lazy">
+                            <img src="images/naspa-dinner-and-awards-night.jpg" alt="NASPA Dinner and Awards Night" loading="lazy">
                         </div>
                         <div class="memory-caption">
-                            <span class="memory-event">NSS Year Group 2023/2024</span>
-                            <div class="memory-title">Social Media Influencer &amp; Hardworking Member</div>
+                            <span class="memory-event">NASPA &middot; NSS 2023/2024</span>
+                            <div class="memory-title">Leadership &amp; Community Service</div>
                         </div>
                     </div>
+                </div>
 
-                    <div class="memory-card">
-                        <div class="memory-media">
-                            <img src="images/publicity-committee.jpg" alt="Emmanuel with publicity committee" loading="lazy">
-                        </div>
-                        <div class="memory-caption">
-                            <span class="memory-event">Ketu North Community</span>
-                            <div class="memory-title">Publicity Committee Member</div>
-                        </div>
-                    </div>
+                <div style="text-align: center; margin-top: 2.5rem;">
+                    <a href="gallery.html" class="btn-warm-outline">Explore Full Photo Gallery &amp; Milestones &rarr;</a>
                 </div>
             </div>
         </section>
 
-        <!-- Brand Creed Banner -->
+        <!-- ── 05: The Creed Banner ── -->
         <section class="section-wrap">
             <div class="container">
                 <div class="creed-banner">
-                    <span class="section-eyebrow" style="margin-bottom: 1rem;">Success Above Dreams</span>
+                    <span class="section-eyebrow" style="margin-bottom: 1rem;">The Standard</span>
                     <blockquote class="creed-quote">
                         &ldquo;Dreams are where things start, but success is what quiet discipline builds when nobody is watching.&rdquo;
                     </blockquote>
-                    <div class="creed-author">&mdash; The creed that drives my work every day</div>
-                    <div style="margin-top: 1.5rem;">
-                        <a href="the-brand.html" class="btn-warm-outline">Learn About the Brand &rarr;</a>
-                    </div>
+                    <div class="creed-author">&mdash; Emmanuel Drah &middot; Founder, Success Above Dreams</div>
                 </div>
             </div>
         </section>
 
-        <!-- Skills & What I Build -->
-        <section class="section-wrap">
+        <!-- ── 06: Direct Personal Invitation (No duplicate form!) ── -->
+        <section class="section-wrap" style="padding-top: 1rem;">
             <div class="container">
-                <div class="section-head">
-                    <span class="section-eyebrow">Skills &amp; Capabilities</span>
-                    <h2 class="section-title">What I bring to a project</h2>
-                </div>
-
-                <div class="skills-grid-clean">
-                    <div class="skill-card-clean">
-                        <h4>Frontend &amp; Websites</h4>
-                        <p>React, Next.js, TypeScript, and clean responsive CSS that works on all screen sizes.</p>
-                    </div>
-                    <div class="skill-card-clean">
-                        <h4>Backend &amp; Databases</h4>
-                        <p>Python (FastAPI), Node.js, PostgreSQL, and Supabase for secure data storage.</p>
-                    </div>
-                    <div class="skill-card-clean">
-                        <h4>Mobile &amp; Desktop</h4>
-                        <p>Flutter and React Native for mobile apps, Electron for local desktop business software.</p>
-                    </div>
-                    <div class="skill-card-clean">
-                        <h4>Local Operations</h4>
-                        <p>Booking engines, direct WhatsApp integration, and local SEO on Google Maps.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Contact Section -->
-        <section class="section-wrap" id="contact">
-            <div class="container">
-                <div class="section-head">
-                    <span class="section-eyebrow">Get in Touch</span>
-                    <h2 class="section-title">Have a project or problem in mind?</h2>
-                    <p class="section-desc">
-                        Whether you need a website for your business, an online store, or an internal tool, send me a message.
-                    </p>
-                </div>
-
-                <div class="contact-grid-clean">
-                    <div class="contact-direct-cards">
-                        <a href="https://wa.me/233543671806?text=Hello%20Emmanuel%2C%20I%20saw%20your%20portfolio%20and%20would%20like%20to%20talk%20about%20a%20project." target="_blank" rel="noopener noreferrer" class="contact-channel">
-                            <span class="channel-icon">💬</span>
-                            <div class="channel-info">
-                                <strong>WhatsApp (Fastest Response)</strong>
-                                <span>+233 543 671 806</span>
-                            </div>
-                        </a>
-
-                        <a href="mailto:emmanueldrah10@gmail.com" class="contact-channel">
-                            <span class="channel-icon">✉️</span>
-                            <div class="channel-info">
-                                <strong>Email</strong>
-                                <span>emmanueldrah10@gmail.com</span>
-                            </div>
-                        </a>
-
-                        <a href="tel:+233543671806" class="contact-channel">
-                            <span class="channel-icon">📞</span>
-                            <div class="channel-info">
-                                <strong>Direct Phone</strong>
-                                <span>+233 543 671 806</span>
-                            </div>
-                        </a>
-
-                        <div class="contact-channel" style="cursor: default;">
-                            <span class="channel-icon">📍</span>
-                            <div class="channel-info">
-                                <strong>Based In</strong>
-                                <span>Ho, Volta Region, Ghana</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="contact-form-box">
-                        <h3 style="font-size: 1.35rem; font-weight: 700; color: var(--text-main); margin-bottom: 0.5rem;">Send a Message</h3>
-                        <p style="font-size: 0.88rem; color: var(--text-muted); margin-bottom: 1.5rem;">
-                            Tell me a little about your project, and I will get back to you within 24 hours.
+                <div class="creed-banner" style="text-align: left; display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: center; gap: 2.5rem; background: linear-gradient(135deg, rgba(210, 162, 76, 0.12), rgba(13, 25, 41, 0.95));">
+                    <div>
+                        <span class="section-eyebrow" style="margin-bottom: 0.6rem;">Let's Connect</span>
+                        <h3 style="font-family: var(--font-display); font-size: clamp(2rem, 3.8vw, 3.2rem); font-weight: 600; color: var(--white); margin-bottom: 0.75rem; line-height: 1.1;">
+                            Let's build something honest and lasting.
+                        </h3>
+                        <p style="color: var(--text-muted); font-size: 1.05rem; max-width: 650px; line-height: 1.7;">
+                            Whether you have an ambitious platform to launch, a complex technical challenge, or simply want to connect with a developer who works with integrity &mdash; my door is open.
                         </p>
-
-                        <div id="form-message" class="form-message" style="display: none; margin-bottom: 1rem;" aria-live="polite"></div>
-
-                        <form id="contactForm" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" novalidate>
-                            <input type="hidden" name="form-name" value="contact">
-                            <p style="display: none;">
-                                <label>Don't fill this out: <input name="bot-field"></label>
-                            </p>
-
-                            <div class="form-group-warm">
-                                <label for="name" class="label-warm">Your Name</label>
-                                <input type="text" id="name" name="name" class="input-warm" placeholder="Kwame Mensah" required>
-                            </div>
-
-                            <div class="form-group-warm">
-                                <label for="email" class="label-warm">Email Address</label>
-                                <input type="email" id="email" name="email" class="input-warm" placeholder="kwame@example.com" required>
-                            </div>
-
-                            <div class="form-group-warm">
-                                <label for="message" class="label-warm">Message</label>
-                                <textarea id="message" name="message" class="textarea-warm" rows="4" placeholder="Tell me what you need help with." required></textarea>
-                            </div>
-
-                            <button type="submit" class="btn-warm-primary" id="submitBtn" style="width: 100%; justify-content: center;">
-                                Send Message &rarr;
-                            </button>
-                        </form>
+                    </div>
+                    <div style="display: flex; flex-direction: column; gap: 0.85rem; min-width: 220px;">
+                        <a href="https://wa.me/233543671806" target="_blank" rel="noopener noreferrer" class="btn-whatsapp" style="width: 100%; justify-content: center;">
+                            Chat on WhatsApp &nearr;
+                        </a>
+                        <a href="contact.html" class="btn-warm-primary" style="width: 100%; justify-content: center;">
+                            Send a Message &rarr;
+                        </a>
+                        <a href="about.html" class="btn-warm-outline" style="width: 100%; justify-content: center;">
+                            Read My Story &rarr;
+                        </a>
                     </div>
                 </div>
             </div>
@@ -325,7 +263,6 @@
     </main>
 
     <portfolio-footer></portfolio-footer>
-    <script src="main.js"></script>
-    <script src="js/contact.js" defer></script>
+    <script src="main.js?v=2"></script>
 </body>
 </html>

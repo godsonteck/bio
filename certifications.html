@@ -1,12 +1,12 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Certifications &amp; Honours — Emmanuel Drah</title>
-    <meta name="description" content="Certifications, awards, and verified technical recognitions earned by Emmanuel Drah across tech fests and public service in Ghana.">
-    <meta property="og:title" content="Certifications &amp; Honours — Emmanuel Drah">
-    <meta property="og:description" content="Proof of hands-on learning, tech fest awards, and public service recognition.">
+    <title>Awards &amp; Certificates — Emmanuel Drah</title>
+    <meta name="description" content="Awards and certificates Emmanuel Drah has earned through tech events, training, and national service.">
+    <meta property="og:title" content="Awards &amp; Certificates — Emmanuel Drah">
+    <meta property="og:description" content="Tech event awards, certificates, and national service recognition earned by Emmanuel Drah.">
     <meta property="og:image" content="https://emmanueldrah.vercel.app/images/tech-fest.jpeg">
     <meta property="og:url" content="https://emmanueldrah.vercel.app/certifications.html">
     <meta name="twitter:card" content="summary_large_image">
@@ -15,21 +15,27 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="icon" type="image/jpeg" href="images/sad.jpg">
     <link rel="apple-touch-icon" href="images/sad.jpg">
-    <link rel="stylesheet" href="css/style.css?v=8">
-    <script src="js/components.js?v=6" defer></script>
+    <link rel="stylesheet" href="css/style.css?v=18">
+    <script src="js/components.js?v=16" defer></script>
 </head>
 <body>
     <portfolio-nav></portfolio-nav>
 
+    <!-- Lightbox Modal -->
+    <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Image Viewer">
+        <button id="lightbox-close" class="lightbox-close" aria-label="Close">&times;</button>
+        <img id="lightbox-img" src="" alt="Full view">
+    </div>
+
     <main>
         <section class="hero-section" style="padding: 4rem 0 2.5rem;">
             <div class="container">
-                <span class="section-eyebrow">Accolades &middot; Proof of Learning</span>
+                <span class="section-eyebrow">Awards</span>
                 <h1 class="hero-headline" style="font-size: clamp(2rem, 3.5vw, 2.8rem); margin-bottom: 0.75rem;">
-                    Certifications &amp; Honours
+                    Awards &amp; Certificates
                 </h1>
                 <p class="hero-subhead" style="max-width: 680px;">
-                    Formal training, community technology festival honours, and verified certificates earned through dedication and practice.
+                    Awards and certificates from tech events, national service, and training over the years.
                 </p>
             </div>
         </section>
@@ -49,31 +55,31 @@
 
                     <div class="memory-card">
                         <div class="memory-media">
-                            <img src="images/naspa2.jpeg" alt="Social Media Influencer of the Year — NSS Year Group 2023/2024" loading="lazy">
+                            <img src="images/naspa2.jpeg" alt="Social Media Influencer of the Year — NASPA, NSS 2023/2024" loading="lazy">
                         </div>
                         <div class="memory-caption">
-                            <span class="memory-event">NSS Year Group 2023/2024</span>
+                            <span class="memory-event">NASPA &middot; NSS 2023/2024</span>
                             <div class="memory-title">Social Media Influencer of the Year</div>
                         </div>
                     </div>
 
                     <div class="memory-card">
                         <div class="memory-media">
-                            <img src="images/naspa3.jpeg" alt="Most Hardworking Committee Member — NSS Year Group 2023/2024" loading="lazy">
+                            <img src="images/naspa3.jpeg" alt="Most Hardworking Committee Member — NASPA, NSS 2023/2024" loading="lazy">
                         </div>
                         <div class="memory-caption">
-                            <span class="memory-event">NASPA Awards Night</span>
+                            <span class="memory-event">NASPA &middot; NSS 2023/2024</span>
                             <div class="memory-title">Most Hardworking Committee Member</div>
                         </div>
                     </div>
 
                     <div class="memory-card">
                         <div class="memory-media">
-                            <img src="images/naspa1.jpeg" alt="National Service Personnel Association Commendation" loading="lazy">
+                            <img src="images/naspa1.jpeg" alt="Executive Commendation — NASPA, NSS 2023/2024" loading="lazy">
                         </div>
                         <div class="memory-caption">
-                            <span class="memory-event">Public Service Recognition</span>
-                            <div class="memory-title">NASPA Executive Commendation</div>
+                            <span class="memory-event">NASPA &middot; NSS 2023/2024</span>
+                            <div class="memory-title">Executive Commendation</div>
                         </div>
                     </div>
                 </div>
@@ -85,8 +91,8 @@
             <div class="container">
                 <div class="creed-banner" style="text-align: left; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 2rem;">
                     <div>
-                        <h3 style="font-size: 1.4rem; font-weight: 800; color: var(--text-main); margin-bottom: 0.5rem;">Let's build something dependable</h3>
-                        <p style="color: var(--text-muted); font-size: 0.95rem;">Reach out directly on WhatsApp or submit a project message.</p>
+                        <h3 style="font-size: 1.4rem; font-weight: 800; color: var(--text-main); margin-bottom: 0.5rem;">Need something built the right way?</h3>
+                        <p style="color: var(--text-muted); font-size: 0.95rem;">Send me a message, or reach me directly on WhatsApp.</p>
                     </div>
                     <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
                         <a href="https://wa.me/233543671806" target="_blank" rel="noopener noreferrer" class="btn-whatsapp">Chat on WhatsApp &nearr;</a>
@@ -98,6 +104,6 @@
     </main>
 
     <portfolio-footer></portfolio-footer>
-    <script src="main.js"></script>
+    <script src="main.js?v=2"></script>
 </body>
 </html>

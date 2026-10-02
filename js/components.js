@@ -1,111 +1,112 @@
-/* ==========================================================================
-   EMMANUEL DRAH — WARM PERSONAL WEB COMPONENTS (NAV & FOOTER)
-   ========================================================================== */
+/* Shared navigation and footer for the full portfolio. */
+
+const getPageSlug = (url = window.location.pathname) => {
+    const clean = url.split('#')[0].split('?')[0].split('/').pop() || '';
+    return clean.replace(/\.html$/, '') || 'index';
+};
 
 class PortfolioNav extends HTMLElement {
     connectedCallback() {
+        const currentPage = getPageSlug();
+        document.body.dataset.page = currentPage;
+
         this.innerHTML = `
-            <nav id="navbar">
-                <div class="container nav-inner">
-                    <a href="index.html" class="brand-badge">
-                        <div class="brand-avatar">
-                            <img src="images/sad.jpg" alt="Emmanuel Drah &middot; S.A.D.">
-                        </div>
-                        <div>
-                            <span class="brand-name">Emmanuel Drah</span>
-                            <span class="brand-tagline">Full-Stack Developer &middot; S.A.D.</span>
-                        </div>
-                    </a>
+            <a class="skip-link" href="#main-content">Skip to content</a>
 
-                    <div class="nav-links" id="nav-menu">
-                        <a href="index.html">Home</a>
-                        <a href="projects.html">Projects</a>
-                        <a href="case-studies.html">Case Studies</a>
-                        <a href="about.html">My Story</a>
-                        <a href="gallery.html">Gallery</a>
-                        <a href="the-brand.html">The Brand</a>
-                        <a href="contact.html" class="btn-nav-talk">Get in Touch</a>
+            <!-- ── Top Bar: full nav on desktop, logo-only on mobile ── -->
+            <nav id="navbar" aria-label="Main navigation">
+                <div class="container">
+                    <div class="nav-inner">
+                        <a href="index.html" class="brand-badge" aria-label="Success Above Dreams — Home">
+                            <span class="brand-avatar"><img src="images/sad.jpg" alt=""></span>
+                            <span>
+                                <strong class="brand-name">Emmanuel Drah</strong>
+                                <small class="brand-tagline">Success Above Dreams</small>
+                            </span>
+                        </a>
+                        <div class="nav-links">
+                            <a href="index.html">Home</a>
+                            <a href="projects.html">Projects</a>
+                            <a href="services.html">Services</a>
+                            <a href="about.html">My Story</a>
+                            <a href="gallery.html">Gallery</a>
+                            <a href="contact.html" class="btn-nav-talk">Let's Talk</a>
+                        </div>
                     </div>
-
-                    <button class="mobile-nav-toggle" id="mobile-toggle" aria-label="Toggle Navigation Menu" aria-expanded="false">
-                        <span class="hamburger"></span>
-                    </button>
                 </div>
             </nav>
 
-            <!-- Mobile Navigation Overlay -->
-            <div class="mobile-menu-overlay" id="mobile-overlay">
-                <a href="index.html" class="mobile-menu-link">Home</a>
-                <a href="projects.html" class="mobile-menu-link">Projects</a>
-                <a href="case-studies.html" class="mobile-menu-link">Case Studies</a>
-                <a href="about.html" class="mobile-menu-link">My Story</a>
-                <a href="gallery.html" class="mobile-menu-link">Gallery</a>
-                <a href="the-brand.html" class="mobile-menu-link">The Brand</a>
-                <a href="contact.html" class="mobile-menu-link">Get in Touch</a>
-            </div>
+            <!-- ── Bottom Nav: mobile only ── -->
+            <nav id="bottom-navbar" aria-label="Mobile navigation" aria-hidden="true">
+                <div class="bottom-nav-shell">
+                    <div class="bottom-nav-links">
+                        <a href="index.html" class="bottom-nav-link" id="bnav-home">
+                            <span class="bottom-nav-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M3 11.5 12 4l9 7.5"/><path d="M5.5 10v9h13v-9"/><path d="M9.5 19v-5h5v5"/></svg></span>
+                            <span>Home</span>
+                        </a>
+                        <a href="projects.html" class="bottom-nav-link" id="bnav-projects">
+                            <span class="bottom-nav-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3.5" y="4" width="17" height="16" rx="2"/><path d="M3.5 9h17M8.5 4v5"/></svg></span>
+                            <span>Projects</span>
+                        </a>
+                        <a href="services.html" class="bottom-nav-link" id="bnav-services">
+                            <span class="bottom-nav-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 7h14M5 12h14M5 17h14"/><circle cx="9" cy="7" r="1.5"/><circle cx="15" cy="12" r="1.5"/><circle cx="11" cy="17" r="1.5"/></svg></span>
+                            <span>Services</span>
+                        </a>
+                        <a href="about.html" class="bottom-nav-link" id="bnav-about">
+                            <span class="bottom-nav-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="3.5"/><path d="M5 20c.6-4 3-6 7-6s6.4 2 7 6"/></svg></span>
+                            <span>About</span>
+                        </a>
+                        <a href="gallery.html" class="bottom-nav-link" id="bnav-gallery">
+                            <span class="bottom-nav-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3.5" y="4" width="17" height="16" rx="2"/><circle cx="9" cy="9" r="1.5"/><path d="m5.5 17 4.2-4.2 3.1 3 2.2-2.2 3.5 3.4"/></svg></span>
+                            <span>Gallery</span>
+                        </a>
+                        <a href="contact.html" class="bottom-nav-link bottom-nav-contact" id="bnav-contact">
+                            <span class="bottom-nav-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 5.5h16v11H9l-5 3v-14Z"/><path d="M8 10h8M8 13h5"/></svg></span>
+                            <span>Talk</span>
+                        </a>
+                    </div>
+                </div>
+            </nav>
         `;
 
-        this.initNav();
+        document.querySelector('main')?.setAttribute('id', 'main-content');
+        this.initNav(currentPage);
+        this.initScrollEffect();
     }
 
-    initNav() {
-        const mobileToggle = this.querySelector('#mobile-toggle');
-        const mobileOverlay = this.querySelector('#mobile-overlay');
-        const overlayLinks = this.querySelectorAll('.mobile-menu-link');
-        const navLinks = this.querySelectorAll('.nav-links a');
+    initNav(currentPage) {
+        const sectionPage = {
+            'case-studies': 'projects',
+            'the-brand':    'about',
+            resume:         'about',
+            certifications: 'about'
+        }[currentPage] || currentPage;
 
-        mobileToggle.addEventListener('click', () => {
-            const isExpanded = mobileToggle.getAttribute('aria-expanded') === 'true';
-            mobileToggle.setAttribute('aria-expanded', !isExpanded);
-            mobileToggle.classList.toggle('active');
-            mobileOverlay.classList.toggle('active');
-            document.body.classList.toggle('no-scroll');
-        });
-
-        overlayLinks.forEach(link => {
-            link.addEventListener('click', () => {
-                mobileToggle.setAttribute('aria-expanded', 'false');
-                mobileToggle.classList.remove('active');
-                mobileOverlay.classList.remove('active');
-                document.body.classList.remove('no-scroll');
-            });
-        });
-
-        // Ensure favicon exists
-        if (!document.querySelector("link[rel*='icon']")) {
-            const fav = document.createElement('link');
-            fav.rel = 'icon';
-            fav.type = 'image/jpeg';
-            fav.href = 'images/sad.jpg';
-            document.head.appendChild(fav);
-        }
-
-        const getSlug = (url) => {
-            if (!url) return 'index';
-            const clean = url.split('#')[0].split('?')[0].split('/').pop() || '';
-            return clean.replace(/\.html$/, '') || 'index';
-        };
-
-        const currentSlug = getSlug(window.location.pathname);
-
-        navLinks.forEach(link => {
-            const linkSlug = getSlug(link.getAttribute('href'));
-            if (linkSlug === currentSlug) {
+        // Desktop top nav active state
+        this.querySelectorAll('.nav-links > a').forEach(link => {
+            if (getPageSlug(link.getAttribute('href')) === sectionPage) {
                 link.classList.add('active');
                 link.setAttribute('aria-current', 'page');
-            } else {
-                link.classList.remove('active');
             }
         });
 
-        overlayLinks.forEach(link => {
-            const linkSlug = getSlug(link.getAttribute('href'));
-            if (linkSlug === currentSlug) {
+        // Mobile bottom nav active state
+        this.querySelectorAll('.bottom-nav-link').forEach(link => {
+            if (getPageSlug(link.getAttribute('href')) === sectionPage) {
                 link.classList.add('active');
-            } else {
-                link.classList.remove('active');
+                link.setAttribute('aria-current', 'page');
             }
         });
+    }
+
+    initScrollEffect() {
+        const navbar = document.getElementById('navbar');
+        if (!navbar) return;
+        const onScroll = () => {
+            navbar.classList.toggle('scrolled', window.scrollY > 40);
+        };
+        window.addEventListener('scroll', onScroll, { passive: true });
+        onScroll();
     }
 }
 
@@ -114,44 +115,57 @@ class PortfolioFooter extends HTMLElement {
         this.innerHTML = `
             <footer>
                 <div class="container">
+                    <div class="footer-kicker">
+                        <div>
+                            <span>Have something in mind?</span>
+                            <h2>Tell me what you need built.</h2>
+                        </div>
+                        <a href="contact.html" class="btn-warm-primary">Start a conversation &rarr;</a>
+                    </div>
+
                     <div class="footer-content-clean">
                         <div class="footer-bio-col">
-                            <div class="footer-bio-name">Emmanuel Drah</div>
-                            <p class="footer-bio-text">
-                                Full-stack developer and founder of Success Above Dreams. Building practical software for real businesses.
-                            </p>
-                            <div style="margin-top: 1.25rem;">
-                                <a href="https://wa.me/233543671806" target="_blank" rel="noopener noreferrer" class="btn-whatsapp" style="padding: 0.6rem 1.15rem; font-size: 0.85rem;">
-                                    <span>💬 Chat on WhatsApp</span>
-                                </a>
+                            <div class="footer-brand-row">
+                                <img src="images/sad.jpg" alt="Success Above Dreams logo">
+                                <div class="footer-bio-name">Emmanuel Drah</div>
                             </div>
+                            <p class="footer-bio-text">I engineer modern web platforms, mobile applications, and custom software systems under Success Above Dreams. Every project is built for performance, scalability, and measurable real-world impact.</p>
                         </div>
 
                         <div class="footer-nav-col">
-                            <h5>Pages</h5>
+                            <h5>Work</h5>
                             <ul>
-                                <li><a href="index.html">Home</a></li>
                                 <li><a href="projects.html">Projects</a></li>
-                                <li><a href="case-studies.html">Case Studies</a></li>
-                                <li><a href="about.html">My Story</a></li>
-                                <li><a href="the-brand.html">The Brand</a></li>
+                                <li><a href="case-studies.html">Project Stories</a></li>
+                                <li><a href="services.html">Services</a></li>
+                                <li><a href="gallery.html">Gallery</a></li>
                             </ul>
                         </div>
 
                         <div class="footer-nav-col">
-                            <h5>Featured Live</h5>
+                            <h5>About</h5>
                             <ul>
-                                <li><a href="https://nsvilla.com" target="_blank" rel="noopener noreferrer">NS Luxury Villa &nearr;</a></li>
-                                <li><a href="https://crcosmeticsgh.com" target="_blank" rel="noopener noreferrer">CR Cosmetics Store &nearr;</a></li>
-                                <li><a href="Emmanuel_Drah_CV.docx" download>Download CV (.docx)</a></li>
-                                <li><a href="contact.html">Contact Me</a></li>
+                                <li><a href="about.html">My Story</a></li>
+                                <li><a href="the-brand.html">The Brand</a></li>
+                                <li><a href="resume.html">R&eacute;sum&eacute;</a></li>
+                                <li><a href="certifications.html">Awards</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="footer-nav-col">
+                            <h5>Contact</h5>
+                            <ul>
+                                <li><a href="contact.html">Send a Message</a></li>
+                                <li><a href="https://wa.me/233543671806" target="_blank" rel="noopener noreferrer">WhatsApp &nearr;</a></li>
+                                <li><a href="mailto:emmanueldrah10@gmail.com">Email</a></li>
+                                <li><a href="Emmanuel_Drah_CV.docx" download>Download CV</a></li>
                             </ul>
                         </div>
                     </div>
 
                     <div class="footer-bottom-clean">
-                        <span>&copy; ${new Date().getFullYear()} Emmanuel Drah &middot; Success Above Dreams</span>
-                        <span>Built with discipline &middot; Success Above Dreams.</span>
+                        <span>&copy; ${new Date().getFullYear()} Emmanuel Drah</span>
+                        <span>Built under Success Above Dreams</span>
                     </div>
                 </div>
             </footer>
