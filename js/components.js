@@ -17,7 +17,7 @@ class PortfolioNav extends HTMLElement {
             <nav id="navbar" aria-label="Main navigation">
                 <div class="container">
                     <div class="nav-inner">
-                        <a href="index.html" class="brand-badge" aria-label="Success Above Dreams — Home">
+                        <a href="index.html" class="brand-badge" aria-label="Success Above Dreams, Home">
                             <span class="brand-avatar"><img src="images/sad.jpg" alt=""></span>
                             <span>
                                 <strong class="brand-name">Emmanuel Drah</strong>
@@ -36,33 +36,33 @@ class PortfolioNav extends HTMLElement {
                 </div>
             </nav>
 
-            <!-- ── Bottom Nav: mobile only ── -->
-            <nav id="bottom-navbar" aria-label="Mobile navigation" aria-hidden="true">
+            <!-- ── Bottom Dock: mobile only ── -->
+            <nav id="bottom-navbar" aria-label="Mobile navigation">
                 <div class="bottom-nav-shell">
                     <div class="bottom-nav-links">
-                        <a href="index.html" class="bottom-nav-link" id="bnav-home">
+                        <a href="index.html" class="bottom-nav-link">
                             <span class="bottom-nav-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M3 11.5 12 4l9 7.5"/><path d="M5.5 10v9h13v-9"/><path d="M9.5 19v-5h5v5"/></svg></span>
                             <span>Home</span>
                         </a>
-                        <a href="projects.html" class="bottom-nav-link" id="bnav-projects">
+                        <a href="projects.html" class="bottom-nav-link">
                             <span class="bottom-nav-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3.5" y="4" width="17" height="16" rx="2"/><path d="M3.5 9h17M8.5 4v5"/></svg></span>
                             <span>Projects</span>
                         </a>
-                        <a href="services.html" class="bottom-nav-link" id="bnav-services">
+                        <a href="services.html" class="bottom-nav-link">
                             <span class="bottom-nav-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 7h14M5 12h14M5 17h14"/><circle cx="9" cy="7" r="1.5"/><circle cx="15" cy="12" r="1.5"/><circle cx="11" cy="17" r="1.5"/></svg></span>
                             <span>Services</span>
                         </a>
-                        <a href="about.html" class="bottom-nav-link" id="bnav-about">
+                        <a href="about.html" class="bottom-nav-link">
                             <span class="bottom-nav-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="3.5"/><path d="M5 20c.6-4 3-6 7-6s6.4 2 7 6"/></svg></span>
-                            <span>About</span>
+                            <span>My Story</span>
                         </a>
-                        <a href="gallery.html" class="bottom-nav-link" id="bnav-gallery">
+                        <a href="gallery.html" class="bottom-nav-link">
                             <span class="bottom-nav-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3.5" y="4" width="17" height="16" rx="2"/><circle cx="9" cy="9" r="1.5"/><path d="m5.5 17 4.2-4.2 3.1 3 2.2-2.2 3.5 3.4"/></svg></span>
                             <span>Gallery</span>
                         </a>
-                        <a href="contact.html" class="bottom-nav-link bottom-nav-contact" id="bnav-contact">
+                        <a href="contact.html" class="bottom-nav-link bottom-nav-contact">
                             <span class="bottom-nav-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 5.5h16v11H9l-5 3v-14Z"/><path d="M8 10h8M8 13h5"/></svg></span>
-                            <span>Talk</span>
+                            <span>Let's Talk</span>
                         </a>
                     </div>
                 </div>
@@ -90,7 +90,7 @@ class PortfolioNav extends HTMLElement {
             }
         });
 
-        // Mobile bottom nav active state
+        // Mobile bottom dock active state
         this.querySelectorAll('.bottom-nav-link').forEach(link => {
             if (getPageSlug(link.getAttribute('href')) === sectionPage) {
                 link.classList.add('active');
@@ -129,7 +129,6 @@ class PortfolioFooter extends HTMLElement {
                                 <img src="images/sad.jpg" alt="Success Above Dreams logo">
                                 <div class="footer-bio-name">Emmanuel Drah</div>
                             </div>
-                            <p class="footer-bio-text">I engineer modern web platforms, mobile applications, and custom software systems under Success Above Dreams. Every project is built for performance, scalability, and measurable real-world impact.</p>
                         </div>
 
                         <div class="footer-nav-col">
