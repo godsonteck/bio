@@ -157,7 +157,6 @@ class PortfolioFooter extends HTMLElement {
                                 <li><a href="contact.html">Send a Message</a></li>
                                 <li><a href="https://wa.me/233543671806" target="_blank" rel="noopener noreferrer">WhatsApp &nearr;</a></li>
                                 <li><a href="mailto:emmanueldrah10@gmail.com">Email</a></li>
-                                <li><a href="Emmanuel_Drah_CV.docx" download>Download CV</a></li>
                             </ul>
                         </div>
                     </div>
