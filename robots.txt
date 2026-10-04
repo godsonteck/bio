@@ -2,3 +2,4 @@ User-agent: *
 Allow: /
 
 Sitemap: https://emmanueldrah.vercel.app/sitemap.xml
+Sitemap: https://emmanueldrah.vercel.app/sitemap_index.xml
