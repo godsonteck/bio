@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Resume &middot; Emmanuel Drah</title>
-    <meta name="description" content="My background, the work I've done, and what I can build for you: websites, mobile apps, and desktop programs.">
+    <meta name="description" content="The work history, education, and practical skills behind the name Success Above Dreams. All of it built from real projects, long learning, and daily effort.">
     <meta property="og:title" content="Resume &middot; Emmanuel Drah">
-    <meta property="og:description" content="My background, experience, and skills: the person behind Success Above Dreams.">
+    <meta property="og:description" content="The story behind the work: the jobs, the learning, and the habits that shaped a builder, one project at a time.">
     <meta property="og:image" content="https://emmanueldrah.vercel.app/images/manuel.jpg">
     <meta property="og:url" content="https://emmanueldrah.vercel.app/resume">
     <meta name="twitter:card" content="summary_large_image">
@@ -15,7 +15,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="icon" type="image/jpeg" href="images/sad.jpg">
     <link rel="apple-touch-icon" href="images/sad.jpg">
-    <link rel="stylesheet" href="css/style.css?v=25">
+    <link rel="stylesheet" href="css/style.css?v=35">
     <script src="js/components.js?v=19" defer></script>
     <script src="js/animate.js?v=1" defer></script>
 </head>
@@ -23,24 +23,90 @@
     <portfolio-nav></portfolio-nav>
 
     <main>
-        <section class="hero-section" style="padding: 4rem 0 2.5rem;">
+        <!-- Hero / Intro (Editorial Poster) -->
+        <section class="hero-section">
             <div class="container">
-                <span class="section-eyebrow">My Resume</span>
-                <h1 class="hero-headline" style="font-size: clamp(2rem, 3.5vw, 2.8rem); margin-bottom: 0.75rem;">
-                    Emmanuel Drah
-                </h1>
-                <p class="hero-subhead" style="max-width: 680px; margin-bottom: 1.5rem;">
-                    Website and app developer with real projects behind me: hotel websites, online stores, and computer records.
-                </p>
-                <div class="hero-ctas">
-                    <a href="contact.html" class="btn-warm-primary">Contact Me &rarr;</a>
-                    <a href="projects.html" class="btn-warm-outline">View Projects &rarr;</a>
+                <div class="intro-poster-card">
+                    <div class="intro-poster-watermark" aria-hidden="true">ED</div>
+
+                    <div class="intro-poster-grid">
+                        <!-- Left: Typography, Story & Signature -->
+                        <div class="intro-poster-content">
+                            <div>
+                                <div class="intro-status-wrap">
+                                    <span class="status-chip status-chip-light" aria-label="My background, told plainly">
+                                        <span class="status-chip-track">
+                                            <span class="status-dot"></span>&ensp;My background, told plainly&emsp;&emsp;
+                                            <span class="status-dot"></span>&ensp;My background, told plainly&emsp;&emsp;
+                                        </span>
+                                    </span>
+                                </div>
+
+                                <p class="intro-kicker">We haven&rsquo;t met yet</p>
+
+                                <h1 class="intro-headline">
+                                    <span class="intro-line intro-dark">My Name Is</span>
+                                    <span class="intro-line intro-orange">Emmanuel</span>
+                                    <span class="intro-line intro-dark">Drah</span>
+                                </h1>
+
+                                <p class="intro-bio">
+                                    A software and web developer with real projects behind me. A hotel website and an online store, live for anyone to visit, and more on the way. This is the work, the learning, and the character behind the name.
+                                </p>
+
+                                <div class="intro-ctas">
+                                    <a href="contact.html" class="btn-intro-primary">Contact Me &rarr;</a>
+                                    <a href="projects.html" class="btn-intro-outline">View Projects &rarr;</a>
+                                    <a href="https://wa.me/233543671806?text=Hello%20Emmanuel%2C%20I%20saw%20your%20website%20and%20would%20like%20to%20connect." target="_blank" rel="noopener noreferrer" class="btn-whatsapp">
+                                        <span>WhatsApp Connect</span>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <!-- Lower Left Signature Block -->
+                            <div class="intro-signature-block">
+                                <div class="intro-stripe-bar"></div>
+                                <div class="intro-signature-inner">
+                                    <div class="intro-signature-script">
+                                        <span class="sig-first">Emmanuel</span>
+                                        <span class="sig-last-wrap">
+                                            <span class="sig-last-highlight"></span>
+                                            <span class="sig-last">Drah</span>
+                                        </span>
+                                    </div>
+                                    <div class="intro-signature-caption">
+                                        <span>Founder &middot; Success Above Dreams</span>
+                                        <span>Ho, Ghana</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Right: Photo & Floating Swipe Pill -->
+                        <div class="intro-poster-photo-wrap">
+                            <div class="intro-photo-frame">
+                                <img src="images/manuel.jpg" alt="Emmanuel Drah" class="intro-photo-img" loading="eager">
+                                <div class="intro-photo-overlay"></div>
+                                <span class="intro-photo-badge">HO &middot; GHANA</span>
+
+                                <a href="#experience" class="intro-swipe-pill" aria-label="Scroll down to the work history">
+                                    <span>Swipe</span>
+                                    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                        <path d="M18 11V6a2 2 0 0 0-2-2v0a2 2 0 0 0-2 2v0"></path>
+                                        <path d="M14 10V4a2 2 0 0 0-2-2v0a2 2 0 0 0-2 2v2"></path>
+                                        <path d="M10 10.5V6a2 2 0 0 0-2-2v0a2 2 0 0 0-2 2v8"></path>
+                                        <path d="M18 8a2 2 0 1 1 4 0v6a8 8 0 0 1-8 8h-2c-2.8 0-4.5-.86-5.99-2.34l-3.6-3.6a2 2 0 0 1 2.83-2.82L7 15"></path>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
 
         <!-- Experience -->
-        <section class="section-wrap" style="padding-top: 0; border-top: none;">
+        <section class="section-wrap" id="experience">
             <div class="container">
                 <div class="section-head">
                     <span class="section-eyebrow">Work History</span>
@@ -53,7 +119,7 @@
                         <div class="timeline-content">
                             <h4>Receptionist &amp; Website Developer &middot; NS Luxury Villa</h4>
                             <p>
-                                I work at the reception desk: checking guests in, answering booking questions, and helping with anything they need. I also built the hotel's website (<a href="https://nsvilla.com" target="_blank" rel="noopener noreferrer" style="color: var(--accent);">nsvilla.com</a>), where guests can see the rooms, check prices, and reach the team on WhatsApp or by phone.
+                                I work at the reception desk, checking guests in, answering questions, and helping with whatever they need. I also built the hotel's website (<a href="https://nsvilla.com" target="_blank" rel="noopener noreferrer" style="color: var(--accent);">nsvilla.com</a>), where guests see the rooms, check prices, and reach the team on WhatsApp or by phone.
                             </p>
                         </div>
                     </div>
@@ -63,7 +129,7 @@
                         <div class="timeline-content">
                             <h4>Founder &middot; Success Above Dreams (SAD)</h4>
                             <p>
-                                I build full-stack websites, mobile apps, and desktop programs under my own name. I made <a href="https://crcosmeticsgh.com" target="_blank" rel="noopener noreferrer" style="color: var(--accent);">crcosmeticsgh.com</a>, an online store where customers can see products and prices, order from their phones, and provide delivery details at checkout.
+                                I build websites, phone apps, and computer programs under my own name. I made <a href="https://crcosmeticsgh.com" target="_blank" rel="noopener noreferrer" style="color: var(--accent);">crcosmeticsgh.com</a>, an online store where customers see the products, know the prices, order from their phones, and leave delivery details at checkout.
                             </p>
                         </div>
                     </div>
@@ -73,7 +139,7 @@
                         <div class="timeline-content">
                             <h4>National Service &middot; NHIS Dzodze</h4>
                             <p>
-                                Assigned to the MIS and P.R.O departments. I managed member records and health insurance information systems, and acted as the public-facing contact for the office: fielding questions, explaining processes, and helping people who came in unsure of where to start.
+                                Assigned to the records department (MIS) and the public relations desk (P.R.O). I kept member records accurate, looked after the office's information, and served as the public face for everyone who walked in unsure of where to start.
                             </p>
                         </div>
                     </div>
@@ -95,7 +161,7 @@
                         <div class="timeline-content">
                             <h4>HND in Information and Communication Technology</h4>
                             <p style="color: var(--accent); font-size: 0.85rem; margin-bottom: 0.5rem;">Ho Technical University</p>
-                            <p>I learned how to build websites and computer programs, how to work with computer records, and how computer networks are set up.</p>
+                            <p>I learned how to build websites and computer programs, how to keep computer records in order, and how computers talk to each other over networks.</p>
                         </div>
                     </div>
                 </div>
@@ -112,20 +178,20 @@
 
                 <div class="skills-grid-clean">
                     <div class="skill-card-clean">
-                        <h4>Frontend &amp; Web Platforms</h4>
-                        <p>HTML5, Modern CSS, JavaScript, React, and Next.js. Building clean component architectures, responsive user interfaces, and accessible digital experiences across all screen sizes.</p>
+                        <h4>Websites &amp; Screens</h4>
+                        <p>HTML5, CSS, JavaScript, React, and Next.js. The tools I use to build websites that look right, load fast, and feel easy on every phone, tablet, and computer.</p>
                     </div>
                     <div class="skill-card-clean">
-                        <h4>Backend &amp; Database Architecture</h4>
-                        <p>Node.js, Python, PostgreSQL, Supabase, and RESTful APIs: databases, logins, and the behind-the-scenes logic that keeps everything running.</p>
+                        <h4>Records, Logins &amp; Data</h4>
+                        <p>Node.js, Python, PostgreSQL, Supabase, and APIs that connect programs to each other. The parts customers never see: safe places to keep records, logins that keep strangers out, and everything running steadily behind the scenes.</p>
                     </div>
                     <div class="skill-card-clean">
-                        <h4>Mobile &amp; Desktop Engineering</h4>
-                        <p>Flutter, React Native, and Electron. Developing performant cross-platform applications with native integrations, offline synchronization, and intuitive workflows.</p>
+                        <h4>Phone Apps &amp; Computer Programs</h4>
+                        <p>Flutter, React Native, and Electron. Phone apps and computer programs that feel natural to use, keep working when the internet drops, and save your progress along the way.</p>
                     </div>
                     <div class="skill-card-clean">
-                        <h4>Cloud, DevOps &amp; Deployment</h4>
-                        <p>Vercel, Netlify, Git version control, CI/CD deployment pipelines, DNS configuration, and performance optimization for 24/7 reliability.</p>
+                        <h4>Getting It Online &amp; Keeping It There</h4>
+                        <p>Vercel, Netlify, Git, and DNS setup. Getting websites online, making them load quickly, keeping a copy of every change, and making sure everything stays up, day and night.</p>
                     </div>
                 </div>
             </div>
@@ -137,7 +203,7 @@
                 <div class="creed-banner" style="text-align: left; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 2rem;">
                     <div>
                         <h3 style="font-size: 1.4rem; font-weight: 800; color: var(--text-main); margin-bottom: 0.5rem;">Want a website, app, or program you can count on?</h3>
-                        <p style="color: var(--text-muted); font-size: 0.95rem;">Reach me on WhatsApp, or send a message about your project.</p>
+                        <p style="color: var(--text-muted); font-size: 0.95rem;">Reach me on WhatsApp, or send a message, and let us talk through what you want built.</p>
                     </div>
                     <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
                         <a href="https://wa.me/233543671806" target="_blank" rel="noopener noreferrer" class="btn-whatsapp">Chat on WhatsApp &nearr;</a>
