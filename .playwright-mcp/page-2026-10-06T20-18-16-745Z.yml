@@ -1,0 +1,179 @@
+- generic [active] [ref=f8e1]:
+  - generic [ref=f8e2]:
+    - link "Skip to content" [ref=f8e3] [cursor=pointer]:
+      - /url: "#main-content"
+    - navigation "Main navigation" [ref=f8e4]:
+      - link "Success Above Dreams, Home" [ref=f8e7] [cursor=pointer]:
+        - /url: index.html
+        - generic [ref=f8e9]:
+          - strong [ref=f8e10]: Emmanuel Drah
+          - generic [ref=f8e11]: Success Above Dreams
+    - navigation "Mobile navigation" [ref=f8e12]:
+      - generic [ref=f8e14]:
+        - link [ref=f8e15] [cursor=pointer]:
+          - /url: index.html
+        - link [ref=f8e21] [cursor=pointer]:
+          - /url: projects.html
+        - link [ref=f8e26] [cursor=pointer]:
+          - /url: services.html
+        - link [ref=f8e33] [cursor=pointer]:
+          - /url: about.html
+        - link [ref=f8e38] [cursor=pointer]:
+          - /url: gallery.html
+        - link [ref=f8e44] [cursor=pointer]:
+          - /url: contact.html
+  - main [ref=f8e49]:
+    - generic [ref=f8e52]:
+      - generic [aria-hidden]: ED
+      - generic [ref=f8e53]:
+        - generic [ref=f8e54]:
+          - generic [ref=f8e55]:
+            - generic "Real projects, live on the internet" [ref=f8e57]: Real projects, live on the internet Real projects, live on the internet
+            - paragraph [ref=f8e61]: Some shipped, more on the way
+            - heading "Proof You Can Click" [level=1] [ref=f8e62]:
+              - generic [ref=f8e63]: Proof
+              - generic [ref=f8e64]: You Can
+              - generic [ref=f8e65]: Click
+            - paragraph [ref=f8e66]:
+              - link "nsvilla.com" [ref=f8e67] [cursor=pointer]:
+                - /url: https://nsvilla.com
+              - text: and
+              - link "crcosmeticsgh.com" [ref=f8e68] [cursor=pointer]:
+                - /url: https://crcosmeticsgh.com
+              - text: are live right now, for anyone to visit. Two projects, not the whole story. More websites, more apps, and more ideas are taking shape behind the scenes, each one built with care and finished properly before it goes live.
+            - generic [ref=f8e69]:
+              - link "Case Studies →" [ref=f8e70] [cursor=pointer]:
+                - /url: case-studies.html
+              - link "Start a Project →" [ref=f8e71] [cursor=pointer]:
+                - /url: contact.html
+              - link "WhatsApp Connect" [ref=f8e72] [cursor=pointer]:
+                - /url: https://wa.me/233543671806?text=Hello%20Emmanuel%2C%20I%20saw%20your%20website%20and%20would%20like%20to%20connect.
+          - generic [ref=f8e75]:
+            - generic [ref=f8e76]:
+              - generic [ref=f8e77]: Emmanuel
+              - generic [ref=f8e78]: Drah
+            - generic [ref=f8e80]: Founder · Success Above Dreams Ho, Ghana
+        - generic [ref=f8e82]:
+          - img "NS Luxury Villa, a live website built by Emmanuel" [ref=f8e83]
+          - text: HO · GHANA
+          - link "Scroll down to see the live projects" [ref=f8e84] [cursor=pointer]:
+            - /url: "#nsvilla"
+            - generic [ref=f8e85]: Swipe
+    - generic [ref=f8e93]:
+      - article [ref=f8e94]:
+        - generic [ref=f8e95]:
+          - generic [ref=f8e96]: Live · nsvilla.com
+          - img "NS Luxury Villa" [ref=f8e98]
+        - generic [ref=f8e99]:
+          - generic [ref=f8e100]: Hotel Website
+          - heading "NS Luxury Villa" [level=2] [ref=f8e101]
+          - paragraph [ref=f8e102]: NS Luxury Villa is where I work at the reception desk. I heard the same questions every single day. How much? What do the rooms look like? How do I get there? So I built nsvilla.com. Now people see the rooms, check the prices, and reach the team on WhatsApp, all without the front desk saying a word.
+          - generic [ref=f8e103]:
+            - generic [ref=f8e104]: Rooms & prices
+            - generic [ref=f8e105]: Book by WhatsApp
+            - generic [ref=f8e106]: Google Maps
+            - generic [ref=f8e107]: Built for real guests
+          - generic [ref=f8e108]:
+            - link "Open nsvilla.com ↗" [ref=f8e109] [cursor=pointer]:
+              - /url: https://nsvilla.com
+            - link "See how I made it →" [ref=f8e110] [cursor=pointer]:
+              - /url: case-studies.html#nsvilla
+      - article [ref=f8e111]:
+        - generic [ref=f8e112]:
+          - generic [ref=f8e113]: Live Store · crcosmeticsgh.com
+          - img "CR Cosmetics and Essentials"
+        - generic [ref=f8e115]:
+          - generic [ref=f8e116]: Online Store
+          - heading "CR Cosmetics & Essentials" [level=2] [ref=f8e117]
+          - paragraph [ref=f8e118]: An online store for beauty and skincare products, with clear prices and delivery details. Orders used to come through WhatsApp status posts, one long back-and-forth at a time. Now everything sits on crcosmeticsgh.com, and every order arrives with the items and the address already written down.
+          - generic [ref=f8e119]:
+            - generic [ref=f8e120]: Prices shown
+            - generic [ref=f8e121]: Order from your phone
+            - generic [ref=f8e122]: Delivery details
+            - generic [ref=f8e123]: Simple checkout
+          - generic [ref=f8e124]:
+            - link "Open crcosmeticsgh.com ↗" [ref=f8e125] [cursor=pointer]:
+              - /url: https://crcosmeticsgh.com
+            - link "See how I made it →" [ref=f8e126] [cursor=pointer]:
+              - /url: case-studies.html#crcosmetics
+    - generic [ref=f8e128]:
+      - generic [ref=f8e129]:
+        - generic [ref=f8e130]: ◆ Other Work
+        - heading "Other places I've worked" [level=2] [ref=f8e131]
+      - generic [ref=f8e132]:
+        - generic [ref=f8e133]:
+          - heading "National Service · NHIS Dzodze" [level=4] [ref=f8e134]
+          - paragraph [ref=f8e135]: I managed health insurance records, kept the office's information in order, and served as the public face of the office, answering questions and helping people through a process that confused most of them.
+        - generic [ref=f8e136]:
+          - heading "Success Above Dreams" [level=4] [ref=f8e137]
+          - paragraph [ref=f8e138]: The name I build under. Websites, apps, and programs for all kinds of businesses, and nothing leaves my hands until it works properly. That part is not negotiable.
+        - generic [ref=f8e139]:
+          - heading "HND Coursework · Ho Technical University" [level=4] [ref=f8e140]
+          - paragraph [ref=f8e141]: How to build websites and computer programs, and how to work with computer records. All of it learned during my HND at Ho Technical University.
+    - generic [ref=f8e144]:
+      - generic [ref=f8e145]:
+        - heading "Have a website, app, or program in mind?" [level=3] [ref=f8e146]
+        - paragraph [ref=f8e147]: Tell me what you need, and I will tell you honestly what it takes, in plain words you can trust.
+      - generic [ref=f8e148]:
+        - link "Chat on WhatsApp ↗" [ref=f8e149] [cursor=pointer]:
+          - /url: https://wa.me/233543671806
+        - link "Send a Message →" [ref=f8e150] [cursor=pointer]:
+          - /url: contact.html
+      - text: SAD
+  - contentinfo [ref=f8e152]:
+    - generic [ref=f8e153]:
+      - generic [ref=f8e154]:
+        - generic [ref=f8e155]:
+          - generic [ref=f8e156]: Have something in mind?
+          - heading "Tell me what you need built." [level=2] [ref=f8e157]
+        - link "Start a conversation →" [ref=f8e158] [cursor=pointer]:
+          - /url: contact.html
+      - generic [ref=f8e159]:
+        - generic [ref=f8e161]:
+          - img "Success Above Dreams logo" [ref=f8e162]
+          - generic [ref=f8e163]: Emmanuel Drah
+        - generic [ref=f8e164]:
+          - heading "Work" [level=5] [ref=f8e165]
+          - list [ref=f8e166]:
+            - listitem [ref=f8e167]:
+              - link "Projects" [ref=f8e168] [cursor=pointer]:
+                - /url: projects.html
+            - listitem [ref=f8e169]:
+              - link "Project Stories" [ref=f8e170] [cursor=pointer]:
+                - /url: case-studies.html
+            - listitem [ref=f8e171]:
+              - link "Services" [ref=f8e172] [cursor=pointer]:
+                - /url: services.html
+            - listitem [ref=f8e173]:
+              - link "Gallery" [ref=f8e174] [cursor=pointer]:
+                - /url: gallery.html
+        - generic [ref=f8e175]:
+          - heading "About" [level=5] [ref=f8e176]
+          - list [ref=f8e177]:
+            - listitem [ref=f8e178]:
+              - link "My Story" [ref=f8e179] [cursor=pointer]:
+                - /url: about.html
+            - listitem [ref=f8e180]:
+              - link "The Brand" [ref=f8e181] [cursor=pointer]:
+                - /url: the-brand.html
+            - listitem [ref=f8e182]:
+              - link "Résumé" [ref=f8e183] [cursor=pointer]:
+                - /url: resume.html
+            - listitem [ref=f8e184]:
+              - link "Awards" [ref=f8e185] [cursor=pointer]:
+                - /url: certifications.html
+        - generic [ref=f8e186]:
+          - heading "Contact" [level=5] [ref=f8e187]
+          - list [ref=f8e188]:
+            - listitem [ref=f8e189]:
+              - link "Send a Message" [ref=f8e190] [cursor=pointer]:
+                - /url: contact.html
+            - listitem [ref=f8e191]:
+              - link "WhatsApp ↗" [ref=f8e192] [cursor=pointer]:
+                - /url: https://wa.me/233543671806
+            - listitem [ref=f8e193]:
+              - link "Email" [ref=f8e194] [cursor=pointer]:
+                - /url: mailto:emmanueldrah10@gmail.com
+      - generic [ref=f8e195]:
+        - generic [ref=f8e196]: © 2026 Emmanuel Drah
+        - generic [ref=f8e197]: Built under Success Above Dreams

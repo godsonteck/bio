@@ -1,0 +1,29 @@
+<!doctype html>
+<meta charset="utf-8">
+<title>mobile probe</title>
+<style>body{margin:0;font:12px monospace;color:#eee;background:#111}iframe{display:block;margin:8px;border:1px solid #444}</style>
+<iframe id="i" width="390" height="844"></iframe>
+<pre id="out">loading</pre>
+<script>
+const page = new URLSearchParams(location.search).get('p') || 'index.html';
+const f = document.getElementById('i');
+f.src = '/' + page + '?cb=' + Date.now();
+f.onload = () => setTimeout(() => {
+  const d = f.contentDocument, w = f.contentWindow;
+  const banners = [...d.querySelectorAll('.creed-banner')].map(b => ({
+    cols: w.getComputedStyle(b).gridTemplateColumns,
+    h: Math.round(b.getBoundingClientRect().height)
+  }));
+  const secs = [...d.querySelectorAll('section')].map(s => Math.round(s.getBoundingClientRect().height));
+  const fk = d.querySelector('.footer-kicker');
+  const btns = d.querySelectorAll('.creed-banner[style*="text-align: left"] a');
+  document.getElementById('out').textContent = JSON.stringify({
+    page,
+    banners,
+    maxSection: Math.max(...secs),
+    overflow: d.documentElement.scrollWidth - w.innerWidth,
+    fkCols: fk ? w.getComputedStyle(fk).gridTemplateColumns : null,
+    btnWidths: [...btns].map(a => Math.round(a.getBoundingClientRect().width))
+  }, null, 1);
+}, 900);
+</script>

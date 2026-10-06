@@ -1,0 +1,178 @@
+- generic [active] [ref=f6e1]:
+  - generic [ref=f6e2]:
+    - link "Skip to content" [ref=f6e3] [cursor=pointer]:
+      - /url: "#main-content"
+    - navigation "Main navigation" [ref=f6e4]:
+      - link "Success Above Dreams, Home" [ref=f6e7] [cursor=pointer]:
+        - /url: index.html
+        - generic [ref=f6e9]:
+          - strong [ref=f6e10]: Emmanuel Drah
+          - generic [ref=f6e11]: Success Above Dreams
+    - navigation "Mobile navigation" [ref=f6e12]:
+      - generic [ref=f6e14]:
+        - link [ref=f6e15] [cursor=pointer]:
+          - /url: index.html
+        - link [ref=f6e21] [cursor=pointer]:
+          - /url: projects.html
+        - link [ref=f6e26] [cursor=pointer]:
+          - /url: services.html
+        - link [ref=f6e33] [cursor=pointer]:
+          - /url: about.html
+        - link [ref=f6e38] [cursor=pointer]:
+          - /url: gallery.html
+        - link [ref=f6e44] [cursor=pointer]:
+          - /url: contact.html
+  - main [ref=f6e49]:
+    - generic [ref=f6e52]:
+      - generic [aria-hidden]: ED
+      - generic [ref=f6e53]:
+        - generic [ref=f6e54]:
+          - generic [ref=f6e55]:
+            - generic "Open to new work, let's build something" [ref=f6e57]: Open to new work, let’s build something Open to new work, let’s build something
+            - paragraph [ref=f6e61]: You’ve been thinking about it long enough
+            - heading "Let’s Build Something Together" [level=1] [ref=f6e62]:
+              - generic [ref=f6e63]: Let’s Build
+              - generic [ref=f6e64]: Something
+              - generic [ref=f6e65]: Together
+            - paragraph [ref=f6e66]: WhatsApp, email, or the form below, and your message lands straight on my phone. No middlemen. No wasted motion. Just a direct conversation with the person who would actually build the thing you care about.
+            - generic [ref=f6e67]:
+              - link "Send a Message →" [ref=f6e68] [cursor=pointer]:
+                - /url: "#reach-me"
+              - link "See My Work →" [ref=f6e69] [cursor=pointer]:
+                - /url: projects.html
+              - link "WhatsApp Connect" [ref=f6e70] [cursor=pointer]:
+                - /url: https://wa.me/233543671806?text=Hello%20Emmanuel%2C%20I%20saw%20your%20website%20and%20would%20like%20to%20connect.
+          - generic [ref=f6e73]:
+            - generic [ref=f6e74]:
+              - generic [ref=f6e75]: Emmanuel
+              - generic [ref=f6e76]: Drah
+            - generic [ref=f6e78]: Founder · Success Above Dreams Ho, Ghana
+        - generic [ref=f6e80]:
+          - img "Emmanuel Drah at the front desk of NS Luxury Villa" [ref=f6e81]
+          - text: HO · GHANA
+          - link "Scroll down to the contact options" [ref=f6e82] [cursor=pointer]:
+            - /url: "#reach-me"
+            - generic [ref=f6e83]: Swipe
+    - generic [ref=f6e91]:
+      - generic [ref=f6e92]:
+        - link "💬 WhatsApp (Fastest Response) +233 543 671 806" [ref=f6e93] [cursor=pointer]:
+          - /url: https://wa.me/233543671806?text=Hello%20Emmanuel%2C%20I%20saw%20your%20portfolio%20and%20would%20like%20to%20talk%20about%20a%20project.
+          - generic [ref=f6e94]: 💬
+          - generic [ref=f6e95]:
+            - strong [ref=f6e96]: WhatsApp (Fastest Response)
+            - generic [ref=f6e97]: +233 543 671 806
+        - link "✉️ Email emmanueldrah10@gmail.com" [ref=f6e98] [cursor=pointer]:
+          - /url: mailto:emmanueldrah10@gmail.com
+          - generic [ref=f6e99]: ✉️
+          - generic [ref=f6e100]:
+            - strong [ref=f6e101]: Email
+            - generic [ref=f6e102]: emmanueldrah10@gmail.com
+        - link "📞 Direct Phone +233 543 671 806" [ref=f6e103] [cursor=pointer]:
+          - /url: tel:+233543671806
+          - generic [ref=f6e104]: 📞
+          - generic [ref=f6e105]:
+            - strong [ref=f6e106]: Direct Phone
+            - generic [ref=f6e107]: +233 543 671 806
+        - generic [ref=f6e108]:
+          - generic [aria-hidden] [ref=f6e109]: SAD
+          - generic [ref=f6e110]:
+            - strong [ref=f6e111]: Success Above Dreams
+            - generic [ref=f6e112]: Clear work, direct communication
+        - generic [ref=f6e113]:
+          - generic [ref=f6e114]: Honest Assessment
+          - paragraph [ref=f6e115]: I read every message myself. You will get a straight answer on what is possible, how long it would take, and what it would cost, before anything starts.
+      - generic [ref=f6e116]:
+        - heading "Send Me a Message" [level=3] [ref=f6e117]
+        - paragraph [ref=f6e118]: Tell me what you need, what isn't working now, and when you'd like it done.
+        - generic [ref=f6e119]:
+          - generic [ref=f6e120]:
+            - generic [ref=f6e121]: Your Name
+            - textbox "Your Name" [ref=f6e122]:
+              - /placeholder: Kwame Mensah
+          - generic [ref=f6e123]:
+            - generic [ref=f6e124]: Email Address
+            - textbox "Email Address" [ref=f6e125]:
+              - /placeholder: kwame@example.com
+          - generic [ref=f6e126]:
+            - generic [ref=f6e127]: What is it about
+            - textbox "What is it about" [ref=f6e128]:
+              - /placeholder: e.g. Website for my hotel / phone app for my shop
+          - generic [ref=f6e129]:
+            - generic [ref=f6e130]: Tell me more
+            - textbox "Tell me more" [ref=f6e131]:
+              - /placeholder: Tell me what you are looking to build and any questions you have.
+          - button "Send Message →" [ref=f6e132]
+    - generic [ref=f6e134]:
+      - generic [ref=f6e135]:
+        - generic [ref=f6e136]: ◆ Process
+        - heading "What happens when you reach out" [level=2] [ref=f6e137]
+      - generic [ref=f6e138]:
+        - generic [ref=f6e139]:
+          - generic [ref=f6e140]: Step 01
+          - heading "Tell me what is wrong" [level=4] [ref=f6e141]
+          - paragraph [ref=f6e142]: Say what is not working now, and what you want the new website, app, or program to do for you.
+        - generic [ref=f6e143]:
+          - generic [ref=f6e144]: Step 02
+          - heading "I look at it honestly" [level=4] [ref=f6e145]
+          - paragraph [ref=f6e146]: "I go through your needs and tell you straight: what is possible, what matters most, and how long it would take."
+        - generic [ref=f6e147]:
+          - generic [ref=f6e148]: Step 03
+          - heading "We build and put it online" [level=4] [ref=f6e149]
+          - paragraph [ref=f6e150]: We build it, test it on real phones and networks, and put it online, so it works properly from day one.
+  - contentinfo [ref=f6e152]:
+    - generic [ref=f6e153]:
+      - generic [ref=f6e154]:
+        - generic [ref=f6e155]:
+          - generic [ref=f6e156]: Have something in mind?
+          - heading "Tell me what you need built." [level=2] [ref=f6e157]
+        - link "Start a conversation →" [ref=f6e158] [cursor=pointer]:
+          - /url: contact.html
+      - generic [ref=f6e159]:
+        - generic [ref=f6e161]:
+          - img "Success Above Dreams logo" [ref=f6e162]
+          - generic [ref=f6e163]: Emmanuel Drah
+        - generic [ref=f6e164]:
+          - heading "Work" [level=5] [ref=f6e165]
+          - list [ref=f6e166]:
+            - listitem [ref=f6e167]:
+              - link "Projects" [ref=f6e168] [cursor=pointer]:
+                - /url: projects.html
+            - listitem [ref=f6e169]:
+              - link "Project Stories" [ref=f6e170] [cursor=pointer]:
+                - /url: case-studies.html
+            - listitem [ref=f6e171]:
+              - link "Services" [ref=f6e172] [cursor=pointer]:
+                - /url: services.html
+            - listitem [ref=f6e173]:
+              - link "Gallery" [ref=f6e174] [cursor=pointer]:
+                - /url: gallery.html
+        - generic [ref=f6e175]:
+          - heading "About" [level=5] [ref=f6e176]
+          - list [ref=f6e177]:
+            - listitem [ref=f6e178]:
+              - link "My Story" [ref=f6e179] [cursor=pointer]:
+                - /url: about.html
+            - listitem [ref=f6e180]:
+              - link "The Brand" [ref=f6e181] [cursor=pointer]:
+                - /url: the-brand.html
+            - listitem [ref=f6e182]:
+              - link "Résumé" [ref=f6e183] [cursor=pointer]:
+                - /url: resume.html
+            - listitem [ref=f6e184]:
+              - link "Awards" [ref=f6e185] [cursor=pointer]:
+                - /url: certifications.html
+        - generic [ref=f6e186]:
+          - heading "Contact" [level=5] [ref=f6e187]
+          - list [ref=f6e188]:
+            - listitem [ref=f6e189]:
+              - link "Send a Message" [ref=f6e190] [cursor=pointer]:
+                - /url: contact.html
+            - listitem [ref=f6e191]:
+              - link "WhatsApp ↗" [ref=f6e192] [cursor=pointer]:
+                - /url: https://wa.me/233543671806
+            - listitem [ref=f6e193]:
+              - link "Email" [ref=f6e194] [cursor=pointer]:
+                - /url: mailto:emmanueldrah10@gmail.com
+      - generic [ref=f6e195]:
+        - generic [ref=f6e196]: © 2026 Emmanuel Drah
+        - generic [ref=f6e197]: Built under Success Above Dreams

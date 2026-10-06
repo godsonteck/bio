@@ -1,0 +1,267 @@
+- generic [active] [ref=f21e1]:
+  - generic [ref=f21e2]:
+    - link "Skip to content" [ref=f21e3] [cursor=pointer]:
+      - /url: "#main-content"
+    - navigation "Main navigation" [ref=f21e4]:
+      - generic [ref=f21e6]:
+        - link "Success Above Dreams, Home" [ref=f21e7] [cursor=pointer]:
+          - /url: index.html
+          - generic [ref=f21e9]:
+            - strong [ref=f21e10]: Emmanuel Drah
+            - generic [ref=f21e11]: Success Above Dreams
+        - generic [ref=f21e12]:
+          - link "Home" [ref=f21e13] [cursor=pointer]:
+            - /url: index.html
+          - link "Projects" [ref=f21e14] [cursor=pointer]:
+            - /url: projects.html
+          - link "Services" [ref=f21e15] [cursor=pointer]:
+            - /url: services.html
+          - link "My Story" [ref=f21e16] [cursor=pointer]:
+            - /url: about.html
+          - link "Gallery" [ref=f21e17] [cursor=pointer]:
+            - /url: gallery.html
+          - link "Let's Talk" [ref=f21e18] [cursor=pointer]:
+            - /url: contact.html
+  - main [ref=f21e19]:
+    - generic [ref=f21e22]:
+      - generic [aria-hidden]: SAD
+      - generic [ref=f21e23]:
+        - generic [ref=f21e24]:
+          - generic [ref=f21e25]:
+            - generic "Life beyond the work" [ref=f21e27]
+            - paragraph [ref=f21e30]: The moments I return to
+            - heading "People. Places. Along the way." [level=1] [ref=f21e31]:
+              - generic [ref=f21e32]: People.
+              - generic [ref=f21e33]: Places.
+              - generic [ref=f21e34]: Along the way.
+            - paragraph [ref=f21e35]: From Dzodze to Ho, from busy days to time with the people who keep me grounded, these photos hold pieces of my life. Not a highlight reel, just moments I’m glad I kept.
+            - generic [ref=f21e36]:
+              - link "My Story →" [ref=f21e37] [cursor=pointer]:
+                - /url: about.html
+              - link "See The Work →" [ref=f21e38] [cursor=pointer]:
+                - /url: projects.html
+              - link "WhatsApp Connect" [ref=f21e39] [cursor=pointer]:
+                - /url: https://wa.me/233543671806?text=Hello%20Emmanuel%2C%20I%20saw%20your%20website%20and%20would%20like%20to%20connect.
+          - generic [ref=f21e42]:
+            - generic [ref=f21e43]:
+              - generic [ref=f21e44]: Emmanuel
+              - generic [ref=f21e45]: Drah
+            - generic [ref=f21e47]: Founder · Success Above Dreams Ho, Ghana
+        - generic [ref=f21e49]:
+          - img "Ho West Tech Fest 2025" [ref=f21e50]
+          - text: HO · GHANA
+          - link "Scroll down to the photo albums" [ref=f21e51] [cursor=pointer]:
+            - /url: "#events"
+            - generic [ref=f21e52]: Swipe
+    - generic [ref=f21e59]:
+      - generic [ref=f21e60]:
+        - generic [ref=f21e61]: ◆ Tech & Awards
+        - heading "Events & recognitions" [level=2] [ref=f21e62]
+      - generic [ref=f21e63]:
+        - button "Ho West Tech Fest 2025 Ho West Tech Fest 2025 At the Tech Fest" [ref=f21e64] [cursor=pointer]:
+          - img "Ho West Tech Fest 2025" [ref=f21e66]
+          - generic [ref=f21e67]:
+            - generic [ref=f21e68]: Ho West Tech Fest 2025
+            - generic [ref=f21e69]: At the Tech Fest
+        - button "Tech Fest launch day Ho West Tech Fest 2025 Launch Day" [ref=f21e70] [cursor=pointer]:
+          - img "Tech Fest launch day" [ref=f21e72]
+          - generic [ref=f21e73]:
+            - generic [ref=f21e74]: Ho West Tech Fest 2025
+            - generic [ref=f21e75]: Launch Day
+        - button "Virtual Reality class in session Ho West Tech Fest 2025 Virtual Reality Class" [ref=f21e76] [cursor=pointer]:
+          - img "Virtual Reality class in session" [ref=f21e78]
+          - generic [ref=f21e79]:
+            - generic [ref=f21e80]: Ho West Tech Fest 2025
+            - generic [ref=f21e81]: Virtual Reality Class
+        - button "Awarded a laptop at Tech Fest Ho West Tech Fest 2025 Awarded a Laptop" [ref=f21e82] [cursor=pointer]:
+          - img "Awarded a laptop at Tech Fest" [ref=f21e84]
+          - generic [ref=f21e85]:
+            - generic [ref=f21e86]: Ho West Tech Fest 2025
+            - generic [ref=f21e87]: Awarded a Laptop
+        - button "Certificate for Virtual Reality class Ho West Tech Fest 2025 VR Certificate" [ref=f21e88] [cursor=pointer]:
+          - img "Certificate for Virtual Reality class" [ref=f21e90]
+          - generic [ref=f21e91]:
+            - generic [ref=f21e92]: Ho West Tech Fest 2025
+            - generic [ref=f21e93]: VR Certificate
+        - button "Best student in Virtual Reality Ho West Tech Fest 2025 Best Learner in VR" [ref=f21e94] [cursor=pointer]:
+          - img "Best student in Virtual Reality" [ref=f21e96]
+          - generic [ref=f21e97]:
+            - generic [ref=f21e98]: Ho West Tech Fest 2025
+            - generic [ref=f21e99]: Best Learner in VR
+        - button "Meeting like-minded people at Tech Fest Ho West Tech Fest 2025 Meeting Like-Minded People" [ref=f21e100] [cursor=pointer]:
+          - img "Meeting like-minded people at Tech Fest" [ref=f21e102]
+          - generic [ref=f21e103]:
+            - generic [ref=f21e104]: Ho West Tech Fest 2025
+            - generic [ref=f21e105]: Meeting Like-Minded People
+    - generic [ref=f21e107]:
+      - generic [ref=f21e108]:
+        - generic [ref=f21e109]: ◆ Community Service
+        - heading "NASPA · NSS 2023/2024" [level=2] [ref=f21e110]
+      - generic [ref=f21e111]:
+        - button "NASPA Dinner and Awards Night NASPA · NSS 2023/2024 Dinner & Awards Night" [ref=f21e112] [cursor=pointer]:
+          - img "NASPA Dinner and Awards Night" [ref=f21e114]
+          - generic [ref=f21e115]:
+            - generic [ref=f21e116]: NASPA · NSS 2023/2024
+            - generic [ref=f21e117]: Dinner & Awards Night
+        - button "Emmanuel at the NASPA awards night NASPA · NSS 2023/2024 Social Media Influencer of the Year" [ref=f21e118] [cursor=pointer]:
+          - img "Emmanuel at the NASPA awards night" [ref=f21e120]
+          - generic [ref=f21e121]:
+            - generic [ref=f21e122]: NASPA · NSS 2023/2024
+            - generic [ref=f21e123]: Social Media Influencer of the Year
+        - button "Receiving Hardworking Member Award NASPA · NSS 2023/2024 Most Hardworking Committee Member" [ref=f21e124] [cursor=pointer]:
+          - img "Receiving Hardworking Member Award" [ref=f21e126]
+          - generic [ref=f21e127]:
+            - generic [ref=f21e128]: NASPA · NSS 2023/2024
+            - generic [ref=f21e129]: Most Hardworking Committee Member
+        - button "Publicity Committee Ketu North Ketu North NASPA Publicity Committee Member" [ref=f21e130] [cursor=pointer]:
+          - img "Publicity Committee Ketu North" [ref=f21e132]
+          - generic [ref=f21e133]:
+            - generic [ref=f21e134]: Ketu North NASPA
+            - generic [ref=f21e135]: Publicity Committee Member
+        - button "NASPA executive meeting NASPA · NSS 2023/2024 Executive Meeting" [ref=f21e136] [cursor=pointer]:
+          - img "NASPA executive meeting" [ref=f21e138]
+          - generic [ref=f21e139]:
+            - generic [ref=f21e140]: NASPA · NSS 2023/2024
+            - generic [ref=f21e141]: Executive Meeting
+        - button "NASPA moments NASPA · NSS 2023/2024 NASPA Moments" [ref=f21e142] [cursor=pointer]:
+          - img "NASPA moments" [ref=f21e144]
+          - generic [ref=f21e145]:
+            - generic [ref=f21e146]: NASPA · NSS 2023/2024
+            - generic [ref=f21e147]: NASPA Moments
+        - button "NASPA community NASPA · NSS 2023/2024 Community Together" [ref=f21e148] [cursor=pointer]:
+          - img "NASPA community" [ref=f21e150]
+          - generic [ref=f21e151]:
+            - generic [ref=f21e152]: NASPA · NSS 2023/2024
+            - generic [ref=f21e153]: Community Together
+        - button "NASPA celebration NASPA · NSS 2023/2024 Celebration Night" [ref=f21e154] [cursor=pointer]:
+          - img "NASPA celebration" [ref=f21e156]
+          - generic [ref=f21e157]:
+            - generic [ref=f21e158]: NASPA · NSS 2023/2024
+            - generic [ref=f21e159]: Celebration Night
+        - button "With NASPA President's wife NASPA · NSS 2023/2024 With the NASPA President's Family" [ref=f21e160] [cursor=pointer]:
+          - img "With NASPA President's wife" [ref=f21e162]
+          - generic [ref=f21e163]:
+            - generic [ref=f21e164]: NASPA · NSS 2023/2024
+            - generic [ref=f21e165]: With the NASPA President's Family
+        - button "With Pascal the photographer NASPA · NSS 2023/2024 With Pascal, the Year Group Photographer" [ref=f21e166] [cursor=pointer]:
+          - img "With Pascal the photographer" [ref=f21e168]
+          - generic [ref=f21e169]:
+            - generic [ref=f21e170]: NASPA · NSS 2023/2024
+            - generic [ref=f21e171]: With Pascal, the Year Group Photographer
+    - generic [ref=f21e173]:
+      - generic [ref=f21e174]:
+        - generic [ref=f21e175]: ◆ Work Life
+        - heading "NS Luxury Villa" [level=2] [ref=f21e176]
+      - generic [ref=f21e177]:
+        - button "NS Luxury Villa NS Luxury Villa The Villa" [ref=f21e178] [cursor=pointer]:
+          - img "NS Luxury Villa" [ref=f21e180]
+          - generic [ref=f21e181]:
+            - generic [ref=f21e182]: NS Luxury Villa
+            - generic [ref=f21e183]: The Villa
+        - button "NS Luxury Villa pool NS Luxury Villa The Pool" [ref=f21e184] [cursor=pointer]:
+          - img "NS Luxury Villa pool" [ref=f21e186]
+          - generic [ref=f21e187]:
+            - generic [ref=f21e188]: NS Luxury Villa
+            - generic [ref=f21e189]: The Pool
+        - button "NS Luxury Villa pool at night NS Luxury Villa Pool at Night" [ref=f21e190] [cursor=pointer]:
+          - img "NS Luxury Villa pool at night" [ref=f21e192]
+          - generic [ref=f21e193]:
+            - generic [ref=f21e194]: NS Luxury Villa
+            - generic [ref=f21e195]: Pool at Night
+        - button "NS Luxury Villa apartment NS Luxury Villa The Apartment" [ref=f21e196] [cursor=pointer]:
+          - img "NS Luxury Villa apartment" [ref=f21e198]
+          - generic [ref=f21e199]:
+            - generic [ref=f21e200]: NS Luxury Villa
+            - generic [ref=f21e201]: The Apartment
+        - button "Office at work NS Luxury Villa At the Front Desk" [ref=f21e202] [cursor=pointer]:
+          - img "Office at work" [ref=f21e204]
+          - generic [ref=f21e205]:
+            - generic [ref=f21e206]: NS Luxury Villa
+            - generic [ref=f21e207]: At the Front Desk
+    - generic [ref=f21e209]:
+      - generic [ref=f21e210]:
+        - generic [ref=f21e211]: ◆ Personal
+        - heading "People & moments" [level=2] [ref=f21e212]
+      - generic [ref=f21e213]:
+        - button "Emmanuel Drah Personal Emmanuel Drah" [ref=f21e214] [cursor=pointer]:
+          - img "Emmanuel Drah" [ref=f21e216]
+          - generic [ref=f21e217]:
+            - generic [ref=f21e218]: Personal
+            - generic [ref=f21e219]: Emmanuel Drah
+        - button "Emmanuel Drah Personal Casual Day" [ref=f21e220] [cursor=pointer]:
+          - img "Emmanuel Drah" [ref=f21e222]
+          - generic [ref=f21e223]:
+            - generic [ref=f21e224]: Personal
+            - generic [ref=f21e225]: Casual Day
+        - button "Young lads Personal Young Lads" [ref=f21e226] [cursor=pointer]:
+          - img "Young lads" [ref=f21e228]
+          - generic [ref=f21e229]:
+            - generic [ref=f21e230]: Personal
+            - generic [ref=f21e231]: Young Lads
+    - generic [ref=f21e234]:
+      - generic [ref=f21e235]:
+        - heading "Let's build something together" [level=3] [ref=f21e236]
+        - paragraph [ref=f21e237]: You have seen the life behind the work. Tell me what you want to build. WhatsApp or a message, and we start from there.
+      - generic [ref=f21e238]:
+        - link "Chat on WhatsApp ↗" [ref=f21e239] [cursor=pointer]:
+          - /url: https://wa.me/233543671806
+        - link "Send a Message →" [ref=f21e240] [cursor=pointer]:
+          - /url: contact.html
+      - text: SAD
+  - contentinfo [ref=f21e242]:
+    - generic [ref=f21e243]:
+      - generic [ref=f21e244]:
+        - generic [ref=f21e245]:
+          - generic [ref=f21e246]: Have something in mind?
+          - heading "Tell me what you need built." [level=2] [ref=f21e247]
+        - link "Start a conversation →" [ref=f21e248] [cursor=pointer]:
+          - /url: contact.html
+      - generic [ref=f21e249]:
+        - generic [ref=f21e251]:
+          - img "Success Above Dreams logo" [ref=f21e252]
+          - generic [ref=f21e253]: Emmanuel Drah
+        - generic [ref=f21e254]:
+          - heading "Work" [level=5] [ref=f21e255]
+          - list [ref=f21e256]:
+            - listitem [ref=f21e257]:
+              - link "Projects" [ref=f21e258] [cursor=pointer]:
+                - /url: projects.html
+            - listitem [ref=f21e259]:
+              - link "Project Stories" [ref=f21e260] [cursor=pointer]:
+                - /url: case-studies.html
+            - listitem [ref=f21e261]:
+              - link "Services" [ref=f21e262] [cursor=pointer]:
+                - /url: services.html
+            - listitem [ref=f21e263]:
+              - link "Gallery" [ref=f21e264] [cursor=pointer]:
+                - /url: gallery.html
+        - generic [ref=f21e265]:
+          - heading "About" [level=5] [ref=f21e266]
+          - list [ref=f21e267]:
+            - listitem [ref=f21e268]:
+              - link "My Story" [ref=f21e269] [cursor=pointer]:
+                - /url: about.html
+            - listitem [ref=f21e270]:
+              - link "The Brand" [ref=f21e271] [cursor=pointer]:
+                - /url: the-brand.html
+            - listitem [ref=f21e272]:
+              - link "Résumé" [ref=f21e273] [cursor=pointer]:
+                - /url: resume.html
+            - listitem [ref=f21e274]:
+              - link "Awards" [ref=f21e275] [cursor=pointer]:
+                - /url: certifications.html
+        - generic [ref=f21e276]:
+          - heading "Contact" [level=5] [ref=f21e277]
+          - list [ref=f21e278]:
+            - listitem [ref=f21e279]:
+              - link "Send a Message" [ref=f21e280] [cursor=pointer]:
+                - /url: contact.html
+            - listitem [ref=f21e281]:
+              - link "WhatsApp ↗" [ref=f21e282] [cursor=pointer]:
+                - /url: https://wa.me/233543671806
+            - listitem [ref=f21e283]:
+              - link "Email" [ref=f21e284] [cursor=pointer]:
+                - /url: mailto:emmanueldrah10@gmail.com
+      - generic [ref=f21e285]:
+        - generic [ref=f21e286]: © 2026 Emmanuel Drah
+        - generic [ref=f21e287]: Built under Success Above Dreams

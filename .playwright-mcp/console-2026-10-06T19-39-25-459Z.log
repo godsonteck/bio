@@ -1,0 +1,3 @@
+[  390791ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:8765/images/receiving-awards-for-the-most-hardworking-committee-member.jpg:0
+[  390792ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:8765/images/awarded-a-laptop-at-the-tech-fest.jpeg:0
+[  391364ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:8765/images/naspa-dinner-and-awards-night.jpg:0

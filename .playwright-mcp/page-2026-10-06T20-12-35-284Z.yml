@@ -1,0 +1,220 @@
+- generic [active] [ref=f4e1]:
+  - generic [ref=f4e2]:
+    - link "Skip to content" [ref=f4e3] [cursor=pointer]:
+      - /url: "#main-content"
+    - navigation "Main navigation" [ref=f4e4]:
+      - link "Success Above Dreams, Home" [ref=f4e7] [cursor=pointer]:
+        - /url: index.html
+        - generic [ref=f4e9]:
+          - strong [ref=f4e10]: Emmanuel Drah
+          - generic [ref=f4e11]: Success Above Dreams
+    - navigation "Mobile navigation" [ref=f4e12]:
+      - generic [ref=f4e14]:
+        - link [ref=f4e15] [cursor=pointer]:
+          - /url: index.html
+        - link [ref=f4e21] [cursor=pointer]:
+          - /url: projects.html
+        - link [ref=f4e26] [cursor=pointer]:
+          - /url: services.html
+        - link [ref=f4e33] [cursor=pointer]:
+          - /url: about.html
+        - link [ref=f4e38] [cursor=pointer]:
+          - /url: gallery.html
+        - link [ref=f4e44] [cursor=pointer]:
+          - /url: contact.html
+  - main [ref=f4e49]:
+    - generic [ref=f4e52]:
+      - generic [aria-hidden]: ED
+      - generic [ref=f4e53]:
+        - generic [ref=f4e55]:
+          - generic "Available for new projects" [ref=f4e57]
+          - paragraph [ref=f4e60]: Websites and software, built with care
+          - heading "I turn ideas into useful digital tools." [level=1] [ref=f4e61]:
+            - generic [ref=f4e62]: I turn ideas
+            - generic [ref=f4e63]: into useful
+            - generic [ref=f4e64]: digital tools.
+          - paragraph [ref=f4e65]:
+            - text: I’m
+            - strong [ref=f4e66]: Emmanuel Drah
+            - text: ", a developer in Ho, Ghana. Through"
+            - link "Success Above Dreams" [ref=f4e67] [cursor=pointer]:
+              - /url: the-brand.html
+            - text: ", I build websites, apps, and computer programs that are easy to use and made to last."
+          - generic [ref=f4e68]:
+            - link "My Story →" [ref=f4e69] [cursor=pointer]:
+              - /url: about.html
+            - link "Projects →" [ref=f4e70] [cursor=pointer]:
+              - /url: projects.html
+            - link "WhatsApp Connect" [ref=f4e71] [cursor=pointer]:
+              - /url: https://wa.me/233543671806?text=Hello%20Emmanuel%2C%20I%20saw%20your%20website%20and%20would%20like%20to%20connect.
+        - generic [ref=f4e74]:
+          - img "Emmanuel Drah - Founder of Success Above Dreams" [ref=f4e75]
+          - generic [ref=f4e76]:
+            - generic "Emmanuel Drah" [ref=f4e77]:
+              - generic [ref=f4e78]: Emmanuel
+              - generic [ref=f4e79]: Drah
+            - generic [ref=f4e81]:
+              - generic [ref=f4e82]:
+                - generic [ref=f4e83]: Founder · Success Above Dreams
+                - generic [ref=f4e84]: Ho, Ghana
+              - link "Scroll down to explore my story" [ref=f4e85] [cursor=pointer]:
+                - /url: "#who-i-am"
+                - generic [ref=f4e86]: Explore
+    - generic [ref=f4e93]:
+      - generic [ref=f4e94]:
+        - generic [ref=f4e95]: ◆ The Identity & Standard
+        - heading "Success is what you build on the days nobody is watching." [level=2] [ref=f4e96]
+        - paragraph [ref=f4e97]: Not the loud days. The ordinary ones. That is where the real work happens.
+      - generic [ref=f4e98]:
+        - generic [ref=f4e99]:
+          - text: “
+          - paragraph [ref=f4e100]: “A front desk taught me. Health insurance records in Dzodze taught me. Long nights of building taught me. People don’t care about your cleverness. They care whether your work actually helps them.”
+          - paragraph [ref=f4e101]: My journey into technology started in childhood, long before I had the tools for it. No computer, no mentor, no money for either, so I learned alone, one stubborn step at a time. Then came the hours at Ho Technical University, the late nights fixing things that refused to work, and the daily practice of watching how real people actually use what I build.
+          - paragraph [ref=f4e102]:
+            - strong [ref=f4e103]: Success Above Dreams
+            - text: "is more than a name. It’s a way of living: act daily, start without permission, stay rooted."
+            - link "[Read the brand story →]" [ref=f4e104] [cursor=pointer]:
+              - /url: the-brand.html
+        - generic [ref=f4e105]:
+          - generic [ref=f4e106]:
+            - generic [ref=f4e107]: SAD / 01 · Action
+            - heading "Choose to Act" [level=4] [ref=f4e108]
+            - paragraph [ref=f4e109]: A dream is a wish until you move. I don’t wait for luck or permission. Real progress is built in the small, daily decisions to keep going.
+          - generic [ref=f4e110]:
+            - generic [ref=f4e111]: SAD / 02 · Discipline
+            - heading "Keep Showing Up" [level=4] [ref=f4e112]
+            - paragraph [ref=f4e113]: The work that counts is the unglamorous kind, done daily, with no audience and no applause. Recognition comes later, if it comes at all. Either way, the work continues.
+          - generic [ref=f4e114]:
+            - generic [ref=f4e115]: SAD / 03 · Roots
+            - heading "Stay Rooted" [level=4] [ref=f4e116]
+            - paragraph [ref=f4e117]: I’m Ewe, from Dzodze, and I carry that humility and grit into every room I enter. Ambition that forgets where it comes from has nothing to stand on.
+    - generic [ref=f4e119]:
+      - generic [ref=f4e120]:
+        - generic [ref=f4e121]: ◆ The Craft
+        - heading "Built carefully. Made to last." [level=2] [ref=f4e122]
+        - paragraph [ref=f4e123]: What I actually build, and why it keeps working long after launch day, on slow networks, older phones, and real life.
+      - generic [ref=f4e124]:
+        - generic [ref=f4e125]:
+          - generic [ref=f4e126]:
+            - text: 01 · Websites
+            - heading "Websites & Online Stores" [level=3] [ref=f4e127]
+            - paragraph [ref=f4e128]:
+              - text: Real websites people use every day, like
+              - emphasis [ref=f4e129]: nsvilla.com
+              - text: and
+              - emphasis [ref=f4e130]: crcosmeticsgh.com
+              - text: . Quick to load on any phone, easy to understand, and simple to keep updated.
+          - link "See the Work →" [ref=f4e132] [cursor=pointer]:
+            - /url: projects.html
+        - generic [ref=f4e133]:
+          - generic [ref=f4e134]:
+            - text: 02 · Apps & Programs
+            - heading "Phone Apps & Computer Programs" [level=3] [ref=f4e135]
+            - paragraph [ref=f4e136]: Apps for phones and programs for computers that feel natural to use on iPhone, Android, Windows, or Mac, and keep working even when the internet drops.
+          - link "See My Services →" [ref=f4e138] [cursor=pointer]:
+            - /url: services.html
+        - generic [ref=f4e139]:
+          - generic [ref=f4e140]:
+            - text: 03 · Behind the Scenes
+            - heading "Records, Logins & Payments" [level=3] [ref=f4e141]
+            - paragraph [ref=f4e142]: "The parts people never see: safe places for your records, logins that keep strangers out, money that moves the way it should, all arranged so your information stays yours."
+          - link "See My Skills →" [ref=f4e144] [cursor=pointer]:
+            - /url: resume.html
+    - generic [ref=f4e146]:
+      - generic [ref=f4e147]:
+        - generic [ref=f4e148]: ◆ Life & Character
+        - heading "Beyond the screen, a life of leadership and service." [level=2] [ref=f4e149]
+        - paragraph [ref=f4e150]: Code is what I build, but character is who I am. These are moments earned through real work, service, and showing up.
+      - generic [ref=f4e151]:
+        - button "Most Hardworking Committee Member award NASPA · NSS 2023/2024 Most Hardworking Committee Member" [ref=f4e152] [cursor=pointer]:
+          - img "Most Hardworking Committee Member award" [ref=f4e154]
+          - generic [ref=f4e155]:
+            - generic [ref=f4e156]: NASPA · NSS 2023/2024
+            - generic [ref=f4e157]: Most Hardworking Committee Member
+        - button "Awarded a laptop at Tech Fest Ho West Tech Fest 2025 Awarded a Laptop" [ref=f4e158] [cursor=pointer]:
+          - img "Awarded a laptop at Tech Fest" [ref=f4e160]
+          - generic [ref=f4e161]:
+            - generic [ref=f4e162]: Ho West Tech Fest 2025
+            - generic [ref=f4e163]: Awarded a Laptop
+        - button "NASPA Dinner and Awards Night NASPA · NSS 2023/2024 Dinner & Awards Night" [ref=f4e164] [cursor=pointer]:
+          - img "NASPA Dinner and Awards Night" [ref=f4e166]
+          - generic [ref=f4e167]:
+            - generic [ref=f4e168]: NASPA · NSS 2023/2024
+            - generic [ref=f4e169]: Dinner & Awards Night
+      - link "Explore Full Photo Gallery & Milestones →" [ref=f4e171] [cursor=pointer]:
+        - /url: gallery.html
+    - generic [ref=f4e174]:
+      - generic [ref=f4e175]: ◆ The Standard
+      - blockquote [ref=f4e176]: “Dreams are where things start. Success is what you build on the days nobody is watching.”
+      - generic [ref=f4e177]: Emmanuel Drah · Founder, Success Above Dreams
+      - text: SAD
+    - generic [ref=f4e180]:
+      - generic [ref=f4e181]:
+        - generic [ref=f4e182]: ◆ Let's Connect
+        - heading "Let's build something honest and lasting." [level=3] [ref=f4e183]
+        - paragraph [ref=f4e184]: A project you keep postponing. A problem that will not leave you alone. A question you have been carrying by yourself. Bring it to me, and you will get honest answers, real attention, and a clear next step.
+      - generic [ref=f4e185]:
+        - link "Chat on WhatsApp ↗" [ref=f4e186] [cursor=pointer]:
+          - /url: https://wa.me/233543671806
+        - link "Send a Message →" [ref=f4e187] [cursor=pointer]:
+          - /url: contact.html
+        - link "Read My Story →" [ref=f4e188] [cursor=pointer]:
+          - /url: about.html
+      - text: SAD
+  - contentinfo [ref=f4e190]:
+    - generic [ref=f4e191]:
+      - generic [ref=f4e192]:
+        - generic [ref=f4e193]:
+          - generic [ref=f4e194]: Have something in mind?
+          - heading "Tell me what you need built." [level=2] [ref=f4e195]
+        - link "Start a conversation →" [ref=f4e196] [cursor=pointer]:
+          - /url: contact.html
+      - generic [ref=f4e197]:
+        - generic [ref=f4e199]:
+          - img "Success Above Dreams logo" [ref=f4e200]
+          - generic [ref=f4e201]: Emmanuel Drah
+        - generic [ref=f4e202]:
+          - heading "Work" [level=5] [ref=f4e203]
+          - list [ref=f4e204]:
+            - listitem [ref=f4e205]:
+              - link "Projects" [ref=f4e206] [cursor=pointer]:
+                - /url: projects.html
+            - listitem [ref=f4e207]:
+              - link "Project Stories" [ref=f4e208] [cursor=pointer]:
+                - /url: case-studies.html
+            - listitem [ref=f4e209]:
+              - link "Services" [ref=f4e210] [cursor=pointer]:
+                - /url: services.html
+            - listitem [ref=f4e211]:
+              - link "Gallery" [ref=f4e212] [cursor=pointer]:
+                - /url: gallery.html
+        - generic [ref=f4e213]:
+          - heading "About" [level=5] [ref=f4e214]
+          - list [ref=f4e215]:
+            - listitem [ref=f4e216]:
+              - link "My Story" [ref=f4e217] [cursor=pointer]:
+                - /url: about.html
+            - listitem [ref=f4e218]:
+              - link "The Brand" [ref=f4e219] [cursor=pointer]:
+                - /url: the-brand.html
+            - listitem [ref=f4e220]:
+              - link "Résumé" [ref=f4e221] [cursor=pointer]:
+                - /url: resume.html
+            - listitem [ref=f4e222]:
+              - link "Awards" [ref=f4e223] [cursor=pointer]:
+                - /url: certifications.html
+        - generic [ref=f4e224]:
+          - heading "Contact" [level=5] [ref=f4e225]
+          - list [ref=f4e226]:
+            - listitem [ref=f4e227]:
+              - link "Send a Message" [ref=f4e228] [cursor=pointer]:
+                - /url: contact.html
+            - listitem [ref=f4e229]:
+              - link "WhatsApp ↗" [ref=f4e230] [cursor=pointer]:
+                - /url: https://wa.me/233543671806
+            - listitem [ref=f4e231]:
+              - link "Email" [ref=f4e232] [cursor=pointer]:
+                - /url: mailto:emmanueldrah10@gmail.com
+      - generic [ref=f4e233]:
+        - generic [ref=f4e234]: © 2026 Emmanuel Drah
+        - generic [ref=f4e235]: Built under Success Above Dreams
