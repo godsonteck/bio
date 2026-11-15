@@ -1087,3 +1087,65 @@ body[data-page='index'] main > .sect, body[data-page='index'] main > .cta { back
     .dashboard-tile { transition: none; }
     .dashboard-tile:hover { transform: none; }
 }
+
+/* More transparent interface */
+body { background: #181719; }
+body:not([data-page='index']) {
+    background:
+        radial-gradient(48rem 38rem at 88% -12%, rgba(203, 178, 232, .13), transparent 68%),
+        radial-gradient(38rem 30rem at -12% 52%, rgba(233, 195, 212, .08), transparent 70%),
+        #181719;
+}
+body[data-page='index'] {
+    background:
+        linear-gradient(rgba(27, 24, 25, .08), rgba(27, 24, 25, .12)),
+        url('/images/nsvilla-apartment.jpeg') center / cover fixed;
+}
+.topbar-inner {
+    background: rgba(47, 43, 44, .48);
+    border-color: rgba(255,255,255,.2);
+    box-shadow: 0 12px 32px rgba(22, 18, 20, .14);
+    backdrop-filter: blur(22px) saturate(135%);
+    -webkit-backdrop-filter: blur(22px) saturate(135%);
+}
+.menu-btn, .drawer-close { background: rgba(255,255,255,.08); }
+.dashboard { background: rgba(39, 36, 37, .58); border-color: rgba(255,255,255,.24); box-shadow: 0 30px 80px rgba(20, 16, 17, .26); backdrop-filter: blur(26px) saturate(135%); -webkit-backdrop-filter: blur(26px) saturate(135%); }
+.dashboard-rail { background: rgba(47,43,44,.54); border-color: rgba(255,255,255,.18); backdrop-filter: blur(22px) saturate(135%); -webkit-backdrop-filter: blur(22px) saturate(135%); }
+.dashboard-tile { background: rgba(64, 58, 60, .5); border-color: rgba(255,255,255,.1); backdrop-filter: blur(18px) saturate(125%); -webkit-backdrop-filter: blur(18px) saturate(125%); }
+.dashboard-link-row, .dashboard-archive, .dashboard-story { background: rgba(62, 56, 58, .42); }
+.dashboard-icon, .dashboard-arrow { background: rgba(255,255,255,.14); }
+.dashboard-now { background: linear-gradient(135deg, rgba(212, 197, 245, .88), rgba(233, 195, 212, .84) 58%, rgba(243, 197, 173, .82)); backdrop-filter: blur(20px) saturate(130%); -webkit-backdrop-filter: blur(20px) saturate(130%); }
+.dashboard-contact { background: linear-gradient(105deg, rgba(203,182,239,.9), rgba(233,196,215,.86) 70%, rgba(241,198,180,.84)); backdrop-filter: blur(20px) saturate(130%); -webkit-backdrop-filter: blur(20px) saturate(130%); }
+.dashboard-now .dashboard-icon { background: rgba(255,255,255,.5); }
+.dashboard-now small { color: rgba(48,41,52,.78); }
+.orbit-track { stroke: rgba(255,255,255,.18); }
+.btn { background: rgba(247,242,242,.94); border-color: rgba(247,242,242,.94); }
+.btn-neu { background: rgba(57, 52, 56, .56); border-color: rgba(255,255,255,.18); backdrop-filter: blur(18px) saturate(125%); -webkit-backdrop-filter: blur(18px) saturate(125%); }
+.btn-wa { background: rgba(49, 93, 74, .8); border-color: rgba(86,132,110,.55); }
+.project-card, .evidence, .story-block, .form-box, .cta-panel, .channel-icon, .chip { background: rgba(50, 46, 48, .48); border-color: rgba(255,255,255,.14); backdrop-filter: blur(18px) saturate(120%); -webkit-backdrop-filter: blur(18px) saturate(120%); }
+.project-card:hover { background: rgba(58, 53, 55, .52); }
+.page-head, .sect, .cta, .lost, .showcase, .rows, .tl, .case-blocks, .steps, .facts-grid { background: transparent !important; }
+.pricing-note, .personal-note, .proverb, .pledge { background: linear-gradient(90deg, rgba(203,178,232,.08), transparent); border-left-color: rgba(203,178,232,.55); }
+.field input, .field textarea, .field select { background: rgba(32, 30, 32, .52); border-color: rgba(255,255,255,.18); backdrop-filter: blur(14px) saturate(115%); -webkit-backdrop-filter: blur(14px) saturate(115%); }
+.drawer { background: rgba(31, 29, 30, .82); backdrop-filter: blur(24px) saturate(130%); -webkit-backdrop-filter: blur(24px) saturate(130%); }
+footer.site-foot { background: rgba(28, 26, 27, .58); border-top-color: rgba(255,255,255,.12); backdrop-filter: blur(20px) saturate(120%); -webkit-backdrop-filter: blur(20px) saturate(120%); }
+body[data-page='index'] main > .sect, body[data-page='index'] main > .cta { background: transparent !important; }
+body[data-page='index'] .project-card, body[data-page='index'] .form-box, body[data-page='index'] .cta-panel { background: rgba(48, 44, 46, .46); }
+
+/* Text legibility on glass */
+:root { --muted: #e0d9db; --dim: #c6bdc1; }
+body { color: #fff; }
+.lead, .project-line, .row p, .case-block p, .tl-row p, .steps p, .prose p, .service-card p, .service-card li, .showcase-outcome, .facts-grid dd, .project-meta, .foot-bio { color: var(--muted); }
+.brand-tag { color: #ddd6d8; }
+.dashboard-heading-place { color: #e3dcdf; }
+.dashboard-link-row small, .dashboard-archive small, .dashboard-small small { color: #e3dcdf; }
+.dashboard-story-top > span { color: #e3dcdf; }
+.story-orbit-copy span { color: #e0d9db; }
+.dashboard-story > p { color: #e8e2e4; }
+.channel span:not(.channel-icon) { color: var(--muted); }
+.field input::placeholder, .field textarea::placeholder { color: #b8aeb3; }
+.drawer-sub a, .drawer-note { color: #d8d1d3; }
+.foot-col a { color: #ddd6d8; }
+.foot-bottom { color: #cfc7ca; }
+.dashboard-tile, .btn-neu, .dashboard-heading, .channel { text-shadow: 0 1px 14px rgba(12, 10, 11, .3); }
+.dashboard-photo::after { background: linear-gradient(90deg, rgba(18,16,18,.94), rgba(18,16,18,.48) 63%, rgba(18,16,18,.12)), linear-gradient(0deg, rgba(18,16,18,.55), transparent 72%); }
