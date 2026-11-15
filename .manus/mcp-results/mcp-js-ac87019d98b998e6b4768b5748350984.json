@@ -1,0 +1,329 @@
+Browser tab: tab_f2e9f63e-7dde-47fd-b689-d1b255111d50, Title: "Emmanuel Drah · Work", URL: "http://127.0.0.1:4173/projects.html".
+243 AXWebArea Emmanuel Drah · Work
+  244 link Skip to content
+  246 banner
+    247 link Emmanuel Drah home
+      248 text Emmanuel Drah
+      249 text INDEPENDENT DEVELOPER / HO, GHANA
+    250 button Open menu, Secondary actions: Expand
+  251 button Close menu
+  252 link Home
+  253 link Work
+  254 link Services
+  255 link Story
+  256 link Proof
+  257 link Contact
+  258 link Résumé
+  259 link Chat on WhatsApp
+  260 link emmanueldrah10@gmail.com
+  261 main
+    262 sectionheader
+      263 generic
+        264 paragraph
+          265 text SOME SHIPPED, MORE ON THE WAY
+        266 heading The work, told plainly.
+          267 text The work, 
+          268 emphasis
+            269 text told plainly.
+        270 paragraph
+          271 text Two projects are live right now. Here is what each business needed, what I built, and what changed after. More work is finished or taking shape behind the scenes.
+        272 link Start a project
+        274 link What I offer
+    277 article
+      278 text LIVE
+      279 text HOTEL WEBSITE
+      280 text NSVILLA.COM
+      281 heading NS Luxury Villa
+      283 paragraph
+        284 text Guests see rooms, prices, and directions before they call, and book on WhatsApp with the details already known.
+      285 link Open nsvilla.com ↗
+      287 figure
+        288 image The nsvilla.com homepage on a desktop screen: rooms, rates, and booking buttons
+        289 image The same site on a phone: large photos and one-tap WhatsApp booking
+      290 DescriptionList
+        291 term CLIENT
+        293 definition
+          294 text NS Luxury Villa, a hotel in Lokoe, Ho
+        295 term ROLE
+        297 definition
+          298 text Website design and build, end to end
+        299 term TIMELINE
+        301 definition
+          302 text Built around my front-desk shifts, live and maintained since
+        303 term STACK
+        305 definition
+          306 text Hand-built pages, Vite build, hosted on Vercel
+        307 term DELIVERABLES
+        309 definition
+          310 text Room and rate pages, photo gallery, Google Maps directions, WhatsApp and call buttons
+        311 term CONSTRAINTS
+        313 definition
+          314 text Guests on slow mobile data and older phones; prices the front desk must keep accurate
+      315 heading The problem
+      317 paragraph
+        318 text A phone that would not stop ringing. The hotel had no website. Guests could not see rooms or prices for themselves, so every question landed on the front desk: the same few answers, all day long.
+      319 heading What existed before
+      321 paragraph
+        322 text Word of mouth and WhatsApp statuses. Rooms, prices, and directions lived in conversations. Every enquiry started from zero, and nothing could be checked before calling.
+      323 heading What I changed
+      325 paragraph
+        326 text One place for everything a guest asks. Photos of every room, prices in plain view, Google Maps directions, and one-tap buttons to call or message on WhatsApp. It opens quickly even on slow mobile data.
+      327 heading Technical decisions
+      329 paragraph
+        330 text Information, not transactions. The hotel takes bookings on WhatsApp, so the site’s job is to inform, not to process payments. I kept it a light hand-built site with compressed images and no heavy booking platform, so it loads fast on the networks guests actually use.
+      331 heading What changed after launch
+      333 paragraph
+        334 text Guests arrive informed. The site put rooms, prices, directions, and WhatsApp contact in one place, so guests could answer many of their own pre-booking questions before calling the front desk. Booking conversations start with the details already known.
+      335 heading What I would improve next
+      337 paragraph
+        338 text An availability calendar. The next useful step is showing open dates per room, so guests can check availability before they message. That is the improvement I would make next.
+    340 article
+      341 text LIVE
+      342 text ONLINE STORE
+      343 text CRCOSMETICSGH.COM
+      344 heading CR Cosmetics & Essentials
+      346 paragraph
+        347 text A catalogue people can search, with prices and a checkout that sends complete orders, instead of WhatsApp status posts alone.
+      348 link Open crcosmeticsgh.com ↗
+      350 figure
+        351 image The crcosmeticsgh.com homepage on a desktop screen: product catalogue with prices in cedis
+        352 image The same store on a phone: products, prices in cedis, and a cart button
+      353 DescriptionList
+        354 term CLIENT
+        356 definition
+          357 text CR Cosmetics & Essentials, a beauty and skincare shop
+        358 term ROLE
+        360 definition
+          361 text Store design and build, end to end
+        362 term TIMELINE
+        364 definition
+          365 text From first brief to live store, then ongoing updates
+        366 term STACK
+        368 definition
+          369 text Custom JavaScript store: catalogue, cart, and customer accounts
+        370 term DELIVERABLES
+        372 definition
+          373 text Product categories, prices and offers, delivery and returns information, checkout that sends complete orders
+        374 term CONSTRAINTS
+        376 definition
+          377 text Customers ordering on phones over mobile data, with nationwide delivery
+      378 heading The problem
+      380 paragraph
+        381 text Selling through WhatsApp statuses. Is this in stock? How much with delivery? Every sale started with the same long back-and-forth, typed out again and again.
+      382 heading What existed before
+      384 paragraph
+        385 text Prices and stock lived in chat. Customers could only see what the latest status post showed. Nothing was searchable, and every order needed a conversation to complete.
+      386 heading What I changed
+      388 paragraph
+        389 text A store built for phones. Products sorted into groups with clear descriptions, prices you do not have to ask about, offers in one place, and a cart and checkout that work on the network most customers actually have.
+      390 heading Technical decisions
+      392 paragraph
+        393 text A custom store, not a rented platform. I built the catalogue, cart, and accounts as one light JavaScript app instead of stacking plugins on a heavy platform. Fewer moving parts means fewer things to break on a slow connection, and the shop keeps full control of its products and prices.
+      394 heading What changed after launch
+      396 paragraph
+        397 text Orders that arrive complete. The store gave the business a searchable product catalogue and a structured order flow instead of relying only on WhatsApp status posts. Orders arrive with the items and the delivery address already written down.
+      398 heading What I would improve next
+      400 paragraph
+        401 text Payment at checkout. Taking payment online in the same place the order is placed would close the last gap between browsing and buying. That is the next improvement I would build.
+    402 generic
+      403 heading The work behind the work.
+      405 paragraph
+        406 text Jobs that taught me how real businesses operate. The lessons show up in everything I build.
+      407 heading National Health Insurance Authority
+      409 paragraph
+        410 strong
+          411 text 2023 to 2024 · NHIS Dzodze.
+        412 text  Records, claims, and a front counter where people arrive worried. I learned accuracy under pressure and how to explain a confusing process in plain words.
+      413 heading Success Above Dreams
+      415 paragraph
+        416 strong
+          417 text Since 2018.
+        418 text  The name I build under. What began as a private promise became the way I work: decide who you are going to be, then get to work.
+      419 heading Ho Technical University
+      421 paragraph
+        422 strong
+          423 text 2020 to 2023 · HND, Information and Communication Technology.
+        424 text  Where the fundamentals were built, and where awards started arriving for the work outside the classroom.
+    425 generic
+      426 heading Does any of this look familiar?
+        427 text Does any of this look 
+        428 emphasis
+          429 text familiar?
+      430 paragraph
+        431 text Tell me what is not working in your business, and you get a plain answer about what would fix it, and what it costs.
+      432 link Start a project
+      434 link See the proof →
+  436 generic
+    437 paragraph
+      438 text A USEFUL NEXT CONVERSATION
+    439 heading Tell me what is still happening the hard way.
+      440 text Tell me what is still happening 
+      441 emphasis
+        442 text the hard way.
+    443 link Start a project
+    445 link Chat on WhatsApp
+  447 contentinfo
+    448 strong
+      449 text Emmanuel Drah
+    450 paragraph
+      451 text Digital front desks, product catalogues, and small business tools built from Ho, Ghana.
+    452 heading NAVIGATE
+    454 list
+      455 list item
+        456 link Work
+      458 list item
+        459 link Services
+      461 list item
+        462 link Proof
+    464 heading READ
+    466 list
+      467 list item
+        468 link Story
+      470 list item
+        471 link Résumé
+    473 heading CONTACT
+    475 list
+      476 list item
+        477 link Start a project
+      479 list item
+        480 link WhatsApp ↗
+      482 list item
+        483 link Email
+    485 text © 2026 Emmanuel Drah
+    486 text Success Above Dreams
+    487 text Ho, Ghana
+{"capture":{"captureId":"capture_fc566b41-1059-46b1-8006-e43723efaced","coordinateSpace":"css-pixel","height":504,"mimeType":"image/png","mode":"viewport","width":505}}
+Browser tab: tab_aad84352-ef4a-4649-ba8e-74cc01c8e674, Title: "Emmanuel Drah · Contact", URL: "http://127.0.0.1:4173/contact.html".
+488 AXWebArea Emmanuel Drah · Contact
+  489 link Skip to content
+  491 banner
+    492 link Emmanuel Drah home
+      493 text Emmanuel Drah
+      494 text INDEPENDENT DEVELOPER / HO, GHANA
+    495 button Open menu, Secondary actions: Expand
+  496 button Close menu
+  497 link Home
+  498 link Work
+  499 link Services
+  500 link Story
+  501 link Proof
+  502 link Contact
+  503 link Résumé
+  504 link Chat on WhatsApp
+  505 link emmanueldrah10@gmail.com
+  506 main
+    507 sectionheader
+      508 generic
+        509 paragraph
+          510 text YOU’VE BEEN THINKING ABOUT IT LONG ENOUGH
+        511 heading Tell me where you’re starting from.
+          512 text Tell me 
+          513 emphasis
+            514 text where you’re
+          515 text  starting from.
+        516 paragraph
+          517 text I’m Emmanuel Drah. I take on websites, online stores, business tools, and selected app projects. I read every message myself and usually reply within 24 hours.
+    518 generic
+      519 link WhatsApp (fastest response) +233 543 671 806
+        520 strong
+          521 text WhatsApp (fastest response)
+        522 text +233 543 671 806
+      523 link Email emmanueldrah10@gmail.com
+        524 strong
+          525 text Email
+        526 text emmanueldrah10@gmail.com
+      527 link Direct phone +233 543 671 806
+        528 strong
+          529 text Direct phone
+        530 text +233 543 671 806
+      531 strong
+        532 text Emmanuel Drah
+      533 text Ho, Ghana · clear work, direct communication
+      534 strong
+        535 text What you get first
+      536 paragraph
+        537 text A straight answer on what is possible, how long it would take, and what it would cost, before anything starts.
+      538 heading Send a message
+      540 paragraph
+        541 text Tell me what you need, what is not working now, and when you would like it done.
+      542 generic
+      543 form
+        544 LabelText Your name
+        546 text field Your name, required
+        547 LabelText Email address
+        549 text field Email address, required
+        550 LabelText
+          551 text What kind of project
+        552 combo box What kind of project, Value: Choose the closest one, required, Secondary actions: Expand
+          553 option Choose the closest one, selected
+          554 option Website
+          555 option Online store
+          556 option Internal tool
+          557 option Mobile app
+          558 option Not sure yet
+        559 LabelText
+          560 text Tell me more
+        561 text field Tell me more, required
+        562 button Send message →
+        564 paragraph
+          565 text Your message is used only to reply to this enquiry.
+    566 generic
+      567 heading What happens when you reach out.
+      569 list
+        570 list item
+          571 heading Tell me what is wrong
+          573 paragraph
+            574 text Say what is not working now, and what you want the new website, store, app, or program to do for you.
+        575 list item
+          576 heading I look at it honestly
+          578 paragraph
+            579 text I go through your needs properly, and tell you straight: what is possible, what matters most, and how long it would take.
+        580 list item
+          581 heading I build and put it online
+          583 paragraph
+            584 text I build it, test it on real phones and networks, and put it online, so it works properly from day one.
+  585 generic
+    586 paragraph
+      587 text A USEFUL NEXT CONVERSATION
+    588 heading Tell me what is still happening the hard way.
+      589 text Tell me what is still happening 
+      590 emphasis
+        591 text the hard way.
+    592 link Start a project
+    594 link Chat on WhatsApp
+  596 contentinfo
+    597 strong
+      598 text Emmanuel Drah
+    599 paragraph
+      600 text Digital front desks, product catalogues, and small business tools built from Ho, Ghana.
+    601 heading NAVIGATE
+    603 list
+      604 list item
+        605 link Work
+      607 list item
+        608 link Services
+      610 list item
+        611 link Proof
+    613 heading READ
+    615 list
+      616 list item
+        617 link Story
+      619 list item
+        620 link Résumé
+    622 heading CONTACT
+    624 list
+      625 list item
+        626 link Start a project
+      628 list item
+        629 link WhatsApp ↗
+      631 list item
+        632 link Email
+    634 text © 2026 Emmanuel Drah
+    635 text Success Above Dreams
+    636 text Ho, Ghana
+          637 generic
+          638 generic
+          639 MenuListPopup
+          640 generic
+{"capture":{"captureId":"capture_0307c03e-2ad4-4564-9c9c-433261079a51","coordinateSpace":"css-pixel","height":504,"mimeType":"image/png","mode":"viewport","width":505}}
+{}

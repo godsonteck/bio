@@ -1,1 +1,4 @@
 cvtmp/
+
+.baseline/
+.playwright-mcp/

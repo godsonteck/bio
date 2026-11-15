@@ -1,169 +1,145 @@
-/* Shared navigation and footer for the full portfolio. */
-
+/* Shared personal-site navigation and footer for Emmanuel Drah. */
 const getPageSlug = (url = window.location.pathname) => {
     const clean = url.split('#')[0].split('?')[0].split('/').pop() || '';
     return clean.replace(/\.html$/, '') || 'index';
 };
 
+const WA_LINK = 'https://wa.me/233543671806?text=Hi%20Emmanuel%2C%20I%20found%20your%20personal%20site%20and%20would%20like%20to%20say%20hello.';
+
 class PortfolioNav extends HTMLElement {
     connectedCallback() {
         const currentPage = getPageSlug();
         document.body.dataset.page = currentPage;
-
         this.innerHTML = `
             <a class="skip-link" href="#main-content">Skip to content</a>
-
-            <!-- ── Top Bar: full nav on desktop, logo-only on mobile ── -->
-            <nav id="navbar" aria-label="Main navigation">
-                <div class="container">
-                    <div class="nav-inner">
-                        <a href="index.html" class="brand-badge" aria-label="Success Above Dreams, Home">
-                            <span class="brand-avatar"><img src="images/sad.jpg" alt=""></span>
-                            <span>
-                                <strong class="brand-name">Emmanuel Drah</strong>
-                                <small class="brand-tagline">Success Above Dreams</small>
-                            </span>
-                        </a>
-                        <div class="nav-links">
-                            <a href="index.html">Home</a>
-                            <a href="projects.html">Projects</a>
-                            <a href="services.html">Services</a>
-                            <a href="about.html">My Story</a>
-                            <a href="gallery.html">Gallery</a>
-                            <a href="contact.html" class="btn-nav-talk">Let's Talk</a>
-                        </div>
-                    </div>
+            <header class="topbar" id="topbar">
+                <div class="container topbar-inner">
+                    <a href="/" class="brand" aria-label="Emmanuel Drah home">
+                        <span class="brand-mark" aria-hidden="true"></span>
+                        <span>
+                            <span class="brand-name">Emmanuel Drah</span>
+                            <span class="brand-tag">Developer / builder / Ho, Ghana</span>
+                        </span>
+                    </a>
+                    <nav class="nav-links" aria-label="Main">
+                        <a href="/" data-nav="index">Home</a>
+                        <a href="/about" data-nav="about">My story</a>
+                        <a href="/projects" data-nav="projects">Work</a>
+                        <a href="/services" data-nav="services">Now</a>
+                        <a href="/proof" data-nav="proof">Archive</a>
+                        <a href="/contact" class="btn btn-sm" data-nav="contact" data-track="say-hello" data-track-label="header">Say hello</a>
+                    </nav>
+                    <button class="menu-btn" id="menu-btn" aria-expanded="false" aria-controls="drawer" aria-label="Open menu">
+                        <span></span><span></span>
+                    </button>
                 </div>
-            </nav>
-
-            <!-- ── Bottom Dock: mobile only ── -->
-            <nav id="bottom-navbar" aria-label="Mobile navigation">
-                <div class="bottom-nav-shell">
-                    <div class="bottom-nav-links">
-                        <a href="index.html" class="bottom-nav-link">
-                            <span class="bottom-nav-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M3 11.5 12 4l9 7.5"/><path d="M5.5 10v9h13v-9"/><path d="M9.5 19v-5h5v5"/></svg></span>
-                            <span>Home</span>
-                        </a>
-                        <a href="projects.html" class="bottom-nav-link">
-                            <span class="bottom-nav-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3.5" y="4" width="17" height="16" rx="2"/><path d="M3.5 9h17M8.5 4v5"/></svg></span>
-                            <span>Projects</span>
-                        </a>
-                        <a href="services.html" class="bottom-nav-link">
-                            <span class="bottom-nav-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 7h14M5 12h14M5 17h14"/><circle cx="9" cy="7" r="1.5"/><circle cx="15" cy="12" r="1.5"/><circle cx="11" cy="17" r="1.5"/></svg></span>
-                            <span>Services</span>
-                        </a>
-                        <a href="about.html" class="bottom-nav-link">
-                            <span class="bottom-nav-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="3.5"/><path d="M5 20c.6-4 3-6 7-6s6.4 2 7 6"/></svg></span>
-                            <span>My Story</span>
-                        </a>
-                        <a href="gallery.html" class="bottom-nav-link">
-                            <span class="bottom-nav-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3.5" y="4" width="17" height="16" rx="2"/><circle cx="9" cy="9" r="1.5"/><path d="m5.5 17 4.2-4.2 3.1 3 2.2-2.2 3.5 3.4"/></svg></span>
-                            <span>Gallery</span>
-                        </a>
-                        <a href="contact.html" class="bottom-nav-link bottom-nav-contact">
-                            <span class="bottom-nav-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 5.5h16v11H9l-5 3v-14Z"/><path d="M8 10h8M8 13h5"/></svg></span>
-                            <span>Let's Talk</span>
-                        </a>
-                    </div>
+            </header>
+            <div class="drawer" id="drawer" role="dialog" aria-modal="true" aria-label="Menu" aria-hidden="true">
+                <div class="drawer-top">
+                    <span class="brand-name">Emmanuel Drah</span>
+                    <button class="drawer-close" id="drawer-close" aria-label="Close menu">&times;</button>
                 </div>
-            </nav>
+                <nav aria-label="Mobile">
+                    <a href="/" data-nav="index">Home</a>
+                    <a href="/about" data-nav="about">My story</a>
+                    <a href="/projects" data-nav="projects">Work</a>
+                    <a href="/services" data-nav="services">Now</a>
+                    <a href="/proof" data-nav="proof">Archive</a>
+                    <a href="/contact" data-nav="contact">Contact</a>
+                </nav>
+                <div class="drawer-sub">
+                    <a href="/resume" data-nav="resume">R&eacute;sum&eacute;</a>
+                    <a href="${WA_LINK}" target="_blank" rel="noopener noreferrer" data-track="whatsapp" data-track-label="drawer">WhatsApp</a>
+                    <a href="mailto:emmanueldrah10@gmail.com" data-track="email" data-track-label="drawer">Email</a>
+                </div>
+                <p class="drawer-note">Ho, Ghana / I read every message myself.</p>
+            </div>
         `;
-
         document.querySelector('main')?.setAttribute('id', 'main-content');
-        this.initNav(currentPage);
-        this.initScrollEffect();
-    }
-
-    initNav(currentPage) {
-        const sectionPage = {
-            'case-studies': 'projects',
-            'the-brand':    'about',
-            resume:         'about',
-            certifications: 'about'
-        }[currentPage] || currentPage;
-
-        // Desktop top nav active state
-        this.querySelectorAll('.nav-links > a').forEach(link => {
-            if (getPageSlug(link.getAttribute('href')) === sectionPage) {
-                link.classList.add('active');
-                link.setAttribute('aria-current', 'page');
-            }
-        });
-
-        // Mobile bottom dock active state
-        this.querySelectorAll('.bottom-nav-link').forEach(link => {
-            if (getPageSlug(link.getAttribute('href')) === sectionPage) {
-                link.classList.add('active');
-                link.setAttribute('aria-current', 'page');
-            }
-        });
-    }
-
-    initScrollEffect() {
-        const navbar = document.getElementById('navbar');
-        if (!navbar) return;
-        const onScroll = () => {
-            navbar.classList.toggle('scrolled', window.scrollY > 40);
-        };
+        this.setActive(currentPage);
+        const topbar = document.getElementById('topbar');
+        const onScroll = () => topbar?.classList.toggle('scrolled', window.scrollY > 24);
         window.addEventListener('scroll', onScroll, { passive: true });
         onScroll();
+    }
+
+    setActive(currentPage) {
+        const alias = {
+            'case-studies': 'projects',
+            'the-brand': 'about',
+            resume: 'about',
+            gallery: 'proof',
+            certifications: 'proof'
+        }[currentPage] || currentPage;
+        this.querySelectorAll('[data-nav]').forEach(link => {
+            if (link.dataset.nav === currentPage || link.dataset.nav === alias) {
+                link.classList.add('active');
+                link.setAttribute('aria-current', 'page');
+            }
+        });
     }
 }
 
 class PortfolioFooter extends HTMLElement {
     connectedCallback() {
-        this.innerHTML = `
-            <footer>
+        const cta = document.body.dataset.page === 'index' ? '' : `
+            <section class="cta">
                 <div class="container">
-                    <div class="footer-kicker">
-                        <div>
-                            <span>Have something in mind?</span>
-                            <h2>Tell me what you need built.</h2>
-                        </div>
-                        <a href="contact.html" class="btn-warm-primary">Start a conversation &rarr;</a>
-                    </div>
-
-                    <div class="footer-content-clean">
-                        <div class="footer-bio-col">
-                            <div class="footer-brand-row">
-                                <img src="images/sad.jpg" alt="Success Above Dreams logo">
-                                <div class="footer-bio-name">Emmanuel Drah</div>
+                    <div class="cta-panel">
+                        <div class="cta-grid">
+                            <div>
+                                <p class="kicker">A personal note</p>
+                                <h2>Have an idea, a question, or a <em>good link?</em></h2>
+                            </div>
+                            <div class="cta-actions">
+                                <a href="/contact" class="btn" data-track="say-hello" data-track-label="footer">Say hello</a>
+                                <a href="${WA_LINK}" target="_blank" rel="noopener noreferrer" class="btn-wa" data-track="whatsapp" data-track-label="footer">WhatsApp</a>
                             </div>
                         </div>
-
-                        <div class="footer-nav-col">
-                            <h5>Work</h5>
+                    </div>
+                </div>
+            </section>
+        `;
+        this.innerHTML = cta + `
+            <footer class="site-foot">
+                <div class="container">
+                    <div class="foot-grid">
+                        <div>
+                            <div class="foot-brand-row">
+                                <span class="brand-mark" aria-hidden="true"></span>
+                                <strong>Emmanuel Drah</strong>
+                            </div>
+                            <p class="foot-bio">A personal site about the work I make, the things I am learning, and the people and places shaping how I think.</p>
+                        </div>
+                        <div class="foot-col">
+                            <h2>Around here</h2>
                             <ul>
-                                <li><a href="projects.html">Projects</a></li>
-                                <li><a href="case-studies.html">Project Stories</a></li>
-                                <li><a href="services.html">Services</a></li>
-                                <li><a href="gallery.html">Gallery</a></li>
+                                <li><a href="/projects">Work</a></li>
+                                <li><a href="/about">My story</a></li>
+                                <li><a href="/proof">Archive</a></li>
                             </ul>
                         </div>
-
-                        <div class="footer-nav-col">
-                            <h5>About</h5>
+                        <div class="foot-col">
+                            <h2>Read</h2>
                             <ul>
-                                <li><a href="about.html">My Story</a></li>
-                                <li><a href="the-brand.html">The Brand</a></li>
-                                <li><a href="resume.html">R&eacute;sum&eacute;</a></li>
-                                <li><a href="certifications.html">Awards</a></li>
+                                <li><a href="/services">What I&rsquo;m into</a></li>
+                                <li><a href="/resume">R&eacute;sum&eacute;</a></li>
+                                <li><a href="https://successabovedreams.vercel.app/" target="_blank" rel="noopener noreferrer">Success Above Dreams &nearr;</a></li>
                             </ul>
                         </div>
-
-                        <div class="footer-nav-col">
-                            <h5>Contact</h5>
+                        <div class="foot-col">
+                            <h2>Say hello</h2>
                             <ul>
-                                <li><a href="contact.html">Send a Message</a></li>
-                                <li><a href="https://wa.me/233543671806" target="_blank" rel="noopener noreferrer">WhatsApp &nearr;</a></li>
-                                <li><a href="mailto:emmanueldrah10@gmail.com">Email</a></li>
+                                <li><a href="/contact">Contact</a></li>
+                                <li><a href="${WA_LINK}" target="_blank" rel="noopener noreferrer" data-track="whatsapp" data-track-label="footer-link">WhatsApp &nearr;</a></li>
+                                <li><a href="mailto:emmanueldrah10@gmail.com" data-track="email" data-track-label="footer-link">Email</a></li>
                             </ul>
                         </div>
                     </div>
-
-                    <div class="footer-bottom-clean">
+                    <div class="foot-bottom">
                         <span>&copy; ${new Date().getFullYear()} Emmanuel Drah</span>
-                        <span>Built under Success Above Dreams</span>
+                        <span class="personal-line">Still learning. Still building.</span>
+                        <span>Ho, Ghana</span>
                     </div>
                 </div>
             </footer>

@@ -1,0 +1,342 @@
+Browser tab: tab_ba93dafd-d473-4a0f-be86-85419a341c76, Title: "Emmanuel Drah · Developer, builder, and curious person", URL: "http://127.0.0.1:4173/?v=77".
+1390 AXWebArea Emmanuel Drah · Developer, builder, and curious person
+  1391 link Skip to content
+  1393 banner
+    1394 link Emmanuel Drah home
+      1395 text Emmanuel Drah
+      1396 text DEVELOPER / BUILDER / HO, GHANA
+    1397 button Open menu, Secondary actions: Expand
+  1398 button Close menu
+  1399 link Home
+  1400 link Work
+  1401 link About
+  1402 link Now
+  1403 link Archive
+  1404 link Contact
+  1405 link Résumé
+  1406 link WhatsApp
+  1407 link Email
+  1408 main
+    1411 generic
+      1412 paragraph
+        1413 text EMMANUEL DRAH · HO, GHANA
+      1414 heading I’m Emmanuel. I make things, notice things, and keep learning.
+        1415 text I’m Emmanuel. I make things, notice things, and keep 
+        1416 emphasis
+          1417 text learning.
+      1418 paragraph
+        1419 text I’m a developer and builder from Ho, Ghana. This is the personal side of my work: things I’ve shipped, ideas I’m working through, and the people and places that have shaped how I see problems.
+      1420 link See what I’ve made
+      1422 link Read my story
+      1424 link Say hello
+      1426 paragraph
+        1427 strong
+          1428 text TWO LIVE PROJECTS
+        1429 text  YOU CAN OPEN NOW · MORE EXPERIMENTS, NOTES, AND HALF-FINISHED IDEAS BEHIND THE SCENES
+      1430 figure
+        1431 image NS Luxury Villa website showing rooms, rates, and booking information
+        1432 paragraph
+          1433 text DEVELOPER 
+          1434 text ·
+          1435 text  BUILDER 
+          1436 text ·
+          1437 text  LEARNER
+    1438 region How I work
+      1439 strong
+        1440 text 2 live projects
+      1441 text Open and working today
+      1442 strong
+        1443 text Ho, Ghana
+      1444 text Where I’m based
+      1445 strong
+        1446 text Always learning
+      1447 text Code, people, places
+      1448 strong
+        1449 text One person
+      1450 text Writing and building this
+    1451 generic
+      1452 heading Some things I’ve made so far.
+        1453 text Some things I’ve made 
+        1454 emphasis
+          1455 text so far.
+      1456 paragraph
+        1457 text A small selection of shipped work. I like projects that make me pay attention to how people actually behave.
+      1458 article
+        1459 figure
+          1460 image The nsvilla.com homepage on a desktop screen: rooms, rates, and booking buttons
+        1461 text LIVE
+        1462 text HOTEL WEBSITE
+        1463 heading NS Luxury Villa
+        1465 paragraph
+          1466 strong
+            1467 text The problem:
+          1468 text  guests kept calling the front desk to ask about rooms, prices, and directions.
+        1469 paragraph
+          1470 strong
+            1471 text What changed:
+          1472 text  rooms, prices, directions, and WhatsApp contact sit in one place, so guests answer many of their own questions before calling.
+        1473 paragraph
+          1474 text ROLE: DESIGN AND BUILD, END TO END · STACK: HAND-BUILT PAGES, VITE, VERCEL
+        1475 link Open nsvilla.com ↗
+        1477 link Read the project story →
+      1479 article
+        1480 figure
+          1481 image The crcosmeticsgh.com homepage on a desktop screen: product catalogue with prices in cedis
+        1482 text LIVE
+        1483 text ONLINE STORE
+        1484 heading CR Cosmetics & Essentials
+        1486 paragraph
+          1487 strong
+            1488 text The problem:
+          1489 text  every order started as a long WhatsApp back-and-forth about price, stock, and delivery.
+        1490 paragraph
+          1491 strong
+            1492 text What changed:
+          1493 text  a catalogue people can search, with prices and a checkout that sends complete orders, instead of status posts alone.
+        1494 paragraph
+          1495 text ROLE: DESIGN AND BUILD · STACK: CUSTOM JAVASCRIPT STORE, CART AND ACCOUNTS
+        1496 link Open crcosmeticsgh.com ↗
+        1498 link Read the project story →
+    1500 generic
+      1501 heading Things I keep noticing.
+        1502 text Things I keep 
+        1503 emphasis
+          1504 text noticing.
+      1505 paragraph
+        1506 text The questions and patterns that follow me from one project to the next.
+      1507 heading People do important work inside chat.
+      1509 paragraph
+        1510 text It is convenient, familiar, and hard to search. I keep thinking about what deserves a better surface.
+      1511 link What I’m exploring →
+      1513 heading The best tools feel almost invisible.
+      1515 paragraph
+        1516 text I care more about the moment something becomes obvious than the technology underneath it.
+      1517 link What I’m exploring →
+      1519 heading Good work leaves a trace.
+      1521 paragraph
+        1522 text Projects, people, mistakes, photos, and notes all become part of how I learn to do the next thing better.
+      1523 link Open the archive →
+    1525 generic
+      1526 heading How I tend to work.
+        1527 text How I tend to 
+        1528 emphasis
+          1529 text work.
+      1530 paragraph
+        1531 text Not a promise or a process diagram. Just the habits I try to keep.
+      1532 list
+        1533 list item
+          1534 heading Pay attention first.
+          1536 paragraph
+            1537 text I try to understand what people are already doing before I decide what needs to change.
+        1538 list item
+          1539 heading Make the idea concrete.
+          1541 paragraph
+            1542 text Words are useful, but a rough screen or working prototype usually tells me more.
+        1543 list item
+          1544 heading Build close to reality.
+          1546 paragraph
+            1547 text Real devices, real constraints, real people. I learn more from use than from a perfect mock-up.
+        1548 list item
+          1549 heading Leave things clearer.
+          1551 paragraph
+            1552 text Whether it ships or stays an experiment, I want the next person to understand what happened and why.
+    1553 generic
+      1554 heading What shipped, and what it taught me.
+        1555 text What shipped, and what it 
+        1556 emphasis
+          1557 text taught me.
+      1558 paragraph
+        1559 text No inflated numbers. Just the small changes and lessons I can honestly point to.
+      1560 heading NS Luxury Villa
+      1562 text BEFORE
+      1563 paragraph
+        1564 text With no website, questions about rooms, prices, and directions went to the front desk.
+      1565 text AFTER
+      1566 paragraph
+        1567 text Rooms, prices, directions, and WhatsApp contact are together on nsvilla.com, so guests can check the details before getting in touch.
+      1568 heading CR Cosmetics & Essentials
+      1570 text BEFORE
+      1571 paragraph
+        1572 text Products were posted on WhatsApp status, with prices, availability, and delivery discussed in chat.
+      1573 text AFTER
+      1574 paragraph
+        1575 text The catalogue, prices, and delivery details are on crcosmeticsgh.com, with a checkout that collects the order and delivery address.
+    1576 generic
+      1577 image Emmanuel Drah
+      1578 paragraph
+        1579 text I learned to build by paying attention to how real people work: at a hotel front desk, in health-insurance records, and through building for local businesses.
+      1580 paragraph
+        1581 text Start where you are. Keep going.
+      1582 link Read my story →
+    1584 generic
+      1585 paragraph
+        1586 text ONE QUESTION
+      1587 heading Want to talk about an idea, a project, or something you’re learning?
+        1588 text Want to talk about an idea, a project, or 
+        1589 emphasis
+          1590 text something you’re learning?
+      1591 link Tell me about it
+      1593 link Chat on WhatsApp
+  1595 contentinfo
+    1596 strong
+      1597 text Emmanuel Drah
+    1598 paragraph
+      1599 text A personal site about the work I make, the things I am learning, and the people and places shaping how I think.
+    1600 heading AROUND HERE
+    1602 list
+      1603 list item
+        1604 link Work
+      1606 list item
+        1607 link About
+      1609 list item
+        1610 link Archive
+    1612 heading READ
+    1614 list
+      1615 list item
+        1616 link What I’m into
+      1618 list item
+        1619 link Résumé
+    1621 heading SAY HELLO
+    1623 list
+      1624 list item
+        1625 link Contact
+      1627 list item
+        1628 link WhatsApp ↗
+      1630 list item
+        1631 link Email
+    1633 text © 2026 Emmanuel Drah
+    1634 text Still learning. Still building.
+    1635 text Ho, Ghana
+{"capture":{"captureId":"capture_c607beab-32ed-4486-8f54-902ec180ecf4","coordinateSpace":"css-pixel","height":587,"mimeType":"image/png","mode":"viewport","width":505}}
+Browser tab: tab_32d18d6a-f281-4e02-b615-23d555833147, Title: "Emmanuel Drah · Contact", URL: "http://127.0.0.1:4173/contact.html?v=77".
+1636 AXWebArea Emmanuel Drah · Contact
+  1637 link Skip to content
+  1639 banner
+    1640 link Emmanuel Drah home
+      1641 text Emmanuel Drah
+      1642 text DEVELOPER / BUILDER / HO, GHANA
+    1643 button Open menu, Secondary actions: Expand
+  1644 button Close menu
+  1645 link Home
+  1646 link Work
+  1647 link About
+  1648 link Now
+  1649 link Archive
+  1650 link Contact
+  1651 link Résumé
+  1652 link WhatsApp
+  1653 link Email
+  1654 main
+    1655 sectionheader
+      1656 generic
+        1657 paragraph
+          1658 text A DIRECT LINE TO ME
+        1659 heading Say hello, or tell me what’s on your mind.
+          1660 text Say hello, or tell me what’s 
+          1661 emphasis
+            1662 text on your mind.
+        1663 paragraph
+          1664 text I’m Emmanuel Drah. I read every message myself and usually reply within 24 hours. It can be a question, an idea, a useful link, a collaboration, or a project that needs a careful conversation.
+    1665 generic
+      1666 link WhatsApp (fastest reply) +233 543 671 806
+        1667 strong
+          1668 text WhatsApp (fastest reply)
+        1669 text +233 543 671 806
+      1670 link Email emmanueldrah10@gmail.com
+        1671 strong
+          1672 text Email
+        1673 text emmanueldrah10@gmail.com
+      1674 link Direct phone +233 543 671 806
+        1675 strong
+          1676 text Direct phone
+        1677 text +233 543 671 806
+      1678 strong
+        1679 text Emmanuel Drah
+      1680 text Ho, Ghana · clear work, direct communication
+      1681 strong
+        1682 text What you get first
+      1683 paragraph
+        1684 text A real reply from me. No automated pitch, no handoff to a sales team, and no pressure to turn a conversation into a project.
+      1685 heading Write to me
+      1687 paragraph
+        1688 text Tell me what you are thinking about, what you are making, or what brought you here.
+      1689 generic
+      1690 form
+        1691 LabelText Your name
+        1693 text field Your name, required
+        1694 LabelText Email address
+        1696 text field Email address, required
+        1697 LabelText
+          1698 text What is this about?
+        1699 combo box What is this about?, Value: Choose the closest one, required, Secondary actions: Expand
+          1700 option Choose the closest one, selected
+          1701 option Just saying hello
+          1702 option An idea or collaboration
+          1703 option A project
+          1704 option Work or opportunity
+          1705 option Something else
+        1706 LabelText
+          1707 text Your message
+        1708 text field Your message, required
+        1709 button Send message →
+        1711 paragraph
+          1712 text Your message is used only to reply to this enquiry.
+    1713 generic
+      1714 heading What happens when you reach out.
+      1716 list
+        1717 list item
+          1718 heading Tell me what brought you here
+          1720 paragraph
+            1721 text You do not need a polished brief. A few honest lines are enough.
+        1722 list item
+          1723 heading I read it properly
+          1725 paragraph
+            1726 text I will take the time to understand what you mean before I decide what to say back.
+        1727 list item
+          1728 heading We decide what comes next
+          1730 paragraph
+            1731 text Sometimes that is a project. Sometimes it is a useful reply and nothing more. Both are fine.
+  1732 generic
+    1733 paragraph
+      1734 text A PERSONAL NOTE
+    1735 heading Have an idea, a question, or a good link?
+      1736 text Have an idea, a question, or a 
+      1737 emphasis
+        1738 text good link?
+    1739 link Say hello
+    1741 link WhatsApp
+  1743 contentinfo
+    1744 strong
+      1745 text Emmanuel Drah
+    1746 paragraph
+      1747 text A personal site about the work I make, the things I am learning, and the people and places shaping how I think.
+    1748 heading AROUND HERE
+    1750 list
+      1751 list item
+        1752 link Work
+      1754 list item
+        1755 link About
+      1757 list item
+        1758 link Archive
+    1760 heading READ
+    1762 list
+      1763 list item
+        1764 link What I’m into
+      1766 list item
+        1767 link Résumé
+    1769 heading SAY HELLO
+    1771 list
+      1772 list item
+        1773 link Contact
+      1775 list item
+        1776 link WhatsApp ↗
+      1778 list item
+        1779 link Email
+    1781 text © 2026 Emmanuel Drah
+    1782 text Still learning. Still building.
+    1783 text Ho, Ghana
+          1784 generic
+          1785 generic
+          1786 MenuListPopup
+          1787 generic
+{"capture":{"captureId":"capture_14681a83-5bcf-46df-8a28-8cec1161db82","coordinateSpace":"css-pixel","height":587,"mimeType":"image/png","mode":"viewport","width":505}}

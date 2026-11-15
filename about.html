@@ -3,254 +3,191 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Story &middot; Emmanuel Drah</title>
-    <meta name="description" content="From Dzodze to projects live on the internet: the honest story of a boy with no computer, no mentor, and no money, who taught himself to build and never stopped showing up.">
-    <meta property="og:title" content="My Story &middot; Emmanuel Drah">
-    <meta property="og:description" content="A long walk from Dzodze to projects live on the internet. Told honestly, with every lesson, every setback, and every win still fresh.">
-    <meta property="og:image" content="https://emmanueldrah.vercel.app/images/manuel.jpg">
+    <title>Emmanuel Drah &middot; My Story</title>
+    <meta name="description" content="Emmanuel Drah's story: from a boy in Dzodze with no computer and no mentor to work live on the internet, built one step at a time.">
+    <meta property="og:title" content="Emmanuel Drah &middot; My Story">
+    <meta property="og:description" content="A personal story about growing up in Dzodze, learning technology alone, and becoming the person behind the work.">
+    <meta property="og:image" content="https://emmanueldrah.vercel.app/images/og-preview.png">
     <meta property="og:url" content="https://emmanueldrah.vercel.app/about">
     <meta name="twitter:card" content="summary_large_image">
     <link rel="canonical" href="https://emmanueldrah.vercel.app/about">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="icon" type="image/jpeg" href="images/sad.jpg">
-    <link rel="apple-touch-icon" href="images/sad.jpg">
-    <link rel="stylesheet" href="css/style.css?v=51">
-    <script src="js/components.js?v=19" defer></script>
-    <script src="js/animate.js?v=1" defer></script>
+    <link rel="icon" type="image/png" href="/images/favicon.png">
+    <link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+    <link rel="stylesheet" href="/css/style.css?v=80">
+    <script defer src="/_vercel/insights/script.js"></script>
+    <script src="/js/components.js?v=76" defer></script>
+    <script src="/js/site.js?v=71" defer></script>
+    <script src="/js/track.js?v=71" defer></script>
 </head>
 <body data-page="about">
     <portfolio-nav></portfolio-nav>
 
-    <!-- Lightbox Modal -->
-    <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Image Viewer">
-        <button id="lightbox-close" class="lightbox-close" aria-label="Close">&times;</button>
-        <img id="lightbox-img" src="" alt="Full view">
-    </div>
-
     <main>
-        <!-- Hero / Intro (Editorial Poster) -->
-        <section class="hero-section">
+        <header class="page-head">
             <div class="container">
-                <div class="intro-poster-card">
-                    <div class="intro-poster-watermark" aria-hidden="true">SAD</div>
+                <h1>A little more <em>about me.</em></h1>
+                <p class="lead">
+                    I&rsquo;m Emmanuel Drah. I grew up in Dzodze and now live in Ho, Ghana. This is the story of where I started, what I&rsquo;ve learned, and the experiences that have shaped me.
+                </p>
+                <div class="head-actions">
+                    <a href="/projects" class="btn" data-track="see-work" data-track-label="about-head">See the work</a>
+                    <a href="/resume" class="btn-neu">R&eacute;sum&eacute;</a>
+                </div>
+            </div>
+        </header>
 
-                    <div class="intro-poster-grid">
-                        <!-- Left: Typography, Story & Signature -->
-                        <div class="intro-poster-content">
-                            <div>
-                                <div class="intro-status-wrap">
-                                    <span class="status-chip status-chip-light" aria-label="From Dzodze, still growing">
-                                        <span class="status-chip-track">
-                                            <span class="status-dot"></span>&ensp;From Dzodze, still growing
-                                        </span>
-                                    </span>
-                                </div>
-
-                                <p class="intro-kicker">I didn&rsquo;t have a clear path</p>
-
-                                <h1 class="intro-headline">
-                                    <span class="intro-line intro-dark">So I made</span>
-                                    <span class="intro-line intro-orange">one step</span>
-                                    <span class="intro-line intro-dark">at a time.</span>
-                                </h1>
-
-                                <p class="intro-bio">
-                                    I grew up in Dzodze with more curiosity than resources. I had no computer or mentor, so I learned on my own, one step at a time. That still shapes me: start where you are, stay patient, and keep showing up.
-                                </p>
-
-                                <div class="intro-ctas">
-                                    <a href="projects.html" class="btn-intro-primary">See My Work &rarr;</a>
-                                    <a href="contact.html" class="btn-intro-outline">Get In Touch &rarr;</a>
-                                    <a href="https://wa.me/233543671806?text=Hello%20Emmanuel%2C%20I%20saw%20your%20website%20and%20would%20like%20to%20connect." target="_blank" rel="noopener noreferrer" class="btn-whatsapp">
-                                        <span>WhatsApp Connect</span>
-                                    </a>
-                                </div>
-                            </div>
-
-                            <!-- Lower Left Signature Block -->
-                            <div class="intro-signature-block">
-                                <div class="intro-stripe-bar"></div>
-                                <div class="intro-signature-inner">
-                                    <div class="intro-signature-script">
-                                        <span class="sig-first">Emmanuel</span>
-                                        <span class="sig-last-wrap">
-                                            <span class="sig-last-highlight"></span>
-                                            <span class="sig-last">Drah</span>
-                                        </span>
-                                    </div>
-                                    <div class="intro-signature-caption">
-                                        <span>Founder &middot; Success Above Dreams</span>
-                                        <span>Ho, Ghana</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Right: Photo & Floating Swipe Pill -->
-                        <div class="intro-poster-photo-wrap">
-                            <div class="intro-photo-frame">
-                                <img src="images/manuel.jpg" alt="Emmanuel Drah - Founder of Success Above Dreams" class="intro-photo-img" loading="eager">
-                                <div class="intro-photo-overlay"></div>
-                                <span class="intro-photo-badge">HO &middot; GHANA</span>
-
-                                <a href="#my-story" class="intro-swipe-pill" aria-label="Scroll down to read my story">
-                                    <span>Swipe</span>
-                                    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                                        <path d="M18 11V6a2 2 0 0 0-2-2v0a2 2 0 0 0-2 2v0"></path>
-                                        <path d="M14 10V4a2 2 0 0 0-2-2v0a2 2 0 0 0-2 2v2"></path>
-                                        <path d="M10 10.5V6a2 2 0 0 0-2-2v0a2 2 0 0 0-2 2v8"></path>
-                                        <path d="M18 8a2 2 0 1 1 4 0v6a8 8 0 0 1-8 8h-2c-2.8 0-4.5-.86-5.99-2.34l-3.6-3.6a2 2 0 0 1 2.83-2.82L7 15"></path>
-                                    </svg>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
+        <section class="sect" id="how-i-learned">
+            <div class="container">
+                <div class="sect-intro">
+                    <h2>I&rsquo;ll tell it myself.</h2>
+                </div>
+                <div class="prose">
+                    <blockquote class="pull">&ldquo;The most important thing I learned has nothing to do with a classroom. It came from standing at a counter and paying attention to people.&rdquo;</blockquote>
+                    <p class="attrib">Emmanuel Drah &middot; Ho, Ghana</p>
+                    <p>
+                        My interest in technology started in childhood, long before I had the means for it. I did not own a computer. There was no money for one. And the elders around me had never been exposed to technology, so they could not understand what I kept reaching for. Nobody was against me. They simply did not know. So I stopped trying to explain, and taught myself instead, quietly, one long night at a time. That is how I became an introvert, not by choice but by circumstance. The habit of sitting alone with a problem until it finally makes sense is still how I work today.
+                    </p>
+                    <p>
+                        I studied at <strong>Ho Technical University</strong>, earning my HND in Information and Communication Technology. But the education I am most proud of comes from watching how people actually live and work, and figuring out how to be genuinely useful to them.
+                    </p>
+                    <p>
+                        I served at <strong>NHIS Dzodze</strong> during national service, working in the records department (<strong>MIS</strong>) and at the public relations desk (<strong>P.R.O</strong>). I kept member records straight, guarded the details people trusted us with, and spoke for the office to everyone who walked in confused or worried. It was my job to send them out calmer and clearer than they came. That mattered to me more than the title.
+                    </p>
+                    <p>
+                        I work at the reception desk of <strong>NS Luxury Villa</strong>. That means greeting guests who arrive tired, answering the same questions patiently for the hundredth time, staying calm when someone is frustrated, and making sure every person who walks through that door feels taken seriously. I have been doing it long enough to know that real, patient presence is rarer than people think.
+                    </p>
                 </div>
             </div>
         </section>
 
-        <!-- Story Details -->
-        <section class="section-wrap" id="my-story">
+        <section class="sect" id="road">
             <div class="container">
-                                <div class="story-box">
-                    <p class="story-lead">
-                        &ldquo;The most important thing I learned has nothing to do with a classroom. It came from standing at a counter and paying attention to people.&rdquo;
-                    </p>
-                    <p class="story-body">
-                        I work at the reception desk of <strong>NS Luxury Villa</strong>. That means greeting guests who arrive tired, answering the same questions patiently for the hundredth time, staying calm when someone is frustrated, and making sure every person who walks through that door feels taken seriously. I have been doing it long enough to know that real, patient presence is rarer than people think.
-                    </p>
-                    <p class="story-body">
-                        Before this, I served at <strong>NHIS Dzodze</strong> during national service, working in the records department (<strong>MIS</strong>) and at the public relations desk (<strong>P.R.O</strong>). I kept member records straight, guarded the details people trusted us with, and spoke for the office to everyone who walked in confused or worried. It was my job to send them out calmer and clearer than they came. That mattered to me more than the title.
-                    </p>
-                    <p class="story-body">
-                        I studied at <strong>Ho Technical University</strong>, earning my HND in Information and Communication Technology. But the education I am most proud of comes from watching how people actually live and work, and figuring out how to be genuinely useful to them.
-                    </p>
-                    <p class="story-body">
-                        My interest in technology started in childhood, long before I had the means for it. I did not own a computer. There was no money for one. And the elders around me had never been exposed to technology, so they could not understand what I kept reaching for. Nobody was against me. They simply did not know. So I stopped trying to explain, and taught myself instead, quietly, one long night at a time. That is how I became an introvert, not by choice but by circumstance. The habit of sitting alone with a problem until it finally makes sense is still how I work today.
-                    </p>
-                    <p class="story-body">
-                        I grew up without a father. Nobody taught me how to carry myself, how to hold a standard, or what a man is supposed to look like from the inside. I had to figure that out alone, earlier than most, and quietly. By the time I was old enough for people to expect it, I had already been living it. A man in a boy&rsquo;s body, not because I chose to grow up fast, but because there was no other option.
-                    </p>
-                    <p class="story-body">
-                        The name <strong>Success Above Dreams</strong> is a personal standard I chose in 2018. Not a brand tagline. A private promise. Do the work. Stay consistent. Be the person you said you would be, even on the days when nobody is watching.</p>
+                <div class="sect-intro">
+                    <h2>The road behind the work.</h2>
                 </div>
-
-                <!-- Timeline -->
-                <div class="section-head">
-                    <span class="section-eyebrow">My Journey</span>
-                    <h2 class="section-title">Where I've been</h2>
-                </div>
-
-                <div class="timeline-clean">
-                    <div class="timeline-row">
-                        <span class="timeline-year">2024 to Present</span>
-                        <div class="timeline-content">
-                            <h4>Receptionist &middot; NS Luxury Villa</h4>
+                <div class="tl">
+                    <div class="tl-row">
+                        <span class="tl-year">2024 to Present</span>
+                        <div>
+                            <h3>Receptionist &middot; NS Luxury Villa</h3>
                             <p>Every day, I meet people from different places, with different moods and different stories. My job is to make each of them feel at ease, whether they are checking in smoothly or standing there because something has gone wrong. I have learned that calm, clear communication is a real skill, and I have had to earn it daily.</p>
                         </div>
                     </div>
-
-                    <div class="timeline-row">
-                        <span class="timeline-year">2023 to 2024</span>
-                        <div class="timeline-content">
-                            <h4>National Service &middot; NHIS Dzodze</h4>
-                            <p>Assigned to the MIS and P.R.O departments. I managed health insurance records, kept the office&rsquo;s information in order, and served as the public-facing voice of the office: explaining policies, answering questions, and making a confusing process feel manageable for the people sitting across the counter.</p>
+                    <div class="tl-row">
+                        <span class="tl-year">2023 to 2024</span>
+                        <div>
+                            <h3>National Service &middot; NHIS Dzodze</h3>
+                            <p>I was assigned to the MIS and P.R.O departments. I managed health insurance records, kept the office&rsquo;s information in order, and served as the public-facing voice of the office: explaining policies, answering questions, and making a confusing process feel manageable for the people sitting across the counter.</p>
                         </div>
                     </div>
-
-                    <div class="timeline-row">
-                        <span class="timeline-year">2020 to 2023</span>
-                        <div class="timeline-content">
-                            <h4>Ho Technical University</h4>
+                    <div class="tl-row">
+                        <span class="tl-year">2020 to 2023</span>
+                        <div>
+                            <h3>Ho Technical University</h3>
                             <p>I studied HND in Information and Communication Technology. Beyond the technical skills, university pushed me to be self-directed and to take initiative. I showed up. I did the work. I finished.</p>
                         </div>
                     </div>
-
-                    <div class="timeline-row">
-                        <span class="timeline-year">2018</span>
-                        <div class="timeline-content">
-                            <h4>Success Above Dreams &middot; The name I chose</h4>
-                            <p>Not a company registration. A personal decision. I looked at the kind of person I wanted to be and wrote it down as a promise: success above the comfort of just dreaming. Then I spent years keeping it. I have carried that with me into every room since.</p>
+                    <div class="tl-row">
+                        <span class="tl-year">2018</span>
+                        <div>
+                            <h3>A standard I chose</h3>
+                            <p>In 2018, I wrote down the kind of person I wanted to become: someone who puts action above the comfort of only dreaming. I have carried that promise into every room since.</p>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Real Photo Memories -->
-        <section class="section-wrap">
+        <section class="sect" id="the-name">
             <div class="container">
-                <div class="section-head">
-                    <span class="section-eyebrow">Proof, not talk</span>
-                    <h2 class="section-title">Moments earned, not given</h2>
-                    <p class="section-desc">
-                        None of these were applied for. They came from people who watched the effort, day after day, and decided it deserved to be noticed.
+                <div class="sect-intro">
+                        <h2>The promise I keep.</h2>
+                </div>
+                <div class="prose">
+                    <p>
+                        The phrase <strong>Success Above Dreams</strong> started as a private standard I chose in 2018. The company now has its own home, but the original idea is still personal: do the work, stay consistent, and be the person you said you would be even on the days when nobody is watching.
+                    </p>
+                    <p>
+                        &ldquo;This isn&rsquo;t about becoming someone else. It&rsquo;s about becoming fully who you already are, and doing it on purpose.&rdquo;
+                    </p>
+                    <blockquote class="pull">&ldquo;Dreams are where things start. Success is what you build on the days nobody is watching.&rdquo;</blockquote>
+                    <p class="attrib">Emmanuel Drah</p>
+                </div>
+                <div class="story-block glass">
+                    <img src="/images/manuel-720.webp" alt="Emmanuel Drah" width="720" height="960" loading="lazy">
+                    <div>
+                        <blockquote class="pull">&ldquo;I decided who I was going to be, then got to work.&rdquo;</blockquote>
+                            <p class="attrib">Emmanuel Drah &middot; a personal standard</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="sect" id="standard">
+            <div class="container">
+                <div class="sect-intro">
+                    <h2>The standard I work to.</h2>
+                </div>
+                <div class="rows">
+                    <div class="row">
+                        <h3>Choose to act.</h3>
+                        <div>
+                            <p>A dream is a wish until you move. Success isn&rsquo;t luck or timing. It&rsquo;s the decision you make today, small or not.</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <h3>Give yourself permission.</h3>
+                        <div>
+                            <p>Don&rsquo;t wait for someone to approve of you before you begin. Nobody is coming to hand you the green light, so you give it to yourself.</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <h3>The work nobody sees.</h3>
+                        <div>
+                            <p>The unglamorous kind of work, done daily, with no audience. Applause comes later, if it comes at all.</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <h3>Stay rooted.</h3>
+                        <div>
+                            <p>My root is Ewe, from Dzodze, and that carries into the work wherever it goes. Ambition that forgets where it comes from has nothing to stand on.</p>
+                            <div class="proverb">
+                                <p class="ewe">&ldquo;Xevi dze atizigba dzi la, me&#331;l&#596;a anyigba be o.&rdquo;</p>
+                                <p class="meaning">An Ewe proverb from home: Even when a bird perches high on the tallest tree, it never forgets the ground it came from.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <h3>Resilience.</h3>
+                        <div>
+                            <p>Hard seasons don&rsquo;t cancel the dream. They test how much you meant it.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="sect" id="personal">
+            <div class="container">
+                <div class="personal-note">
+                    <span class="case-label">The personal part</span>
+                    <p>
+                        I grew up without a father. Nobody taught me how to carry myself, how to hold a standard, or what a man is supposed to look like from the inside. I had to figure that out alone, earlier than most, and quietly. By the time I was old enough for people to expect it, I had already been living it. A man in a boy&rsquo;s body, not because I chose to grow up fast, but because there was no other option.
                     </p>
                 </div>
-
-                <div class="photo-gallery-grid">
-                    <div class="memory-card">
-                        <div class="memory-media">
-                            <img src="images/vr-class-in-session.jpg" alt="Emmanuel in VR session at Ho West Tech Fest" loading="lazy">
-                        </div>
-                        <div class="memory-caption">
-                            <span class="memory-event">Ho West Tech Fest 2025</span>
-                            <div class="memory-title">Virtual Reality Class</div>
-                        </div>
-                    </div>
-
-                    <div class="memory-card">
-                        <div class="memory-media">
-                            <img src="images/me-at-the-naspa-awards-night.jpg" alt="Emmanuel at NASPA awards night" loading="lazy">
-                        </div>
-                        <div class="memory-caption">
-                            <span class="memory-event">NASPA &middot; NSS 2023/2024</span>
-                            <div class="memory-title">Social Media Influencer of the Year</div>
-                        </div>
-                    </div>
-
-                    <div class="memory-card">
-                        <div class="memory-media">
-                            <img src="images/receiving-awards-for-the-most-hardworking-committee-member.jpg" alt="Receiving Hardworking Committee Member award" loading="lazy">
-                        </div>
-                        <div class="memory-caption">
-                            <span class="memory-event">NASPA &middot; NSS 2023/2024</span>
-                            <div class="memory-title">Most Hardworking Committee Member</div>
-                        </div>
-                    </div>
-
-                    <div class="memory-card">
-                        <div class="memory-media">
-                            <img src="images/publicity-committee.jpg" alt="Publicity Committee Ketu North" loading="lazy">
-                        </div>
-                        <div class="memory-caption">
-                            <span class="memory-event">Ketu North NASPA</span>
-                            <div class="memory-title">Publicity Committee Member</div>
-                        </div>
-                    </div>
-                </div>
             </div>
         </section>
 
-        <!-- Direct Contact Callout -->
-        <section class="section-wrap">
+        <section class="sect-tight">
             <div class="container">
-                <div class="creed-banner" style="text-align: left; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 2rem;">
-                    <div>
-                        <h3 style="font-size: 1.4rem; font-weight: 800; color: var(--text-main); margin-bottom: 0.5rem;">Have something you would like built?</h3>
-                        <p style="color: var(--text-muted); font-size: 0.95rem;">Send me a message, or reach me directly on WhatsApp, and let us talk it through.</p>
-                    </div>
-                    <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
-                        <a href="https://wa.me/233543671806" target="_blank" rel="noopener noreferrer" class="btn-whatsapp">Chat on WhatsApp &nearr;</a>
-                        <a href="contact.html" class="btn-warm-outline">Send a Message &rarr;</a>
-                    </div>
+                <div class="head-actions">
+                    <a href="/proof" class="btn-neu">See the proof</a>
+                    <a href="/projects" class="arrow-link">See the work &rarr;</a>
                 </div>
             </div>
         </section>
     </main>
 
     <portfolio-footer></portfolio-footer>
-    <script src="main.js?v=2"></script>
 </body>
 </html>

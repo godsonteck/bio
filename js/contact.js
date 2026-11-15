@@ -1,85 +1,100 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const contactForm = document.getElementById('contactForm');
-    const formMessage = document.getElementById('form-message');
+    const form = document.getElementById('contactForm');
+    const status = document.getElementById('form-message');
     const submitBtn = document.getElementById('submitBtn');
+    if (!form || !status || !submitBtn) return;
 
-    if (!contactForm || !formMessage || !submitBtn) return;
+    const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
+    const TYPES = ['hello', 'idea', 'project', 'work', 'other'];
 
-    // Helper to show message
-    const showMessage = (msg, isError = false) => {
-        formMessage.style.display = 'block';
-        formMessage.textContent = msg;
-        formMessage.style.backgroundColor = isError ? 'rgba(255, 59, 48, 0.1)' : 'rgba(52, 199, 89, 0.1)';
-        formMessage.style.color = isError ? '#ff3b30' : '#34c759';
-        formMessage.style.border = `1px solid ${isError ? '#ff3b30' : '#34c759'}`;
+    const fieldOf = (input) => input.closest('.field');
+    const setFieldError = (input, message) => {
+        const field = fieldOf(input);
+        if (!field) return;
+        const err = field.querySelector('.field-error');
+        field.classList.toggle('invalid', Boolean(message));
+        input.setAttribute('aria-invalid', message ? 'true' : 'false');
+        if (err) err.textContent = message || '';
     };
 
-    // Helper to set loading state
-    const setLoading = (isLoading) => {
-        if (!submitBtn) return;
-
-        submitBtn.disabled = isLoading;
-        submitBtn.style.opacity = isLoading ? '0.7' : '1';
+    const showStatus = (message, kind) => {
+        status.textContent = message;
+        status.className = 'form-status ' + kind;
+    };
+    const clearStatus = () => {
+        status.textContent = '';
+        status.className = 'form-status';
     };
 
-    // Basic email validation regex
-    const validateEmail = (email) => {
-        const re = /^[^\\s@]+@[^\\s@]+\\.[^\\s@]+$/;
-        return re.test(String(email).toLowerCase());
+    const validate = () => {
+        const name = form.elements.name;
+        const email = form.elements.email;
+        const type = form.elements.type;
+        const message = form.elements.message;
+        let firstBad = null;
+
+        const check = (input, ok, msg) => {
+            setFieldError(input, ok ? '' : msg);
+            if (!ok && !firstBad) firstBad = input;
+        };
+
+        check(name, name.value.trim().length > 0, 'Please tell me your name.');
+        check(email, EMAIL_RE.test(email.value.trim()), 'That email address does not look right. Check it and try again.');
+        check(type, TYPES.includes(type.value), 'Choose what your message is about.');
+        check(message, message.value.trim().length > 0, 'Please write a message.');
+
+        if (firstBad) {
+            showStatus('Please check the highlighted fields.', 'err');
+            firstBad.focus();
+        }
+        return !firstBad;
     };
 
-    contactForm.addEventListener('submit', async (e) => {
-        e.preventDefault();
-        
-        // Hide previous messages
-        formMessage.style.display = 'none';
+    ['name', 'email', 'type', 'message'].forEach(n => {
+        const input = form.elements[n];
+        input?.addEventListener('input', () => setFieldError(input, ''));
+        input?.addEventListener('change', () => setFieldError(input, ''));
+    });
 
-        // Get form values
-        const formData = new FormData(contactForm);
-        const name = formData.get('name').trim();
-        const email = formData.get('email').trim();
-        const message = formData.get('message').trim();
-        const botField = formData.get('bot-field');
+    form.addEventListener('submit', async (event) => {
+        event.preventDefault();
+        clearStatus();
+        if (!validate()) return;
 
-        // Validation
-        if (!name || !email || !message) {
-            showMessage('Please fill out all required fields.', true);
-            return;
-        }
+        const payload = {
+            name: form.elements.name.value.trim(),
+            email: form.elements.email.value.trim(),
+            type: form.elements.type.value,
+            message: form.elements.message.value.trim(),
+            'bot-field': form.elements['bot-field'].value
+        };
 
-        if (!validateEmail(email)) {
-            showMessage('Please enter a valid email address.', true);
-            return;
-        }
-
-        // Honeypot check (bot prevention)
-        if (botField) {
-            // Silently "succeed" to fool the bot, but don't actually send
-            contactForm.reset();
-            showMessage('Message sent successfully! We will get back to you soon.');
-            return;
-        }
-
-        setLoading(true);
+        submitBtn.disabled = true;
+        const originalLabel = submitBtn.textContent;
+        submitBtn.textContent = 'Sending…';
 
         try {
-            const response = await fetch('/', {
+            const response = await fetch('/api/contact', {
                 method: 'POST',
-                headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-                body: new URLSearchParams(formData).toString()
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(payload)
             });
+            const data = await response.json().catch(() => ({}));
 
-            if (response.ok) {
-                contactForm.reset();
-                showMessage('Message sent successfully! I will get back to you soon.');
+            if (response.ok && data.ok === true) {
+                form.reset();
+                showStatus('Message sent. I read every message myself and usually reply within 24 hours. If it is urgent, WhatsApp is fastest.', 'ok');
+                window.trackEvent?.('form-submit', { status: 'ok' });
             } else {
-                throw new Error('Network response was not ok');
+                showStatus(data.error || 'There was a problem sending your message. Please try again, or use WhatsApp or email instead.', 'err');
+                window.trackEvent?.('form-submit', { status: 'error', code: response.status });
             }
         } catch (error) {
-            showMessage('Oops! There was a problem submitting your form. Please try again later.', true);
-            console.error('Form submission error:', error);
+            showStatus('There was a problem sending your message. Please try again, or use WhatsApp or email instead.', 'err');
+            window.trackEvent?.('form-submit', { status: 'network-error' });
         } finally {
-            setLoading(false);
+            submitBtn.disabled = false;
+            submitBtn.textContent = originalLabel;
         }
     });
 });

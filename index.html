@@ -3,295 +3,215 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Emmanuel Drah &middot; Websites, Apps, and Programs That Work</title>
-    <meta name="description" content="I am Emmanuel Drah, a software and web developer in Ho, Ghana. I build websites, apps, and computer programs with care, and I stand behind every one of them.">
-    <meta property="og:title" content="Emmanuel Drah &middot; Websites, Apps, and Programs That Work">
-    <meta property="og:description" content="Built with care under the name Success Above Dreams. Websites, apps, and computer programs that load fast, feel simple, and keep working after launch day.">
-    <meta property="og:image" content="https://emmanueldrah.vercel.app/images/manuel.jpg">
-    <meta property="og:url" content="https://emmanueldrah.vercel.app">
+    <title>Emmanuel Drah &middot; Developer, builder, and curious person</title>
+    <meta name="description" content="The personal site of Emmanuel Drah: developer, builder, learner, and maker from Ho, Ghana. Selected work, a personal archive, and the ideas shaping how he thinks.">
+    <meta property="og:title" content="Emmanuel Drah &middot; Developer, builder, and curious person">
+    <meta property="og:description" content="Selected work, a personal archive, and the ideas shaping how Emmanuel Drah thinks and builds.">
+    <meta property="og:image" content="https://emmanueldrah.vercel.app/images/og-preview.png">
+    <meta property="og:url" content="https://emmanueldrah.vercel.app/">
     <meta name="twitter:card" content="summary_large_image">
-    <link rel="canonical" href="https://emmanueldrah.vercel.app">
+    <link rel="canonical" href="https://emmanueldrah.vercel.app/">
     <meta name="google-site-verification" content="V2cCKsIabCmftvy7_vFWWu5q3KPVl1k3VGr-6bYQgwE">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="icon" type="image/jpeg" href="images/sad.jpg">
-    <link rel="apple-touch-icon" href="images/sad.jpg">
-    <link rel="stylesheet" href="css/style.css?v=51">
-    <script src="js/components.js?v=19" defer></script>
-    <script src="js/animate.js?v=1" defer></script>
+    <link rel="icon" type="image/png" href="/images/favicon.png">
+    <link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+    <link rel="stylesheet" href="/css/style.css?v=80">
+    <script defer src="/_vercel/insights/script.js"></script>
+    <script src="/js/components.js?v=76" defer></script>
+    <script src="/js/site.js?v=71" defer></script>
+    <script src="/js/track.js?v=71" defer></script>
 </head>
 <body data-page="index">
     <portfolio-nav></portfolio-nav>
 
-    <!-- Lightbox Modal -->
-    <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Image Viewer">
-        <button id="lightbox-close" class="lightbox-close" aria-label="Close">&times;</button>
-        <img id="lightbox-img" src="" alt="Full view">
-    </div>
-
-    <main id="main-content">
-        <!-- ── 01: Hero Section (Intro Poster) ── -->
-        <section class="hero-section">
-            <div class="container">
-                <div class="intro-poster-card">
-                    <!-- Faint SAD background watermark -->
-                    <div class="intro-poster-watermark" aria-hidden="true">SAD</div>
-
-                    <div class="intro-poster-grid">
-                        <!-- Left: Typography & Story & Signature -->
-                        <div class="intro-poster-content">
-                            <div>
-                                <div class="intro-status-wrap">
-                                    <span class="status-chip status-chip-light" aria-label="Action, discipline, roots">
-                                        <span class="status-chip-track">
-                                            <span class="status-dot"></span>&ensp;Action &middot; Discipline &middot; Roots
-                                        </span>
-                                    </span>
+    <main>
+        <section class="dashboard-stage" aria-label="Welcome">
+            <div class="dashboard-wrap">
+                <nav class="dashboard-rail" aria-label="Quick navigation">
+                    <a href="/" class="rail-active" aria-label="Home" aria-current="page"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m4 11 8-7 8 7v8a1 1 0 0 1-1 1h-5v-6h-4v6H5a1 1 0 0 1-1-1z"/></svg></a>
+                    <a href="/about" aria-label="My story"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="3.5"/><path d="M5 20a7 7 0 0 1 14 0"/></svg></a>
+                    <a href="/projects" aria-label="Work"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="6" width="17" height="14" rx="2"/><path d="M9 6V4h6v2M3.5 12h17"/></svg></a>
+                    <a href="/proof" aria-label="Archive"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="5" width="17" height="14" rx="2"/><circle cx="9" cy="10" r="1.5"/><path d="m4 17 5-4 3 2 3-3 5 5"/></svg></a>
+                    <a href="/contact" aria-label="Contact"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="5.5" width="17" height="13" rx="2"/><path d="m4.5 7 7.5 6 7.5-6"/></svg></a>
+                </nav>
+                <div class="dashboard">
+                    <div class="dashboard-heading">
+                        <div><span class="dashboard-heading-name">Emmanuel Drah</span><span class="dashboard-heading-place">Ho, Ghana</span></div>
+                        <a href="/contact" class="dashboard-heading-link">Say hello <span aria-hidden="true">&nearr;</span></a>
+                    </div>
+                    <div class="dashboard-grid">
+                        <div class="dashboard-left">
+                            <a class="dashboard-photo dashboard-tile" href="/about" data-track="read-story" data-track-label="hero">
+                                <img src="/images/manuel-720.webp" alt="Emmanuel Drah outdoors in a black shirt and cap" width="720" height="960" fetchpriority="high">
+                                <div class="dashboard-photo-copy">
+                                    <p>Software &amp; web developer</p>
+                                    <h1>Hi, I&rsquo;m<br>Emmanuel.</h1>
+                                    <span>Get to know me <span aria-hidden="true">&rarr;</span></span>
                                 </div>
-
-                                <p class="intro-kicker">I started with a dream and very little else</p>
-
-                                <h1 class="intro-headline">
-                                    <span class="intro-line intro-dark">Start where</span>
-                                    <span class="intro-line intro-orange">you are.</span>
-                                    <span class="intro-line intro-dark">Keep going.</span>
-                                </h1>
-
-                                <p class="intro-bio">
-                                    I&rsquo;m <strong>Emmanuel Drah</strong>, from Dzodze, Ghana. <a href="the-brand.html">Success Above Dreams</a> is more than a name to me. It&rsquo;s the standard I try to live by: take action, keep showing up, and stay rooted in where I come from.
-                                </p>
-
-                                <div class="intro-ctas">
-                                    <a href="about.html" class="btn-intro-primary">My Story &rarr;</a>
-                                    <a href="projects.html" class="btn-intro-outline">Projects &rarr;</a>
-                                    <a href="https://wa.me/233543671806?text=Hello%20Emmanuel%2C%20I%20saw%20your%20website%20and%20would%20like%20to%20connect." target="_blank" rel="noopener noreferrer" class="btn-whatsapp">
-                                        <span>WhatsApp Connect</span>
-                                    </a>
-                                </div>
+                            </a>
+                            <a class="dashboard-link-row dashboard-tile" href="/about">
+                                <span class="dashboard-icon dashboard-icon-gradient" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="3.5"/><path d="M5 20a7 7 0 0 1 14 0"/></svg></span>
+                                <span><strong>My story</strong><small>Where I started and what shaped me</small></span>
+                                <span class="dashboard-arrow" aria-hidden="true">&rarr;</span>
+                            </a>
+                            <div class="dashboard-pair">
+                                <a class="dashboard-small dashboard-work dashboard-tile" href="/projects">
+                                    <span class="dashboard-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3.5" y="6" width="17" height="14" rx="2"/><path d="M9 6V4h6v2M3.5 12h17"/></svg></span>
+                                    <span><strong>My work</strong><small>A few things I&rsquo;ve made</small></span>
+                                    <span class="dashboard-small-arrow" aria-hidden="true">&nearr;</span>
+                                </a>
+                                <a class="dashboard-small dashboard-now dashboard-tile" href="/services">
+                                    <span class="dashboard-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 3v18M3 12h18M5.6 5.6l12.8 12.8M18.4 5.6 5.6 18.4"/></svg></span>
+                                    <span><strong>What I&rsquo;m into</strong><small>Things I&rsquo;m exploring</small></span>
+                                    <span class="dashboard-small-arrow" aria-hidden="true">&nearr;</span>
+                                </a>
                             </div>
-
+                            <a class="dashboard-contact dashboard-tile" href="/contact" data-track="say-hello" data-track-label="hero">
+                                <span>Have something to share? <strong>Say hello.</strong></span><span class="dashboard-arrow" aria-hidden="true">&rarr;</span>
+                            </a>
                         </div>
-
-                        <!-- Right: Photo & Floating Swipe Pill -->
-                        <div class="intro-poster-photo-wrap">
-                            <div class="intro-photo-frame">
-                                <img src="images/manuel.jpg" alt="Emmanuel Drah - Founder of Success Above Dreams" class="intro-photo-img" loading="eager">
-                                <div class="intro-photo-overlay"></div>
-
-                                <div class="intro-photo-caption">
-                                    <div class="intro-signature-script" aria-label="Emmanuel Drah">
-                                        <span class="sig-first">Emmanuel</span>
-                                        <span class="sig-last-wrap">
-                                            <span class="sig-last-highlight"></span>
-                                            <span class="sig-last">Drah</span>
-                                        </span>
-                                    </div>
-                                    <div class="intro-photo-caption-meta">
-                                        <div class="intro-photo-caption-copy">
-                                            <span class="intro-photo-caption-role">Founder &middot; Success Above Dreams</span>
-                                            <span class="intro-photo-caption-location">Ho, Ghana</span>
-                                        </div>
-                                        <a href="#who-i-am" class="intro-swipe-pill" aria-label="Scroll down to explore my story">
-                                            <span>Explore</span>
-                                            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                                                <path d="M18 11V6a2 2 0 0 0-2-2v0a2 2 0 0 0-2 2v0"></path>
-                                                <path d="M14 10V4a2 2 0 0 0-2-2v0a2 2 0 0 0-2 2v2"></path>
-                                                <path d="M10 10.5V6a2 2 0 0 0-2-2v0a2 2 0 0 0-2 2v8"></path>
-                                                <path d="M18 8a2 2 0 1 1 4 0v6a8 8 0 0 1-8 8h-2c-2.8 0-4.5-.86-5.99-2.34l-3.6-3.6a2 2 0 0 1 2.83-2.82L7 15"></path>
-                                            </svg>
-                                        </a>
-                                    </div>
+                        <div class="dashboard-right">
+                            <a class="dashboard-story dashboard-tile" href="/about">
+                                <div class="dashboard-story-top"><strong>A little about me</strong><span>Read my story <span aria-hidden="true">&nearr;</span></span></div>
+                                <div class="story-orbit">
+                                    <svg viewBox="0 0 300 240" aria-hidden="true" focusable="false">
+                                        <defs><linearGradient id="story-arc" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#d1b9fa"/><stop offset=".55" stop-color="#e8b9d1"/><stop offset="1" stop-color="#f2c0aa"/></linearGradient></defs>
+                                        <path class="orbit-track" d="M45 201A110 110 0 1 1 255 201"/>
+                                        <path class="orbit-color" d="M45 201A110 110 0 1 1 255 201"/>
+                                    </svg>
+                                    <div class="story-orbit-copy"><span>From</span><strong>Dzodze</strong><span>to Ho, Ghana</span></div>
                                 </div>
+                                <p>I&rsquo;m a developer, a learner, and a curious person. This is my little corner of the internet.</p>
+                            </a>
+                            <a class="dashboard-archive dashboard-tile" href="/proof" data-track="open-archive" data-track-label="hero">
+                                <img src="/images/awarded-a-laptop-at-the-tech-fest.jpeg" alt="" width="900" height="600" loading="eager">
+                                <span><strong>My archive</strong><small>Photos and moments along the way</small></span>
+                                <span class="dashboard-arrow" aria-hidden="true">&rarr;</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <a class="dashboard-background-credit" href="/projects#nsvilla">Background photo: NS Luxury Villa</a>
+        </section>
+
+        <section class="sect" id="story">
+            <div class="container personal-intro">
+                <div class="prose">
+                    <h2>I started in Dzodze.</h2>
+                    <p>My interest in technology goes back to childhood. I didn&rsquo;t have a computer or someone to teach me, but I kept finding ways to learn.</p>
+                    <p>Since then, I&rsquo;ve studied at Ho Technical University, worked with people at NHIS Dzodze and NS Luxury Villa, and kept building. Each part of that journey has taught me something different.</p>
+                    <a href="/about" class="arrow-link">More about my journey &rarr;</a>
+                </div>
+                <figure class="personal-moment">
+                    <img src="/images/awarded-a-laptop-at-the-tech-fest.jpeg" alt="Emmanuel receiving a laptop at Ho West Tech Fest 2025" width="900" height="600" loading="lazy">
+                    <figcaption>Ho West Tech Fest 2025 &middot; Awarded a Laptop</figcaption>
+                </figure>
+            </div>
+        </section>
+
+        <section class="sect" id="work">
+            <div class="container">
+                <div class="sect-intro">
+                        <h2>Some things I&rsquo;ve made <em>so far.</em></h2>
+                        <p>These are a few things I can share. I&rsquo;ve also built management systems and point-of-sale software that I can&rsquo;t show publicly.</p>
+                </div>
+                <div class="work-grid">
+                    <article class="project-card glass">
+                        <figure class="shot">
+                            <img src="/images/nsvilla-desktop.webp" srcset="/images/nsvilla-desktop-720.webp 720w, /images/nsvilla-desktop.webp 1440w" sizes="(min-width: 860px) 50vw, calc(100vw - 70px)" alt="The nsvilla.com homepage on a desktop screen: rooms, rates, and booking buttons" width="1440" height="900" loading="lazy">
+                        </figure>
+                        <div class="project-body">
+                            <div class="project-tags">
+                                <span class="chip"><span class="dot" aria-hidden="true"></span> Live</span>
+                                <span class="chip">Hotel website</span>
+                            </div>
+                            <h3>NS Luxury Villa</h3>
+                            <p class="project-line"><strong>The problem:</strong> guests kept calling the front desk to ask about rooms, prices, and directions.</p>
+                            <p class="project-line"><strong>What changed:</strong> rooms, prices, directions, and WhatsApp contact sit in one place, so guests answer many of their own questions before calling.</p>
+                            <p class="project-meta">Role: design and build, end to end &middot; Stack: hand-built pages, Vite, Vercel</p>
+                            <div class="project-actions">
+                                <a href="https://nsvilla.com" target="_blank" rel="noopener noreferrer" class="btn btn-sm" data-track="live-project" data-track-label="nsvilla">Open nsvilla.com &nearr;</a>
+                                <a href="/projects#nsvilla" class="arrow-link">Read the project story &rarr;</a>
                             </div>
                         </div>
-                    </div>
+                    </article>
+                    <article class="project-card glass">
+                        <figure class="shot">
+                            <img src="/images/crcosmetics-desktop.webp" srcset="/images/crcosmetics-desktop-720.webp 720w, /images/crcosmetics-desktop.webp 1440w" sizes="(min-width: 860px) 50vw, calc(100vw - 70px)" alt="The crcosmeticsgh.com homepage on a desktop screen: product catalogue with prices in cedis" width="1440" height="900" loading="lazy">
+                        </figure>
+                        <div class="project-body">
+                            <div class="project-tags">
+                                <span class="chip"><span class="dot" aria-hidden="true"></span> Live</span>
+                                <span class="chip">Online store</span>
+                            </div>
+                            <h3>CR Cosmetics &amp; Essentials</h3>
+                            <p class="project-line"><strong>The problem:</strong> every order started as a long WhatsApp back-and-forth about price, stock, and delivery.</p>
+                            <p class="project-line"><strong>What changed:</strong> a catalogue people can search, with prices and a checkout that sends complete orders, instead of status posts alone.</p>
+                            <p class="project-meta">Role: design and build &middot; Stack: custom JavaScript store, cart and accounts</p>
+                            <div class="project-actions">
+                                <a href="https://crcosmeticsgh.com" target="_blank" rel="noopener noreferrer" class="btn btn-sm" data-track="live-project" data-track-label="crcosmetics">Open crcosmeticsgh.com &nearr;</a>
+                                <a href="/projects#crcosmetics" class="arrow-link">Read the project story &rarr;</a>
+                            </div>
+                        </div>
+                    </article>
                 </div>
             </div>
         </section>
 
-        <!-- ── 02: Who I Am & The Brand Philosophy ── -->
-        <section class="section-wrap" id="who-i-am">
+        <section class="sect" id="problems">
             <div class="container">
-                <div class="section-head">
-                    <span class="section-eyebrow">The Identity &amp; Standard</span>
-                    <h2 class="section-title">Success is what you build on the days nobody is watching.</h2>
-                    <p class="section-desc">
-                        Not the loud days. The ordinary ones. That is where the real work happens.
-                    </p>
+                <div class="sect-intro">
+                        <h2>Things I keep <em>noticing.</em></h2>
+                        <p>The questions and patterns that follow me from one project to the next.</p>
                 </div>
-
-                <div class="home-identity-grid">
-                    <!-- Left: Personal Story Lead -->
-                    <div class="story-box" style="margin-bottom: 0;">
-                        <p class="story-lead">
-                            &ldquo;A front desk taught me. Health insurance records in Dzodze taught me. Long nights of building taught me. People don&rsquo;t care about your cleverness. They care whether your work actually helps them.&rdquo;
-                        </p>
-                        <p class="story-body">
-                            My journey into technology started in childhood, long before I had the tools for it. No computer, no mentor, no money for either, so I learned alone, one stubborn step at a time. Then came the hours at Ho Technical University, the late nights fixing things that refused to work, and the daily practice of watching how real people actually use what I build.
-                        </p>
-                        <p class="story-body" style="margin-top: 1.5rem; padding-top: 1.5rem; border-top: 1px solid var(--accent-border);">
-                            <strong>Success Above Dreams</strong> is more than a name. It&rsquo;s a way of living: act daily, start without permission, stay rooted.
-                            <a href="the-brand.html" style="color: var(--gold-light); font-weight: 700; text-decoration: underline; text-underline-offset: 4px; display: inline-block; margin-left: 0.25rem;">[Read the brand story &rarr;]</a>
-                        </p>
-                    </div>
-
-                    <!-- Right: The 3 Core Pillars -->
-                    <div>
-                        <div class="home-pillar-card">
-                            <span class="home-pillar-num">SAD / 01 &middot; Action</span>
-                            <h4>Choose to Act</h4>
-                            <p>A dream is a wish until you move. I don&rsquo;t wait for luck or permission. Real progress is built in the small, daily decisions to keep going.</p>
-                        </div>
-
-                        <div class="home-pillar-card">
-                            <span class="home-pillar-num">SAD / 02 &middot; Discipline</span>
-                            <h4>Keep Showing Up</h4>
-                            <p>The work that counts is the unglamorous kind, done daily, with no audience and no applause. Recognition comes later, if it comes at all. Either way, the work continues.</p>
-                        </div>
-
-                        <div class="home-pillar-card">
-                            <span class="home-pillar-num">SAD / 03 &middot; Roots</span>
-                            <h4>Stay Rooted</h4>
-                            <p>I&rsquo;m Ewe, from Dzodze, and I carry that humility and grit into every room I enter. Ambition that forgets where it comes from has nothing to stand on.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- 03: The Craft, curated preview (no duplicates) -->
-        <section class="section-wrap" style="background: linear-gradient(180deg, transparent, rgba(13, 25, 41, 0.35) 50%, transparent);">
-            <div class="container">
-                <div class="section-head">
-                    <span class="section-eyebrow">The Craft</span>
-                    <h2 class="section-title">Built carefully. Made to last.</h2>
-                    <p class="section-desc">
-                        What I actually build, and why it keeps working long after launch day, on slow networks, older phones, and real life.
-                    </p>
-                </div>
-
-                <div class="home-craft-grid">
-                    <div class="home-craft-card">
+                <div class="rows">
+                    <div class="row">
+                            <h3>People do important work inside chat.</h3>
                         <div>
-                            <span style="font-family: ui-monospace, monospace; font-size: 0.74rem; font-weight: 700; color: var(--gold); letter-spacing: 0.16em; text-transform: uppercase;">01 &middot; Websites</span>
-                            <h3 style="font-family: var(--font-display); font-size: 1.55rem; color: var(--white); margin: 0.6rem 0 0.8rem; line-height: 1.2;">Websites &amp; Online Stores</h3>
-                            <p style="color: var(--text-muted); font-size: 0.94rem; line-height: 1.7;">Real websites people use every day, like <em>nsvilla.com</em> and <em>crcosmeticsgh.com</em>. Quick to load on any phone, easy to understand, and simple to keep updated.</p>
-                        </div>
-                        <div style="margin-top: 1.8rem;">
-                            <a href="projects.html" style="color: var(--gold-light); font-size: 0.82rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; display: inline-flex; align-items: center; gap: 0.4rem;">See the Work &rarr;</a>
+                                <p>It is convenient, familiar, and hard to search. I keep thinking about what deserves a better surface.</p>
+                                <a href="/services#websites" class="arrow-link">What I&rsquo;m exploring &rarr;</a>
                         </div>
                     </div>
-
-                    <div class="home-craft-card">
+                    <div class="row">
+                            <h3>The best tools feel almost invisible.</h3>
                         <div>
-                            <span style="font-family: ui-monospace, monospace; font-size: 0.74rem; font-weight: 700; color: var(--gold); letter-spacing: 0.16em; text-transform: uppercase;">02 &middot; Apps &amp; Programs</span>
-                            <h3 style="font-family: var(--font-display); font-size: 1.55rem; color: var(--white); margin: 0.6rem 0 0.8rem; line-height: 1.2;">Phone Apps &amp; Computer Programs</h3>
-                            <p style="color: var(--text-muted); font-size: 0.94rem; line-height: 1.7;">Apps for phones and programs for computers that feel natural to use on iPhone, Android, Windows, or Mac, and keep working even when the internet drops.</p>
-                        </div>
-                        <div style="margin-top: 1.8rem;">
-                            <a href="services.html" style="color: var(--gold-light); font-size: 0.82rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; display: inline-flex; align-items: center; gap: 0.4rem;">See My Services &rarr;</a>
+                                <p>I care more about the moment something becomes obvious than the technology underneath it.</p>
+                                <a href="/services#tools" class="arrow-link">What I&rsquo;m exploring &rarr;</a>
                         </div>
                     </div>
-
-                    <div class="home-craft-card">
+                    <div class="row">
+                            <h3>Good work leaves a trace.</h3>
                         <div>
-                            <span style="font-family: ui-monospace, monospace; font-size: 0.74rem; font-weight: 700; color: var(--gold); letter-spacing: 0.16em; text-transform: uppercase;">03 &middot; Behind the Scenes</span>
-                            <h3 style="font-family: var(--font-display); font-size: 1.55rem; color: var(--white); margin: 0.6rem 0 0.8rem; line-height: 1.2;">Records, Logins &amp; Payments</h3>
-                            <p style="color: var(--text-muted); font-size: 0.94rem; line-height: 1.7;">The parts people never see: safe places for your records, logins that keep strangers out, money that moves the way it should, all arranged so your information stays yours.</p>
-                        </div>
-                        <div style="margin-top: 1.8rem;">
-                            <a href="resume.html" style="color: var(--gold-light); font-size: 0.82rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; display: inline-flex; align-items: center; gap: 0.4rem;">See My Skills &rarr;</a>
+                                <p>Projects, people, mistakes, photos, and notes all become part of how I learn to do the next thing better.</p>
+                                <a href="/proof" class="arrow-link">Open the archive &rarr;</a>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- ── 04: Proof of Character & Journey ── -->
-        <section class="section-wrap">
+        <section class="sect" id="my-brand">
             <div class="container">
-                <div class="section-head">
-                    <span class="section-eyebrow">Life &amp; Character</span>
-                    <h2 class="section-title">Beyond the screen, a life of leadership and service.</h2>
-                    <p class="section-desc">
-                        Code is what I build, but character is who I am. These are moments earned through real work, service, and showing up.
-                    </p>
-                </div>
-
-                <div class="photo-gallery-grid">
-                    <div class="memory-card">
-                        <div class="memory-media">
-                            <img src="images/receiving-awards-for-the-most-hardworking-committee-member.jpg" alt="Most Hardworking Committee Member award" loading="lazy">
-                        </div>
-                        <div class="memory-caption">
-                            <span class="memory-event">NASPA &middot; NSS 2023/2024</span>
-                            <div class="memory-title">Most Hardworking Committee Member</div>
-                        </div>
-                    </div>
-
-                    <div class="memory-card">
-                        <div class="memory-media">
-                            <img src="images/awarded-a-laptop-at-the-tech-fest.jpeg" alt="Awarded a laptop at Tech Fest" loading="lazy">
-                        </div>
-                        <div class="memory-caption">
-                            <span class="memory-event">Ho West Tech Fest 2025</span>
-                            <div class="memory-title">Awarded a Laptop</div>
-                        </div>
-                    </div>
-
-                    <div class="memory-card">
-                        <div class="memory-media">
-                            <img src="images/naspa-dinner-and-awards-night.jpg" alt="NASPA Dinner and Awards Night" loading="lazy">
-                        </div>
-                        <div class="memory-caption">
-                            <span class="memory-event">NASPA &middot; NSS 2023/2024</span>
-                            <div class="memory-title">Dinner &amp; Awards Night</div>
-                        </div>
-                    </div>
-                </div>
-
-                <div style="text-align: center; margin-top: 2.5rem;">
-                    <a href="gallery.html" class="btn-warm-outline">Explore Full Photo Gallery &amp; Milestones &rarr;</a>
+                <div class="brand-note">
+                    <h2>The name I build under.</h2>
+                    <p>I started Success Above Dreams as a personal promise. Today, it&rsquo;s also the home for my work with businesses, including project stories and services.</p>
+                    <a href="https://successabovedreams.vercel.app/" target="_blank" rel="noopener noreferrer" class="arrow-link">Visit Success Above Dreams &nearr;</a>
                 </div>
             </div>
         </section>
 
-        <!-- ── 05: The Creed Banner ── -->
-        <section class="section-wrap">
+        <section class="cta">
             <div class="container">
-                <div class="creed-banner">
-                    <span class="section-eyebrow" style="margin-bottom: 1rem;">The Standard</span>
-                    <blockquote class="creed-quote">
-                        &ldquo;Dreams are where things start. Success is what you build on the days nobody is watching.&rdquo;
-                    </blockquote>
-                    <div class="creed-author">Emmanuel Drah &middot; Founder, Success Above Dreams</div>
-                </div>
-            </div>
-        </section>
-
-        <!-- ── 06: Direct Personal Invitation (No duplicate form!) ── -->
-        <section class="section-wrap" style="padding-top: 1rem;">
-            <div class="container">
-                <div class="creed-banner" style="text-align: left; background: linear-gradient(135deg, rgba(210, 162, 76, 0.12), rgba(13, 25, 41, 0.95));">
-                    <div>
-                        <span class="section-eyebrow" style="margin-bottom: 0.6rem;">Let's Connect</span>
-                        <h3 style="font-family: var(--font-display); font-size: clamp(2rem, 3.8vw, 3.2rem); font-weight: 600; color: var(--white); margin-bottom: 0.75rem; line-height: 1.1;">
-                            Let's build something honest and lasting.
-                        </h3>
-                        <p style="color: var(--text-muted); font-size: 1.05rem; max-width: 650px; line-height: 1.7;">
-                            A project you keep postponing. A problem that will not leave you alone. A question you have been carrying by yourself. Bring it to me, and you will get honest answers, real attention, and a clear next step.
-                        </p>
-                    </div>
-                    <div style="display: flex; flex-direction: column; gap: 0.85rem; min-width: 220px;">
-                        <a href="https://wa.me/233543671806" target="_blank" rel="noopener noreferrer" class="btn-whatsapp" style="width: 100%; justify-content: center;">
-                            Chat on WhatsApp &nearr;
-                        </a>
-                        <a href="contact.html" class="btn-warm-primary" style="width: 100%; justify-content: center;">
-                            Send a Message &rarr;
-                        </a>
-                        <a href="about.html" class="btn-warm-outline" style="width: 100%; justify-content: center;">
-                            Read My Story &rarr;
-                        </a>
+                <div class="cta-panel glass glass-lg">
+                    <div class="cta-grid">
+                        <div>
+                            <p class="kicker">One question</p>
+                            <h2>Want to talk about an idea, a project, or <em>something you&rsquo;re learning?</em></h2>
+                        </div>
+                        <div class="cta-actions">
+                            <a href="/contact" class="btn" data-track="tell-me" data-track-label="home-final">Tell me about it</a>
+                            <a href="https://wa.me/233543671806?text=Hi%20Emmanuel%2C%20I%20found%20your%20personal%20site%20and%20would%20like%20to%20say%20hello." target="_blank" rel="noopener noreferrer" class="btn-wa" data-track="whatsapp" data-track-label="home-final">Chat on WhatsApp</a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -299,6 +219,5 @@
     </main>
 
     <portfolio-footer></portfolio-footer>
-    <script src="main.js?v=2"></script>
 </body>
 </html>
