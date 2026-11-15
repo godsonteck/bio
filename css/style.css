@@ -1149,3 +1149,28 @@ body { color: #fff; }
 .foot-bottom { color: #cfc7ca; }
 .dashboard-tile, .btn-neu, .dashboard-heading, .channel { text-shadow: 0 1px 14px rgba(12, 10, 11, .3); }
 .dashboard-photo::after { background: linear-gradient(90deg, rgba(18,16,18,.94), rgba(18,16,18,.48) 63%, rgba(18,16,18,.12)), linear-gradient(0deg, rgba(18,16,18,.55), transparent 72%); }
+
+/* Floating glass sections over the photo */
+body[data-page='index'] {
+    background:
+        linear-gradient(rgba(24, 21, 22, .10), rgba(24, 21, 22, .16) 42%, rgba(24, 21, 22, .58)),
+        url('/images/nsvilla-apartment.jpeg') center / cover fixed;
+}
+body[data-page='index'] main > .sect > .container {
+    padding: clamp(1.6rem, 4.5vw, 3.2rem);
+    border: 1px solid rgba(255, 255, 255, .16);
+    border-radius: 30px;
+    background: rgba(38, 34, 36, .5);
+    box-shadow: 0 26px 70px rgba(16, 13, 14, .3);
+    backdrop-filter: blur(26px) saturate(130%);
+    -webkit-backdrop-filter: blur(26px) saturate(130%);
+}
+body[data-page='index'] .sect-intro h2, body[data-page='index'] .personal-intro h2, body[data-page='index'] .brand-note h2, body[data-page='index'] .row h3, body[data-page='index'] .prose h2 { text-shadow: 0 1px 16px rgba(12, 10, 11, .4); }
+body[data-page='index'] .sect-intro h2 em, body[data-page='index'] .cta h2 em { color: #f0d7f7; text-shadow: 0 1px 16px rgba(12, 10, 11, .45); }
+body[data-page='index'] .arrow-link { color: #ecd7ff; text-shadow: 0 1px 12px rgba(12, 10, 11, .45); }
+body[data-page='index'] .arrow-link:hover { color: #fff; }
+body[data-page='index'] .rows { border-top-color: rgba(255, 246, 246, .24); }
+body[data-page='index'] .row { border-bottom-color: rgba(255, 246, 246, .17); }
+@media (max-width: 760px) {
+    body[data-page='index'] main > .sect > .container { padding: 1.3rem 1.1rem; border-radius: 22px; }
+}
