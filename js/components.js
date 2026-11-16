@@ -18,7 +18,7 @@ class PortfolioNav extends HTMLElement {
                         <span class="brand-mark" aria-hidden="true"></span>
                         <span>
                             <span class="brand-name">Emmanuel Drah</span>
-                            <span class="brand-tag">Developer / builder / Ho, Ghana</span>
+                            <span class="brand-tag">Developer &middot; builder &middot; Ho, Ghana</span>
                         </span>
                     </a>
                     <nav class="nav-links" aria-label="Main">
@@ -27,6 +27,7 @@ class PortfolioNav extends HTMLElement {
                         <a href="/projects" data-nav="projects">Work</a>
                         <a href="/services" data-nav="services">Now</a>
                         <a href="/proof" data-nav="proof">Archive</a>
+                        <span class="nav-sep" aria-hidden="true"></span>
                         <a href="/contact" class="btn btn-sm" data-nav="contact" data-track="say-hello" data-track-label="header">Say hello</a>
                     </nav>
                     <button class="menu-btn" id="menu-btn" aria-expanded="false" aria-controls="drawer" aria-label="Open menu">
