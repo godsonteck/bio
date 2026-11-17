@@ -1,7 +1,5 @@
 /* Drawer, lightbox, and anchor scrolling. Content is visible without JS. */
 document.addEventListener('DOMContentLoaded', () => {
-    const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-
     const menuBtn = document.getElementById('menu-btn');
     const drawer = document.getElementById('drawer');
     const drawerClose = document.getElementById('drawer-close');
@@ -22,6 +20,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (menuBtn && drawer) {
         const openDrawer = () => {
+            drawer.inert = false;
             drawer.classList.add('open');
             drawer.setAttribute('aria-hidden', 'false');
             menuBtn.setAttribute('aria-expanded', 'true');
@@ -30,6 +29,7 @@ document.addEventListener('DOMContentLoaded', () => {
             drawerClose?.focus();
         };
         const closeDrawer = (restoreFocus = true) => {
+            drawer.inert = true;
             drawer.classList.remove('open');
             drawer.setAttribute('aria-hidden', 'true');
             menuBtn.setAttribute('aria-expanded', 'false');
@@ -55,17 +55,23 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', event => {
-            const href = anchor.getAttribute('href');
-            if (!href || href === '#') return;
-            const target = document.querySelector(href);
-            if (target) {
-                event.preventDefault();
-                target.scrollIntoView({ behavior: reduceMotion ? 'auto' : 'smooth', block: 'start' });
-            }
-        });
-    });
+    /* Ghana keeps UTC all year, so the time in Ho is the UTC clock. */
+    const hoGreeting = document.querySelector('[data-ho-greeting]');
+    const hoTime = document.querySelector('[data-ho-time]');
+    if (hoGreeting && hoTime) {
+        const showHoTime = () => {
+            const now = new Date();
+            const hour = now.getUTCHours();
+            const minutes = String(now.getUTCMinutes()).padStart(2, '0');
+            hoGreeting.textContent = hour < 5 || hour >= 22 ? 'Late night in Ho'
+                : hour < 12 ? 'Good morning from Ho'
+                : hour < 17 ? 'Good afternoon from Ho'
+                : 'Good evening from Ho';
+            hoTime.textContent = `${hour % 12 || 12}:${minutes} ${hour < 12 ? 'am' : 'pm'}`;
+        };
+        showHoTime();
+        setInterval(showHoTime, 30000);
+    }
 
     const lightbox = document.getElementById('lightbox');
     const lightboxImg = document.getElementById('lightbox-img');

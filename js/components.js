@@ -35,7 +35,7 @@ class PortfolioNav extends HTMLElement {
                     </button>
                 </div>
             </header>
-            <div class="drawer" id="drawer" role="dialog" aria-modal="true" aria-label="Menu" aria-hidden="true">
+            <div class="drawer" id="drawer" role="dialog" aria-modal="true" aria-label="Menu" aria-hidden="true" inert>
                 <div class="drawer-top">
                     <span class="brand-name">Emmanuel Drah</span>
                     <button class="drawer-close" id="drawer-close" aria-label="Close menu">&times;</button>
@@ -56,7 +56,14 @@ class PortfolioNav extends HTMLElement {
                 <p class="drawer-note">Ho, Ghana / I read every message myself.</p>
             </div>
         `;
-        document.querySelector('main')?.setAttribute('id', 'main-content');
+        const main = document.querySelector('main');
+        if (main && !document.getElementById('main-content')) {
+            if (main.id) {
+                this.querySelector('.skip-link').href = `#${main.id}`;
+            } else {
+                main.id = 'main-content';
+            }
+        }
         this.setActive(currentPage);
         const topbar = document.getElementById('topbar');
         const onScroll = () => topbar?.classList.toggle('scrolled', window.scrollY > 24);
@@ -64,18 +71,14 @@ class PortfolioNav extends HTMLElement {
         onScroll();
     }
 
-    setActive(currentPage) {
-        const alias = {
-            'case-studies': 'projects',
-            'the-brand': 'about',
-            resume: 'about',
-            gallery: 'proof',
-            certifications: 'proof'
-        }[currentPage] || currentPage;
+    setActive(section) {
         this.querySelectorAll('[data-nav]').forEach(link => {
-            if (link.dataset.nav === currentPage || link.dataset.nav === alias) {
-                link.classList.add('active');
+            const active = link.dataset.nav === section;
+            link.classList.toggle('active', active);
+            if (active) {
                 link.setAttribute('aria-current', 'page');
+            } else {
+                link.removeAttribute('aria-current');
             }
         });
     }
@@ -83,13 +86,12 @@ class PortfolioNav extends HTMLElement {
 
 class PortfolioFooter extends HTMLElement {
     connectedCallback() {
-        const cta = document.body.dataset.page === 'index' ? '' : `
+        const cta = ['index', 'contact'].includes(document.body.dataset.page) ? '' : `
             <section class="cta">
                 <div class="container">
                     <div class="cta-panel">
                         <div class="cta-grid">
                             <div>
-                                <p class="kicker">A personal note</p>
                                 <h2>Have an idea, a question, or a <em>good link?</em></h2>
                             </div>
                             <div class="cta-actions">
